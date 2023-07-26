@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- Dried Meat -->
+	<Operation Class="PatchOperationAttributeSet">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
+		<attribute>ParentName</attribute>
+		<value>OrganicProductBase</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
+		<value>
+			<thingCategories>
+				<li>Foods</li>
+				<li>MeatRaw</li>
+			</thingCategories>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/statBases</xpath>
+		<value>
+			<statBases>
+				<MarketValue>2.5</MarketValue>
+				<Mass>0.01</Mass>
+				<Nutrition>0.05</Nutrition>
+			</statBases>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/ingestible</xpath>
+		<value>
+			<ingestible>
+				<foodType>Meat</foodType>
+				<preferability>DesperateOnly</preferability>
+				<ingestEffect>EatMeat</ingestEffect>
+				<ingestSound>RawMeat_Eat</ingestSound>
+			</ingestible>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="CompProperties_Rottable">
+					<daysToRotStart>60</daysToRotStart>
+					<rotDestroys>true</rotDestroys>
+				</li>
+				<li Class="CompProperties_Ingredients"/>
+			</comps>
+		</value>
+	</Operation>
+	
+	<!-- Meat Process Weather -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/sunFactor</xpath>
+		<value>
+			<sunFactor>0.5~1</sunFactor>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/windFactor</xpath>
+		<value>
+			<windFactor>0.75~1.25</windFactor>
+		</value>
+	</Operation>
+	
+	<!-- 1:1 Meat to Dried -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/efficiency</xpath>
+		<value>
+			<efficiency>1</efficiency>
+		</value>
+	</Operation>
+	
+	<!-- Prevent Drying  -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/</xpath>
+			<value>
+				<disallowedThingDefs>
+					<li>DankPyon_DriedMeat</li>
+					<li>DankPyon_SmokedMeat</li>
+				</disallowedThingDefs>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
+			<value>
+				<li>DankPyon_DriedMeat</li>
+				<li>DankPyon_SmokedMeat</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Prevent Smoking -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter</xpath>
+			<value>
+				<disallowedThingDefs>
+					<li>DankPyon_DriedMeat</li>
+					<li>DankPyon_SmokedMeat</li>
+				</disallowedThingDefs>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
+			<value>
+				<li>DankPyon_DriedMeat</li>
+				<li>DankPyon_SmokedMeat</li>
+			</value>
+		</match>
+	</Operation>
+	
+</Patch>

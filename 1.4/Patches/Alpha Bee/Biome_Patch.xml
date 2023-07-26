@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Bees</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Medieval Overhaul Biomes -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildPlants</xpath>
+					<value>
+						<RB_Plant_Hive_Temperate>0.01</RB_Plant_Hive_Temperate>
+						<RB_Plant_Hive_Mild>0.01</RB_Plant_Hive_Mild>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildPlants</xpath>
+					<value>
+						<RB_Plant_Hive_Temperate>0.01</RB_Plant_Hive_Temperate>
+						<RB_Plant_Hive_Mild>0.01</RB_Plant_Hive_Mild>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Bees</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Rimedieval</li>
+				<li>Remove Industrial Stuff</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Fix Bee List -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RimBees.BeeListDef[
+				defName="RB_AlloyBeeList" or
+				defName="RB_NeutroBeeList" or
+				defName="RB_TechnologicalBeeList" or
+				defName="RB_ArgentBeeList" or
+				defName="RB_AurumBeeList" or
+				defName="RB_PreciousBeeList" or
+				defName="RB_RadioactiveBeeList" or
+				defName="RB_TipsyBeeList" or
+				defName="RB_LuxuriousBeeList" or
+				defName="RB_PsychicBeeList" or
+				defName="RB_StonerBeeList" or
+				defName="RB_AgriculturalBeeList" or
+				defName="RB_BittersweetBeeList" or
+				defName="RB_LacticBeeList" or
+				defName="RB_EgglayingBeeList" or
+				defName="RB_InsectoidBeeList" or
+				defName="RB_ElectronicBeeList" or
+				defName="RB_OilyBeeList" or
+				defName="RB_StonerBeeList" or
+				defName="RB_PlasticBeeList" or
+				defName="RB_PetBeeList" or
+				defName="RB_StrawBeeList" or
+				defName="RB_WeavingBeeList" or
+				defName="RB_TannerBeeList" or
+				defName="RB_WoolyBeeList" or
+				defName="RB_OilyBeeList" or
+				defName="RB_HighBeeList" or
+				defName="RB_LuciferBeeList" or
+				defName="RB_CulinaryBeeList" or
+				defName="RB_ChefBeeList" or
+				defName="RB_MedicinalBeeList" or
+				defName="RB_SurgeonBeeList" or
+				defName="RB_SyntheticBeeList" or
+				defName="RB_HyperBeeList" or
+				defName="RB_NitroBeeList" or
+				defName="RB_FabricatedBeeList"]						</xpath>
+					</li>
+					
+					<!-- Fixing Bee Combos -->
+					<!-- Tier 1 Bees -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RimBees.BeeCombinationDef[defName="RB_CombinationTier1_3"]/result/li[.="Alloy"]</xpath>
+					</li>
+				
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RimBees.BeeCombinationDef[defName="RB_CombinationTier1_3"]/result/li[.="Neutro"]</xpath>
+					</li>
+				
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RimBees.BeeCombinationDef[defName="RB_CombinationTier1_3"]/result/li[.="Technological"]</xpath>
+					</li>
+				
+					<!-- Remove Crazy Bee Combos -->
+				
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RimBees.BeeCombinationDef[
+				defName="RB_CombinationTier2_2" or
+				defName="RB_CombinationTier2_3" or
+				defName="RB_CombinationTier2_4" or
+				defName="RB_CombinationTier2_5" or
+				defName="RB_CombinationTier3_1" or
+				defName="RB_CombinationTier3_2" or
+				defName="RB_CombinationTier3_3" or
+				defName="RB_CombinationTier3_4" or
+				defName="RB_CombinationTier3_5" or
+				defName="RB_CombinationTier3_6" or
+				defName="RB_CombinationTier3_7" or
+				defName="RB_CombinationTier4_1" or
+				defName="RB_CombinationTier4_2" or
+				defName="RB_CombinationTier4_3" or
+				defName="RB_CombinationTier4_4" or
+				defName="RB_CombinationTier4_5" or
+				defName="RB_CombinationTier4_6"]						</xpath>
+					</li>
+				 
+					<!-- Remove Extra Research -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[
+				defName="RB_ResearchPapersNutTech" or
+				defName="RB_ResearchPapersNutAdapt" or
+				defName="RB_ResearchPapersAdaptTech" or
+				defName="RB_ResearchPapersStoPsy" or
+				defName="RB_ResearchPapersAgriSwamp" or
+				defName="RB_ResearchPapersPlasAlloy" or
+				defName="RB_ResearchPapersAgriWood" or
+				defName="RB_ResearchPapersAgriCul" or
+				defName="RB_ResearchPapersLuxHigh" or
+				defName="RB_ResearchPapersMedTech" or
+				defName="RB_ResearchPapersSynthTech" or
+				defName="RB_ResearchPapersSynthOily" or
+				defName="RB_ResearchPapersElectronicSynthetic"]						</xpath>
+					</li>
+			
+					<!-- Remove Crazy Bees -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[
+				defName="RB_Bee_Alloy_Drone" or
+				defName="RB_Bee_Alloy_Queen" or
+				defName="RB_Bee_Neutro_Drone" or
+				defName="RB_Bee_Neutro_Queen" or
+				defName="RB_Bee_Technological_Drone" or
+				defName="RB_Bee_Technological_Queen" or
+				defName="RB_Bee_Argent_Drone" or
+				defName="RB_Bee_Argent_Queen" or
+				defName="RB_Bee_Aurum_Drone" or
+				defName="RB_Bee_Aurum_Queen" or
+				defName="RB_Bee_Precious_Drone" or
+				defName="RB_Bee_Precious_Queen" or
+				defName="RB_Bee_Radioactive_Drone" or
+				defName="RB_Bee_Radioactive_Queen" or
+				defName="RB_Bee_Tipsy_Drone" or
+				defName="RB_Bee_Tipsy_Queen" or
+				defName="RB_Bee_Luxurious_Drone" or
+				defName="RB_Bee_Luxurious_Queen" or
+				defName="RB_Bee_Psychic_Drone" or
+				defName="RB_Bee_Psychic_Queen" or
+				defName="RB_Bee_Stoner_Drone" or
+				defName="RB_Bee_Stoner_Queen" or
+				defName="RB_Bee_Agricultural_Drone" or
+				defName="RB_Bee_Agricultural_Queen" or
+				defName="RB_Bee_Bittersweet_Drone" or
+				defName="RB_Bee_Bittersweet_Queen" or
+				defName="RB_Bee_Lactic_Drone" or
+				defName="RB_Bee_Lactic_Queen" or
+				defName="RB_Bee_Egglaying_Drone" or
+				defName="RB_Bee_Egglaying_Queen" or
+				defName="RB_Bee_Insectoid_Drone" or
+				defName="RB_Bee_Insectoid_Queen" or
+				defName="RB_Bee_Electronic_Drone" or
+				defName="RB_Bee_Electronic_Queen" or
+				defName="RB_Bee_Oily_Drone" or
+				defName="RB_Bee_Oily_Queen" or
+				defName="RB_Bee_Plastic_Drone" or
+				defName="RB_Bee_Plastic_Queen" or
+				defName="RB_Bee_Weaving_Drone" or
+				defName="RB_Bee_Weaving_Queen" or
+				defName="RB_Bee_Tanner_Drone" or
+				defName="RB_Bee_Tanner_Queen" or
+				defName="RB_Bee_Wooly_Drone" or
+				defName="RB_Bee_Wooly_Queen" or
+				defName="RB_Bee_Straw_Drone" or
+				defName="RB_Bee_Straw_Queen" or
+				defName="RB_Bee_Pet_Drone" or
+				defName="RB_Bee_Pet_Queen" or
+				defName="RB_Bee_High_Drone" or
+				defName="RB_Bee_High_Queen" or
+				defName="RB_Bee_Lucifer_Drone" or
+				defName="RB_Bee_Lucifer_Queen" or
+				defName="RB_Bee_Culinary_Drone" or
+				defName="RB_Bee_Culinary_Queen" or
+				defName="RB_Bee_Chef_Drone" or
+				defName="RB_Bee_Chef_Queen" or
+				defName="RB_Bee_Medicinal_Drone" or
+				defName="RB_Bee_Medicinal_Queen" or
+				defName="RB_Bee_Surgeon_Drone" or
+				defName="RB_Bee_Surgeon_Queen" or
+				defName="RB_Bee_Synthetic_Drone" or
+				defName="RB_Bee_Synthetic_Queen" or
+				defName="RB_Bee_Hyper_Drone" or
+				defName="RB_Bee_Hyper_Queen" or
+				defName="RB_Bee_Nitro_Drone" or
+				defName="RB_Bee_Nitro_Queen" or
+				defName="RB_Bee_Fabricated_Drone" or
+				defName="RB_Bee_Fabricated_Queen"]						</xpath>
+					</li>
+				
+					<!-- Remove Crazy Honeycombs -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[
+				defName="RB_Alloy_Honeycomb" or
+				defName="RB_Neutro_Honeycomb" or
+				defName="RB_Technological_Honeycomb" or
+				defName="RB_Argent_Honeycomb" or
+				defName="RB_Aurum_Honeycomb" or
+				defName="RB_Precious_Honeycomb" or
+				defName="RB_Radioactive_Honeycomb" or
+				defName="RB_Tipsy_Honeycomb" or
+				defName="RB_Luxurious_Honeycomb" or
+				defName="RB_Psychic_Honeycomb" or
+				defName="RB_Stoner_Honeycomb" or
+				defName="RB_Agricultural_Honeycomb" or
+				defName="RB_Bittersweet_Honeycomb" or
+				defName="RB_Lactic_Honeycomb" or
+				defName="RB_Egglaying_Honeycomb" or
+				defName="RB_Insectoid_Honeycomb" or
+				defName="RB_Electronic_Honeycomb" or
+				defName="RB_Oily_Honeycomb" or
+				defName="RB_Plastic_Honeycomb" or
+				defName="RB_Pet_Honeycomb" or
+				defName="RB_Straw_Honeycomb" or
+				defName="RB_Weaving_Honeycomb" or
+				defName="RB_Tanner_Honeycomb" or
+				defName="RB_Wooly_Honeycomb" or
+				defName="RB_High_Honeycomb" or
+				defName="RB_Lucifer_Honeycomb" or
+				defName="RB_Culinary_Honeycomb" or
+				defName="RB_Chef_Honeycomb" or
+				defName="RB_Medicinal_Honeycomb" or
+				defName="RB_Surgeon_Honeycomb" or
+				defName="RB_Synthetic_Honeycomb" or
+				defName="RB_Hyper_Honeycomb" or
+				defName="RB_Nitro_Honeycomb" or
+				defName="RB_Fabricated_Honeycomb"]						</xpath>
+					</li>
+				
+					<!-- Remove Crazy Centrifuge Recipes -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[
+				defName="RB_CentrifugeAlloyComb" or
+				defName="RB_CentrifugeNeutroComb" or
+				defName="RB_CentrifugeTechnologicalComb" or
+				defName="RB_CentrifugeArgentComb" or
+				defName="RB_CentrifugeAurumComb" or
+				defName="RB_CentrifugePreciousComb" or
+				defName="RB_CentrifugeRadioactiveComb" or
+				defName="RB_CentrifugeTipsyComb" or
+				defName="RB_CentrifugeLuxuriousComb" or
+				defName="RB_CentrifugePsychicComb" or
+				defName="RB_CentrifugeStonerComb" or
+				defName="RB_CentrifugeAgriculturalComb" or
+				defName="RB_CentrifugeBittersweetComb" or
+				defName="RB_CentrifugeLacticComb" or
+				defName="RB_CentrifugeEgglayingComb" or
+				defName="RB_CentrifugeInsectoidComb" or
+				defName="RB_CentrifugeElectronicComb" or
+				defName="RB_CentrifugeOilyComb" or
+				defName="RB_CentrifugePlasticComb" or
+				defName="RB_CentrifugePetComb" or
+				defName="RB_CentrifugeStrawComb" or
+				defName="RB_CentrifugeWeavingComb" or
+				defName="RB_CentrifugeTannerComb" or
+				defName="RB_CentrifugeWoolyComb" or
+				defName="RB_CentrifugeHighComb" or
+				defName="RB_CentrifugeLuciferComb" or
+				defName="RB_CentrifugeCulinaryComb" or
+				defName="RB_CentrifugeChefComb" or
+				defName="RB_CentrifugeMedicinalComb" or
+				defName="RB_CentrifugeSurgeonComb" or
+				defName="RB_CentrifugeSyntheticComb" or
+				defName="RB_CentrifugeHyperComb" or
+				defName="RB_CentrifugeNitroComb" or
+				defName="RB_CentrifugeFabricatedComb"]						</xpath>
+					</li>
+				
+					<!-- Remove Crazy Centrifuge Bulk Recipes -->
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[
+				defName="RB_CentrifugeAlloyCombBulk" or
+				defName="RB_CentrifugeNeutroCombBulk" or
+				defName="RB_CentrifugeTechnologicalCombBulk" or
+				defName="RB_CentrifugeArgentCombBulk" or
+				defName="RB_CentrifugeAurumCombBulk" or
+				defName="RB_CentrifugePreciousCombBulk" or
+				defName="RB_CentrifugeRadioactiveCombBulk" or
+				defName="RB_CentrifugeTipsyCombBulk" or
+				defName="RB_CentrifugeLuxuriousCombBulk" or
+				defName="RB_CentrifugePsychicCombBulk" or
+				defName="RB_CentrifugeStonerCombBulk" or
+				defName="RB_CentrifugeAgriculturalCombBulk" or
+				defName="RB_CentrifugeBittersweetCombBulk" or
+				defName="RB_CentrifugeLacticCombBulk" or
+				defName="RB_CentrifugeEgglayingCombBulk" or
+				defName="RB_CentrifugeInsectoidCombBulk" or
+				defName="RB_CentrifugeElectronicCombBulk" or
+				defName="RB_CentrifugeOilyCombBulk" or
+				defName="RB_CentrifugePlasticCombBulk" or
+				defName="RB_CentrifugePetCombBulk" or
+				defName="RB_CentrifugeStrawCombBulk" or
+				defName="RB_CentrifugeWeavingCombBulk" or
+				defName="RB_CentrifugeTannerCombBulk" or
+				defName="RB_CentrifugeWoolyCombBulk" or
+				defName="RB_CentrifugeHighCombBulk" or
+				defName="RB_CentrifugeLuciferCombBulk" or
+				defName="RB_CentrifugeCulinaryCombBulk" or
+				defName="RB_CentrifugeChefCombBulk" or
+				defName="RB_CentrifugeMedicinalCombBulk" or
+				defName="RB_CentrifugeSurgeonCombBulk" or
+				defName="RB_CentrifugeSyntheticCombBulk" or
+				defName="RB_CentrifugeHyperCombBulk" or
+				defName="RB_CentrifugeNitroCombBulk" or
+				defName="RB_CentrifugeFabricatedCombBulk"]						</xpath>
+					</li>
+				
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>

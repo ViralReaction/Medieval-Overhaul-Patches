@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Camping Tent</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Camping Tent -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+				defName="Canopy" or
+				defName="Teepee" or
+				defName="VikingTent" or
+				defName="ModernTent" or
+				defName="FoldingTent"or
+				defName="Tent"
+				]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs					</xpath>
+					<value>
+						<li>DankPyon_DarkWoodLog</li>
+						<li>DankPyon_ElvenWoodLog</li>
+						<li>DankPyon_DryadWoodLog</li>
+						<li>DankPyon_AncientWoodLog</li>
+					</value>
+				</li>
+			
+			</operations>
+		</match>
+			
+	</Operation>
+	
+</Patch>

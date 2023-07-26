@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Fishing Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Dried Fish -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_DriedFish"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="DankPyon_DriedFish"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+					
+						<ThingDef ParentName="OrganicProductBase">
+							<defName>DankPyon_DriedFish</defName>
+							<label>dried fish</label>
+							<description>Smoked fish to preserve and prolong shelf life.</description>
+							<graphicData>
+								<texPath>Meal/DriedMeat</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<thingCategories>
+								<li>Foods</li>
+								<li>MeatRaw</li>
+								<li>VCEF_RawFishCategory</li>
+							</thingCategories>
+							<statBases>
+								<MarketValue>2.5</MarketValue>
+								<Mass>0.01</Mass>
+								<Nutrition>0.05</Nutrition>
+							</statBases>
+							<ingestible>
+								<foodType>Meat</foodType>
+								<preferability>DesperateOnly</preferability>
+								<ingestEffect>EatMeat</ingestEffect>
+								<ingestSound>RawMeat_Eat</ingestSound>
+							</ingestible>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>60</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients"/>
+							</comps>
+						</ThingDef>
+					
+					</value>
+				</li>
+				
+				<!-- Dried Fish Processing -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedFishProcess"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedFishProcess"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<ProcessorFramework.ProcessDef>
+						
+							<defName>DankPyon_DriedFishProcess</defName>
+							<thingDef>DankPyon_DriedFish</thingDef>
+							<ingredientFilter>
+								<categories>
+									<li>VCEF_RawFishCategory</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>DankPyon_DriedFish</li>
+								</disallowedThingDefs>
+							</ingredientFilter>
+							<processDays>2.5</processDays><!-- in days, a day is 60,000 ticks -->
+							<capacityFactor>1.0</capacityFactor>
+							<efficiency>1</efficiency>
+							<usesTemperature>true</usesTemperature>
+							<temperatureSafe>-99.0~99.0</temperatureSafe>
+							<temperatureIdeal>21.0~99.0</temperatureIdeal>
+							<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
+							<speedBelowSafe>0.1</speedBelowSafe>
+							<speedAboveSafe>1.0</speedAboveSafe>
+							<sunFactor>0.5~1</sunFactor>
+							<rainFactor>1.0~0.0</rainFactor>
+							<snowFactor>1.0~0.0</snowFactor>
+							<windFactor>0.75~1.25</windFactor>
+							<unpoweredFactor>0.0</unpoweredFactor>
+							<unfueledFactor>0.0</unfueledFactor>
+							<powerUseFactor>1.0</powerUseFactor>
+							<fuelUseFactor>0.0</fuelUseFactor>
+							<filledGraphicSuffix>FilledMeat</filledGraphicSuffix>
+							<usesQuality>false</usesQuality>
+							<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+							<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
+							<customLabel/>
+							<destroyChance>0.0</destroyChance>
+  
+						</ProcessorFramework.ProcessDef>
+						
+					</value>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DankPyon_DriedFishProcess"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+						<value>
+							<li>DankPyon_DriedFishProcess</li>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!-- Prevent Dried Meat from using fish -->	
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/disallowedCategories/li[.="VCEF_RawFishCategory"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter</xpath>
+						<value>
+							<disallowedCategories>
+								<li>VCEF_RawFishCategory</li>
+							</disallowedCategories>
+						</value>
+					</nomatch>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+				
+</Patch>

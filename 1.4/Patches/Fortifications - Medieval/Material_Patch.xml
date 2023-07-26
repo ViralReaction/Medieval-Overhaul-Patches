@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Fortifications - Medieval - Material</li>
+		</mods>
+		
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="FT_TableMasonry"]/costList/Steel</xpath>
+			<match Class="PatchOperationSetName">
+				<xpath>/Defs/ThingDef[defName="FT_TableMasonry"]/costList/Steel</xpath>
+				<name>DankPyon_IronIngot</name>
+			</match>
+		</match>
+
+	</Operation>
+	
+</Patch>

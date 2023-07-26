@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Remove Smoked Meat -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEM_SmokedMeat"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VFEM_SmokedMeat"]</xpath>
+					</match>
+				</li>
+				
+				<!-- VFEM Item Processor -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ItemProcessor.CombinationDef[defName="VFEM_SmokerMeatToSmokedMeat"]/result</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ItemProcessor.CombinationDef[defName="VFEM_SmokerMeatToSmokedMeat"]/result</xpath>
+						<value>
+							<result>DankPyon_SmokedMeat</result>
+						</value>
+					</match>
+				</li>
+				
+				<!-- Processor -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ProcessorFramework.ProcessDef[defName="VFEM_SmokedMeat"]/thingDef</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="VFEM_SmokedMeat"]/thingDef</xpath>
+						<value>
+							<thingDef>DankPyon_SmokedMeat</thingDef>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ProcessorFramework.ProcessDef[defName="VFEM_SmokedMeat"]/ingredientFilter/disallowedThingDefs/li[.="VFEM_SmokedMeat"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="VFEM_SmokedMeat"]/ingredientFilter/disallowedThingDefs/li[.="VFEM_SmokedMeat"]</xpath>
+					</match>
+				</li>
+				
+				<!-- Hide Smoker Just in Case -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEM_MeatSmoker"]/researchPrerequisites</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VFEM_MeatSmoker"]/researchPrerequisites</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEM_MeatSmoker"]/designationCategory</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VFEM_MeatSmoker"]/designationCategory</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEM_MeatSmoker"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VFEM_MeatSmoker"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
+					</match>
+				</li>
+				
+				<!-- VFEM and VE Fishing -->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Fishing Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_SmokedFish"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VFEM_SmokedFish"]</xpath>
+								</match>
+							</li>
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ItemProcessor.CombinationDef[defName="VFEM_SmokerMeatToSmokedMeat"]/disallowedThingDefs/li[.="VFEM_SmokedFish"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ItemProcessor.CombinationDef[defName="VFEM_SmokerMeatToSmokedMeat"]/disallowedThingDefs/li[.="VFEM_SmokedFish"]</xpath>
+								</match>
+							</li>
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ItemProcessor.CombinationDef[defName="VFEM_SmokerFishToSmokedFish"]/result</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ItemProcessor.CombinationDef[defName="VFEM_SmokerFishToSmokedFish"]/result</xpath>
+									<value>
+										<result>DankPyon_SmokedFish</result>
+									</value>
+								</match>
+							</li>
+							
+						</operations>
+					</match>
+				</li>
+				
+				<!-- Remove Research -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_MeatSmoking"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ResearchProjectDef[defName="VFEM_MeatSmoking"]</xpath>
+					</match>
+				</li>
+				
+				
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

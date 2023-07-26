@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Books Expanded Expanded (Continued)</li>
+		</mods>
+			
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/Steel</xpath>
+					<match Class="PatchOperationSetName">
+						<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/Steel</xpath>
+						<name>DankPyon_IronIngot</name>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/ComponentIndustrial</xpath>
+					<match Class="PatchOperationSetName">
+						<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/ComponentIndustrial</xpath>
+						<name>DankPyon_ComponentBasic</name>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VBE_Printing"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+					
+			</operations>
+		</match>
+			
+	</Operation>
+	
+</Patch>

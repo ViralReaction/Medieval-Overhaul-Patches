@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+				
+	<!-- Change Preserved Food to be after Basic Cooking -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ResearchProjectDef[defName="Pemmican"]/prerequisites/li[.="DankPyon_BasicCooking"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="Pemmican"]</xpath>
+			<value>
+				<prerequisites>
+					<li>DankPyon_BasicCooking</li>
+				</prerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
+		<value>
+			<prerequisites>
+				<li>DankPyon_BasicCooking</li>
+				<li>DankPyon_RusticFurniture</li>
+			</prerequisites>
+		</value>
+	</Operation>
+			
+</Patch>

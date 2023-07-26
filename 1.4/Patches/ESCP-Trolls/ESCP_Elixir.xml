@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ESCP - Trolls</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+					
+					
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[@Name="ESCP_TrollElixirBase"]/recipeMaker/recipeUsers/li[.="DankPyon_AlchemyBench"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[@Name="ESCP_TrollElixirBase"]/recipeMaker/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_AlchemyBench</li>
+						</value>
+					</nomatch>
+				</li>
+
+			</operations>
+		</match>
+			
+	</Operation>
+	
+</Patch>
