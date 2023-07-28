@@ -1,44 +1,184 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
+	
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Vanilla Books Expanded Expanded (Continued)</li>
+			<li>Vanilla Books Expanded</li>
 		</mods>
-			
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<!-- Hide Electric Press -->
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/Steel</xpath>
-					<match Class="PatchOperationSetName">
-						<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/Steel</xpath>
-						<name>DankPyon_IronIngot</name>
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/designationCategory</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/designationCategory</xpath>
 					</match>
 				</li>
 				
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/ComponentIndustrial</xpath>
-					<match Class="PatchOperationSetName">
-						<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/ComponentIndustrial</xpath>
-						<name>DankPyon_ComponentBasic</name>
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/researchPrerequisites</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/researchPrerequisites</xpath>
 					</match>
 				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]</xpath>
-					<value>
-						<techLevel>Industrial</techLevel>
-					</value>
+							
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/techLevel</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/techLevel</xpath>
+						<value>
+							<techLevel>Industrial</techLevel>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]</xpath>
+						<value>
+							<techLevel>Industrial</techLevel>
+						</value>
+					</nomatch>
 				</li>
+							
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Books Expanded Expanded (Continued)</li>
+					</mods>
+			
+					<match Class="PatchOperationSequence">
+						<operations>
 				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="VBE_Printing"]/techLevel</xpath>
-					<value>
-						<techLevel>Medieval</techLevel>
-					</value>
+							<!-- MO materials -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/Steel</xpath>
+								<match Class="PatchOperationSetName">
+									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/Steel</xpath>
+									<name>DankPyon_IronIngot</name>
+								</match>
+							</li>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/ComponentIndustrial</xpath>
+								<match Class="PatchOperationSetName">
+									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressManual"]/costList/ComponentIndustrial</xpath>
+									<name>DankPyon_ComponentBasic</name>
+								</match>
+							</li>
+				
+							<!-- Hide Electric Press -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/designationCategory</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/designationCategory</xpath>
+
+								</match>
+							</li>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/researchPrerequisites</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/researchPrerequisites</xpath>
+
+								</match>
+							</li>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/techLevel</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/techLevel</xpath>
+									<value>
+										<techLevel>Industrial</techLevel>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]</xpath>
+									<value>
+										<techLevel>Industrial</techLevel>
+									</value>
+								</nomatch>
+							</li>
+				
+							<!-- Printing Tech Level Change -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ResearchProjectDef[defName="VBE_Printing"]/techLevel</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ResearchProjectDef[defName="VBE_Printing"]/techLevel</xpath>
+									<value>
+										<techLevel>Medieval</techLevel>
+									</value>
+								</match>
+							</li>
+							
+							<!-- Printing Tech Level Change -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VBE_Newspaper"]/costList</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VBE_Newspaper"]/costList</xpath>
+								</match>
+							</li>
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VBE_Newspaper"]/recipeMaker</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VBE_Newspaper"]/recipeMaker</xpath>
+								</match>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs</xpath>
+								<value>
+									<RecipeDef>
+										<defName>VBE_Newspaper</defName>
+										<label>print newspaper</label>
+										<description>Print a newspaper.</description>
+										<jobString>printing newspaper</jobString>
+										<workAmount>2100</workAmount>
+										<workSpeedStat>ResearchSpeed</workSpeedStat>
+										<requiredGiverWorkType>VBE_Writing</requiredGiverWorkType>
+										<effectWorking>Sculpt</effectWorking>
+										<soundWorking>Recipe_Sculpt</soundWorking>
+										<recipeUsers>
+											<li>VanillaBooksExpandedExpanded_PrintingPressElectric</li>
+											<li>VanillaBooksExpandedExpanded_PrintingPressManual</li>
+										</recipeUsers>
+										<ignoreIngredientCountTakeEntireStacks>true</ignoreIngredientCountTakeEntireStacks>
+										<ingredients>
+											<li>
+												<filter>
+													<thingDefs>
+														<li>DankPyon_DarkWoodLog</li>
+														<li>DankPyon_DryadWoodLog</li>
+														<li>DankPyon_ElvenWoodLog</li>
+														<li>DankPyon_AncientWoodLog</li>
+														<li>DankPyon_AncientWood</li>
+														<li>DankPyon_RawWood</li>
+														<li>DankPyon_RawDarkWood</li>
+													</thingDefs>
+												</filter>
+												<count>10</count>
+											</li>
+										</ingredients>
+										<fixedIngredientFilter>
+											<thingDefs>
+												<li>DankPyon_DarkWoodLog</li>
+												<li>DankPyon_DryadWoodLog</li>
+												<li>DankPyon_ElvenWoodLog</li>
+												<li>DankPyon_AncientWoodLog</li>
+												<li>DankPyon_AncientWood</li>
+												<li>DankPyon_RawWood</li>
+												<li>DankPyon_RawDarkWood</li>
+											</thingDefs>
+										</fixedIngredientFilter>
+										<products>
+											<VBE_Newspaper>1</VBE_Newspaper>
+										</products>
+									</RecipeDef>
+								</value>
+							</li>
+						
+						</operations>
+					</match>
 				</li>
-					
+		
 			</operations>
 		</match>
 			
