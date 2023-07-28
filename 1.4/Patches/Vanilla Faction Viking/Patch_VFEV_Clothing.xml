@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Vikings</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- VFEV Leather Armor -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEV_Apparel_LeatherHelmet"]/recipeMaker/researchPrerequisite</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFEV_Apparel_LeatherHelmet"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_ProtectiveClothing</researchPrerequisite>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEV_Apparel_LeatherHelmet"]</xpath>
+						<value>
+							<recipeMaker>
+								<researchPrerequisite>DankPyon_ProtectiveClothing</researchPrerequisite>
+							</recipeMaker>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEV_LeatherArmor"]/recipeMaker/researchPrerequisite</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFEV_LeatherArmor"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_ProtectiveClothing</researchPrerequisite>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEV_LeatherArmor"]</xpath>
+						<value>
+							<recipeMaker>
+								<researchPrerequisite>DankPyon_ProtectiveClothing</researchPrerequisite>
+							</recipeMaker>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!-- VFEV Ravager Helmet -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEV_Apparel_RavagerHelmet"]/recipeMaker/researchPrerequisite</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFEV_Apparel_RavagerHelmet"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_ChainArmor</researchPrerequisite>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEV_Apparel_RavagerHelmet"]</xpath>
+						<value>
+							<recipeMaker>
+								<researchPrerequisite>DankPyon_ChainArmor</researchPrerequisite>
+							</recipeMaker>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEV_Apparel_RavagerArmor"]/recipeMaker/researchPrerequisite</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFEV_Apparel_RavagerArmor"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_ChainArmor</researchPrerequisite>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEV_Apparel_RavagerArmor"]</xpath>
+						<value>
+							<recipeMaker>
+								<researchPrerequisite>DankPyon_ChainArmor</researchPrerequisite>
+							</recipeMaker>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!-- VFEV Jarl Gear -->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Ideology</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEV_JarlCrown"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEV_JarlCrown"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>RoyalApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEV_JarlCrown"]</xpath>
+									<value>
+										<recipeMaker>
+											<researchPrerequisite>RoyalApparel</researchPrerequisite>
+										</recipeMaker>
+									</value>
+								</nomatch>
+							</li>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEV_Apparel_JarlCape"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEV_Apparel_JarlCape"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>RoyalApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEV_Apparel_JarlCape"]</xpath>
+									<value>
+										<recipeMaker>
+											<researchPrerequisite>RoyalApparel</researchPrerequisite>
+										</recipeMaker>
+									</value>
+								</nomatch>
+							</li>
+				
+						</operations>
+					</match>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

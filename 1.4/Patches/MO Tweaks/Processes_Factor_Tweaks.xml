@@ -5,7 +5,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess" or defName="DankPyon_StrawProcess"]/sunFactor</xpath>
 		<value>
-			<sunFactor>0.5~1</sunFactor>
+			<sunFactor>0.5~1.0</sunFactor>
 		</value>
 	</Operation>
 	
@@ -20,8 +20,8 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MustIntoWine"]/efficiency</xpath>
 		<value>
-			<efficiency>1</efficiency>
+			<efficiency>1.0</efficiency>
 		</value>
 	</Operation>
 	
-</Patch>
+</Patch>  

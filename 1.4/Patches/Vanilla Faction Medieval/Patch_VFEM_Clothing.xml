@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Change Plague Mask Research -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_PlagueMask"]/prerequisites</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ResearchProjectDef[defName="VFEM_PlagueMask"]/prerequisites</xpath>
+						<value>
+							<prerequisites>
+								<li>DankPyon_Tailoring</li>
+							</prerequisites>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ResearchProjectDef[defName="VFEM_Apparel_PlagueMask"]</xpath>
+						<value>
+							<prerequisites>
+								<li>DankPyon_Tailoring</li>
+							</prerequisites>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!-- Tabard -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEM_Apparel_Tabard"]/recipeMaker/researchPrerequisite</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFEM_Apparel_Tabard"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEM_Apparel_Tabard"]</xpath>
+						<value>
+							<recipeMaker>
+								<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
+							</recipeMaker>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Ideology</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+				
+							<!-- Jester Clothing -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/recipeMaker</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</nomatch>
+							</li>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/recipeMaker</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</nomatch>
+							</li>
+				
+							<!-- Dame Clothing -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameHat"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameHat"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameHat"]/recipeMaker</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</nomatch>
+							</li>
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameDress"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameDress"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameDress"]/recipeMaker</xpath>
+									<value>
+										<researchPrerequisite>NobleApparel</researchPrerequisite>
+									</value>
+								</nomatch>
+							</li>
+							
+							<!-- King's Crown -->
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>RoyalApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/recipeMaker</xpath>
+									<value>
+										<researchPrerequisite>RoyalApparel</researchPrerequisite>
+									</value>
+								</nomatch>
+							</li>
+				
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsRobes"]/recipeMaker/researchPrerequisite</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsRobes"]/recipeMaker/researchPrerequisite</xpath>
+									<value>
+										<researchPrerequisite>RoyalApparel</researchPrerequisite>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsRobes"]/recipeMaker</xpath>
+									<value>
+										<researchPrerequisite>RoyalApparel</researchPrerequisite>
+									</value>
+								</nomatch>
+							</li>
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ResearchProjectDef[defName="VFEM_NobleMedievalApparel"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ResearchProjectDef[defName="VFEM_NobleMedievalApparel"]</xpath>
+								</match>
+							</li>
+							
+						</operations>
+					</match>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

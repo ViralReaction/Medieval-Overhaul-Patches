@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Vikings</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Remove VFEV Mead Process -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFEV_Mead"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFEV_Mead"]</xpath>
+					</match>
+				</li>
+				
+				<!-- Change Moodlet to VFEV Meads -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_Mead"]/ingestible/outcomeDoers</xpath>
+					<match Class="PatchoperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_Mead"]/ingestible/outcomeDoers</xpath>
+						<value>
+							<outcomeDoers>
+								<li Class="IngestionOutcomeDoer_GiveHediff">
+									<hediffDef>VFEF_MeadAlcoholHigh</hediffDef>
+									<severity>0.15</severity>
+									<toleranceChemical>Alcohol</toleranceChemical>
+								</li>
+								<li Class="IngestionOutcomeDoer_GiveHediff">
+									<hediffDef>AlcoholTolerance</hediffDef>
+									<severity>0.016</severity>
+									<divideByBodySize>true</divideByBodySize>
+								</li>
+							</outcomeDoers>
+						</value>
+					</match>
+				</li>
+				
+				<!-- Add VFEV Honey to Process if no Alpha Bee -->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Bees</li>
+					</mods>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_HoneyIntoMead"]/ingredientFilter/thingDefs</xpath>
+						<value>
+							<li>VFEV_Honey</li>
+						</value>
+					</nomatch>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

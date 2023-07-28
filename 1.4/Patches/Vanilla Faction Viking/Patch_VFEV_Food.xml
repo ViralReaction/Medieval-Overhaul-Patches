@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Vikings</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add Sweet Roll to Cooking Table -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/recipeUsers/li[.="DankPyon_StoneOven"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_StoneOven</li>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/label</xpath>
+					<value>
+						<label>make sweetrolls x10</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/researchPrerequisites</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/researchPrerequisites</xpath>
+						<value>
+							<researchPrerequisites>
+								<li>DankPyon_BasicCooking</li>
+								<li>DankPyon_Oven</li>
+							</researchPrerequisites>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]</xpath>
+						<value>
+							<researchPrerequisites>
+								<li>DankPyon_BasicCooking</li>
+								<li>DankPyon_Oven</li>
+							</researchPrerequisites>
+						</value>
+					</nomatch>
+				</li>
+				
+				<!-- Change Moodlet to VFEV Meads -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath>
+					<value>
+						<thingDefs>
+							<li>VFEV_Honey</li>
+							<li>DankPyon_Honey</li>
+						</thingDefs>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>DankPyon_Honey</li>
+					</value>
+				</li>
+				
+				
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>
