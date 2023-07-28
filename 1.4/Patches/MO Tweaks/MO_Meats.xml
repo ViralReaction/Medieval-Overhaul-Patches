@@ -8,6 +8,13 @@
 		<value>OrganicProductBase</value>
 	</Operation>
 	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/thingCategories</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/thingCategories</xpath>
+		</match>
+	</Operation>
+	
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
 		<value>

@@ -9,12 +9,16 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				
-				<li Class="PatchOperationSetName">
+				<li Class="PatchOperationConditional">
 					<xpath>/Defs/ThingDef[
 					defName="BurnPit" or
-					defName="BiosolidsComposter"]/costList/Steel</xpath>
-					<name>DankPyon_IronIngot</name>
+					defName="BiosolidsComposter"]/costList/Steel					</xpath>
+					<match Class="PatchOperationSetName">
+						<xpath>/Defs/ThingDef[
+					defName="BurnPit" or
+					defName="BiosolidsComposter"]/costList/Steel						</xpath>
+						<name>DankPyon_IronIngot</name>
+					</match>
 				</li>
 				
 			</operations>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 	
+	<!-- Hide Vanilla Benches -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "FueledStove" or defName = "FueledSmithy"]/designationCategory</xpath>
+		<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
 		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName = "FueledStove" or defName = "FueledSmithy"]/designationCategory</xpath>
+			<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
 		</match>
 	</Operation>
 			
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "FueledStove" or defName = "FueledSmithy"]/researchPrerequisites</xpath>
+		<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
 		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName = "FueledStove" or defName = "FueledSmithy"]/researchPrerequisites</xpath>
+			<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
 		</match>
 	</Operation>
 			

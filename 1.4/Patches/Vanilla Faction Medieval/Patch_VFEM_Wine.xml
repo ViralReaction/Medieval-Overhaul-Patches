@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+					
+				<!-- Remove VFEM Must-->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="VFEM_Make_Must"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="VFEM_Make_Must"]</xpath>
+					</match>
+				</li>
+				
+				
+				<!-- Remove VFEM Grape -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VFEM_Plant_Grape"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VFEM_Plant_Grape"]</xpath>
+					</match>
+				</li>
+				
+				<!-- Remove VFEM Wine Process -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFE_Wine"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFE_Wine"]</xpath>
+					</match>
+				</li>
+				
+				<!-- Give MO Wine VE quality -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Wine"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CompQuality</compClass>
+						</li>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

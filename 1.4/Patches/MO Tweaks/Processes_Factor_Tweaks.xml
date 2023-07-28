@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Process Sun Factor -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess" or defName="DankPyon_StrawProcess"]/sunFactor</xpath>
+		<value>
+			<sunFactor>0.5~1</sunFactor>
+		</value>
+	</Operation>
+	
+	<!-- Process Wind Factor -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess" or defName="DankPyon_StrawProcess"]/windFactor</xpath>
+		<value>
+			<windFactor>0.75~1.25</windFactor>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MustIntoWine"]/efficiency</xpath>
+		<value>
+			<efficiency>1</efficiency>
+		</value>
+	</Operation>
+	
+</Patch>
