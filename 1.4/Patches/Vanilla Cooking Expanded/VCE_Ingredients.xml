@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<!-- Flour Integration -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VCE_Flour"]/li</xpath>
+					<value>
+						<li>VCE_Flour</li>
+						<li>DankPyon_Flour</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VCE_Flour"]/li</xpath>
+					<value>
+					<li>VCE_Flour</li>
+						<li>DankPyon_Flour</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/harvestedThingDef</xpath>
+					<value>
+						<harvestedThingDef>DankPyon_RawWheat</harvestedThingDef>
+					</value>
+				</li>
+				
+				<!-- Sugar Integration -->				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Sugarcane"]/plant/harvestedThingDef</xpath>
+					<value>
+						<harvestedThingDef>DankPyon_Sugarcane</harvestedThingDef>
+					</value>
+				</li>
+				
+				<!-- Salt Integration -->
+				
+				<!-- Spices Integration -->				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Allspice"]/plant/harvestedThingDef</xpath>
+					<value>
+						<harvestedThingDef>DankPyon_RawHerb</harvestedThingDef>
+					</value>
+				</li>
+				
+				<!-- Cheese Integration -->
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

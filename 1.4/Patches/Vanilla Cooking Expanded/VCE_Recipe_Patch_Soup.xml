@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Soup Research Change -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+							
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>DankPyon_BasicCooking</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<!-- Soup Pot -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Production/StewPot</texPath>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/tickerType</xpath>
+					<value>
+						<tickerType>Normal</tickerType>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>100</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/costList</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/uiIconScale</xpath>
+					<value>
+						<uiIconScale>0.5</uiIconScale>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/label</xpath>
+					<value>
+						<label>soup pot</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="CompProperties_Power"]</xpath>
+					<value>
+						<li Class="CompProperties_Refuelable">
+							<fuelConsumptionRate>3.33</fuelConsumptionRate>
+							<fuelCapacity>20.0</fuelCapacity>
+							<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+							<fuelFilter>
+								<thingDefs>
+									<li>DankPyon_RawWood</li>
+									<li>DankPyon_RawDarkWood</li>
+									<li>WoodLog</li>
+									<li>DankPyon_DarkWoodLog</li>
+									<li>DankPyon_ElvenWoodLog</li>
+									<li>DankPyon_DryadWoodLog</li>
+									<li>DankPyon_AncientWoodLog</li>
+								</thingDefs>
+							</fuelFilter>
+							<initialFuelPercent>1</initialFuelPercent>
+							<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+							<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+				</li>
+				
+				<!-- Soup Recipes -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[
+					defName="VCE_CookSoupSimple" or
+					defName="VCE_CookSoupFine" or
+					defName="VCE_CookSoupLavish" or
+					defName="VCE_CookSoupGourmet"]/recipeUsers					</xpath>
+					<value>
+						<li>DankPyon_RusticCookingTable</li>
+					</value>
+				</li>
+				
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

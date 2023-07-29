@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Big and Small Genes</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Apothecary Outfit -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="BS_JotunHammer"]/recipeMaker/researchPrerequisite</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="BS_JotunHammer"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_NobleMaces</researchPrerequisite>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="BS_JotunHammer"]</xpath>
+						<value>
+							<recipeMaker>
+								<researchPrerequisite>DankPyon_NobleMaces</researchPrerequisite>
+							</recipeMaker>
+						</value>
+					</nomatch>
+				</li>
+	
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

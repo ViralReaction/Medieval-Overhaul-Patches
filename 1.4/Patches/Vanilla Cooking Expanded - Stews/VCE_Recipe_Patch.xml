@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded - Stews</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Uncooked Stew Recipes -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[
+					defName="VCE_CookStewSimple" or
+					defName="VCE_CookStewFine" or
+					defName="VCE_CookStewLavish"]/recipeUsers					</xpath>
+					<value>
+						<li>DankPyon_StewPot</li>
+					</value>
+				</li>
+				
+				<!-- Recipe Work Amounts -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[
+					defName="VCE_CookStewSimple" or
+					defName="VCE_CookStewFine" or
+					defName="VCE_CookStewLavish"]					</xpath>
+					<value>
+						<workAmount>600</workAmount>
+					</value>
+				</li>
+				
+				<!-- Simple Stew -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VCE_CookStewSimple"]/products</xpath>
+					<value>
+						<products>
+							<VCE_CookedStewSimple>2</VCE_CookedStewSimple>
+						</products>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VCE_CookStewSimple"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<categories>
+										<li>FoodRaw</li>
+									</categories>
+								</filter>
+								<count>0.8</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				
+				<!-- Fine Stew -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VCE_CookStewFine"]/products</xpath>
+					<value>
+						<products>
+							<VCE_CookedStewFine>2</VCE_CookedStewFine>
+						</products>
+					</value>
+				</li>
+				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VCE_CookStewFine"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+										<li>AnimalProductRaw</li>
+									</categories>
+								</filter>
+								<count>0.4</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>PlantFoodRaw</li>
+									</categories>
+								</filter>
+								<count>0.4</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				
+				<!-- Lavish Stew -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VCE_CookStewLavish"]/products</xpath>
+					<value>
+						<products>
+							<VCE_CookedStewLavish>2</VCE_CookedStewLavish>
+						</products>
+					</value>
+				</li>
+								
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="VCE_CookStewLavish"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+										<li>AnimalProductRaw</li>
+									</categories>
+								</filter>
+								<count>0.8</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>PlantFoodRaw</li>
+									</categories>
+								</filter>
+								<count>0.8</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>
