@@ -80,7 +80,7 @@
 									<li>VCE_UncookedStewSimple</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>.5</processDays>
 						</ProcessorFramework.ProcessDef>
@@ -93,7 +93,7 @@
 									<li>VCE_UncookedStewFine</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>.7</processDays>
 						</ProcessorFramework.ProcessDef>
@@ -106,7 +106,7 @@
 									<li>VCE_UncookedStewLavish</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>1</processDays>
 						</ProcessorFramework.ProcessDef>

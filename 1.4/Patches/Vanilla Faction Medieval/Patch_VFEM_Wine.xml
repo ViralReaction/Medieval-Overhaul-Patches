@@ -36,7 +36,7 @@
 				
 				<!-- Give MO Wine VE quality -->
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DankPyon_Wine"]/comps</xpath>
+					<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Wine_Mulberry"]/comps</xpath>
 					<value>
 						<li>
 							<compClass>CompQuality</compClass>

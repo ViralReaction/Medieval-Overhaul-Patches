@@ -72,7 +72,7 @@
 									<li>VCE_UncookedSoupSimple</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>.5</processDays>
 						</ProcessorFramework.ProcessDef>
@@ -85,7 +85,7 @@
 									<li>VCE_UncookedSoupFine</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>.7</processDays>
 						</ProcessorFramework.ProcessDef>
@@ -98,7 +98,7 @@
 									<li>VCE_UncookedSoupLavish</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>1</processDays>
 						</ProcessorFramework.ProcessDef>
@@ -111,7 +111,7 @@
 									<li>VCE_UncookedSoupGourmet</li>
 								</thingDefs>
 							</ingredientFilter>
-							<capacityFactor>1</capacityFactor>
+							<capacityFactor>2</capacityFactor>
 							<efficiency>10.0</efficiency>
 							<processDays>1</processDays>
 						</ProcessorFramework.ProcessDef>

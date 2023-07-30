@@ -3,347 +3,360 @@
 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Medieval Overhaul</li>
+			<li>Sailpunk Airships</li>
 		</mods>
-		<match Class="PatchOperationFindMod">
-			<mods>
-				<li>Sailpunk Airships</li>
-			</mods>
 			
-			<match Class="PatchOperationSequence">
-				<operations>
+		<match Class="PatchOperationSequence">
+			<operations>
 				
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SADinghy"]/costList</xpath>
-						<value>
-							<costList><!-- Costs to build, the names are the defNames of items -->
-								<WoodLog>300</WoodLog>
-								<Cloth>500</Cloth>
-								<DankPyon_IronIngot>100</DankPyon_IronIngot>
-								<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
-							</costList>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Research_Thefirstjump"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>Smithing</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+				<xpath>Defs/ResearchProjectDef[
+				defName="Research_RidingintheWinds" or
+				defName="Research_Merchantoftheskies" or
+				defName="Research_WindsofWar" or
+				defName="Research_Conqueringthewinds" or
+				defName="Research_Windjewel"]/prerequisites/li[.="ComplexClothing"]</xpath>
+				</li>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SADinghy"]/killedLeavings</xpath>
-						<value>
-							<killedLeavings>
-								<WoodLog>90</WoodLog>
-								<Cloth>50</Cloth>
-								<DankPyon_IronIngot>20</DankPyon_IronIngot>
-							</killedLeavings>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SADinghy"]/costList</xpath>
+					<value>
+						<costList><!-- Costs to build, the names are the defNames of items -->
+							<WoodLog>300</WoodLog>
+							<Cloth>500</Cloth>
+							<DankPyon_IronIngot>100</DankPyon_IronIngot>
+							<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
+						</costList>
+					</value>
+				</li>
 					
-					<!-- Pioneer -->
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SAPioneer"]/costList</xpath>
-						<value>
-							<costList><!-- Costs to build, the names are the defNames of items -->
-								<WoodLog>700</WoodLog>
-								<Cloth>1500</Cloth>
-								<DankPyon_IronIngot>300</DankPyon_IronIngot>
-								<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
-							</costList>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SADinghy"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<WoodLog>90</WoodLog>
+							<Cloth>50</Cloth>
+							<DankPyon_IronIngot>20</DankPyon_IronIngot>
+						</killedLeavings>
+					</value>
+				</li>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SAPioneer"]/killedLeavings</xpath>
-						<value>
-							<killedLeavings>
-								<WoodLog>210</WoodLog>
-								<Cloth>150</Cloth>
-								<DankPyon_IronIngot>30</DankPyon_IronIngot>
-							</killedLeavings>
-						</value>
-					</li>
+				<!-- Pioneer -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SAPioneer"]/costList</xpath>
+					<value>
+						<costList><!-- Costs to build, the names are the defNames of items -->
+							<WoodLog>700</WoodLog>
+							<Cloth>1500</Cloth>
+							<DankPyon_IronIngot>300</DankPyon_IronIngot>
+							<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
+						</costList>
+					</value>
+				</li>
 					
-					<!-- Fat Muffalo -->
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SAFatMuffalo"]/costList</xpath>
-						<value>
-							<costList><!-- Costs to build, the names are the defNames of items -->
-								<WoodLog>1700</WoodLog>
-								<Cloth>2500</Cloth>
-								<DankPyon_IronIngot>600</DankPyon_IronIngot>
-								<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
-							</costList>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SAPioneer"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<WoodLog>210</WoodLog>
+							<Cloth>150</Cloth>
+							<DankPyon_IronIngot>30</DankPyon_IronIngot>
+						</killedLeavings>
+					</value>
+				</li>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SAFatMuffalo"]/killedLeavings</xpath>
-						<value>
-							<killedLeavings>
-								<WoodLog>510</WoodLog>
-								<Cloth>250</Cloth>
-								<DankPyon_IronIngot>60</DankPyon_IronIngot>
-							</killedLeavings>
-						</value>
-					</li>
+				<!-- Fat Muffalo -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SAFatMuffalo"]/costList</xpath>
+					<value>
+						<costList><!-- Costs to build, the names are the defNames of items -->
+							<WoodLog>1700</WoodLog>
+							<Cloth>2500</Cloth>
+							<DankPyon_IronIngot>600</DankPyon_IronIngot>
+							<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
+						</costList>
+					</value>
+				</li>
 					
-					<!-- Spiteful Moth -->
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/costList</xpath>
-						<value>
-							<costList><!-- Costs to build, the names are the defNames of items -->
-								<WoodLog>1800</WoodLog>
-								<Cloth>1500</Cloth>
-								<DankPyon_IronIngot>1000</DankPyon_IronIngot>
-								<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
-								<DankPyon_Silk>450</DankPyon_Silk>
-							</costList>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SAFatMuffalo"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<WoodLog>510</WoodLog>
+							<Cloth>250</Cloth>
+							<DankPyon_IronIngot>60</DankPyon_IronIngot>
+						</killedLeavings>
+					</value>
+				</li>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/killedLeavings</xpath>
-						<value>
-							<killedLeavings>
-								<WoodLog>540</WoodLog>
-								<Cloth>150</Cloth>
-								<DankPyon_IronIngot>100</DankPyon_IronIngot>
-								<DankPyon_Silk>65</DankPyon_Silk>
-							</killedLeavings>
-						</value>
-					</li>
+				<!-- Spiteful Moth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/costList</xpath>
+					<value>
+						<costList><!-- Costs to build, the names are the defNames of items -->
+							<WoodLog>1800</WoodLog>
+							<Cloth>1500</Cloth>
+							<DankPyon_IronIngot>1000</DankPyon_IronIngot>
+							<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
+							<DankPyon_Silk>450</DankPyon_Silk>
+						</costList>
+					</value>
+				</li>
 					
-					<!-- Advanced Pioneer -->
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SAAdvancedpioneer"]/costList</xpath>
-						<value>
-							<costList><!-- Costs to build, the names are the defNames of items -->
-								<WoodLog>700</WoodLog>
-								<Cloth>1600</Cloth>
-								<Steel>250</Steel>
-								<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<WoodLog>540</WoodLog>
+							<Cloth>150</Cloth>
+							<DankPyon_IronIngot>100</DankPyon_IronIngot>
+							<DankPyon_Silk>65</DankPyon_Silk>
+						</killedLeavings>
+					</value>
+				</li>
+					
+				<!-- Advanced Pioneer -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SAAdvancedpioneer"]/costList</xpath>
+					<value>
+						<costList><!-- Costs to build, the names are the defNames of items -->
+							<WoodLog>700</WoodLog>
+							<Cloth>1600</Cloth>
+							<Steel>250</Steel>
+							<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
 								
-							</costList>
-						</value>
-					</li>
+						</costList>
+					</value>
+				</li>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SAAdvancedpioneer"]/killedLeavings</xpath>
-						<value>
-							<killedLeavings>
-								<WoodLog>210</WoodLog>
-								<Cloth>160</Cloth>
-								<Steel>50</Steel>
-							</killedLeavings>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SAAdvancedpioneer"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<WoodLog>210</WoodLog>
+							<Cloth>160</Cloth>
+							<Steel>50</Steel>
+						</killedLeavings>
+					</value>
+				</li>
 					
-					<!-- Sand Manta -->
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SASandmanta"]/costList</xpath>
-						<value>
-							<costList><!-- Costs to build, the names are the defNames of items -->
-								<WoodLog>1200</WoodLog>
-								<Cloth>1300</Cloth>
-								<Steel>350</Steel>
-								<Gold>50</Gold>
-								<DankPyon_ComponentBasic>15</DankPyon_ComponentBasic>
-								<DankPyon_Silk>350</DankPyon_Silk>
-							</costList>
-						</value>
-					</li>
+				<!-- Sand Manta -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SASandmanta"]/costList</xpath>
+					<value>
+						<costList><!-- Costs to build, the names are the defNames of items -->
+							<WoodLog>1200</WoodLog>
+							<Cloth>1300</Cloth>
+							<Steel>350</Steel>
+							<Gold>50</Gold>
+							<DankPyon_ComponentBasic>15</DankPyon_ComponentBasic>
+							<DankPyon_Silk>350</DankPyon_Silk>
+						</costList>
+					</value>
+				</li>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SASandmanta"]/killedLeavings</xpath>
-						<value>
-							<killedLeavings>
-								<WoodLog>360</WoodLog>
-								<Cloth>130</Cloth>
-								<Steel>70</Steel>
-								<DankPyon_Silk>50</DankPyon_Silk>
-							</killedLeavings>
-						</value>
-					</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SASandmanta"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<WoodLog>360</WoodLog>
+							<Cloth>130</Cloth>
+							<Steel>70</Steel>
+							<DankPyon_Silk>50</DankPyon_Silk>
+						</killedLeavings>
+					</value>
+				</li>
 					
-					<!-- Remove Breakdown -->
-					<li Class="PatchOperationConditional">
-						<xpath>Defs/ThingDef[
-						defName="SADinghy" or
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"
-						]/comps/li[@Class="CompProperties_Breakdownable"]						</xpath>
-						<match Class="PatchOperationRemove">
-							<xpath>Defs/ThingDef[defName="SASandmanta"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
-						</match>
-					</li>
-					
-					<li Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[
-						defName="SADinghy" or
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"
-						]/comps/li[@Class="CompProperties_Flickable"]						</xpath>
-					</li>
-					
-					<!-- Fuel -->
-					<li Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[.="WoodLog"]</xpath>
-					</li>
-					
-					<li Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="SADinghy"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-						<value>
-							<li>DankPyon_DarkWoodLog</li>
-							<li>DankPyon_ElvenWoodLog</li>
-							<li>DankPyon_DryadWoodLog</li>
-							<li>DankPyon_AncientWoodLog</li>
-						</value>
-					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"
-						]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-						<value>
-							<li>DankPyon_DarkWoodLog</li>
-							<li>DankPyon_ElvenWoodLog</li>
-							<li>DankPyon_DryadWoodLog</li>
-							<li>DankPyon_AncientWoodLog</li>
-							<li>DankPyon_Coal</li>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[
-						defName="SADinghy" or
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"
-						]/comps/li[@Class="CompProperties_Refuelable"]/initialFuelPercent</xpath>
-						<value>
-							<initialFuelPercent>0.01</initialFuelPercent>
-						</value>
-					</li>
-					
-					<!-- Ship Balance HP -->
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/statBases/MaxHitPoints</xpath>
-						<value>
-							<MaxHitPoints>1000</MaxHitPoints>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="SASandmanta"]/statBases/MaxHitPoints</xpath>
-						<value>
-							<MaxHitPoints>1200</MaxHitPoints>
-						</value>
-					</li>
-						
-					<!-- Resize -->
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ThingDef[
-								defName="SADinghy" or
-								defName="SADinghy_Incoming" or
-								defName="SADinghy_BomberRun" or
-								defName="SADinghy_Leaving" or
-								defName="SADinghy_Active"]/graphicData/drawSize</xpath>
-						<value>
-							<drawSize>(6,6)</drawSize>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ThingDef[
-								defName="SAPioneer" or
-								defName="SAPioneer_Incoming" or
-								defName="SAPioneer_BomberRun" or
-								defName="SAPioneer_Leaving" or
-								defName="SAPioneer_Active"]/graphicData/drawSize</xpath>
-						<value>
-							<drawSize>(8.66,10)</drawSize>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ThingDef[
-								defName="SAAdvancedpioneer" or
-								defName="SAAdvancedpioneer_Incoming" or
-								defName="SAAdvancedpioneer_BomberRun" or
-								defName="SAAdvancedpioneer_Leaving" or
-								defName="SAAdvancedpioneer_Active"]/graphicData/drawSize</xpath>
-						<value>
-							<drawSize>(10.5,12)</drawSize>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ThingDef[
-								defName="SAFatMuffalo" or
-								defName="SAFatMuffalo_Incoming" or
-								defName="SAFatMuffalo_BomberRun" or
-								defName="SAFatMuffalo_Leaving" or
-								defName="SAFatMuffalo_Active"]/graphicData/drawSize</xpath>
-						<value>
-							<drawSize>(16,16)</drawSize>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ThingDef[
-								defName="SASpitefulMoth" or
-								defName="SASpitefulMoth_Incoming" or
-								defName="SASpitefulMoth_BomberRun" or
-								defName="SASpitefulMoth_Leaving" or
-								defName="SASpitefulMoth_Active"]/graphicData/drawSize</xpath>
-						<value>
-							<drawSize>(16,16)</drawSize>
-						</value>
-					</li>
-					
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ThingDef[
-								defName="SASandmanta" or
-								defName="SASandmanta_Incoming" or
-								defName="SASandmanta_BomberRun" or
-								defName="SASandmanta_Leaving" or
-								defName="SASandmanta_Active"]/graphicData/drawSize</xpath>
-						<value>
-							<drawSize>(14,14)</drawSize>
-						</value>
-					</li>
-					
-					<!-- Mass Balance -->
-					<li Class="PatchOperationReplace">
+				<!-- Remove Breakdown -->
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[
 						defName="SADinghy" or
 						defName="SAPioneer" or
 						defName="SAFatMuffalo" or
 						defName="SASpitefulMoth" or
 						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"]/statBases/Mass</xpath>
-						<value>
-						<Mass>300</Mass>
-						</value>
-					</li>
+						defName="SASandmanta"
+						]/comps/li[@Class="CompProperties_Breakdownable"]					</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="SASandmanta"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+					</match>
+				</li>
 					
-				</operations>
-			</match>
-			
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+						defName="SADinghy" or
+						defName="SAPioneer" or
+						defName="SAFatMuffalo" or
+						defName="SASpitefulMoth" or
+						defName="SAAdvancedpioneer" or
+						defName="SASandmanta"
+						]/comps/li[@Class="CompProperties_Flickable"]					</xpath>
+				</li>
+					
+				<!-- Fuel -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+						defName="SAPioneer" or
+						defName="SAFatMuffalo" or
+						defName="SASpitefulMoth" or
+						defName="SAAdvancedpioneer" or
+						defName="SASandmanta"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[.="WoodLog"]					</xpath>
+				</li>
+					
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="SADinghy"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+					<value>
+						<li>DankPyon_DarkWoodLog</li>
+						<li>DankPyon_ElvenWoodLog</li>
+						<li>DankPyon_DryadWoodLog</li>
+						<li>DankPyon_AncientWoodLog</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+						defName="SAPioneer" or
+						defName="SAFatMuffalo" or
+						defName="SASpitefulMoth" or
+						defName="SAAdvancedpioneer" or
+						defName="SASandmanta"
+						]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs					</xpath>
+					<value>
+						<li>DankPyon_DarkWoodLog</li>
+						<li>DankPyon_ElvenWoodLog</li>
+						<li>DankPyon_DryadWoodLog</li>
+						<li>DankPyon_AncientWoodLog</li>
+						<li>DankPyon_Coal</li>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+						defName="SADinghy" or
+						defName="SAPioneer" or
+						defName="SAFatMuffalo" or
+						defName="SASpitefulMoth" or
+						defName="SAAdvancedpioneer" or
+						defName="SASandmanta"
+						]/comps/li[@Class="CompProperties_Refuelable"]/initialFuelPercent					</xpath>
+					<value>
+						<initialFuelPercent>0.01</initialFuelPercent>
+					</value>
+				</li>
+					
+				<!-- Ship Balance HP -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<MaxHitPoints>1000</MaxHitPoints>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SASandmanta"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<MaxHitPoints>1200</MaxHitPoints>
+					</value>
+				</li>
+						
+				<!-- Resize -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[
+								defName="SADinghy" or
+								defName="SADinghy_Incoming" or
+								defName="SADinghy_BomberRun" or
+								defName="SADinghy_Leaving" or
+								defName="SADinghy_Active"]/graphicData/drawSize					</xpath>
+					<value>
+						<drawSize>(6,6)</drawSize>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[
+								defName="SAPioneer" or
+								defName="SAPioneer_Incoming" or
+								defName="SAPioneer_BomberRun" or
+								defName="SAPioneer_Leaving" or
+								defName="SAPioneer_Active"]/graphicData/drawSize					</xpath>
+					<value>
+						<drawSize>(8.66,10)</drawSize>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[
+								defName="SAAdvancedpioneer" or
+								defName="SAAdvancedpioneer_Incoming" or
+								defName="SAAdvancedpioneer_BomberRun" or
+								defName="SAAdvancedpioneer_Leaving" or
+								defName="SAAdvancedpioneer_Active"]/graphicData/drawSize					</xpath>
+					<value>
+						<drawSize>(10.5,12)</drawSize>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[
+								defName="SAFatMuffalo" or
+								defName="SAFatMuffalo_Incoming" or
+								defName="SAFatMuffalo_BomberRun" or
+								defName="SAFatMuffalo_Leaving" or
+								defName="SAFatMuffalo_Active"]/graphicData/drawSize					</xpath>
+					<value>
+						<drawSize>(16,16)</drawSize>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[
+								defName="SASpitefulMoth" or
+								defName="SASpitefulMoth_Incoming" or
+								defName="SASpitefulMoth_BomberRun" or
+								defName="SASpitefulMoth_Leaving" or
+								defName="SASpitefulMoth_Active"]/graphicData/drawSize					</xpath>
+					<value>
+						<drawSize>(16,16)</drawSize>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[
+								defName="SASandmanta" or
+								defName="SASandmanta_Incoming" or
+								defName="SASandmanta_BomberRun" or
+								defName="SASandmanta_Leaving" or
+								defName="SASandmanta_Active"]/graphicData/drawSize					</xpath>
+					<value>
+						<drawSize>(14,14)</drawSize>
+					</value>
+				</li>
+					
+				<!-- Mass Balance -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+						defName="SADinghy" or
+						defName="SAPioneer" or
+						defName="SAFatMuffalo" or
+						defName="SASpitefulMoth" or
+						defName="SAAdvancedpioneer" or
+						defName="SASandmanta"]/statBases/Mass					</xpath>
+					<value>
+						<Mass>300</Mass>
+					</value>
+				</li>
+					
+			</operations>
 		</match>
+			
 	</Operation>
 	
 </Patch>

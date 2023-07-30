@@ -50,7 +50,14 @@
 							<li>VFEV_Honey</li>
 						</value>
 					</nomatch>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEV_Honey"]/thingCategories</xpath>
+						<value>
+							<li>RB_Honeys</li>
+						</value>
+					</match>
 				</li>
+	
 
 			</operations>
 		</match>

@@ -19,7 +19,7 @@
 	
 	<!-- Add Cooking to Requirements for Brewing -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
 		<value>
 			<prerequisites>
 				<li>DankPyon_BasicCooking</li>
@@ -30,9 +30,17 @@
 	
 	<!-- Change Complex Clothing to Industrial -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ResearchProjectDef[defName="ComplexClothing"]/techLevel</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="ComplexClothing"]/techLevel</xpath>
 		<value>
 			<techLevel>Industrial</techLevel>
+		</value>
+	</Operation>
+	
+	<!-- Change Some Weapon Stuff -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_HuntingBow" or defName="RecurveBow"]/techLevel</xpath>
+		<value>
+			<techLevel>Neolithic</techLevel>
 		</value>
 	</Operation>
 	

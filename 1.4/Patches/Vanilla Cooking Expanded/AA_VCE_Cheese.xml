@@ -35,8 +35,8 @@
 										<capacityFactor>1.0</capacityFactor>
 										<efficiency>0.5</efficiency>
 										<usesTemperature>true</usesTemperature>
-										<temperatureSafe>-99.0~99.0</temperatureSafe>
-										<temperatureIdeal>21.0~99.0</temperatureIdeal>
+										<temperatureSafe>-1.0~32.0</temperatureSafe>
+										<temperatureIdeal>7.0~32.0</temperatureIdeal>
 										<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
 										<speedBelowSafe>0.1</speedBelowSafe>
 										<speedAboveSafe>1.0</speedAboveSafe>
@@ -68,8 +68,8 @@
 										<capacityFactor>1.0</capacityFactor>
 										<efficiency>0.5</efficiency>
 										<usesTemperature>true</usesTemperature>
-										<temperatureSafe>-99.0~99.0</temperatureSafe>
-										<temperatureIdeal>21.0~99.0</temperatureIdeal>
+										<temperatureSafe>-1.0~32.0</temperatureSafe>
+										<temperatureIdeal>7.0~32.0</temperatureIdeal>
 										<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
 										<speedBelowSafe>0.1</speedBelowSafe>
 										<speedAboveSafe>1.0</speedAboveSafe>
@@ -101,8 +101,8 @@
 										<capacityFactor>1.0</capacityFactor>
 										<efficiency>0.5</efficiency>
 										<usesTemperature>true</usesTemperature>
-										<temperatureSafe>-99.0~99.0</temperatureSafe>
-										<temperatureIdeal>21.0~99.0</temperatureIdeal>
+										<temperatureSafe>-1.0~32.0</temperatureSafe>
+										<temperatureIdeal>7.0~32.0</temperatureIdeal>
 										<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
 										<speedBelowSafe>0.1</speedBelowSafe>
 										<speedAboveSafe>1.0</speedAboveSafe>

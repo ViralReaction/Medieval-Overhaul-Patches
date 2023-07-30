@@ -16,19 +16,6 @@
 					</value>
 				</li>
 				
-				<!-- Add Viking Honey to Bee Must -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Factions Expanded - Vikings</li>
-					</mods>
-					<match Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="VFEV_Honey"]/thingCategories</xpath>
-						<value>
-							<li>RB_Honeys</li>
-						</value>
-					</match>
-				</li>
-				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="RB_MeadMust"]</xpath>
 					<value>
