@@ -23,35 +23,40 @@
 					defName="DankPyon_CookMealPumpkinSoup" or
 					defName="DankPyon_CookMealPumpkinSoupBulk" or
 					defName="DankPyon_CookMealCheeseSoup" or
-					defName="DankPyon_CookMealCheeseSoupBulk"]</xpath>
+					defName="DankPyon_CookMealCheeseSoupBulk"]					</xpath>
 				</li>
 				
 				<!-- Soup Processor -->
-				<li Class="PatchOperationRemove">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/thingClass</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/thingClass</xpath>
+					</match>
 				</li>
-				
-				
-				<li Class="PatchOperationReplace">
+						
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
-					<value>
-						<li Class="ProcessorFramework.CompProperties_Processor">
-							<capacity>1</capacity>
-							<independentProcesses>true</independentProcesses>
-							<processes>
-								<li>VCE_CookedSoupSimple</li>
-								<li>VCE_CookedSoupFine</li>
-								<li>VCE_CookedSoupLavish</li>
-								<li>VCE_CookedSoupGourmet</li>
-								<li>MO_BoneSoup</li>
-								<li>MO_LentilSoup</li>
-								<li>MO_MushroomSoup</li>
-								<li>MO_BreadSoup</li>
-								<li>MO_PumpkinSoup</li>
-								<li>MO_CheeseSoup</li>
-							</processes>
-						</li>
-					</value>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
+						<value>
+							<li Class="ProcessorFramework.CompProperties_Processor">
+								<capacity>2</capacity>
+								<independentProcesses>false</independentProcesses>
+								<processes>
+									<li>VCE_CookedSoupSimple</li>
+									<li>VCE_CookedSoupFine</li>
+									<li>VCE_CookedSoupLavish</li>
+									<li>VCE_CookedSoupGourmet</li>
+									<li>MO_BoneSoup</li>
+									<li>MO_LentilSoup</li>
+									<li>MO_MushroomSoup</li>
+									<li>MO_BreadSoup</li>
+									<li>MO_PumpkinSoup</li>
+									<li>MO_CheeseSoup</li>
+								</processes>
+							</li>
+						</value>
+					</match>
 				</li>
 				
 				<!-- Simple Soups in Pot -->
@@ -228,6 +233,28 @@
 									<count>2.5</count>
 								</li>
 							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+									<!--li>Milk</li-->
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
 							<products>
 								<MO_UncookedLentilSoup>1</MO_UncookedLentilSoup>
 							</products>
@@ -316,6 +343,28 @@
 							<products>
 								<MO_UncookedMushroomSoup>1</MO_UncookedMushroomSoup>
 							</products>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+									<!--li>Milk</li-->
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
 							<researchPrerequisite>
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisite>
@@ -382,11 +431,7 @@
 							<effectWorking>Cook</effectWorking>
 							<soundWorking>Recipe_CookMeal</soundWorking>
 							<allowMixingIngredients>true</allowMixingIngredients>
-							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-							<researchPrerequisites>
-								<li>DankPyon_IntermediateCooking</li>
-								<li>VCE_SoupCooking</li>
-							</researchPrerequisites>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>			
 							<recipeUsers>
 								<li>ElectricStove</li>
 								<li>FueledStove</li>
@@ -405,9 +450,32 @@
 							<products>
 								<MO_UncookedBreadSoup>1</MO_UncookedBreadSoup>
 							</products>
-							<researchPrerequisite>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+									<li>Milk</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<researchPrerequisites>
+								<li>DankPyon_IntermediateCooking</li>
 								<li>VCE_SoupCooking</li>
-							</researchPrerequisite>
+							</researchPrerequisites>
 						</RecipeDef>
 					
 						<ThingDef ParentName="RoughPlantBase">
@@ -472,10 +540,6 @@
 							<soundWorking>Recipe_CookMeal</soundWorking>
 							<allowMixingIngredients>true</allowMixingIngredients>
 							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-							<researchPrerequisites>
-								<li>DankPyon_IntermediateCooking</li>
-								<li>VCE_SoupCooking</li>
-							</researchPrerequisites>
 							<recipeUsers>
 								<li>ElectricStove</li>
 								<li>FueledStove</li>
@@ -494,9 +558,32 @@
 							<products>
 								<MO_UncookedPumpkinSoup>1</MO_UncookedPumpkinSoup>
 							</products>
-							<researchPrerequisite>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+									<!--li>Milk</li-->
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<researchPrerequisites>
+								<li>DankPyon_IntermediateCooking</li>
 								<li>VCE_SoupCooking</li>
-							</researchPrerequisite>
+							</researchPrerequisites>
 						</RecipeDef>
 					
 						<ThingDef ParentName="RoughPlantBase">
@@ -561,10 +648,6 @@
 							<soundWorking>Recipe_CookMeal</soundWorking>
 							<allowMixingIngredients>true</allowMixingIngredients>
 							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-							<researchPrerequisites>
-								<li>DankPyon_AdvancedCooking</li>
-								<li>VCE_SoupCooking</li>
-							</researchPrerequisites>
 							<recipeUsers>
 								<li>ElectricStove</li>
 								<li>FueledStove</li>
@@ -580,28 +663,51 @@
 									<count>2</count>
 								</li>
 								<li>
-			<filter>
-				<thingDefs>
-					<li>DankPyon_Ale</li>
-				  </thingDefs>
-			</filter>
-			<count>0.8</count>
-		</li>
-		<li>
-			<filter>
-				<thingDefs>
-					<li>DankPyon_RawGarlic</li>
-				  </thingDefs>
-			</filter>
-			<count>4</count>
-		</li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_Ale</li>
+										</thingDefs>
+									</filter>
+									<count>0.8</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawGarlic</li>
+										</thingDefs>
+									</filter>
+									<count>4</count>
+								</li>
 							</ingredients>
 							<products>
 								<MO_UncookedCheeseSoup>1</MO_UncookedCheeseSoup>
 							</products>
-							<researchPrerequisite>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+									<!--li>Milk</li-->
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<researchPrerequisites>
+								<li>DankPyon_AdvancedCooking</li>
 								<li>VCE_SoupCooking</li>
-							</researchPrerequisite>
+							</researchPrerequisites>
 						</RecipeDef>
 					
 						<ThingDef ParentName="RoughPlantBase">

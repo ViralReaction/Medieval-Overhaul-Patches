@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Cheese Comp Properties -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/comps</xpath>
+		<value>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+				<ingestedThought>VCE_AteCheese</ingestedThought>
+			</li>
+		</value>
+	</Operation>
+	
+</Patch>

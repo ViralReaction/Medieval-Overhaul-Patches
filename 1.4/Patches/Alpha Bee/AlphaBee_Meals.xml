@@ -56,31 +56,11 @@
 				</li>
 				
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealSimple" or defName="RB_CookHoneyMealSimpleBulk"]/researchPrerequisites</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealSimple" or defName="RB_CookHoneyMealSimpleBulk"]/researchPrerequisites</xpath>
-						<value>
-							<researchPrerequisites>
-								<li>DankPyon_BasicCooking</li>
-							</researchPrerequisites>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealSimple" or defName="RB_CookHoneyMealSimpleBulk"]</xpath>
-						<value>
-							<researchPrerequisites>
-								<li>DankPyon_BasicCooking</li>
-							</researchPrerequisites>
-						</value>
-					</nomatch>
-				</li>
-				
-				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealFine" or	defName="RB_CookHoneyMealFineBulk"]/researchPrerequisites</xpath>
 					<match Class="PatchOPerationReplace">
 						<value>
 							<researchPrerequisites>
-								<li>DankPyon_IntermediateCooking</li>
+								<li>DankPyon_BasicCooking</li>
 							</researchPrerequisites>
 						</value>
 					</match>
@@ -88,7 +68,7 @@
 						<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealFine" or	defName="RB_CookHoneyMealFineBulk"]</xpath>
 						<value>
 							<researchPrerequisites>
-								<li>DankPyon_IntermediateCooking</li>
+								<li>DankPyon_BasicCooking</li>
 							</researchPrerequisites>
 						</value>
 					</nomatch>
@@ -99,7 +79,7 @@
 					<match Class="PatchOPerationReplace">
 						<value>
 							<researchPrerequisites>
-								<li>DankPyon_AdvancedCooking</li>
+								<li>DankPyon_IntermediateCooking</li>
 							</researchPrerequisites>
 						</value>
 					</match>
@@ -107,7 +87,7 @@
 						<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealLavish" or defName="RB_CookHoneyMealLavishBulk"]</xpath>
 						<value>
 							<researchPrerequisites>
-								<li>DankPyon_AdvancedCooking</li>
+								<li>DankPyon_IntermediateCooking</li>
 							</researchPrerequisites>
 						</value>
 					</nomatch>

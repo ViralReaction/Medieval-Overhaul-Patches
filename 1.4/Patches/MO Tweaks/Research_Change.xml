@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-				
-	<!-- Change Preserved Food to be after Basic Cooking -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ResearchProjectDef[defName="Pemmican"]/prerequisites/li[.="DankPyon_BasicCooking"]</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ResearchProjectDef[defName="Pemmican"]</xpath>
-			<value>
-				<prerequisites>
-					<li>DankPyon_BasicCooking</li>
-				</prerequisites>
-			</value>
-		</nomatch>
+	
+	<!-- Perserved Food -->
+	<!-- Change Preserved Food Research Requirements -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[
+	defName="DankPyon_CookMealRations" or
+	defName="DankPyon_CookMealRationsBulk" or
+	defName="DankPyon_CookMealRationsVegan" or
+	defName="DankPyon_CookMealRationsVeganBulk"]/researchPrerequisite		</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>Pemmican</li>
+				<li>DankPyon_BasicCooking</li>
+			</researchPrerequisites>
+		</value>
 	</Operation>
 	
+	<!-- Add Cooking to Requirements for Brewing -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
 		<value>
@@ -23,7 +27,8 @@
 			</prerequisites>
 		</value>
 	</Operation>
-			
+	
+	<!-- Change Complex Clothing to Industrial -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ResearchProjectDef[defName="ComplexClothing"]/techLevel</xpath>
 		<value>

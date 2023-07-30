@@ -9,73 +9,22 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<!-- Simple Meals -->
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[
-					defName="VCE_CookBakeSimple" or
-					defName="VCE_CookBakeSimpleBulk" or
-					defName="VCE_CookGrillSimple" or
-					defName="VCE_CookGrillSimpleBulk" or
-					defName="VCE_CookSoupSimple" or
-					defName="VCE_CookDessertSimple" or
-					defName="VCE_CookDessertSimpleBulk"]					</xpath>
+				<!-- Soup Research Change -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/techLevel</xpath>
 					<value>
-						<researchPrerequisites>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+							
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
 							<li>DankPyon_BasicCooking</li>
-						</researchPrerequisites>
+						</prerequisites>
 					</value>
 				</li>
-				
-				<!-- Fine Meals -->
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[
-					defName="VCE_CookBakeFine" or
-					defName="VCE_CookBakeFineBulk" or
-					defName="VCE_CookGrillFine" or
-					defName="VCE_CookGrillFineBulk" or
-					defName="VCE_CookSoupFine" or
-					defName="VCE_CookDessertFine" or
-					defName="VCE_CookDessertFineBulk"]					</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>DankPyon_IntermediateCooking</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
-				<!-- Lavish Meals -->
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[
-					defName="VCE_CookBakeLavish" or
-					defName="VCE_CookBakeLavishBulk" or
-					defName="VCE_CookGrillLavish" or
-					defName="VCE_CookGrillLavishBulk" or
-					defName="VCE_CookSoupLavish" or
-					defName="VCE_CookDessertLavish" or
-					defName="VCE_CookDessertLavishBulk"]					</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>DankPyon_AdvancedCooking</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
-				<!-- Gourmet Meals -->
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[
-					defName="VCE_CookBakeGourmet" or
-					defName="VCE_CookGrillGourmet" or
-					defName="VCE_CookSoupGourmet" or
-					defName="VCE_CookDessertGourmet" or
-					defName="VCE_CookMealGourmet"]					</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>DankPyon_AdvancedCooking</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
-				
 				
 			</operations>
 		</match>

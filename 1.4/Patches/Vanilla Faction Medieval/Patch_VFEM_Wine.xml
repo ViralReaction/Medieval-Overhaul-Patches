@@ -41,6 +41,9 @@
 						<li>
 							<compClass>CompQuality</compClass>
 						</li>
+						<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+							<ingestedThought>VFEM_DrankWine</ingestedThought>
+						</li>
 					</value>
 				</li>
 

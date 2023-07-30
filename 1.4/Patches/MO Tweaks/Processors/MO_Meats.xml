@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	
+	<!-- Meat Rack -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
+				</match>
+			</li>
+	
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps</xpath>
+					<value>
+						<li Class="ProcessorFramework.CompProperties_Processor">
+							<capacity>200</capacity>
+							<independentProcesses>false</independentProcesses>
+							<parallelProcesses>false</parallelProcesses>
+							<dropIngredients>true</dropIngredients>
+							<showProductIcon>true</showProductIcon>
+							<barOffset>(0.0, 0.25)</barOffset>
+							<barScale>(1.0, 1.0)</barScale>
+							<colorCoded>false</colorCoded>
+							<processes>
+								<li>DankPyon_DriedMeatProcess</li>
+							</processes>
+						</li>
+					</value>
+				</nomatch>
+			</li>
+	
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/thingClass[.="ItemProcessor.Building_ItemProcessor"]</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/thingClass</xpath>
+					<value>
+						<thingClass>Building_WorkTable</thingClass>
+					</value>
+				</match>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+	
 	<!-- Dried Meat -->
 	<Operation Class="PatchOperationAttributeSet">
 		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
@@ -98,27 +145,6 @@
 		</nomatch>
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
-			<value>
-				<li>DankPyon_DriedMeat</li>
-				<li>DankPyon_SmokedMeat</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<!-- Prevent Smoking -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter</xpath>
-			<value>
-				<disallowedThingDefs>
-					<li>DankPyon_DriedMeat</li>
-					<li>DankPyon_SmokedMeat</li>
-				</disallowedThingDefs>
-			</value>
-		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedMeat</li>
 				<li>DankPyon_SmokedMeat</li>

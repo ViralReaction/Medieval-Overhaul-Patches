@@ -8,24 +8,7 @@
 		
 		<match Class="PatchOperationSequence">
 			<operations>
-				
-				<!-- Soup Research Change -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/techLevel</xpath>
-					<value>
-						<techLevel>Medieval</techLevel>
-					</value>
-				</li>
-							
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/prerequisites</xpath>
-					<value>
-						<prerequisites>
-							<li>DankPyon_BasicCooking</li>
-						</prerequisites>
-					</value>
-				</li>
-				
+						
 				<!-- Soup Pot -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/graphicData/texPath</xpath>
@@ -87,7 +70,7 @@
 									<li>DankPyon_AncientWoodLog</li>
 								</thingDefs>
 							</fuelFilter>
-							<initialFuelPercent>1</initialFuelPercent>
+							<initialFuelPercent>0.0</initialFuelPercent>
 							<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 							<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
 						</li>
