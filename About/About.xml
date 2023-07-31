@@ -17,6 +17,7 @@
 	</modDependencies>
 	<loadAfter>
 		<li>mlie.vanillabooksexpandedexpanded</li>
+		<li>Argon.TribalMedicineRemake</li>
 	</loadAfter>
 
 </ModMetaData>
