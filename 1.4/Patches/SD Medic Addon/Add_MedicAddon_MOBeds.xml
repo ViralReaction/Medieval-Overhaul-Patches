@@ -10,6 +10,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 					
+				<!-- Link Beds -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[
 					defName="DankPyon_BedLog" or
@@ -46,7 +47,16 @@
 					</nomatch>
 				</li>
 				
-				<!-- Prevents Error -->
+				<!-- Change to Base Iron -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="sd_medicaddons_medieval_surg_instruments" or defName="sd_medicaddons_medieval_surg_lamp"]/costList/Steel</xpath>
+					<match Class="PatchOperationSetName">
+						<xpath>Defs/ThingDef[defName="sd_medicaddons_medieval_surg_instruments" or defName="sd_medicaddons_medieval_surg_lamp"]/costList/Steel</xpath>
+						<name>DankPyon_IronIngot</name>
+					</match>
+				</li>
+				
+				<!-- Prevents Tab Error -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ResearchTabDef[defName="sd_medicaddons_ResearchTab"]</xpath>
 					<match Class="PatchOperationReplace">
