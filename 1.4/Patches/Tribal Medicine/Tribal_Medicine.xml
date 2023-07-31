@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Tribal Medicine 2.0</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/baseCost</xpath>
+					<value>
+						<baseCost>1000</baseCost>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/StatDef[defName="MedicalQualityMax" or defName="MedicalPotency"]/parts/li[@Class="StatPart_Quality"]</xpath>
+					<value>
+						<li Class="StatPart_Quality">
+							<factorAwful>0.4</factorAwful>
+							<factorPoor>0.6</factorPoor>
+							<factorNormal>1</factorNormal>
+							<factorGood>1.1</factorGood>
+							<factorExcellent>1.2</factorExcellent>
+							<factorMasterwork>1.35</factorMasterwork>
+							<factorLegendary>1.5</factorLegendary>
+						</li>
+					</value>
+				</li>
+			
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

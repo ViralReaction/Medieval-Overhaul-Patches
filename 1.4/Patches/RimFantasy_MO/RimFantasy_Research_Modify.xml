@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimFantasy - Medieval Overhaul Edition</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+		
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="RF_ArcaneCrafting"]</xpath>
+					<value>
+						<prerequisites>
+							<li>Esoteric_Studies</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="RF_ArcaneCrafting"]/baseCost</xpath>
+					<value>
+						<baseCost>1000</baseCost>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[
+					defName="RF_ArcaneDefences" or
+					defName="RF_ArcaneLighting" or
+					defName="RF_ArcaneTemperatureRegulation" or
+					defName="RF_ArcaneWeapons"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+		
+			</operations>
+		</match>
+		
+	</Operation>
+		
+</Patch>

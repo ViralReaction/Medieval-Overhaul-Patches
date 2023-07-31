@@ -19,6 +19,20 @@
 						</value>
 					</nomatch>
 				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="ESCP_TrollElixirBase"]/recipeMaker/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisite>DankPyon_Alchemy</researchPrerequisite>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="MorrowRim_PrimitiveElixirs"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ResearchProjectDef[defName="MorrowRim_PrimitiveElixirs"]</xpath>
+					</match>
+				</li>
 
 			</operations>
 		</match>

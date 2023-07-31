@@ -88,19 +88,25 @@
 		</value>
 	</Operation>
 
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/researchViewX</xpath>
-		<value>
-			<researchViewX>15.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/researchViewX</xpath>
+					<value>
+						<researchViewX>15.00</researchViewX>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.75</researchViewY>
+					</value>
+				</li>
+			</operations>
+		</match>
 	</Operation>
-				
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/researchViewY</xpath>
-		<value>
-			<researchViewY>5.75</researchViewY>
-		</value>
-	</Operation>
-
+	
 </Patch>
