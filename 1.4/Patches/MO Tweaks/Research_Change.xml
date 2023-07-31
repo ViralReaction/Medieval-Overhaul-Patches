@@ -44,4 +44,13 @@
 		</value>
 	</Operation>
 	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Alchemy"]</xpath>
+		<value>
+			<prerequisites>
+				<li>Esoteric_Studies</li>
+			</prerequisites>
+		</value>
+	</Operation>
+	
 </Patch>

@@ -11,7 +11,23 @@
 					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
 				</match>
 			</li>
-	
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/drawerType</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]</xpath>
+					<value>
+						<drawerType>MapMeshAndRealTime</drawerType>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/drawerType</xpath>
+					<value>
+						<drawerType>MapMeshAndRealTime</drawerType>
+					</value>
+				</match>
+			</li>
+			
 			<li Class="PatchOperationConditional">
 				<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]</xpath>
 				<nomatch Class="PatchOperationAdd">

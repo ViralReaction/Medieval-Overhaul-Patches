@@ -34,6 +34,38 @@
 				</li-->
 				
 				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/tickerType</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]</xpath>
+						<value>
+							<tickerType>Normal</tickerType>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/tickerType</xpath>
+						<value>
+							<tickerType>Normal</tickerType>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/drawerType</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]</xpath>
+						<value>
+							<drawerType>MapMeshAndRealTime</drawerType>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/drawerType</xpath>
+						<value>
+							<drawerType>MapMeshAndRealTime</drawerType>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
 					<match Class="PatchOperationRemove">
 						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>

@@ -13,6 +13,22 @@
 			</li>
 	
 			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_HayRack"]/drawerType</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_HayRack"]</xpath>
+					<value>
+						<drawerType>MapMeshAndRealTime</drawerType>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_HayRack"]/drawerType</xpath>
+					<value>
+						<drawerType>MapMeshAndRealTime</drawerType>
+					</value>
+				</match>
+			</li>
+	
+			<li Class="PatchOperationConditional">
 				<xpath>Defs/ThingDef[defName="DankPyon_HayRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]</xpath>
 				<nomatch Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="DankPyon_HayRack"]/comps</xpath>
