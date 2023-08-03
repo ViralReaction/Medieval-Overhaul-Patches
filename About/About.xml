@@ -5,8 +5,7 @@
 	<supportedVersions>
 		<li>1.4</li>
 	</supportedVersions>
-	<packageId>VR.MOPatches</packageId>
-	<description>Custom Patch Repository</description>
+	<packageId>VR.MOPatches</packageId>	
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -19,6 +18,7 @@
 		<li>mlie.vanillabooksexpandedexpanded</li>
 		<li>Argon.TribalMedicineRemake</li>
 		<li>ninja.lowtoolcabinet</li>
+		<li>adamas.perfectmedievalplaythrough</li>
 	</loadAfter>
-
+	<description>Multiple patches that attempt to integrate mods into a better playthrough of Medieval Overhaul.</description>
 </ModMetaData>
