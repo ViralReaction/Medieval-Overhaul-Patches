@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Prosthetics</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				
+				<!-- Basic Prosthetics -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+					defName="WoodenFoot" or
+					defName="WoodenToe" or
+					defName="WoodenFinger" or
+					defName="EyePatch" or
+					defName="EarPatch" or
+					defName="IronArm" or
+					defName="ProstheticHook"]/costList
+					</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="IronArm" or defName="ProstheticHook"]
+					</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="WoodenFoot" or
+					defName="WoodenToe" or
+					defName="WoodenFinger"]
+					</xpath>
+					<value>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="EyePatch" or
+					defName="EarPatch"]
+					</xpath>
+					<value>
+						<stuffCategories>
+							<li>Fabric</li>
+						</stuffCategories>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="IronArm"]</xpath>
+					<value>
+						<costStuffCount>50</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ProstheticHook"]</xpath>
+					<value>
+						<costStuffCount>25</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="WoodenFoot"]</xpath>
+					<value>
+						<costStuffCount>25</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="WoodenToe"]</xpath>
+					<value>
+						<costStuffCount>50</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="WoodenFinger"]</xpath>
+					<value>
+						<costStuffCount>5</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="WoodenNose"]</xpath>
+					<value>
+						<costStuffCount>5</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="EyePatch"]</xpath>
+					<value>
+						<costStuffCount>15</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="EarPatch"]</xpath>
+					<value>
+						<costStuffCount>15</costStuffCount>
+					</value>
+				</li>
+				
+				<!-- Artificial Prosthetics -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+					defName="ArtificialMedHand" or
+					defName="ArtificialMedArm" or
+					defName="ArtificialMedLeg" or
+					defName="ArtificialMedFoot" or
+					defName="ArtificialMedToe" or
+					defName="ArtificialMedFinger" or
+					defName="ArtificialMedNose" or
+					defName="ArtificialMedEye" or
+					defName="ArtificialMedEar"]/costList
+					</xpath>
+				</li>
+								
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="ArtificialMedHand" or
+					defName="ArtificialMedArm" or
+					defName="ArtificialMedLeg" or
+					defName="ArtificialMedFoot" or
+					defName="ArtificialMedToe" or
+					defName="ArtificialMedFinger" or
+					defName="ArtificialMedNose" or
+					defName="ArtificialMedEye" or
+					defName="ArtificialMedEar"]
+					</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ArtificialMedHand" or defName="ArtificialMedFoot"]</xpath>
+					<value>
+						<costStuffCount>65</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ArtificialMedArm" or defName="ArtificialMedLeg"]</xpath>
+					<value>
+						<costStuffCount>125</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ArtificialMedToe" or defName="ArtificialMedFinger"]</xpath>
+					<value>
+						<costStuffCount>20</costStuffCount>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="ArtificialMedNose" or defName="ArtificialMedEye" or defName="ArtificialMedEar"]</xpath>
+					<value>
+						<costStuffCount>15</costStuffCount>
+					</value>
+				</li>
+				
+				<!-- Mechanical Prosthetics -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+					defName="MechanicalMedHand" or
+					defName="MechanicalMedArm" or
+					defName="MechanicalMedLeg" or
+					defName="MechanicalMedFoot" or
+					defName="MechanicalMedToe" or
+					defName="MechanicalMedFinger" or
+					defName="MechanicalMedNose" or
+					defName="MechanicalMedEye" or
+					defName="MechanicalMedEar"]/costList
+					</xpath>
+				</li>
+								
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="MechanicalMedHand" or
+					defName="MechanicalMedArm" or
+					defName="MechanicalMedLeg" or
+					defName="MechanicalMedFoot" or
+					defName="MechanicalMedToe" or
+					defName="MechanicalMedFinger" or
+					defName="MechanicalMedNose" or
+					defName="MechanicalMedEye" or
+					defName="MechanicalMedEar"]
+					</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MechanicalMedHand" or defName="MechanicalMedFoot"]</xpath>
+					<value>
+						<costStuffCount>70</costStuffCount>
+					<costList>
+						<DankPyon_ComponentBasic>3</DankPyon_ComponentBasic>
+					</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MechanicalMedArm" or defName="MechanicalMedLeg"]</xpath>
+					<value>
+						<costStuffCount>115</costStuffCount>
+						<costList>
+							<DankPyon_ComponentBasic>6</DankPyon_ComponentBasic>
+						</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MechanicalMedToe" or defName="MechanicalMedFinger"]</xpath>
+					<value>
+						<costStuffCount>25</costStuffCount>
+						<costList>
+							<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
+						</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MechanicalMedNose" or defName="MechanicalMedEye" or defName="MechanicalMedEar"]</xpath>
+					<value>
+						<costStuffCount>15</costStuffCount>
+						<costList>
+							<Silver>5</Silver>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- Ambrosien Prosthetics -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+					defName="AmbroisenMedHand" or
+					defName="AmbroisenMedArm" or
+					defName="AmbroisenMedLeg" or
+					defName="AmbroisenMedFoot" or
+					defName="AmbroisenMedToe" or
+					defName="AmbroisenMedFinger" or
+					defName="AmbroisenMedNose" or
+					defName="AmbroisenMedEye" or
+					defName="AmbroisenMedEar"]/costList
+					</xpath>
+				</li>
+								
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+					defName="AmbroisenMedHand" or
+					defName="AmbroisenMedArm" or
+					defName="AmbroisenMedLeg" or
+					defName="AmbroisenMedFoot" or
+					defName="AmbroisenMedToe" or
+					defName="AmbroisenMedFinger" or
+					defName="AmbroisenMedNose" or
+					defName="AmbroisenMedEye" or
+					defName="AmbroisenMedEar"]
+					</xpath>
+					<value>
+						<stuffCategories>
+							<li>Metallic</li>
+						</stuffCategories>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="AmbroisenMedHand" or defName="AmbroisenMedFoot"]</xpath>
+					<value>
+						<costStuffCount>70</costStuffCount>	
+					<costList>
+						<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
+						<Gold>2</Gold>
+						<Silver>15</Silver>
+					</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="AmbroisenMedArm" or defName="AmbroisenMedLeg"]</xpath>
+					<value>
+						<costStuffCount>115</costStuffCount>
+						<costList>
+							<DankPyon_ComponentBasic>15</DankPyon_ComponentBasic>
+							<Gold>3</Gold>
+							<Silver>20</Silver>
+						</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="AmbroisenMedToe" or defName="AmbroisenMedFinger"]</xpath>
+					<value>
+						<costStuffCount>25</costStuffCount>
+						<costList>
+							<DankPyon_ComponentBasic>5</DankPyon_ComponentBasic>
+							<Gold>1</Gold>
+							<Silver>5</Silver>
+						</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="AmbroisenMedNose" or defName="AmbroisenMedEye" or defName="AmbroisenMedEar"]</xpath>
+					<value>
+						<costStuffCount>15</costStuffCount>
+						<costList>
+							<Gold>1</Gold>
+							<Silver>5</Silver>
+						</costList>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+
+</Patch>

@@ -24,6 +24,20 @@
 					</value>
 				</li>
 				
+				<!-- Hide Centrifuge -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/designationCategory</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/designationCategory</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/researchPrerequisites</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/researchPrerequisites</xpath>
+					</match>
+				</li>
+
 			</operations>
 		</match>
 	</Operation>

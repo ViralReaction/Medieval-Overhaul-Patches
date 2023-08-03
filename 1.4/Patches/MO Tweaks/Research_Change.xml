@@ -5,10 +5,10 @@
 	<!-- Change Preserved Food Research Requirements -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[
-	defName="DankPyon_CookMealRations" or
-	defName="DankPyon_CookMealRationsBulk" or
-	defName="DankPyon_CookMealRationsVegan" or
-	defName="DankPyon_CookMealRationsVeganBulk"]/researchPrerequisite		</xpath>
+		defName="DankPyon_CookMealRations" or
+		defName="DankPyon_CookMealRationsBulk" or
+		defName="DankPyon_CookMealRationsVegan" or
+		defName="DankPyon_CookMealRationsVeganBulk"]/researchPrerequisite		</xpath>
 		<value>
 			<researchPrerequisites>
 				<li>Pemmican</li>

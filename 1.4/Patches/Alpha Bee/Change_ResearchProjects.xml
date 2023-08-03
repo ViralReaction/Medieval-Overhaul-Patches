@@ -23,8 +23,8 @@
 						<xpath>Defs/ResearchProjectDef[defName="RB_BeeswaxLighting"]</xpath>
 					</match>
 				</li>
-				
-				<!-- Remove Electricit requirement -->
+
+				<!-- Industrial Hybridization requirement -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ResearchProjectDef[defName="RB_BeeHybridizing"]/prerequisites/li[.="Electricity"]</xpath>
 					<match Class="PatchOperationRemove">

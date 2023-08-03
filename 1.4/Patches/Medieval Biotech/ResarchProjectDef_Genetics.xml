@@ -47,9 +47,35 @@
 							<tab>DankPyon_MedievalResearchTab</tab>
 						</value>
 					</nomatch>
-					
 				</li>
-
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Xenogermination"]/researchViewX</xpath>
+					<value>
+						<researchViewX>13.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Xenogermination"]/researchViewY</xpath>
+					<value>
+						<researchViewY>6.10</researchViewY>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]/researchViewX</xpath>
+					<value>
+						<researchViewX>14.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]/researchViewY</xpath>
+					<value>
+						<researchViewY>6.10</researchViewY>
+					</value>
+				</li>
 				
 			</operations>
 		</match>

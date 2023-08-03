@@ -9,7 +9,7 @@
 			<operations>
 				
 				<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[@Name="RB_BeesWaxBase"]/stuffProps/categories/li[.="Metallic"]</xpath>
+					<xpath>Defs/ThingDef[@Name="RB_BeesWaxBase"]/stuffProps/categories/li[.="Metallic"]</xpath>
 				</li>
 				
 			</operations>

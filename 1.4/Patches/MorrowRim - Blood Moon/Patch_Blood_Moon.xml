@@ -3,7 +3,7 @@
 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Medieval Biotech</li>
+			<li>MorrowRim - Bloodmoon</li>
 		</mods>
 		
 		<match Class="PatchOperationSequence">
