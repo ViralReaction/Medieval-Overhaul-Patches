@@ -18,6 +18,7 @@
 	<loadAfter>
 		<li>mlie.vanillabooksexpandedexpanded</li>
 		<li>Argon.TribalMedicineRemake</li>
+		<li>ninja.lowtoolcabinet</li>
 	</loadAfter>
 
 </ModMetaData>
