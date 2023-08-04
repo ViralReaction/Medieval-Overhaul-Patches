@@ -28,6 +28,154 @@
 				</match>
 			</li>
 			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+				
+					<!-- Smoked Human Meat -->
+					<ProcessorFramework.ProcessDef>
+						<defName>DankPyon_SmokedMeatHumanProcess</defName>
+						<thingDef>DankPyon_SmokedMeat_Human</thingDef>
+						<ingredientFilter>
+							<thingDefs>
+								<li>Meat_Human</li>
+							</thingDefs>
+						</ingredientFilter>
+						<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->
+						<capacityFactor>1.0</capacityFactor>
+						<efficiency>0.10</efficiency>
+						<usesTemperature>true</usesTemperature>
+						<temperatureSafe>-99.0~99.0</temperatureSafe>
+						<temperatureIdeal>21.0~99.0</temperatureIdeal>
+						<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
+						<speedBelowSafe>0.1</speedBelowSafe>
+						<speedAboveSafe>1.0</speedAboveSafe>
+						<sunFactor>1.0~1.0</sunFactor>
+						<rainFactor>1.0~0.5</rainFactor>
+						<snowFactor>1.0~0.5</snowFactor>
+						<windFactor>1.0~1.0</windFactor>
+						<unpoweredFactor>0.0</unpoweredFactor>
+						<unfueledFactor>0.0</unfueledFactor>
+						<powerUseFactor>1.0</powerUseFactor>
+						<fuelUseFactor>1.0</fuelUseFactor>
+						<filledGraphicSuffix>Filled</filledGraphicSuffix>
+						<usesQuality>false</usesQuality>
+						<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+						<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
+						<customLabel/>
+						<destroyChance>0.0</destroyChance>
+  
+					</ProcessorFramework.ProcessDef>
+
+			
+					<!-- Smoke Human Meat -->
+					<ThingDef ParentName="MealBase">
+						<defName>DankPyon_SmokedMeat_Human</defName>
+						<label>Smoked Human Meat</label>
+						<description>Smoked human meat to preserve and prolong shelf life.</description>
+						<graphicData>
+							<texPath>Meal/SmokedMeat</texPath>
+							<graphicClass>Graphic_StackCount</graphicClass>
+						</graphicData>
+						<statBases>
+							<MarketValue>15</MarketValue>
+							<Nutrition>0.85</Nutrition>
+						</statBases>
+						<ingredient>
+							<mergeCompatibilityTags>
+								<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+								<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism</li>
+								<li MayRequire="Ludeon.RimWorld.Ideology">HumanMeat</li>
+							</mergeCompatibilityTags>
+						</ingredient>
+						<ingestible>
+							<foodType>Meat</foodType>
+							<preferability>MealSimple</preferability>
+							<tasteThought>AteHumanlikeMeatAsIngredient</tasteThought>
+							<tasteThought>AteHumanlikeMeatAsIngredientCannibal</tasteThought>
+							<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+							<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+							
+						</ingestible>
+						<comps>
+							<li Class="CompProperties_Rottable">
+								<daysToRotStart>30</daysToRotStart>
+								<rotDestroys>true</rotDestroys>
+							</li>
+						</comps>
+						<rotatable>false</rotatable>
+						<tradeability>Buyable</tradeability>
+					</ThingDef>
+			
+					<!-- Smoked Insect Meat -->
+					<ProcessorFramework.ProcessDef>
+						<defName>DankPyon_SmokedMeatInsectProcess</defName>
+						<thingDef>DankPyon_SmokedMeat_Insect</thingDef>
+						<ingredientFilter>
+							<thingDefs>
+								<li>Meat_Megaspider</li>
+							</thingDefs>
+						</ingredientFilter>
+						<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->
+						<capacityFactor>1.0</capacityFactor>
+						<efficiency>0.10</efficiency>
+						<usesTemperature>true</usesTemperature>
+						<temperatureSafe>-99.0~99.0</temperatureSafe>
+						<temperatureIdeal>21.0~99.0</temperatureIdeal>
+						<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
+						<speedBelowSafe>0.1</speedBelowSafe>
+						<speedAboveSafe>1.0</speedAboveSafe>
+						<sunFactor>1.0~1.0</sunFactor>
+						<rainFactor>1.0~0.5</rainFactor>
+						<snowFactor>1.0~0.5</snowFactor>
+						<windFactor>1.0~1.0</windFactor>
+						<unpoweredFactor>0.0</unpoweredFactor>
+						<unfueledFactor>0.0</unfueledFactor>
+						<powerUseFactor>1.0</powerUseFactor>
+						<fuelUseFactor>1.0</fuelUseFactor>
+						<filledGraphicSuffix>Filled</filledGraphicSuffix>
+						<usesQuality>false</usesQuality>
+						<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+						<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
+						<customLabel/>
+						<destroyChance>0.0</destroyChance>
+  
+					</ProcessorFramework.ProcessDef>
+
+			
+					<!-- Smoke Insect Meat -->
+					<ThingDef ParentName="MealBase">
+						<defName>DankPyon_SmokedMeat_Insect</defName>
+						<label>Smoked Insect Meat</label>
+						<description>Dried meat to preserve and prolong shelf life.</description>
+						<graphicData>
+							<texPath>Meal/SmokedMeat</texPath>
+							<graphicClass>Graphic_StackCount</graphicClass>
+						</graphicData>
+						<statBases>
+							<MarketValue>15</MarketValue>
+							<Nutrition>0.85</Nutrition>
+						</statBases>
+						<ingestible>
+							<foodType>Meat</foodType>
+							<preferability>MealSimple</preferability>
+							<tasteThought>AteInsectMeatAsIngredient</tasteThought>
+							<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+							<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+						</ingestible>
+						<comps>
+							<li Class="CompProperties_Rottable">
+								<daysToRotStart>30</daysToRotStart>
+								<rotDestroys>true</rotDestroys>
+							</li>
+						</comps>
+						<rotatable>false</rotatable>
+						<tradeability>Buyable</tradeability>
+					</ThingDef>
+				
+				</value>
+			</li>
+			
 			<li Class="PatchOperationConditional">
 				<xpath>Defs/ThingDef[defName="DankPyon_Smoker"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]</xpath>
 				<nomatch Class="PatchOperationAdd">
@@ -44,6 +192,8 @@
 							<colorCoded>false</colorCoded>
 							<processes>
 								<li>DankPyon_SmokedMeatProcess</li>
+								<li>DankPyon_SmokedMeatHumanProcess</li>
+								<li>DankPyon_SmokedMeatInsectProcess</li>
 							</processes>
 						</li>
 					</value>
@@ -71,7 +221,10 @@
 			<value>
 				<disallowedThingDefs>
 					<li>DankPyon_DriedMeat</li>
-					<li>DankPyon_SmokedMeat</li>
+					<li>Meat_Human</li>
+					<li>Meat_Megaspider</li>
+					<li>DankPyon_DriedMeat_Human</li>
+					<li>DankPyon_DriedMeat_Insect</li>
 				</disallowedThingDefs>
 			</value>
 		</nomatch>
@@ -79,7 +232,10 @@
 			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/disallowedThingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedMeat</li>
-				<li>DankPyon_SmokedMeat</li>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>DankPyon_DriedMeat_Human</li>
+				<li>DankPyon_DriedMeat_Insect</li>
 			</value>
 		</match>
 	</Operation>
