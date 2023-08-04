@@ -8,65 +8,71 @@
 			
 		<match Class="PatchOperationSequence">
 			<operations>
-	
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals</xpath>
-					<value>
-						<MM_Ahuizotl>0.005</MM_Ahuizotl>
-						<MM_Basilisk>0.005</MM_Basilisk>
-						<MM_Catoblepas>0.035</MM_Catoblepas>
-						<MM_Cerberus>0.005</MM_Cerberus>
-						<MM_CeryneianHind>0.025</MM_CeryneianHind>
-						<MM_Chimera>0.02</MM_Chimera>
-						<MM_ErymanthianBoar>0.035</MM_ErymanthianBoar>
-						<MM_Fenghuang>0.01</MM_Fenghuang>
-						<MM_Griffin>0.03</MM_Griffin>
-						<MM_Ieltxu>0.01</MM_Ieltxu>
-						<MM_Kappa>0.01</MM_Kappa>
-						<MM_Kitsune>0.035</MM_Kitsune>
-						<MM_LernaeanHydra>0.005</MM_LernaeanHydra>
-						<MM_LesserWyvern>0.003</MM_LesserWyvern>
-						<MM_Manticore>0.02</MM_Manticore>
-						<MM_Pegasus>0.01</MM_Pegasus>
-						<MM_Phoenix>0.01</MM_Phoenix>
-						<MM_Qilin>0.035</MM_Qilin>
-						<MM_Salamander>0.04</MM_Salamander>
-						<MM_Tlilcoatl>0.02</MM_Tlilcoatl>
-						<MM_Unicorn>0.01</MM_Unicorn>
-						<MM_WildMinotaur>0.015</MM_WildMinotaur>
-						<MM_WillOWisp>0.015</MM_WillOWisp>
-						<MM_Xiezhi>0.02</MM_Xiezhi>
-					</value>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals/MM_Ahuizotl</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals</xpath>
+						<value>
+							<MM_Ahuizotl>0.005</MM_Ahuizotl>
+							<MM_Basilisk>0.005</MM_Basilisk>
+							<MM_Catoblepas>0.035</MM_Catoblepas>
+							<MM_Cerberus>0.005</MM_Cerberus>
+							<MM_CeryneianHind>0.025</MM_CeryneianHind>
+							<MM_Chimera>0.02</MM_Chimera>
+							<MM_ErymanthianBoar>0.035</MM_ErymanthianBoar>
+							<MM_Fenghuang>0.01</MM_Fenghuang>
+							<MM_Griffin>0.03</MM_Griffin>
+							<MM_Ieltxu>0.01</MM_Ieltxu>
+							<MM_Kappa>0.01</MM_Kappa>
+							<MM_Kitsune>0.035</MM_Kitsune>
+							<MM_LernaeanHydra>0.005</MM_LernaeanHydra>
+							<MM_LesserWyvern>0.003</MM_LesserWyvern>
+							<MM_Manticore>0.02</MM_Manticore>
+							<MM_Pegasus>0.01</MM_Pegasus>
+							<MM_Phoenix>0.01</MM_Phoenix>
+							<MM_Qilin>0.035</MM_Qilin>
+							<MM_Salamander>0.04</MM_Salamander>
+							<MM_Tlilcoatl>0.02</MM_Tlilcoatl>
+							<MM_Unicorn>0.01</MM_Unicorn>
+							<MM_WildMinotaur>0.015</MM_WildMinotaur>
+							<MM_WillOWisp>0.015</MM_WillOWisp>
+							<MM_Xiezhi>0.02</MM_Xiezhi>
+						</value>
+					</nomatch>
 				</li>
 			  
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals</xpath>
-					<value>
-						<MM_Ahuizotl>0.005</MM_Ahuizotl>
-						<MM_Basilisk>0.005</MM_Basilisk>
-						<MM_Catoblepas>0.035</MM_Catoblepas>
-						<MM_Cerberus>0.005</MM_Cerberus>
-						<MM_CeryneianHind>0.025</MM_CeryneianHind>
-						<MM_Chimera>0.02</MM_Chimera>
-						<MM_ErymanthianBoar>0.035</MM_ErymanthianBoar>
-						<MM_Fenghuang>0.01</MM_Fenghuang>
-						<MM_Griffin>0.03</MM_Griffin>
-						<MM_Ieltxu>0.01</MM_Ieltxu>
-						<MM_Kappa>0.01</MM_Kappa>
-						<MM_Kitsune>0.035</MM_Kitsune>
-						<MM_LernaeanHydra>0.005</MM_LernaeanHydra>
-						<MM_LesserWyvern>0.003</MM_LesserWyvern>
-						<MM_Manticore>0.02</MM_Manticore>
-						<MM_Pegasus>0.01</MM_Pegasus>
-						<MM_Phoenix>0.01</MM_Phoenix>
-						<MM_Qilin>0.035</MM_Qilin>
-						<MM_Salamander>0.04</MM_Salamander>
-						<MM_Tlilcoatl>0.02</MM_Tlilcoatl>
-						<MM_Unicorn>0.01</MM_Unicorn>
-						<MM_WildMinotaur>0.015</MM_WildMinotaur>
-						<MM_WillOWisp>0.015</MM_WillOWisp>
-						<MM_Xiezhi>0.02</MM_Xiezhi>
-					</value>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals/MM_Ahuizotl</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals</xpath>
+						<value>
+							<MM_Ahuizotl>0.005</MM_Ahuizotl>
+							<MM_Basilisk>0.005</MM_Basilisk>
+							<MM_Catoblepas>0.035</MM_Catoblepas>
+							<MM_Cerberus>0.005</MM_Cerberus>
+							<MM_CeryneianHind>0.025</MM_CeryneianHind>
+							<MM_Chimera>0.02</MM_Chimera>
+							<MM_ErymanthianBoar>0.035</MM_ErymanthianBoar>
+							<MM_Fenghuang>0.01</MM_Fenghuang>
+							<MM_Griffin>0.03</MM_Griffin>
+							<MM_Ieltxu>0.01</MM_Ieltxu>
+							<MM_Kappa>0.01</MM_Kappa>
+							<MM_Kitsune>0.035</MM_Kitsune>
+							<MM_LernaeanHydra>0.005</MM_LernaeanHydra>
+							<MM_LesserWyvern>0.003</MM_LesserWyvern>
+							<MM_Manticore>0.02</MM_Manticore>
+							<MM_Pegasus>0.01</MM_Pegasus>
+							<MM_Phoenix>0.01</MM_Phoenix>
+							<MM_Qilin>0.035</MM_Qilin>
+							<MM_Salamander>0.04</MM_Salamander>
+							<MM_Tlilcoatl>0.02</MM_Tlilcoatl>
+							<MM_Unicorn>0.01</MM_Unicorn>
+							<MM_WildMinotaur>0.015</MM_WildMinotaur>
+							<MM_WillOWisp>0.015</MM_WillOWisp>
+							<MM_Xiezhi>0.02</MM_Xiezhi>
+						</value>
+					</nomatch>
 				</li>
 				
 			</operations>
