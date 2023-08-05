@@ -3,14 +3,14 @@
 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Vanilla Factions Expanded - Medieval</li>
+			<li>Vanilla Factions Expanded - Vikings</li>
 		</mods>
 		
 		<match Class="PatchOperationSequence">
 			<operations>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VFEM_ArcheryTarget"]/costList</xpath>
+					<xpath>Defs/ThingDef[defName="VFEV_TrainingDummy"]/costList</xpath>
 					<value>
 						<costList>
 							<WoodLog>4</WoodLog>
