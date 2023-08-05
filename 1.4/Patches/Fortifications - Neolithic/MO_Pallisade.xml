@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Fortifications - Neolithic</li>
+		</mods>
+	
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="FT_Palisade_Corner" or defName="FT_Palisade" or defName="FT_PalisadeDoor" or defName="FT_Palisade_Embrasures"]</xpath>
+					<value>
+						<stuffCategories Inherit="False">
+							<li>DankPyon_RawWood</li>
+						</stuffCategories>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="DankPyon_Palisade" or defName="DankPyon_EmbPalisade"]/designationCategory</xpath>
+				</li>
+				
+			</operations>
+		</match>
+			
+	</Operation>
+		
+</Patch>
