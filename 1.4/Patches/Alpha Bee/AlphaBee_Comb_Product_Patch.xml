@@ -197,6 +197,86 @@
 					</value>
 				</li>
 				
+				<!-- Tech Bees -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+					defName="RB_Pet_Honeycomb" or
+					defName="RB_Straw_Honeycomb" or
+					defName="RB_Weaving_Honeycomb" or
+					defName="RB_Tanner_Honeycomb"
+					]/butcherProducts
+					</xpath>
+					<value>
+						<butcherProducts>
+							<RB_TastyHoney>15</RB_TastyHoney>
+							<RB_HeavyWax>5</RB_HeavyWax>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RB_Synthetic_Honeycomb"]/butcherProducts
+					</xpath>
+					<value>
+						<butcherProducts>
+							<RB_BaseHoney>5</RB_BaseHoney>
+							<RB_Beeswax>25</RB_Beeswax>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RB_Hyper_Honeycomb"]/butcherProducts
+					</xpath>
+					<value>
+						<butcherProducts>
+							<RB_TastyHoney>5</RB_TastyHoney>
+							<RB_Beeswax>40</RB_Beeswax>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RB_Surgeon_Honeycomb"]/butcherProducts/MedicineUltratech
+					</xpath>
+					<value>
+						<MedicineHerbal>5</MedicineHerbal>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RB_Lucifer_Honeycomb"]/butcherProducts
+					</xpath>
+					<value>
+						<butcherProducts>
+							<Luciferium>1</Luciferium>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RB_Nitro_Honeycomb"]/butcherProducts
+					</xpath>
+					<value>
+						<butcherProducts>
+							<RB_HeavyWax>10</RB_HeavyWax>
+							<RB_WhiteHoney>15</RB_WhiteHoney>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RB_Nitro_Honeycomb"]/butcherProducts
+					</xpath>
+					<value>
+						<butcherProducts>
+							<RB_HeavyWax>15</RB_HeavyWax>
+							<RB_WhiteHoney>15</RB_WhiteHoney>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				
 			</operations>
 		</match>
 	</Operation>

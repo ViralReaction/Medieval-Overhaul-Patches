@@ -92,7 +92,7 @@
 							<foodType>Meat</foodType>
 							<preferability>MealSimple</preferability>
 							<tasteThought>AteHumanlikeMeatAsIngredient</tasteThought>
-							<tasteThought>AteHumanlikeMeatAsIngredientCannibal</tasteThought>
+							<specialThoughtDirect>AteHumanlikeMeatAsIngredientCannibal</specialThoughtDirect>
 							<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
 							<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
 							
