@@ -26,39 +26,6 @@
 					defName="DankPyon_CookMealCheeseSoupBulk"]					</xpath>
 				</li>
 				
-				<!-- Soup Processor -->
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/thingClass</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/thingClass</xpath>
-					</match>
-				</li>
-						
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="ItemProcessor.CompProperties_ItemProcessor"]</xpath>
-						<value>
-							<li Class="ProcessorFramework.CompProperties_Processor">
-								<capacity>2</capacity>
-								<independentProcesses>false</independentProcesses>
-								<processes>
-									<li>VCE_CookedSoupSimple</li>
-									<li>VCE_CookedSoupFine</li>
-									<li>VCE_CookedSoupLavish</li>
-									<li>VCE_CookedSoupGourmet</li>
-									<li>MO_BoneSoup</li>
-									<li>MO_LentilSoup</li>
-									<li>MO_MushroomSoup</li>
-									<li>MO_BreadSoup</li>
-									<li>MO_PumpkinSoup</li>
-									<li>MO_CheeseSoup</li>
-								</processes>
-							</li>
-						</value>
-					</match>
-				</li>
-				
 				<!-- Simple Soups in Pot -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
