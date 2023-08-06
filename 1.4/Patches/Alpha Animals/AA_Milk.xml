@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="AA_BlueMilk" or defName="AA_GowMilk" or defName="AA_NightMilk"]/thingCategories</xpath>
+			<value>
+				<thingCategories>
+					<li>DankPyon_Milk</li>
+				</thingCategories>
+			</value>
+		</match>
+			
+	</Operation>
+  
+</Patch>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Animals - Community Pack (temp)[HH]</li>
+		</mods>
+		
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="AnimaHeart"]/comps/li[@Class="CompProperties_UseEffect"]</xpath>
+			<value>
+				<li Class="CompProperties_UseEffectDestroySelf"/>
+			</value>
+		</match>
+		
+	</Operation>
+  
+</Patch>
