@@ -25,7 +25,6 @@
 					</value>
 				</li>
 
-				<!--Change complex mend workAmount -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName="MendComplexApparel"]/workAmount</xpath>
 					<value>
@@ -39,7 +38,6 @@
 					</value>
 				</li>
 
-				<!-- Make mend jobs take longer, due to no electricity -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName="MendSimpleApparel"]/workAmount</xpath>
 					<value>
@@ -54,16 +52,20 @@
 					</value>
 				</li>
 
-				<!-- Eliminate electricity need  and 'flickable' from mending bench -->
-				<li Class="PatchOperationRemove">
+				<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="TableMending"]/comps/li[@Class="CompProperties_Power"]</xpath>
+				<match Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="TableMending"]/comps/li[@Class="CompProperties_Power"]</xpath>
+				</match>
 				</li>
-
-				<li Class="PatchOperationRemove">
+				
+				<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="TableMending"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+				<match Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="TableMending"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+				</match>
 				</li>
 
-				<!-- Add mending prereq before being able to craft mending kit -->
 				<li Class="PatchOperationInsert">
 					<xpath>Defs/ThingDef[defName="MendingKit"]/thingCategories</xpath>
 					<value>
@@ -73,7 +75,6 @@
 					</value>
 				</li>
 
-				<!-- Change complex mends to require machining -->
 				<li Class="PatchOperationInsert">
 					<xpath>Defs/RecipeDef[defName="MendComplexApparel"]/label</xpath>
 					<value>
@@ -87,7 +88,6 @@
 						<researchPrerequisite>Smithing</researchPrerequisite>
 					</value>
 				</li>
-
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="TableMending"]/costList</xpath>

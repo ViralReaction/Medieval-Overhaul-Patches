@@ -113,6 +113,7 @@
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_PressSheepCheeseProcess"]</xpath>
 		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
 			<value>
 			
 				<ProcessorFramework.ProcessDef>
