@@ -17,6 +17,8 @@
 			]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs
 			</xpath>
 			<value>
+				<li>DankPyon_RawWood</li>
+				<li>DankPyon_RawDarkWood</li>
 				<li>DankPyon_DarkWoodLog</li>
 				<li>DankPyon_ElvenWoodLog</li>
 				<li>DankPyon_DryadWoodLog</li>

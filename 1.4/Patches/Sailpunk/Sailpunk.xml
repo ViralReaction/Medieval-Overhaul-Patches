@@ -26,12 +26,28 @@
 				defName="Research_Conqueringthewinds" or
 				defName="Research_Windjewel"]/prerequisites/li[.="ComplexClothing"]</xpath>
 				</li>
-					
+				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="SADinghy" or
+				defName="SAPioneer" or
+				defName="SAFatMuffalo" or
+				defName="SASpitefulMoth" or
+				defName="SAAdvancedpioneer" or
+				defName="SASandmanta"
+				]</xpath>
+				<value>
+				<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+				</value>
+				</li>
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SADinghy"]/costList</xpath>
 					<value>
+						<costStuffCount>300</costStuffCount>
 						<costList><!-- Costs to build, the names are the defNames of items -->
-							<WoodLog>300</WoodLog>
 							<Cloth>500</Cloth>
 							<DankPyon_IronIngot>100</DankPyon_IronIngot>
 							<DankPyon_ComponentBasic>1</DankPyon_ComponentBasic>
@@ -54,8 +70,8 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SAPioneer"]/costList</xpath>
 					<value>
+						<costStuffCount>700</costStuffCount>
 						<costList><!-- Costs to build, the names are the defNames of items -->
-							<WoodLog>700</WoodLog>
 							<Cloth>1500</Cloth>
 							<DankPyon_IronIngot>300</DankPyon_IronIngot>
 							<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
@@ -78,8 +94,8 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SAFatMuffalo"]/costList</xpath>
 					<value>
+						<costStuffCount>1700</costStuffCount>
 						<costList><!-- Costs to build, the names are the defNames of items -->
-							<WoodLog>1700</WoodLog>
 							<Cloth>2500</Cloth>
 							<DankPyon_IronIngot>600</DankPyon_IronIngot>
 							<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
@@ -102,8 +118,8 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SASpitefulMoth"]/costList</xpath>
 					<value>
+						<costStuffCount>1800</costStuffCount>
 						<costList><!-- Costs to build, the names are the defNames of items -->
-							<WoodLog>1800</WoodLog>
 							<Cloth>1500</Cloth>
 							<DankPyon_IronIngot>1000</DankPyon_IronIngot>
 							<DankPyon_ComponentBasic>20</DankPyon_ComponentBasic>
@@ -128,8 +144,8 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SAAdvancedpioneer"]/costList</xpath>
 					<value>
+						<costStuffCount>700</costStuffCount>
 						<costList><!-- Costs to build, the names are the defNames of items -->
-							<WoodLog>700</WoodLog>
 							<Cloth>1600</Cloth>
 							<Steel>250</Steel>
 							<DankPyon_ComponentBasic>10</DankPyon_ComponentBasic>
@@ -153,8 +169,8 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SASandmanta"]/costList</xpath>
 					<value>
+						<costStuffCount>1200</costStuffCount>
 						<costList><!-- Costs to build, the names are the defNames of items -->
-							<WoodLog>1200</WoodLog>
 							<Cloth>1300</Cloth>
 							<Steel>350</Steel>
 							<Gold>50</Gold>
@@ -215,6 +231,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="SADinghy"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
 					<value>
+						<li>DankPyon_RawWood</li>
+						<li>DankPyon_RawDarkWood</li>
 						<li>DankPyon_DarkWoodLog</li>
 						<li>DankPyon_ElvenWoodLog</li>
 						<li>DankPyon_DryadWoodLog</li>
@@ -230,6 +248,8 @@
 						defName="SASandmanta"
 						]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs					</xpath>
 					<value>
+						<li>DankPyon_RawWood</li>
+						<li>DankPyon_RawDarkWood</li>
 						<li>DankPyon_DarkWoodLog</li>
 						<li>DankPyon_ElvenWoodLog</li>
 						<li>DankPyon_DryadWoodLog</li>
