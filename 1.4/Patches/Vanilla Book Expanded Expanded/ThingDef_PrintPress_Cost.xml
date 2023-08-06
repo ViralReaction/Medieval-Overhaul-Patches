@@ -8,21 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<!-- Hide Electric Press -->
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/designationCategory</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/designationCategory</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/researchPrerequisites</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/researchPrerequisites</xpath>
-					</match>
-				</li>
-							
+				<!-- Industrial Type Writer -->						
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/techLevel</xpath>
 					<match Class="PatchOperationReplace">
@@ -64,23 +50,7 @@
 								</match>
 							</li>
 				
-							<!-- Hide Electric Press -->
-							<li Class="PatchOperationConditional">
-								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/designationCategory</xpath>
-								<match Class="PatchOperationRemove">
-									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/designationCategory</xpath>
-
-								</match>
-							</li>
-				
-							<li Class="PatchOperationConditional">
-								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/researchPrerequisites</xpath>
-								<match Class="PatchOperationRemove">
-									<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/researchPrerequisites</xpath>
-
-								</match>
-							</li>
-				
+							<!-- Electric Press Industrial -->				
 							<li Class="PatchOperationConditional">
 								<xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_PrintingPressElectric"]/techLevel</xpath>
 								<match Class="PatchOperationReplace">
