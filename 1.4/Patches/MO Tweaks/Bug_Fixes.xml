@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Thrumbo"]</xpath>
+		<value>
+			<li Class="DankPyon.AdditionalButcherProducts">
+				<butcherOptions>
+					<li>
+						<thingDef>ThrumboHorn</thingDef>
+						<amount>1</amount>
+						<chance>100</chance>
+					</li>
+				</butcherOptions>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_MealBread"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="Make_BabyFood" or defName="Make_BabyFoodBulk"]</xpath>
+			<value>
+				<recipeUsers>
+					<li>Campfire</li>
+					<li>FueledStove</li>
+					<li>ElectricStove</li>
+					<li>DankPyon_RusticCookingTable</li>
+				</recipeUsers>
+			</value>
+		</match>
+	</Operation>
+	
+</Patch>
