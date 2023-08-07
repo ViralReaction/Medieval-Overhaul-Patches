@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	
+	<!-- Fix Missing Thrumbo Horn -->
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="Thrumbo"]</xpath>
 		<value>
@@ -16,6 +17,7 @@
 		</value>
 	</Operation>
 	
+	<!-- Fix Bread -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_MealBread"]/comps</xpath>
 		<value>
@@ -24,6 +26,7 @@
 		</value>
 	</Operation>
 	
+	<!-- Fix Missing Baby Food -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Biotech</li>
@@ -39,6 +42,21 @@
 				</recipeUsers>
 			</value>
 		</match>
+	</Operation>
+	
+	<!-- Relabel Honeycomb -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/label</xpath>
+		<value>
+			<label>carrion honeycomb</label>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/description</xpath>
+		<value>
+			<description>This is a honeycomb produced by carrion bees. Honeycombs can be procesed in a Honey Extractor to get honey and beeswax.</description>
+		</value>
 	</Operation>
 	
 </Patch>
