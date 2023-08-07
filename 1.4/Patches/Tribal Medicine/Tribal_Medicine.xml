@@ -8,7 +8,16 @@
 		
 		<match Class="PatchOperationSequence">
 			<operations>
-			
+				
+				<!-- Add Tribal to Cooking Table -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="TM_MedicineTribal" or @Name="TM_TeaBase"]/recipeMaker/recipeUsers</xpath>
+					<value>
+					<li>DankPyon_RusticCookingTable</li>
+					</value>
+				</li>
+				
+				<!-- Reduce from 5000 -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/baseCost</xpath>
 					<value>
@@ -16,6 +25,7 @@
 					</value>
 				</li>
 				
+				<!-- Slightly reduce bonus -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/StatDef[defName="MedicalQualityMax" or defName="MedicalPotency"]/parts/li[@Class="StatPart_Quality"]</xpath>
 					<value>

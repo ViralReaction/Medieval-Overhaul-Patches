@@ -37,14 +37,14 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="MedievalGoJuice"]/ingestible/ingestCommandString</xpath>
 					<value>
-						<ingestCommandString>Ingest {0}</ingestCommandString>
+						<ingestCommandString>Drink {0}</ingestCommandString>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="MedievalGoJuice"]/ingestible/ingestReportString</xpath>
 					<value>
-						<ingestCommandString>Ingesting {0}</ingestCommandString>
+						<ingestCommandString>Drinking {0}</ingestCommandString>
 					</value>
 				</li>
 				
