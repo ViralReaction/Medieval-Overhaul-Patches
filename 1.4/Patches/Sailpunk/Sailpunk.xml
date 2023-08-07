@@ -13,9 +13,22 @@
 					<xpath>Defs/ResearchProjectDef[defName="Research_Thefirstjump"]/prerequisites</xpath>
 					<value>
 						<prerequisites>
-							<li>Smithing</li>
+							<li>DankPyon_Engineering</li>
 						</prerequisites>
+						<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
 					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[
+				defName="Research_RidingintheWinds" or
+				defName="Research_Merchantoftheskies" or
+				defName="Research_WindsofWar" or
+				defName="Research_Conqueringthewinds" or
+				defName="Research_Windjewel"]</xpath>
+				<value>
+				<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+				</value>
 				</li>
 				
 				<li Class="PatchOperationRemove">

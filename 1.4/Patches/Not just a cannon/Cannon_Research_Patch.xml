@@ -33,6 +33,19 @@
 					</nomatch>
 				</li>
 				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[
+					defName="CannonMaking" or
+					defName="Fortification" or
+					defName="AntiDragonWeaponry" or
+					defName="EndLoaded" or
+					defName="ArcedBallistic" or
+					defName="AntiDragonWeaponry"]</xpath>
+					<value>
+						<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+					</value>
+				</li>
+				
 				<!-- Move Research -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ResearchProjectDef[defName="CannonMaking" or defName="Fortification" or defName="AntiDragonWeaponry" or defName="EndLoaded" or defName="ArcedBallistic"]</xpath>
@@ -42,73 +55,73 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="CannonMaking"]/researchViewX</xpath>
-				<value>
-				<researchViewX>16.00</researchViewX>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="CannonMaking"]/researchViewX</xpath>
+					<value>
+						<researchViewX>16.00</researchViewX>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="CannonMaking"]/researchViewY</xpath>
-				<value>
-				<researchViewY>5.80</researchViewY>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="CannonMaking"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.80</researchViewY>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="Fortification"]/researchViewX</xpath>
-				<value>
-				<researchViewX>16.00</researchViewX>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="Fortification"]/researchViewX</xpath>
+					<value>
+						<researchViewX>16.00</researchViewX>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="Fortification"]/researchViewY</xpath>
-				<value>
-				<researchViewY>6.50</researchViewY>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="Fortification"]/researchViewY</xpath>
+					<value>
+						<researchViewY>6.50</researchViewY>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="AntiDragonWeaponry"]/researchViewX</xpath>
-				<value>
-				<researchViewX>17.00</researchViewX>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="AntiDragonWeaponry"]/researchViewX</xpath>
+					<value>
+						<researchViewX>17.00</researchViewX>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="AntiDragonWeaponry"]/researchViewY</xpath>
-				<value>
-				 <researchViewY>6.45</researchViewY>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="AntiDragonWeaponry"]/researchViewY</xpath>
+					<value>
+						<researchViewY>6.45</researchViewY>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="EndLoaded"]/researchViewX</xpath>
-				<value>
-				<researchViewX>17.00</researchViewX>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="EndLoaded"]/researchViewX</xpath>
+					<value>
+						<researchViewX>17.00</researchViewX>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="EndLoaded"]/researchViewY</xpath>
-				<value>
-				<researchViewY>5.80</researchViewY>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="EndLoaded"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.80</researchViewY>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="ArcedBallistic"]/researchViewX</xpath>
-				<value>
-				<researchViewX>17.00</researchViewX>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="ArcedBallistic"]/researchViewX</xpath>
+					<value>
+						<researchViewX>17.00</researchViewX>
+					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="ArcedBallistic"]/researchViewY</xpath>
-				<value>
-				<researchViewY>5.20</researchViewY>
-				</value>
+					<xpath>Defs/ResearchProjectDef[defName="ArcedBallistic"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.20</researchViewY>
+					</value>
 				</li>
 				
 			</operations>

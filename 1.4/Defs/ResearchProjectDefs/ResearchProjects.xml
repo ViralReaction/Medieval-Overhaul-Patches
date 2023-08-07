@@ -4,7 +4,7 @@
 	<ResearchProjectDef>
 		<defName>Esoteric_Studies</defName>
 		<label>esoteric studies</label>
-		<description>Beginning studies of the occult, magical, and the supernatural</description>
+		<description>Beginning studies of the occult, magical, and the supernatural. Unlocks advanced research table.</description>
 		<baseCost>1000</baseCost>
 		<tab>DankPyon_MedievalResearchTab</tab>
 		<techLevel>Medieval</techLevel>
