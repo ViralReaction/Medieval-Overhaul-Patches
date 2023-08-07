@@ -196,24 +196,16 @@
 							</ingredients>
 							<fixedIngredientFilter>
 								<categories>
-									<li>FoodRaw</li>
+									<li>MeatRaw</li>
 								</categories>
-								<specialFiltersToDisallow>
-									<li>AllowPlantFood</li>
-								</specialFiltersToDisallow>
 							</fixedIngredientFilter>
 							<defaultIngredientFilter>
 								<categories>
-									<li>FoodRaw</li>
+									<li>MeatRaw</li>
 								</categories>
-								<disallowedCategories>
-									<li>EggsFertilized</li>
-								</disallowedCategories>
 								<disallowedThingDefs>
 									<li>Meat_Human</li>
 									<li>Meat_Megaspider</li>
-									<li>InsectJelly</li>
-									<li>Milk</li>
 								</disallowedThingDefs>
 							</defaultIngredientFilter>
 							<products>
@@ -303,19 +295,13 @@
 							</ingredients>
 							<fixedIngredientFilter>
 								<categories>
-									<li>FoodRaw</li>
+									<li>PlantFoodRaw</li>
 								</categories>
-								<specialFiltersToDisallow>
-									<li>AllowPlantFood</li>
-								</specialFiltersToDisallow>
 							</fixedIngredientFilter>
 							<defaultIngredientFilter>
 								<categories>
-									<li>FoodRaw</li>
+									<li>PlantFoodRaw</li>
 								</categories>
-								<disallowedCategories>
-									<li>EggsFertilized</li>
-								</disallowedCategories>
 								<disallowedThingDefs>
 									<li>Meat_Human</li>
 									<li>Meat_Megaspider</li>
@@ -564,19 +550,13 @@
 							</ingredients>
 							<fixedIngredientFilter>
 								<categories>
-									<li>FoodRaw</li>
+									<li>MeatRaw</li>
 								</categories>
-								<specialFiltersToDisallow>
-									<li>AllowPlantFood</li>
-								</specialFiltersToDisallow>
 							</fixedIngredientFilter>
 							<defaultIngredientFilter>
 								<categories>
-									<li>FoodRaw</li>
+									<li>MeatRaw</li>
 								</categories>
-								<disallowedCategories>
-									<li>EggsFertilized</li>
-								</disallowedCategories>
 								<disallowedThingDefs>
 									<li>Meat_Human</li>
 									<li>Meat_Megaspider</li>

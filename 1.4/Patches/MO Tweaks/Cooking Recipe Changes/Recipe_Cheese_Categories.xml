@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>DankPyon_Cheese</li>
+						</categories>
+					</filter>
+					<count>0.4</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>DankPyon_Cheese</li>
+						</categories>
+					</filter>
+					<count>2</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealCheeseSoup"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>DankPyon_Cheese</li>
+						</categories>
+					</filter>
+					<count>0.4</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>DankPyon_Ale</li>
+						</thingDefs>
+					</filter>
+					<count>0.16</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>DankPyon_RawGarlic</li>
+						</thingDefs>
+					</filter>
+					<count>0.8</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealCheeseSoupBulk"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>DankPyon_Cheese</li>
+						</categories>
+					</filter>
+					<count>1.2</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>DankPyon_Ale</li>
+						</thingDefs>
+					</filter>
+					<count>0.48</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>DankPyon_RawGarlic</li>
+						</thingDefs>
+					</filter>
+					<count>0.24</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	
+</Patch>

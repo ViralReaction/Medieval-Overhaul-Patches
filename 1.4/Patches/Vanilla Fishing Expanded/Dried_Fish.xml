@@ -30,8 +30,6 @@
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<thingCategories>
-								<li>Foods</li>
-								<li>MeatRaw</li>
 								<li>VCEF_RawFishCategory</li>
 							</thingCategories>
 							<statBases>

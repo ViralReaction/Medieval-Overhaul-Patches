@@ -49,6 +49,132 @@
 					</nomatch>
 				</li>
 				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<RecipeDef>
+							<defName>VFEV_Make_SweetrollBulk</defName>
+							<label>make sweetrolls x20</label>
+							<description>Make sweetrolls out of honey and eggs.</description>
+							<jobString>Making sweetrolls.</jobString>
+							<workAmount>900</workAmount>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_StoneOvenLarge</li>
+							</recipeUsers>
+							<researchPrerequisites>
+								<li>DankPyon_BasicCooking</li>
+								<li>DankPyon_Oven</li>
+							</researchPrerequisites>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>EggsUnfertilized</li>
+										</categories>
+									</filter>
+									<count>8</count>
+								</li>
+								<li>
+									<filter>
+          
+										<thingDefs>
+											<li>VFEV_Honey</li>
+										</thingDefs>
+									</filter>
+									<count>8</count>
+								</li>
+							</ingredients>
+							<products>
+								<VFEV_Sweetroll>20</VFEV_Sweetroll>
+							</products>
+							<fixedIngredientFilter>
+								<categories>
+									<li>EggsUnfertilized</li>
+								</categories>
+								<thingDefs>
+									<li>VFEV_Honey</li>
+									<li>DankPyon_Honey</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>Foods</li>
+								</categories>
+     
+							</defaultIngredientFilter>
+							<workSkill>Cooking</workSkill>
+						</RecipeDef>
+						
+						<RecipeDef>
+							<defName>VFEV_Make_SweetrollBulkier</defName>
+							<label>make sweetrolls x60</label>
+							<description>Make sweetrolls out of honey and eggs.</description>
+							<jobString>Making sweetrolls.</jobString>
+							<workAmount>2700</workAmount>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_StoneOvenLarge</li>
+							</recipeUsers>
+							<researchPrerequisites>
+								<li>DankPyon_BasicCooking</li>
+								<li>DankPyon_Oven</li>
+							</researchPrerequisites>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>EggsUnfertilized</li>
+										</categories>
+									</filter>
+									<count>24</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>VFEV_Honey</li>
+										</thingDefs>
+									</filter>
+									<count>24</count>
+								</li>
+							</ingredients>
+							<products>
+								<VFEV_Sweetroll>60</VFEV_Sweetroll>
+							</products>
+							<fixedIngredientFilter>
+								<categories>
+									<li>EggsUnfertilized</li>
+								</categories>
+								<thingDefs>
+									<li>VFEV_Honey</li>
+									<li>DankPyon_Honey</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>Foods</li>
+								</categories>
+     
+							</defaultIngredientFilter>
+							<workSkill>Cooking</workSkill>
+						</RecipeDef>
+				
+					</value>
+				</li>
+				
 				<li Class="PatchOperationFindMod">
 					<mods>
 						<li>Alpha Bees</li>
@@ -60,7 +186,7 @@
 						</value>
 					</nomatch>
 					<match Class="PatchOperationReplace">
-						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter</xpath>
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll" or defName="VFEV_Make_SweetrollBulk" or defName="VFEV_Make_SweetrollBulkier"]/fixedIngredientFilter</xpath>
 						<value>
 							<fixedIngredientFilter>
 								<categories>
@@ -77,7 +203,7 @@
 						<li>Alpha Bees</li>
 					</mods>
 					<match Class="PatchOperationReplace">
-						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath>
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll" or defName="VFEV_Make_SweetrollBulk" or defName="VFEV_Make_SweetrollBulkier"]/ingredients/li[2]/filter/thingDefs</xpath>
 						<value>
 							<categories>
 								<li>RB_Honeys</li>
@@ -94,6 +220,7 @@
 						</value>
 					</nomatch>
 				</li>
+				
 				
 
 			</operations>

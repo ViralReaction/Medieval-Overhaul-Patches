@@ -17,6 +17,15 @@
 					</mods>
 					<match Class="PatchOperationSequence">
 						<operations>
+						
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="VCE_NightCheese" or defName="VCE_BlueCheese" or defName="VCE_GowCheese"]/thingCategories</xpath>
+								<value>
+									<thingCategories>
+										<li>DankPyon_Cheese</li>
+									</thingCategories>
+								</value>
+							</li>
 					
 							<!-- AA VCE Cheese Processes -->
 							<li Class="PatchOperationAdd">

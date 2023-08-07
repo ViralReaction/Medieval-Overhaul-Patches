@@ -80,7 +80,6 @@
 							<graphicClass>Graphic_StackCount</graphicClass>
 						</graphicData>
 						<thingCategories>
-							<li>Foods</li>
 							<li>MeatRaw</li>
 						</thingCategories>
 						<statBases>
@@ -162,7 +161,6 @@
 							<graphicClass>Graphic_StackCount</graphicClass>
 						</graphicData>
 						<thingCategories>
-							<li>Foods</li>
 							<li>MeatRaw</li>
 						</thingCategories>
 						<statBases>
@@ -269,7 +267,6 @@
 		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
 		<value>
 			<thingCategories>
-				<li>Foods</li>
 				<li>MeatRaw</li>
 			</thingCategories>
 		</value>
