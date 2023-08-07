@@ -14,7 +14,14 @@
 						<efficiency>1</efficiency>
 					</value>
 				</li>
-			
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DevDesigner_VFEM_BloodWine"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DevDesigner_VFEM_BloodWine"]</xpath>
+					</match>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
