@@ -17,21 +17,7 @@
 						<name>DankPyon_IronIngot</name>
 					</match>
 				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="FT_CastleWall" or defName="FT_CastleWallEmbrasures"]/designationCategory</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="FT_CastleWall" or defName="FT_CastleWallEmbrasures"]/designationCategory</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="FT_CastleWall" or defName="FT_CastleWallEmbrasures"]/researchPrerequisites</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="FT_CastleWall" or defName="FT_CastleWallEmbrasures"]/researchPrerequisites</xpath>
-					</match>
-				</li>
-		
+
 			</operations>
 		</match>
 	</Operation>
