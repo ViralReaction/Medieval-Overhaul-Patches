@@ -18,6 +18,7 @@
 						<value>
 							<prerequisites>
 								<li>CE_Gunpowder</li>
+								<li>DankPyon_Engineering</li>
 							</prerequisites>
 						</value>
 					</match>
@@ -26,6 +27,7 @@
 						<value>
 							<prerequisites>
 								<li>DankPyon_Gunpowder</li>
+								<li>DankPyon_Engineering</li>
 							</prerequisites>
 						</value>
 					</nomatch>
