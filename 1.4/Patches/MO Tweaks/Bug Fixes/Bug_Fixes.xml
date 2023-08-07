@@ -35,9 +35,6 @@
 			<xpath>Defs/RecipeDef[defName="Make_BabyFood" or defName="Make_BabyFoodBulk"]</xpath>
 			<value>
 				<recipeUsers>
-					<li>Campfire</li>
-					<li>FueledStove</li>
-					<li>ElectricStove</li>
 					<li>DankPyon_RusticCookingTable</li>
 				</recipeUsers>
 			</value>
