@@ -9,10 +9,12 @@
 			<operations>
 				
 				<!-- Change MO Honey thing category -->
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DankPyon_Honey"]/thingCategories</xpath>
 					<value>
-						<li>RB_Honeys</li>
+						<thingCategories>
+							<li>RB_Honeys</li>
+						</thingCategories>
 					</value>
 				</li>
 				

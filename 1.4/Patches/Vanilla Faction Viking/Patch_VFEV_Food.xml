@@ -49,24 +49,51 @@
 					</nomatch>
 				</li>
 				
-				<!-- Change Moodlet to VFEV Meads -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath>
-					<value>
-						<thingDefs>
-							<li>VFEV_Honey</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Bees</li>
+					</mods>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter/thingDefs</xpath>
+						<value>
 							<li>DankPyon_Honey</li>
-						</thingDefs>
-					</value>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter</xpath>
+						<value>
+							<fixedIngredientFilter>
+								<categories>
+									<li>EggsUnfertilized</li>
+									<li>RB_Honeys</li>
+								</categories>
+							</fixedIngredientFilter>
+						</value>
+					</match>
 				</li>
 				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter/thingDefs</xpath>
-					<value>
-						<li>DankPyon_Honey</li>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Bees</li>
+					</mods>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath>
+						<value>
+							<categories>
+								<li>RB_Honeys</li>
+							</categories>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath>
+						<value>
+							<thingDefs>
+								<li>VFEV_Honey</li>
+								<li>DankPyon_Honey</li>
+							</thingDefs>
+						</value>
+					</nomatch>
 				</li>
-				
 				
 
 			</operations>
