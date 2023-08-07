@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ↁ House Sanguin</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DevDesigner_BloodMustWineIntoBloodWine"]/efficiency</xpath>
+					<value>
+						<efficiency>1</efficiency>
+					</value>
+				</li>
+			
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
