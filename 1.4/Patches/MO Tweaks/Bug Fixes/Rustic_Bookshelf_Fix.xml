@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- Fix Rustic Bookshelf Errors -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_RusticBookshelf"]</xpath>
+		<value>
+			<inspectorTabs>
+				<li>ITab_Storage</li>
+			</inspectorTabs>
+		</value>
+	</Operation>
+	
+	<!-- Description says two -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_RusticBookshelf"]/comps/li[@Class=CompProperties_Facility]/maxSimultaneous</xpath>
+		<value>
+			<maxSimultaneous>2</maxSimultaneous>
+		</value>
+	</Operation>
+	
+	<!-- Make Royal Bookshelf work same -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_RoyalBookshelf"]</xpath>
+		<value>
+			<building>
+				<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+				<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+				<maxItemsInCell>3</maxItemsInCell>
+				<storageGroupTag>Shelf</storageGroupTag>
+				<blueprintClass>Blueprint_Storage</blueprintClass>
+				<fixedStorageSettings>
+					<filter>
+						<disallowNotEverStorable>true</disallowNotEverStorable>
+						<categories>
+							<li>DankPyon_BuildingsBook</li>
+						</categories>
+					</filter>
+				</fixedStorageSettings>
+				<defaultStorageSettings>
+					<priority>Preferred</priority>
+					<filter>
+						<categories>
+							<li>DankPyon_BuildingsBook</li>
+						</categories>
+					</filter>
+				</defaultStorageSettings>
+				<paintable>true</paintable>
+			</building>
+			<inspectorTabs>
+				<li>ITab_Storage</li>
+			</inspectorTabs>
+			<researchPrerequisites>
+				<li>DankPyon_RoyalRusticFurniture</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_RoyalBookshelf"]/thingClass</xpath>
+		<value>
+			<thingClass>Building_Storage</thingClass>
+		</value>
+	</Operation>
+	
+	<!-- Linkable Royal Bookshelf -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_AdvancedResearchBench" or defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities]/linkableFacilities</xpath>
+		<value>
+			<li>DankPyon_RoyalBookshelf</li>
+		</value>
+	</Operation>
+
+</Patch>
