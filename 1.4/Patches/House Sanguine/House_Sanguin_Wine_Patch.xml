@@ -22,6 +22,26 @@
 					</match>
 				</li>
 				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Factions Expanded - Medieval</li>
+					</mods>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DevDesigner_BloodWine"]/comps</xpath>
+						<value>
+							<li Class="VFEMedieval.CompProperties_IngestedThoughtFromQuality">
+								<ingestedThought>DevDesigner_VFEM_DrankBloodWine</ingestedThought>
+							</li>
+							<li>
+								<compClass>CompQuality</compClass>
+							</li>
+							<li>
+								<compClass>CompEquippable</compClass>
+							</li>
+						</value>
+					</match>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
