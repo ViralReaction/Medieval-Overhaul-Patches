@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_RusticTorchLamp" or defName="DankPyon_WallTorch"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+		<value>
+			<li>DankPyon_RawWood</li>
+			<li>DankPyon_RawDarkWood</li>
+		</value>
+	</Operation>
+	
+</Patch>
