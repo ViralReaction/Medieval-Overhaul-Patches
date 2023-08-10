@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Divine Order</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="ComplexClothing"]</xpath>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+		
+</Patch>
