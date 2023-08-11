@@ -7,27 +7,23 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_PeltMantle"]/apparel/layers</xpath>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_PeltMantle" or defName="Gunmar_Apparel_SunshadePeltMantle" or defName="Gunmar_Apparel_WovenMantle"]</xpath>
 					<value>
-						<layers>
-							<li>DankPyon_ShellAttachment</li>
-						</layers>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0, 0.2, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0, 0.2, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_SunshadePeltMantle"]/apparel/layers</xpath>
-					<value>
-						<layers>
-							<li>DankPyon_ShellAttachment</li>
-						</layers>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_WovenMantle"]/apparel/layers</xpath>
+					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_PeltMantle" or defName="Gunmar_Apparel_SunshadePeltMantle" or defName="Gunmar_Apparel_WovenMantle"]/apparel/layers</xpath>
 					<value>
 						<layers>
 							<li>DankPyon_ShellAttachment</li>
@@ -38,5 +34,5 @@
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>
