@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Ideology Expanded - Memes and Structures</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]</xpath>
+					<value>
+						<li>DankPyon_Mead</li>
+						<li>DankPyon_Ale</li>
+						<li>DankPyon_Cider</li>
+						<li>DankPyon_Wine</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>ↁ House Sanguin</li>
+					</mods>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]</xpath>
+						<value>
+							<li>DevDesigner_BloodWine</li>
+						</value>
+					</match>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
