@@ -8,8 +8,11 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<li Class="PatchOperationRemove">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="ComplexClothing"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="ComplexClothing"]</xpath>
+					</match>
 				</li>
 				
 			</operations>
