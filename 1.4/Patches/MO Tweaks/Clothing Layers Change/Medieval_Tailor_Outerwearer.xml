@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medievel Tailor</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="AMT_Apparel_WinterCloak"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="AMT_Apparel_Cloak"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="AMT_Headgear_Cowl"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_Hood</li>
+						</layers>
+					</value>
+				</li>
+				
+				
+			
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
