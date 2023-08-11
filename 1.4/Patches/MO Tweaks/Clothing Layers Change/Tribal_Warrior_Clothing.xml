@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Tribal Warrior Set!</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_PeltMantle"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_SunshadePeltMantle"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Gunmar_Apparel_WovenMantle"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
