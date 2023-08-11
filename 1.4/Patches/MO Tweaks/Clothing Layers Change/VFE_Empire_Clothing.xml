@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Empire</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0, 0.2, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0, 0.2, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
