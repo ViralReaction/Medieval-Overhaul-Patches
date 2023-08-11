@@ -9,7 +9,7 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsRobes"/apparel/layers</xpath>
+					<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsRobes"]/apparel/layers</xpath>
 					<value>
 							<li>DankPyon_ShellAttachment</li>
 					</value>
