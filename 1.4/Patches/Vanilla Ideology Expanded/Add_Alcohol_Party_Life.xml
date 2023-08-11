@@ -9,7 +9,7 @@
 			<operations>
 			
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]</xpath>
+					<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept</xpath>
 					<value>
 						<li>DankPyon_Mead</li>
 						<li>DankPyon_Ale</li>
@@ -23,7 +23,7 @@
 						<li>ↁ House Sanguin</li>
 					</mods>
 					<match Class="PatchOperationAdd">
-						<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]</xpath>
+						<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept</xpath>
 						<value>
 							<li>DevDesigner_BloodWine</li>
 						</value>
