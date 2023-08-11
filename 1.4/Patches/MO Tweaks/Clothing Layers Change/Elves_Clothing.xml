@@ -9,11 +9,32 @@
 			<operations>
 
 				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="DevDesigner_Cloaks"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0, 0.2, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0, 0.2, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="DevDesigner_Cloaks"]/apparel/layers</xpath>
 					<value>
 						<layers>
 							<li>DankPyon_ShellAttachment</li>
 						</layers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="DevDesigner_Cloaks"]/apparel/bodyPartGroups</xpath>
+					<value>
+						<li>Shoulders</li>
 					</value>
 				</li>
 

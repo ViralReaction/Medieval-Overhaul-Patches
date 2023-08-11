@@ -3,13 +3,13 @@
 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Medievel Tailor</li>
+			<li>Dragons Descent</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 
 				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="AMT_Apparel_WinterCloak" or defName="AMT_Apparel_Cloak"]</xpath>
+					<xpath>Defs/ThingDef[defName="DD_Apparel_WingCape"]</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
@@ -23,7 +23,7 @@
 				</li>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="AMT_Apparel_WinterCloak" or defName="AMT_Apparel_Cloak"]/apparel/layers</xpath>
+					<xpath>Defs/ThingDef[defName="DD_Apparel_WingCape"]/apparel/layers</xpath>
 					<value>
 						<layers>
 							<li>DankPyon_ShellAttachment</li>
@@ -31,10 +31,12 @@
 					</value>
 				</li>
 				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="AMT_Apparel_Cloak" or defName="AMT_Apparel_WinterCloak"]/apparel/bodyPartGroups</xpath>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleMail"]/apparel/layers</xpath>
 					<value>
-						<li>Shoulders</li>
+						<layers>
+							<li>Shell</li>
+						</layers>
 					</value>
 				</li>
 
