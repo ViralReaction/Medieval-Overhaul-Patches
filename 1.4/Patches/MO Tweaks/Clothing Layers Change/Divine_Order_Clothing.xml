@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-<Operation Class="PatchOperationFindMod">
+	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Divine Order</li>
 		</mods>
@@ -38,9 +38,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="BotchJob_CrusaderHelmet"]/apparel/layers</xpath>
 					<value>
-						<layers>
-							<li>DankPyon_Hood</li>
-						</layers>
+						<li>DankPyon_Hood</li>
 					</value>
 				</li>
 				

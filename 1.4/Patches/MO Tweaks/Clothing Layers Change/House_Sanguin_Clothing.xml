@@ -29,9 +29,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_HeraldicGreatHelm"]/apparel/layers</xpath>
 					<value>
-						<layers>
 							<li>DankPyon_Hood</li>
-						</layers>
 					</value>
 				</li>
 
