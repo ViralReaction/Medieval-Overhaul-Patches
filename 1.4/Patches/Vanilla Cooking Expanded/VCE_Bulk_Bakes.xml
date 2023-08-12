@@ -38,10 +38,14 @@
 					<products>
 						<VCE_SimpleBake>24</VCE_SimpleBake>
 					</products>
+					<researchPrerequisites>
+						<li>DankPyon_BasicCooking</li>
+						<li>DankPyon_Oven</li>
+					</researchPrerequisites>
 				</RecipeDef>
 				
 				<RecipeDef ParentName="VCE_CookBakeMealBase">
-					<defName>VCE_CookBakeFineBulk</defName>
+					<defName>VCE_CookBakeFineBulkier</defName>
 					<label>cook fine bake x24</label>
 					<description>Cook 24 complex bakes assembled with care from a wide selection of ingredients and flour.</description>
 					<jobString>Cooking fine bake x24.</jobString>
@@ -89,10 +93,14 @@
 					<skillRequirements>
 						<Cooking>6</Cooking>
 					</skillRequirements>
+					<researchPrerequisites>
+						<li>DankPyon_BasicCooking</li>
+						<li>DankPyon_Oven</li>
+					</researchPrerequisites>
 				</RecipeDef>
 	
 				<RecipeDef ParentName="VCE_CookBakeMealBase">
-					<defName>VCE_CookBakeLavishBulk</defName>
+					<defName>VCE_CookBakeLavishBulkier</defName>
 					<label>cook lavish bake x24</label>
 					<description>Cook 24 masterpieces of the culinary arts, these bakes nourish the body, mind, and soul.</description>
 					<jobString>Cooking lavish bake x24.</jobString>
@@ -139,6 +147,10 @@
 					<skillRequirements>
 						<Cooking>8</Cooking>
 					</skillRequirements>
+					<researchPrerequisites>
+						<li>DankPyon_IntermediateCooking</li>
+						<li>DankPyon_Oven</li>
+					</researchPrerequisites>
 				</RecipeDef>
 			
 			</value>

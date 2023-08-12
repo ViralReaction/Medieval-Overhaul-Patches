@@ -5,7 +5,6 @@
 		<mods>
 			<li>Vanilla Cooking Expanded</li>
 		</mods>
-		
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -30,18 +29,9 @@
 						<xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
 					</match>
 				</li>
-				
-				<!-- Hide VCE Wheat -->
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/sowTags</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/sowTags</xpath>
-					</match>
-				</li>
-				
+
 			</operations>
 		</match>
-		
 	</Operation>
 	
 </Patch>
