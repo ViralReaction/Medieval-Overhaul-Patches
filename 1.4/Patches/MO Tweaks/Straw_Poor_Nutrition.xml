@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/statBases</xpath>
+		<value>
+			<Nutrition>0.01</Nutrition>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+		<value>
+			<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
+		</value>
+	</Operation>
+	
+	
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_StrawProcess"]/thingDef</xpath>
+		<value>
+			<thingDef>DankPyon_DriedHay</thingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Plants Expanded</li>
+		</mods>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/products/Hay</xpath>
+		</match>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/products/Hay</xpath>
+			<value>
+				<DankPyon_Straw>1</DankPyon_Straw>
+			</value>
+		</nomatch>
+	</Operation>
+	
+</Patch>
