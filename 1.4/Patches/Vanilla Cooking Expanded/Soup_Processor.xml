@@ -555,7 +555,7 @@
 					
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedPumpkinSoup</defName>
-							<label>uncooked mushroom soup</label>
+							<label>uncooked pumpkin soup</label>
 							<description>An uncooked pumpkin soup. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
 								<texPath>Meal/PumpkinSoup</texPath>
