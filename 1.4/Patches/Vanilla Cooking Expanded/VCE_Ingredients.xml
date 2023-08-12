@@ -16,6 +16,14 @@
 						<li>DankPyon_Flour</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs[li="DankPyon_Flour"]/li</xpath>
+					<value>
+						<li>VCE_Flour</li>
+						<li>DankPyon_Flour</li>
+					</value>
+				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VCE_Flour"]/li</xpath>
@@ -24,26 +32,125 @@
 						<li>DankPyon_Flour</li>
 					</value>
 				</li>
-
+				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/harvestedThingDef</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VCE_Flour"]/li</xpath>
 					<value>
-						<harvestedThingDef>DankPyon_RawWheat</harvestedThingDef>
+						<li>VCE_Flour</li>
+						<li>DankPyon_Flour</li>
 					</value>
 				</li>
 				
-				<!-- Sugar -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Sugarcane"]/plant/harvestedThingDef</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="DankPyon_Flour"]/li</xpath>
 					<value>
-						<harvestedThingDef>DankPyon_Sugarcane</harvestedThingDef>
+						<li>VCE_Flour</li>
+						<li>DankPyon_Flour</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="DankPyon_Flour"]/li</xpath>
+					<value>
+						<li>VCE_Flour</li>
+						<li>DankPyon_Flour</li>
+					</value>
+				</li>
+
+				<!-- Sugar -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]/thingCategories</xpath>
+					<value>
+						<li>VCE_Condiments</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
+					<value>
+						<ingredient>
+							<mergeCompatibilityTags>
+								<li>Condiments</li>
+							</mergeCompatibilityTags>
+						</ingredient>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Allspice"]/plant/harvestedThingDef</xpath>
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]/ingestible</xpath>
 					<value>
-						<harvestedThingDef>DankPyon_RawHerb</harvestedThingDef>
+						<ingestible>
+							<preferability>NeverForNutrition</preferability>
+							<specialThoughtAsIngredient>VCE_ConsumedSugar</specialThoughtAsIngredient>
+							<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+						</ingestible>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
+					<value>
+						<li Class="AnimalBehaviours.AnimalStatExtension">
+				
+							<statToAdd>
+								<li>VCE_CondimentEffects</li>
+				
+							</statToAdd>
+							<statValues>
+								<li>VCE_CondimentEffectsTitle</li>
+								
+							</statValues>
+							<statDescriptions>
+								<li>VCE_CondimentEffectsSugar</li>
+							</statDescriptions>
+						</li>
+					</value>
+				</li>
+
+				<!-- Spices -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Spices"]/thingCategories</xpath>
+					<value>
+						<li>VCE_Condiments</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Spices"]</xpath>
+					<value>
+						<ingredient>
+							<mergeCompatibilityTags>
+								<li>Condiments</li>
+							</mergeCompatibilityTags>
+						</ingredient>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_Spices"]/ingestible</xpath>
+					<value>
+						<ingestible>
+							<preferability>NeverForNutrition</preferability>
+							<specialThoughtAsIngredient>VCE_ConsumedSpices</specialThoughtAsIngredient>
+							<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+						</ingestible>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="DankPyon_Spices"]</xpath>
+					<value>
+						<li Class="AnimalBehaviours.AnimalStatExtension">
+							<statToAdd>
+								<li>VCE_CondimentEffects</li>
+							</statToAdd>
+							<statValues>
+								<li>VCE_CondimentEffectsTitle</li>
+							</statValues>
+							<statDescriptions>
+								<li>VCE_CondimentEffectsSpices</li>
+							</statDescriptions>
+						</li>
 					</value>
 				</li>
 

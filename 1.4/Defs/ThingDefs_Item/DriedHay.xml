@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>DankPyon_DriedHay</defName>
+		<label>dried hay</label>
+		<description>Dried stalks of grain, used especially as fodder, harvested and compacted for storage. Straw is good animal feed, but inedible for humans.</description>
+		<stackLimit>200</stackLimit>
+		<graphicData>
+			<texPath>Resources/Straw</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.7</MarketValue>
+			<Mass>0.010</Mass>
+			<Flammability>1.8</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<ingestible>
+			<optimalityOffsetFeedingAnimals>6</optimalityOffsetFeedingAnimals>
+		</ingestible>
+	</ThingDef>
+
+</Defs>
