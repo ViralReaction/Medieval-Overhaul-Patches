@@ -7,30 +7,26 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<!-- Apple Tree Integration -->
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant/sowTags</xpath>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/graphicData/texPath</xpath>
 					<value>
 						<texPath>Plants/TreeApple</texPath>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant/harvestedThingDef</xpath>
 					<value>
 						<harvestedThingDef>DankPyon_RawApples</harvestedThingDef>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant/sowResearchPrerequisites</xpath>
-				</li>
-				
+
 				<!-- Fruit Tree Integration -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[
@@ -48,7 +44,7 @@
 						</sowResearchPrerequisites>
 					</value>
 				</li>
-				
+
 			</operations>
 		</match>
 	</Operation>
