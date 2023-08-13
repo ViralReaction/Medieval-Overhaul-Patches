@@ -7,15 +7,22 @@
 			<Nutrition>0.01</Nutrition>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
 		<value>
 			<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
 		</value>
 	</Operation>
-	
-	
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>Feed</li>
+			</thingCategories>
+		</value>
+	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_StrawProcess"]/thingDef</xpath>
@@ -30,5 +37,5 @@
 			<DankPyon_Straw>1</DankPyon_Straw>
 		</value>
 	</Operation>
-	
+
 </Patch>

@@ -18,7 +18,7 @@
 			<Flammability>1.8</Flammability>
 		</statBases>
 		<thingCategories>
-			<li>Foods</li>
+			<li>Feed</li>
 		</thingCategories>
 		<ingestible>
 			<optimalityOffsetFeedingAnimals>6</optimalityOffsetFeedingAnimals>
@@ -39,13 +39,10 @@
 		</graphicData>
 		<size>(2,1)</size>
 		<defaultPlacingRot>South</defaultPlacingRot>
-
 		<costList>
 			<DankPyon_DriedHay>20</DankPyon_DriedHay>
 		</costList>
-
 		<stuffCategories Inherit="false"/>
-
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints> 
 			<Mass>8</Mass>

@@ -9,6 +9,14 @@
 		</value>
 	</Operation>
 	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hay"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>Feed</li>
+			</thingCategories>
+		</value>
+	</Operation>
 	
 	
 </Patch>

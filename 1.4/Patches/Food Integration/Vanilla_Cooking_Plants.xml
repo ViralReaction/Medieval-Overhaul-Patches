@@ -9,12 +9,12 @@
 			<operations>
 
 				<!--Wheat Integration -->
-				<!--<li Class="PatchOperationReplace">
+				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/sowTags</xpath>
 					<value>
 						<sowTags/>
 					</value>
-				</li> -->
+				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/harvestedThingDef</xpath>
@@ -22,62 +22,7 @@
 						<harvestedThingDef>DankPyon_RawSpelt</harvestedThingDef>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs</xpath>
-					<value>
-				
-						<ThingDef ParentName="RoughPlantBase">
-							<defName>DankPyon_RawSpelt</defName>
-							<label>spelt</label>
-							<description>Spelt is a grain that can be milled into flour.</description>
-							<graphicData>
-								<texPath>Plants/RawWheat</texPath>
-								<graphicClass>Graphic_StackCount</graphicClass>
-								<color>(0.75,0.75,0.75,1)</color>
-							</graphicData>
-							<statBases>
-								<MarketValue>1.1</MarketValue>
-							</statBases>
-							<ingestible>
-								<foodType>Seed</foodType>
-								<preferability>NeverForNutrition</preferability>
-							</ingestible>
-							<comps>
-								<li Class="CompProperties_Rottable">
-									<daysToRotStart>60</daysToRotStart>
-									<rotDestroys>true</rotDestroys>
-								</li>
-							</comps>
-							<thingCategories>
-								<li>Foods</li>
-							</thingCategories>
-						</ThingDef>
-				
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/fixedIngredientFilter/thingDefs</xpath>
-					<value>
-						<li>DankPyon_RawSpelt</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/ingredients/li/filter/thingDefs</xpath>
-					<value>
-						<li>DankPyon_RawSpelt</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs</xpath>
-					<value>
-						<li>DankPyon_RawSpelt</li>
-					</value>
-				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/label</xpath>
 					<value>
