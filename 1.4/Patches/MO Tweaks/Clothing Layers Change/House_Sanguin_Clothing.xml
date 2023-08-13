@@ -6,19 +6,37 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_Cape"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
-					<value>
-						<li Class="VFECore.ApparelDrawPosExtension">
-							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.2, -.15)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  0.005, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  0.005, 0)</drawPosEastOffset>
-							</apparelDrawSettings>
-						</li>
-					</value>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_Cape"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
+									<drawPosNorthOffset>(0, 0.2, -.15)</drawPosNorthOffset>
+									<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+									<drawPosWestOffset>(0,  0.005, 0)</drawPosWestOffset>
+									<drawPosEastOffset>(0,  0.005, 0)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_Cape"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
+									<drawPosNorthOffset>(0, 0.2, -.15)</drawPosNorthOffset>
+									<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
+									<drawPosWestOffset>(0,  0.001, 0)</drawPosWestOffset>
+									<drawPosEastOffset>(0,  0.001, 0)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</match>
 				</li>
 				
 				<li Class="PatchOperationReplace">

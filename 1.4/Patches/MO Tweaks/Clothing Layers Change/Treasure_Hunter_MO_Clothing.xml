@@ -8,18 +8,36 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
-					<value>
-						<li Class="VFECore.ApparelDrawPosExtension">
-							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.05,  0.005, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-0.05,  0.005, 0)</drawPosEastOffset>
-							</apparelDrawSettings>
-						</li>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
+									<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
+									<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+									<drawPosWestOffset>(0.05,  0.005, 0)</drawPosWestOffset>
+									<drawPosEastOffset>(-.05,  0.005, 0)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
+									<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
+									<drawPosSouthOffset>(0, 0.001, -0.01)</drawPosSouthOffset>
+									<drawPosWestOffset>(0.05,  0.001, 0)</drawPosWestOffset>
+									<drawPosEastOffset>(-.05,  0.001, 0)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</match>
 				</li>
 
 				<li Class="PatchOperationReplace">
@@ -30,9 +48,9 @@
 						</layers>
 					</value>
 				</li>
-				
+
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>

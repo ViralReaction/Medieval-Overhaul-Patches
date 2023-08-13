@@ -7,33 +7,70 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-
-				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak" or defName="BotchJob_InquisitorCloak"]</xpath>
-					<value>
-						<li Class="VFECore.ApparelDrawPosExtension">
-							<apparelDrawSettings>
+				
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<nomatch Class="PatchOperationAddModExtension">
+						<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak" or defName="BotchJob_InquisitorCloak"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
 								<drawPosNorthOffset>(0, 0.01, 0.05)</drawPosNorthOffset>
 								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
 								<drawPosWestOffset>(0,  0.005, 0.05)</drawPosWestOffset>
 								<drawPosEastOffset>(0,  0.005, 0.05)</drawPosEastOffset>
-							</apparelDrawSettings>
-						</li>
-					</value>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAddModExtension">
+						<xpath>Defs/ThingDef[defName="DD_Apparel_WingCape"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.01, 0.05)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.001, 0.05)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.001, 0.05)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</match>
 				</li>
 				
-				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]</xpath>
-					<value>
-						<li Class="VFECore.ApparelDrawPosExtension">
-							<apparelDrawSettings>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<nomatch Class="PatchOperationAddModExtension">
+						<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
 								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  0.005, 0.05)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  0.005, 0.05)</drawPosEastOffset>
-							</apparelDrawSettings>
-						</li>
-					</value>
+								<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.001, 0.05)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.001, 0.05)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationAddModExtension">
+						<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]</xpath>
+						<value>
+							<li Class="VFECore.ApparelDrawPosExtension">
+								<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.001, 0.05)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.001, 0.05)</drawPosEastOffset>
+								</apparelDrawSettings>
+							</li>
+						</value>
+					</match>
 				</li>
 
 				<li Class="PatchOperationReplace">

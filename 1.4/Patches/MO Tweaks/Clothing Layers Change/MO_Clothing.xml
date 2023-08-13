@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[@Name="DankPyon_ArmorAttachmentBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
-		<value>
-			<li Class="VFECore.ApparelDrawPosExtension">
-				<apparelDrawSettings>
-					<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-					<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-					<drawPosWestOffset>(0.1,  0.005, 0)</drawPosWestOffset>
-					<drawPosEastOffset>(-.1,  0.005, 0)</drawPosEastOffset>
-				</apparelDrawSettings>
-			</li>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[@Name="DankPyon_ArmorAttachmentBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+			<value>
+				<li Class="VFECore.ApparelDrawPosExtension">
+					<apparelDrawSettings>
+						<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+						<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+						<drawPosWestOffset>(0.1,  0.005, 0)</drawPosWestOffset>
+						<drawPosEastOffset>(-.1,  0.005, 0)</drawPosEastOffset>
+					</apparelDrawSettings>
+				</li>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[@Name="DankPyon_ArmorAttachmentBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+			<value>
+				<li Class="VFECore.ApparelDrawPosExtension">
+					<apparelDrawSettings>
+						<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+						<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
+						<drawPosWestOffset>(0.1,  0.001, 0)</drawPosWestOffset>
+						<drawPosEastOffset>(-.1,  0.001, 0)</drawPosEastOffset>
+					</apparelDrawSettings>
+				</li>
+			</value>
+		</match>
 	</Operation>
 
 </Patch>
