@@ -15,6 +15,19 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="VFEM_Apparel_PlateArmorHeavy"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<shellPosDrawSettings>
+								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+							</shellPosDrawSettings>
+						</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>

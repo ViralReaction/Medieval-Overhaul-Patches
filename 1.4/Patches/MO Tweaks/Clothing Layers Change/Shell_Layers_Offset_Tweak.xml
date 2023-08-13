@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Vanilla Rimworld -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[
+		defName="Apparel_Parka" or
+		defName="Apparel_PlateArmor"]</xpath>
+		<value>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+				</shellPosDrawSettings>
+			</li>
+		</value>
+	</Operation>
+	
+	<!-- Medieval Overhaul -->
+	<!-- Heavy Armor -->
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[
+		defName="DankPyon_Apparel_Brigandine" or
+		defName="DankPyon_Apparel_Breast_Plate" or
+		defName="DankPyon_Apparel_FullPlate" or
+		defName="DankPyon_Apparel_FullPlateGilded" or
+		defName="DankPyon_Apparel_FullPlateNamed"]</xpath>
+		<value>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+				</shellPosDrawSettings>
+			</li>
+		</value>
+	</Operation>  
+	
+	<!-- Medium Armor -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[
+		defName="DankPyon_Apparel_Heavy_Hauberk" or
+		defName="DankPyon_Apparel_Heraldic_Hauberk1c"]</xpath>
+		<value>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<shellPosDrawSettings>
+					<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+				</shellPosDrawSettings>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

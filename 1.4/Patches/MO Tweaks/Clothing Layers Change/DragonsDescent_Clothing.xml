@@ -13,10 +13,10 @@
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0, 0.2, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0, 0.2, 0)</drawPosEastOffset>
+								<drawPosNorthOffset>(0, 0.01, -.1)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.005, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.005, 0)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
@@ -37,6 +37,19 @@
 						<layers>
 							<li>Shell</li>
 						</layers>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleMail"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<shellPosDrawSettings>
+								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+							</shellPosDrawSettings>
+						</li>
 					</value>
 				</li>
 

@@ -9,14 +9,28 @@
 			<operations>
 
 				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak" or defName="BotchJob_DivineOrderFurCloak" or defName="BotchJob_InquisitorCloak"]</xpath>
+					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak" or defName="BotchJob_InquisitorCloak"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.01, 0.05)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.005, 0.05)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.005, 0.05)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
 								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0, 0.2, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0, 0.2, 0)</drawPosEastOffset>
+								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.005, 0.05)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.005, 0.05)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
@@ -30,13 +44,33 @@
 						</layers>
 					</value>
 				</li>
-
-				<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="BotchJob_InquisitorArmor"]/apparel/layers/li[.="OnSkin"]</xpath>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="BotchJob_CrusaderArmor"]/apparel/layers</xpath>
 					<value>
-							<li>Shell</li>
+						<li>DankPyon_ShellAttachment</li>
 					</value>
 				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="BotchJob_InquisitorArmor"]/apparel/layers/li[.="OnSkin"]</xpath>
+					<value>
+						<li>Shell</li>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderPlateArmor"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<shellPosDrawSettings>
+								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+							</shellPosDrawSettings>
+						</li>
+					</value>
+				</li> -->
 
 			</operations>
 		</match>

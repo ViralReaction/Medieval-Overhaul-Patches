@@ -7,41 +7,11 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
+
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ResearchProjectDef[defName="DraconicApparelAndWeapons"]/prerequisites/li[.="PlateArmor"]</xpath>
 				</li>
-			
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleHelm"]/recipeMaker/researchPrerequisite</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>DraconicApparelAndWeapons</li>
-							<li>DankPyon_ChainArmor</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleHelm" or defName="DD_Apparel_ScaleMail"]/recipeMaker/researchPrerequisite</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>DraconicApparelAndWeapons</li>
-							<li>DankPyon_ChainArmor</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DD_Apparel_WingCape"]/recipeMaker/researchPrerequisite</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>DraconicApparelAndWeapons</li>
-							<li>DankPyon_Tailoring</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DD_MeleeWeapon_HornedLance"]/recipeMaker/researchPrerequisite</xpath>
 					<value>
@@ -51,7 +21,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DD_MeleeWeapon_DrachenSword"]/recipeMaker/researchPrerequisite</xpath>
 					<value>
@@ -61,9 +31,9 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-			
+
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>

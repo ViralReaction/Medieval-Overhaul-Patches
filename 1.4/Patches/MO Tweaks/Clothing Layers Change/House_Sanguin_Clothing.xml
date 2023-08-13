@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>ↁ House Sanguin</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_Cape"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, -.15)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.005, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.005, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
+				</li>
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_Cape"]/apparel/layers</xpath>
 					<value>
@@ -16,9 +29,28 @@
 						</layers>
 					</value>
 				</li>
-
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[
+					defName="DevDesigner_Blood_Apparel_HeraldicHeavyHauberk" or
+					defName="DevDesigner_Blood_Apparel_FullPlate" or
+					defName="DevDesigner_Blood_Apparel_LordFullPlate"]
+					</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<shellPosDrawSettings>
+								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+							</shellPosDrawSettings>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				
 			</operations>
 		</match>
 	</Operation>
-
 </Patch>

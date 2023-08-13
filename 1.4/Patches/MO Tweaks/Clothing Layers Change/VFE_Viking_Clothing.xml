@@ -9,14 +9,28 @@
 			<operations>
 				
 				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="VFEV_Apparel_JarlCape" or defName="VFEV_Apparel_RoyalFurCoat"]</xpath>
+					<xpath>Defs/ThingDef[defName="VFEV_Apparel_JarlCape"]</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
 								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0, 0.2, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0, 0.2, 0)</drawPosEastOffset>
+								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0.08,  0.005, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(-0.08,  0.005, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="VFEV_Apparel_RoyalFurCoat"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0.1,  0.005, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(-0.1,  0.005, 0)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
@@ -28,6 +42,24 @@
 						<layers>
 							<li>DankPyon_ShellAttachment</li>
 						</layers>
+					</value>
+				</li>
+				
+				<!-- Shell Armor -->
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[
+					defName="VFEV_Apparel_GuardianArmor" or
+					defName="VFEV_Apparel_RavagerArmor"]
+					</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<shellPosDrawSettings>
+								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+							</shellPosDrawSettings>
+						</li>
+					
 					</value>
 				</li>
 				
