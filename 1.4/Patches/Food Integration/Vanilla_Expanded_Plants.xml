@@ -156,17 +156,6 @@
 					</value>
 				</li>
 				
-				<!-- Add Straw to MO Wheat -->
-				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="DankPyon_Plant_Wheat"]</xpath>
-					<value>
-						<li Class="VanillaPlantsExpanded.DualCropExtension">
-							<secondaryOutput>DankPyon_Straw</secondaryOutput>
-							<outPutAmount>15</outPutAmount>
-						</li>
-					</value>
-				</li>
-				
 				<!-- Add Research -->
 				<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="VCE_Beet" or defName="VCE_Peas"]/plant</xpath>
