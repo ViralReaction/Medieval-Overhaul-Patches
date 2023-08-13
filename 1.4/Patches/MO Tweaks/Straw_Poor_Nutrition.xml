@@ -24,19 +24,11 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Vanilla Plants Expanded</li>
-		</mods>
-		<match Class="PatchOperationRemove">
-			<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/products/Hay</xpath>
-		</match>
-		<nomatch Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/products/Hay</xpath>
-			<value>
-				<DankPyon_Straw>1</DankPyon_Straw>
-			</value>
-		</nomatch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]/products/Hay</xpath>
+		<value>
+			<DankPyon_Straw>1</DankPyon_Straw>
+		</value>
 	</Operation>
 	
 </Patch>
