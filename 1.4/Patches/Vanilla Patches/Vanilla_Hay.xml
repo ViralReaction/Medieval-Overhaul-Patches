@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hay"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Resources/Straw</texPath>
+			<color>(0.50,0.75,0.50,1)</color>
+		</value>
+	</Operation>
+	
+	
+	
+</Patch>

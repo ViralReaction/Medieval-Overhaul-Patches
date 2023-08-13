@@ -9,7 +9,7 @@
 		<stackLimit>200</stackLimit>
 		<graphicData>
 			<texPath>Resources/Straw</texPath>
-			<color>(0.75,1.0,0.75,1)</color>
+			<color>(0.75,1,0.75,1)</color>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -34,7 +34,7 @@
 			<texPath>Storage/StrawPile</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2.70,2.70)</drawSize>
-			<color>(0.75,1.0,0.75,1)</color>
+			<color>(0.75,1,0.75,1)</color>
 			<drawRotated>false</drawRotated>
 		</graphicData>
 		<size>(2,1)</size>
