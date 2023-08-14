@@ -37,5 +37,12 @@
 			<DankPyon_Straw>1</DankPyon_Straw>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlourBulk"]/products/Hay</xpath>
+		<value>
+			<DankPyon_Straw>10</DankPyon_Straw>
+		</value>
+	</Operation>
 
 </Patch>

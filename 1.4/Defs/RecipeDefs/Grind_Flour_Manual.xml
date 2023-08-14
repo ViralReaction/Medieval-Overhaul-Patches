@@ -3,9 +3,9 @@
 
 	<RecipeDef>
 		<defName>DankPyon_CraftFlourManual</defName>
-		<label>grind wheat into flour</label>
-		<description>Grind wheat into flour.</description>
-		<jobString>Grinding wheat into flour.</jobString>
+		<label>grind grain into flour</label>
+		<description>Grind grain into flour.</description>
+		<jobString>Grinding grain into flour.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<workAmount>200</workAmount>
@@ -16,6 +16,7 @@
 				<filter>
 					<thingDefs>
 						<li>DankPyon_RawWheat</li>
+						<li>DankPyon_RawSpelt</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -24,6 +25,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>DankPyon_RawWheat</li>
+				<li>DankPyon_RawSpelt</li>
 			</thingDefs>
 			<specialFiltersToDisallow>
 				<li>AllowRotten</li>
