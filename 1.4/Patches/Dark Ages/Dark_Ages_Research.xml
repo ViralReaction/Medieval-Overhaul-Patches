@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dark Ages : Crypts and Tombs</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DA_Catacombs"]/tab</xpath>
+					<value>
+						<tab>
+							<li>DankPyon_MedievalResearchTab</li>
+						</tab>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DA_Catacombs"]/researchViewX</xpath>
+					<value>
+						<researchViewX>4.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DA_Catacombs"]/researchViewY</xpath>
+					<value>
+						<researchViewY>4.05</researchViewY>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ResearchTabDef[defName="DarkAges"]</xpath>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_TreeHealroot" or defName="VFEM_PlagueMask"]/tab</xpath>
+					<value>
+						<tab>
+							<li>DankPyon_MedievalResearchTab</li>
+						</tab>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_TreeHealroot"]/researchViewX</xpath>
+					<value>
+						<researchViewX>0.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_TreeHealroot"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.60</researchViewY>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_PlagueMask"]/researchViewX</xpath>
+					<value>
+						<researchViewX>8.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFEM_PlagueMask"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.20</researchViewY>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+			
+	</Operation>
+	
+</Patch>

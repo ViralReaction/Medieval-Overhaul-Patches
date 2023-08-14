@@ -18,8 +18,10 @@
 						<value>
 							<prerequisites>
 								<li>CE_Gunpowder</li>
-								<li>DankPyon_Engineering</li>
 							</prerequisites>
+							<hiddenPrerequisites>
+									<li>DankPyon_Engineering</li>
+							</hiddenPrerequisites>
 						</value>
 					</match>
 					<nomatch Class="PatchOperationReplace">
@@ -27,8 +29,10 @@
 						<value>
 							<prerequisites>
 								<li>DankPyon_Gunpowder</li>
-								<li>DankPyon_Engineering</li>
 							</prerequisites>
+							<hiddenPrerequisites>
+									<li>DankPyon_Engineering</li>
+							</hiddenPrerequisites>
 						</value>
 					</nomatch>
 				</li>

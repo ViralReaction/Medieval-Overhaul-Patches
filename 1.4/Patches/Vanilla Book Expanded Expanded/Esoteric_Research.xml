@@ -24,6 +24,43 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VBE_Writing" or defName="VBE_Printing"]/tab</xpath>
+					<value>
+						<tab>
+							<li>DankPyon_MedievalResearchTab</li>
+						</tab>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VBE_Writing"]/researchViewX</xpath>
+					<value>
+						<researchViewX>12.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VBE_Writing"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.65</researchViewY>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VBE_Printing"]/researchViewX</xpath>
+					<value>
+						<researchViewX>12.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VBE_Printing"]/researchViewY</xpath>
+					<value>
+						<researchViewY>6.25</researchViewY>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 			

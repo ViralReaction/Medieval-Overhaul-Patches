@@ -14,6 +14,22 @@
 						<li>DankPyon_AlchemyBench</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ShardMethamphetamine"]/costList</xpath>
+					<value>
+						<costList>
+							<DregMethamphetamine>5</DregMethamphetamine>
+						</costList>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="ShardMethamphetamine"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
 
 			</operations>
 		</match>

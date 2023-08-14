@@ -19,12 +19,14 @@
 	
 	<!-- Add Cooking to Requirements for Brewing -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="Brewing" or defName="DankPyon_Presser"]/prerequisites</xpath>
 		<value>
 			<prerequisites>
-				<li>DankPyon_BasicCooking</li>
 				<li>DankPyon_RusticFurniture</li>
 			</prerequisites>
+			<hiddenPrerequisites>
+				<li>DankPyon_BasicCooking</li>
+			</hiddenPrerequisites>
 		</value>
 	</Operation>
 	
@@ -54,7 +56,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
-	<xpath>Defs/ResearchProjectDef[defName="DankPyon_Alchemy"]/description</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Alchemy"]/description</xpath>
 		<value>
 			<description>Research to uncover methods for transforming raw resources into more valuable substances and discover potent elixirs with a range of effects.</description>
 		</value>

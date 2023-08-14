@@ -5,10 +5,9 @@
 		<mods>
 			<li>Windows</li>
 		</mods>
-	
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="OpenWindow" or defName="LargeOpenWindow" or defName="HugeOpenWindow"]/costList/Steel</xpath>
 					<match Class="PatchOperationSetName">
@@ -16,7 +15,7 @@
 						<name>DankPyon_IronIngot</name>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="ReinforcedOpenWindow" or defName="LargeReinforcedOpenWindow"]/costList/Plasteel</xpath>
 					<match Class="PatchOperationSetName">
@@ -24,7 +23,7 @@
 						<name>Steel</name>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="ReinforcedOpenWindow" or	defName="LargeReinforcedOpenWindow"]/researchPrerequisites</xpath>
 					<value>
@@ -34,30 +33,9 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ResearchProjectDef[defName="Glassworks"]/prerequisites</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ResearchProjectDef[defName="Glassworks"]/prerequisites</xpath>
-						<value>
-							<prerequisites>
-								<li>DankPyon_RusticFurniture</li>
-							</prerequisites>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ResearchProjectDef[defName="Glassworks"]</xpath>
-						<value>
-							<prerequisites>
-								<li>DankPyon_RusticFurniture</li>
-							</prerequisites>
-						</value>
-					</nomatch>
-				</li>
-				
+
 			</operations>
 		</match>
-			
 	</Operation>
-		
+
 </Patch>
