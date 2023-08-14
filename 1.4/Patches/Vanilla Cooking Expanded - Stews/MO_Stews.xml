@@ -712,7 +712,7 @@
 					
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedHunterStew</defName>
-							<label>uncooked hearty stew</label>
+							<label>uncooked hunter stew</label>
 							<description>An uncooked hearty stew. This needs to be cooked in a stew pot to be edible.</description>
 							<graphicData>
 								<texPath>Meal/HuntersStew</texPath>
