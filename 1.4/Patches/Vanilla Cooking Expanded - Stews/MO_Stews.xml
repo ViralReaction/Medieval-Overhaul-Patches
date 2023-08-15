@@ -198,11 +198,19 @@
 								<categories>
 									<li>MeatRaw</li>
 								</categories>
+								<thingDefs>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+								</thingDefs>
 							</fixedIngredientFilter>
 							<defaultIngredientFilter>
 								<categories>
 									<li>MeatRaw</li>
 								</categories>
+								<thingDefs>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+								</thingDefs>
 								<disallowedThingDefs>
 									<li>Meat_Human</li>
 									<li>Meat_Megaspider</li>
@@ -552,11 +560,23 @@
 								<categories>
 									<li>MeatRaw</li>
 								</categories>
+								<thingDefs>
+									<li>DankPyon_RawOnions</li>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+									<li>DankPyon_Salt</li>
+								</thingDefs>
 							</fixedIngredientFilter>
 							<defaultIngredientFilter>
 								<categories>
 									<li>MeatRaw</li>
 								</categories>
+								<thingDefs>
+									<li>DankPyon_RawOnions</li>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+									<li>DankPyon_Salt</li>
+								</thingDefs>
 								<disallowedThingDefs>
 									<li>Meat_Human</li>
 									<li>Meat_Megaspider</li>

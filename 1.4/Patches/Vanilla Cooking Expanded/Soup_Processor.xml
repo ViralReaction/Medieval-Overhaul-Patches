@@ -653,11 +653,19 @@
 								<categories>
 									<li>DankPyon_Cheese</li>
 								</categories>
+								<thingDefs>
+								<li>DankPyon_Ale</li>
+								<li>DankPyon_RawGarlic</li>
+								</thingDefs>
 							</fixedIngredientFilter>
 							<defaultIngredientFilter>
 								<categories>
 									<li>DankPyon_Cheese</li>
 								</categories>
+								<thingDefs>
+								<li>DankPyon_Ale</li>
+								<li>DankPyon_RawGarlic</li>
+								</thingDefs>
 							</defaultIngredientFilter>
 							<researchPrerequisites>
 								<li>DankPyon_AdvancedCooking</li>
