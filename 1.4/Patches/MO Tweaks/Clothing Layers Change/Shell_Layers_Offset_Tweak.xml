@@ -11,8 +11,8 @@
 				<!-- Vanilla Rimworld -->
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
-		defName="Apparel_Parka" or
-		defName="Apparel_PlateArmor"]					</xpath>
+					defName="Apparel_Parka" or
+					defName="Apparel_PlateArmor"]					</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<shellPosDrawSettings>
@@ -29,11 +29,11 @@
 	
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
-		defName="DankPyon_Apparel_Brigandine" or
-		defName="DankPyon_Apparel_Breast_Plate" or
-		defName="DankPyon_Apparel_FullPlate" or
-		defName="DankPyon_Apparel_FullPlateGilded" or
-		defName="DankPyon_Apparel_FullPlateNamed"]					</xpath>
+					defName="DankPyon_Apparel_Brigandine" or
+					defName="DankPyon_Apparel_Breast_Plate" or
+					defName="DankPyon_Apparel_FullPlate" or
+					defName="DankPyon_Apparel_FullPlateGilded" or
+					defName="DankPyon_Apparel_FullPlateNamed"]					</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<shellPosDrawSettings>
@@ -48,8 +48,8 @@
 				<!-- Medium Armor -->
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
-		defName="DankPyon_Apparel_Heavy_Hauberk" or
-		defName="DankPyon_Apparel_Heraldic_Hauberk1c"]					</xpath>
+					defName="DankPyon_Apparel_Heavy_Hauberk" or
+					defName="DankPyon_Apparel_Heraldic_Hauberk1c"]					</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<shellPosDrawSettings>

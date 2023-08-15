@@ -30,9 +30,9 @@
 							<li Class="VFECore.ApparelDrawPosExtension">
 								<apparelDrawSettings>
 									<drawPosNorthOffset>(0, 0.2, -.15)</drawPosNorthOffset>
-									<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
-									<drawPosWestOffset>(0,  0.001, 0)</drawPosWestOffset>
-									<drawPosEastOffset>(0,  0.001, 0)</drawPosEastOffset>
+									<drawPosSouthOffset>(0, 0.002, 0)</drawPosSouthOffset>
+									<drawPosWestOffset>(0,  0.002, 0)</drawPosWestOffset>
+									<drawPosEastOffset>(0,  0.002, 0)</drawPosEastOffset>
 								</apparelDrawSettings>
 							</li>
 						</value>
