@@ -7,5 +7,12 @@
         <parent>Foods</parent>
         <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
       </ThingCategoryDef>
+	  
+	  <ThingCategoryDef>
+        <defName>MO_Flour</defName>
+        <label>flour</label>
+        <parent>FoodRaw</parent>
+        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+      </ThingCategoryDef>
 
 </Defs>

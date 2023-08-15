@@ -8,110 +8,49 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<!-- Flour  -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VCE_Flour"]/li</xpath>
-					<value>
-						<li>VCE_Flour</li>
-						<li>DankPyon_Flour</li>
-					</value>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="VCE_CookBakeSimple" or defName="VCE_CookBakeSimpleBulk"]/ingredients/li/filter/thingDefs</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VCE_CookBakeSimple" or defName="VCE_CookBakeSimpleBulk"]/ingredients/li/filter/thingDefs</xpath>
+						<value>
+							<categories>
+								<li>MO_Flour</li>
+							</categories>
+						</value>
+					</match>
 				</li>
 				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs[li="DankPyon_Flour"]/li</xpath>
-					<value>
-						<li>VCE_Flour</li>
-						<li>DankPyon_Flour</li>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VCE_Flour"]/li</xpath>
-					<value>
-						<li>VCE_Flour</li>
-						<li>DankPyon_Flour</li>
-					</value>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="VCE_CookBakeFine" or defName="VCE_CookBakeFineBulk" or defName="VCE_CookBakeLavish" or defName="VCE_CookBakeLavishBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VCE_CookBakeFine" or defName="VCE_CookBakeFineBulk" or defName="VCE_CookBakeLavish" or defName="VCE_CookBakeLavishBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+						<value>
+							<categories>
+								<li>MO_Flour</li>
+							</categories>
+						</value>
+					</match>
 				</li>
 				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VCE_Flour"]/li</xpath>
-					<value>
-						<li>VCE_Flour</li>
-						<li>DankPyon_Flour</li>
-					</value>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="VCE_CookBakeGourmet" or defName="VCE_CookBakeGourmetBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="VCE_CookBakeGourmet" or defName="VCE_CookBakeGourmetBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
+						<value>
+							<categories>
+								<li>MO_Flour</li>
+							</categories>
+						</value>
+					</match>
 				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="DankPyon_Flour"]/li</xpath>
-					<value>
-						<li>VCE_Flour</li>
-						<li>DankPyon_Flour</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="DankPyon_Flour"]/li</xpath>
-					<value>
-						<li>VCE_Flour</li>
-						<li>DankPyon_Flour</li>
-					</value>
-				</li>
-
-				<!-- Sugar -->
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]/thingCategories</xpath>
-					<value>
-						<li>VCE_Condiments</li>
-					</value>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
-					<value>
-						<ingredient>
-							<mergeCompatibilityTags>
-								<li>Condiments</li>
-							</mergeCompatibilityTags>
-						</ingredient>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]/ingestible</xpath>
-					<value>
-						<ingestible>
-							<preferability>NeverForNutrition</preferability>
-							<specialThoughtAsIngredient>VCE_ConsumedSugar</specialThoughtAsIngredient>
-							<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
-						</ingestible>
-					</value>
-				</li>
-
-				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
-					<value>
-						<li Class="AnimalBehaviours.AnimalStatExtension">
-				
-							<statToAdd>
-								<li>VCE_CondimentEffects</li>
-				
-							</statToAdd>
-							<statValues>
-								<li>VCE_CondimentEffectsTitle</li>
-								
-							</statValues>
-							<statDescriptions>
-								<li>VCE_CondimentEffectsSugar</li>
-							</statDescriptions>
-						</li>
-					</value>
-				</li>
-
+		
 				<!-- Spices -->
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DankPyon_Spices"]/thingCategories</xpath>
 					<value>
-						<li>VCE_Condiments</li>
+						<thingCategories>
+							<li>VCE_Condiments</li>
+						</thingCategories>
 					</value>
 				</li>
 

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Bread -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_BakeBread" or defName="DankPyon_BakeBreadBulk" or defName="DankPyon_BakeBreadMegaBulk"]/ingredients/li/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_BakeBread" or defName="DankPyon_BakeBreadBulk" or defName="DankPyon_BakeBreadMegaBulk"]/ingredients/li/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_BakeBread" or defName="DankPyon_BakeBreadBulk" or defName="DankPyon_BakeBreadMegaBulk"]/fixedIngredientFilter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_BakeBread" or defName="DankPyon_BakeBreadBulk" or defName="DankPyon_BakeBreadMegaBulk"]/fixedIngredientFilter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- Mashed Potatoes -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>DankPyon_Milk</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>DankPyon_Milk</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>RawPotatoes</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<value>
+						<li>RawToxipotato</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CookMealMashedPotatoes" or defName="DankPyon_CookMealMashedPotatoesBulk"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>RawToxipotato</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!-- Pumpkin Fritters -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinFritters" or defName="DankPyon_CookMealPumpkinFrittersBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinFritters" or defName="DankPyon_CookMealPumpkinFrittersBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinFritters" or defName="DankPyon_CookMealPumpkinFrittersBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinFritters" or defName="DankPyon_CookMealPumpkinFrittersBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>MO_Flour</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinFritters" or defName="DankPyon_CookMealPumpkinFrittersBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>DankPyon_RawPumpkins</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinFritters" or defName="DankPyon_CookMealPumpkinFrittersBulk"]/defaultIngredientFilter/categories</xpath>
+		<value>
+			<li>MO_Flour</li>
+		</value>
+	</Operation>
+
+	<!-- Apple Pie -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealApplePie" or defName="DankPyon_CookMealApplePieBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealApplePie" or defName="DankPyon_CookMealApplePieBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealApplePie" or defName="DankPyon_CookMealApplePieBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealApplePie" or defName="DankPyon_CookMealApplePieBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>MO_Flour</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealApplePie" or defName="DankPyon_CookMealApplePieBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>DankPyon_Sugar</li>
+				<li>DankPyon_RawApples</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealApplePie" or defName="DankPyon_CookMealApplePieBulk"]/defaultIngredientFilter/categories</xpath>
+		<value>
+			<li>MO_Flour</li>
+		</value>
+	</Operation>
+
+	<!-- Grilled Cheese -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese" or defName="DankPyon_CookMealGrilledCheeseBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese" or defName="DankPyon_CookMealGrilledCheeseBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>DankPyon_Cheese</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese" or defName="DankPyon_CookMealGrilledCheeseBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese" or defName="DankPyon_CookMealGrilledCheeseBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>DankPyon_Cheese</li>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- Quiche -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>DankPyon_Milk</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>EggsUnfertilized</li>
+				<li>MeatRaw</li>
+				<li>DankPyon_Milk</li>
+				<li>MO_Flour</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealQuiche" or defName="DankPyon_CookMealQuicheBulk"]/defaultIngredientFilter/categories</xpath>
+		<value>
+			<li>MO_Flour</li>
+		</value>
+	</Operation>
+
+	<!-- Pancakes -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>DankPyon_Milk</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>EggsUnfertilized</li>
+				<li>DankPyon_Milk</li>
+				<li>MO_Flour</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>DankPyon_Sugar</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealSweetPancakes" or defName="DankPyon_CookMealSweetPancakesBulk"]/defaultIngredientFilter/categories</xpath>
+		<value>
+			<li>MO_Flour</li>
+		</value>
+	</Operation>
+	
+	<!-- Tomato Omelette -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealTomatoOmelette" or defName="DankPyon_CookMealTomatoOmeletteBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealTomatoOmelette" or defName="DankPyon_CookMealTomatoOmeletteBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>EggsUnfertilized</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealTomatoOmelette" or defName="DankPyon_CookMealTomatoOmeletteBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>DankPyon_RawTomatoes</li>
+				<li>DankPyon_RawOnions</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<!-- Pumpkin Pie -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>DankPyon_Milk</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>DankPyon_Milk</li>
+				<li>MO_Flour</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealPumpkinPie" or defName="DankPyon_CookMealPumpkinPieBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>DankPyon_RawPumpkins</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<!-- Griffon Pie -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGriffonBerryPie" or defName="DankPyon_CookMealGriffonBerryPieBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGriffonBerryPie" or defName="DankPyon_CookMealGriffonBerryPieBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+			<value>
+				<categories>
+					<li>MO_Flour</li>
+				</categories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGriffonBerryPie" or defName="DankPyon_CookMealGriffonBerryPieBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGriffonBerryPie" or defName="DankPyon_CookMealGriffonBerryPieBulk"]/fixedIngredientFilter/categories/li[.="FoodRaw"]</xpath>
+			<value>
+				<li>DankPyon_Milk</li>
+				<li>EggsUnfertilized</li>
+				<li>MO_Flour</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealGriffonBerryPie" or defName="DankPyon_CookMealGriffonBerryPieBulk"]/fixedIngredientFilter</xpath>
+		<value>
+			<thingDefs>
+				<li>DankPyon_GriffonBerry</li>
+				<li>DankPyon_Sugar</li>
+				<li>DankPyon_RawLemons</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+</Patch>
