@@ -9,10 +9,10 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="FT_Palisade_Corner" or defName="FT_Palisade" or defName="FT_PalisadeDoor" or defName="FT_Palisade_Embrasures"]</xpath>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="FT_Palisade_Base"]/stuffCategories</xpath>
 					<value>
-						<stuffCategories Inherit="False">
+						<stuffCategories>
 							<li>DankPyon_RawWood</li>
 						</stuffCategories>
 					</value>
