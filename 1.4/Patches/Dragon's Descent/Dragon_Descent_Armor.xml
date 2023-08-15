@@ -7,7 +7,18 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DD_Apparel_DragonCrown"]/recipeMaker/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>DraconicApparelAndWeapons</li>
+							<li>PlateArmor</li>
+							<li>DankPyon_AdornedArmor</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleHelm"]/recipeMaker/researchPrerequisite</xpath>
 					<value>
