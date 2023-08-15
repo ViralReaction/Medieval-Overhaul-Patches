@@ -103,67 +103,46 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/ingredients/li/filter/thingDefs</xpath>
 					<value>
-						<li>DankPyon_RawBuckwheat</li>
+						<li>VCE_RawBuckwheat</li>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/fixedIngredientFilter/thingDefs</xpath>
 					<value>
-						<li>DankPyon_RawBuckwheat</li>
+						<li>VCE_RawBuckwheat</li>
 					</value>
 				</li>
 	
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs</xpath>
 					<value>
-						<li>DankPyon_RawBuckwheat</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Buckwheat"]/plant/harvestedThingDef</xpath>
-					<value>
-						<harvestedThingDef>DankPyon_RawBuckwheat</harvestedThingDef>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs</xpath>
-					<value>
-				
-						<ThingDef ParentName="RoughPlantBase">
-							<defName>DankPyon_RawBuckwheat</defName>
-							<label>buckwheat</label>
-							<description>Buckwheat is a grain that can be milled into flour.</description>
-							<graphicData>
-								<texPath>Things/Items/Raw/VCE_Buckwheat</texPath>
-								<graphicClass>Graphic_StackCount</graphicClass>
-							</graphicData>
-							<statBases>
-								<MarketValue>1.1</MarketValue>
-							</statBases>
-							<ingestible>
-								<foodType>Seed</foodType>
-								<preferability>NeverForNutrition</preferability>
-							</ingestible>
-							<comps>
-								<li Class="CompProperties_Rottable">
-									<daysToRotStart>60</daysToRotStart>
-									<rotDestroys>true</rotDestroys>
-								</li>
-							</comps>
-							<thingCategories>
-								<li>Foods</li>
-							</thingCategories>
-						</ThingDef>
-				
+						<li>VCE_RawBuckwheat</li>
 					</value>
 				</li>
 
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_RawBuckwheat"]/ingestible</xpath>
+					<value>
+						<ingestible>
+							<foodType>Seed</foodType>
+							<preferability>NeverForNutrition</preferability>
+						</ingestible>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VCE_RawBuckwheat"]</xpath>
+					<value>
+						<thingCategories>
+							<li>Foods</li>
+						</thingCategories>
+					</value>
+				</li>
+			
 				<!-- Add Research -->
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VCE_Beet" or defName="VCE_Lettuce" or defName="VCE_Cassava" or defName="VCE_SweetPotato" or defName="VCE_BellPepper" or defName="VCE_Taro" or defName="VCE_Watercress"]/plant</xpath>
+					<xpath>Defs/ThingDef[defName="VCE_Lettuce" or defName="VCE_Cassava" or defName="VCE_SweetPotato" or defName="VCE_BellPepper" or defName="VCE_Taro" or defName="VCE_Watercress"]/plant</xpath>
 					<value>
 						<sowResearchPrerequisites>
 							<li>DankPyon_BasicAgriculture</li>
@@ -195,6 +174,23 @@
 							<li>DankPyon_AdvancedAgriculture</li>
 						</sowResearchPrerequisites>
 					</value>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Factions Expanded - Vikings</li>
+					</mods>
+					<match Class="PatchOperationFindMod">
+						<mods>
+							<li>ReGrowth: Core</li>
+						</mods>
+						<match Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="VCE_Blueberry"]</xpath>
+							<value>
+							
+							</value>
+						</match>
+					</match>
 				</li>
 
 			</operations>
