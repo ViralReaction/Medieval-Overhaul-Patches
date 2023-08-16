@@ -5,18 +5,17 @@
 		<mods>
 			<li>Tribal Medicine 2.0</li>
 		</mods>
-		
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<!-- Add Tribal to Cooking Table -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="TM_MedicineTribal" or @Name="TM_TeaBase"]/recipeMaker/recipeUsers</xpath>
 					<value>
-					<li>DankPyon_RusticCookingTable</li>
+						<li>DankPyon_RusticCookingTable</li>
 					</value>
 				</li>
-				
+
 				<!-- Reduce from 5000 -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/baseCost</xpath>
@@ -24,7 +23,14 @@
 						<baseCost>1000</baseCost>
 					</value>
 				</li>
-				
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]</xpath>
+					<value>
+						<tab>DankPyon_MedievalResearchTab</tab>
+					</value>
+				</li>
+
 				<!-- Slightly reduce bonus -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/StatDef[defName="MedicalQualityMax" or defName="MedicalPotency"]/parts/li[@Class="StatPart_Quality"]</xpath>
@@ -40,10 +46,9 @@
 						</li>
 					</value>
 				</li>
-			
+
 			</operations>
 		</match>
-		
 	</Operation>
-	
+
 </Patch>

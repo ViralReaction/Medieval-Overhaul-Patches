@@ -5,10 +5,9 @@
 		<mods>
 			<li>MorrowRim - Bloodmoon</li>
 		</mods>
-		
 		<match Class="PatchOperationSequence">
 			<operations>
-			
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef[@Name="MorrowRim_CraftElixirBase_Lycanthropic"]/recipeUsers</xpath>
 					<match Class="PatchOperationAdd">
@@ -18,7 +17,7 @@
 						</value>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ResearchProjectDef[defName="MorrowRim_LycanthropicElixirs"]</xpath>
 					<value>
@@ -27,10 +26,16 @@
 						</prerequisites>
 					</value>
 				</li>
-			
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MorrowRim_Gun_Hunters"]</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+
 			</operations>
 		</match>
-		
 	</Operation>
-	
+
 </Patch>

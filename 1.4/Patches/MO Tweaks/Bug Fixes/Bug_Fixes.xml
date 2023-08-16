@@ -56,4 +56,11 @@
 		</value>
 	</Operation>
 	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealBoiledBeansAndOnion"]/ingredients/li[3]/count</xpath>
+		<value>
+			<count>0.06</count>
+		</value>
+	</Operation>
+	
 </Patch>
