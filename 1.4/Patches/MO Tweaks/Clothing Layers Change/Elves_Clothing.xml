@@ -15,8 +15,8 @@
 							<apparelDrawSettings>
 								<drawPosNorthOffset>(0, 0.2, -0.05)</drawPosNorthOffset>
 								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  0.2, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  0.2, 0)</drawPosEastOffset>
+								<drawPosWestOffset>(0,  0.2, -0.01)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.2, -0.01)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
