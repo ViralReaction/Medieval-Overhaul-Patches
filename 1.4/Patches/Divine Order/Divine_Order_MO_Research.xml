@@ -9,27 +9,13 @@
 			<operations>
 				
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="ComplexClothing"]</xpath>
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites</xpath>
 					<match Class="PatchOperationRemove">
-						<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="ComplexClothing"]</xpath>
+						<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites</xpath>
 					</match>
 				</li>
 				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="Smithing"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites/li[.="Smithing"]</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing" or defName="BotchJob_DivineOrderEliteArmor"]</xpath>
-					<value>
-						<tab>DankPyon_MedievalResearchTab</tab>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
+		<!--		<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/researchViewX</xpath>
 					<value>
 						<researchViewX>14.00</researchViewX>
@@ -55,7 +41,7 @@
 					<value>
 						<researchViewY>0.10</researchViewY>
 					</value>
-				</li>
+				</li> -->
 				
 			</operations>
 		</match>

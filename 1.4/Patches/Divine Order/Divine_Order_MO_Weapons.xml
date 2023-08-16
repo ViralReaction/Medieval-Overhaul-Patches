@@ -73,8 +73,17 @@
 						</value>
 					</match>
 				</li>
-
-				<li Class="PatchOperationConditional">
+				
+				<!-- Pistol -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderPistol"]</xpath>
+					<value>
+						<techLevel Inherit="False">Medieval</techLevel>
+					</value>
+				</li>
+				
+				<!-- Can't get to work... -->
+				<!--li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderPistol"]/recipeMaker/researchPrerequisite</xpath>
 					<match Class="PatchOperationFindMod">
 						<mods>
@@ -83,7 +92,7 @@
 						<nomatch Class="PatchOperationReplace">
 							<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderPistol"]/recipeMaker/researchPrerequisite</xpath>
 							<value>
-								<researchPrerequisites>
+								<researchPrerequisites Inherit="False">
 									<li>BotchJob_DivineOrderSmithing</li>
 									<li>DankPyon_Gunpowder</li>
 								</researchPrerequisites>
@@ -92,14 +101,14 @@
 						<match Class="PatchOperationReplace">
 							<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderPistol"]/recipeMaker/researchPrerequisite</xpath>
 							<value>
-								<researchPrerequisites>
+								<researchPrerequisites Inherit="False">
 									<li>BotchJob_DivineOrderSmithing</li>
 									<li>CE_Gunpowder</li>
 								</researchPrerequisites>
 							</value>
 						</match>
 					</match>
-				</li>
+				</li-->
 
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCrossbow"]/recipeMaker/researchPrerequisite</xpath>

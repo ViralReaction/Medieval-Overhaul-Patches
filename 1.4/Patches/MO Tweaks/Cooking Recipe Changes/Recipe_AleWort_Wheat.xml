@@ -17,18 +17,24 @@
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/RecipeDef[defName="DankPyon_Make_WortAle"]/fixedIngredientFilter/thingDefs/li[.="RawHops"]</xpath>
-		<value>
-			<li>DankPyon_RawWheat</li>
-		</value>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_WortAle"]/fixedIngredientFilter/thingDefs/li[.="RawHops"]</xpath>
+			<value>
+				<li>DankPyon_RawWheat</li>
+			</value>
+		</match>
 	</Operation>
 	
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/RecipeDef[defName="DankPyon_Make_WortAle"]/defaultIngredientFilter/thingDefs/li[.="RawHops"]</xpath>
-		<value>
-			<li>DankPyon_RawWheat</li>
-		</value>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_WortAle"]/defaultIngredientFilter/thingDefs/li[.="RawHops"]</xpath>
+			<value>
+				<li>DankPyon_RawWheat</li>
+			</value>
+		</match>
 	</Operation>
 	
 	<Operation Class="PatchOperationReplace">
