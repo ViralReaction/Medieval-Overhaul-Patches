@@ -382,5 +382,39 @@
 			</thingDefs>
 		</value>
 	</Operation>
+	
+	<!-- Rations -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealRations" or defName="DankPyon_CookMealRationsBulk"]</xpath>
+		<value>
+			<fixedIngredientFilter Inherit="False">
+				<categories>
+					<li>MeatRaw</li>
+					<li>AnimalProductRaw</li>
+					<li>PlantFoodRaw</li>
+				</categories>
+				<thingDefs>
+					<li>DankPyon_Salt</li>
+				</thingDefs>
+				<specialFiltersToDisallow>
+					<li>AllowPlantFood</li>
+				</specialFiltersToDisallow>
+			</fixedIngredientFilter>
+			<defaultIngredientFilter Inherit="False">
+				<categories>
+					<li>FoodRaw</li>
+					<li>DankPyon_Condiments</li>
+				</categories>
+				<disallowedCategories>
+					<li>EggsFertilized</li>
+				</disallowedCategories>
+				<disallowedThingDefs>
+					<li>Meat_Human</li>
+					<li>Meat_Megaspider</li>
+					<li>InsectJelly</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</value>
+	</Operation>
 
 </Patch>
