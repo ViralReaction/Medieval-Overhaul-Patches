@@ -9,12 +9,28 @@
 			<operations>
 			
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="DraconicDrugProduction" or defName="DraconicIncubation" or defName="DraconicApparelAndWeapons" or defName="DraconicAdvancedIncubation"]/tab</xpath>
+					<xpath>Defs/ResearchProjectDef[defName="DraconicDrugProduction" or defName="DraconicIncubation" or defName="DraconicApparelAndWeapons"]/tab</xpath>
 					<value>
 						<tab>
 							<li>DankPyon_MedievalResearchTab</li>
 						</tab>
 					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DraconicAdvancedIncubation"]/tab</xpath>
+					<value>
+						<tab>
+							<li>Main</li>
+						</tab>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>Defs/ResearchProjectDef[defName="DraconicIncubation"]/baseCost</xpath>
+				<value>
+				<baseCost>1100</baseCost>
+				</value>
 				</li>
 				
 				<li Class="PatchOperationConditional">

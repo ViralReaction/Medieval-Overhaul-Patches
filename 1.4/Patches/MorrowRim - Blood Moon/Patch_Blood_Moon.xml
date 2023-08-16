@@ -30,7 +30,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="MorrowRim_Gun_Hunters"]</xpath>
 					<value>
-						<techLevel>Industrial</techLevel>
+						<techLevel Inherit="False">Industrial</techLevel>
 					</value>
 				</li>
 

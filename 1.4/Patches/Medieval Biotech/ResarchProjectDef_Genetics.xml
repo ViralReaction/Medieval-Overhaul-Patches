@@ -26,10 +26,35 @@
 				</li>
 				
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]/requiredResearchBuilding[.="HiTechResearchBench"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]/requiredResearchBuilding</xpath>
+					<xpath>Defs/ResearchProjectDef[defName="Xenogermination"]/requiredResearchBuilding</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ResearchProjectDef[defName="Xenogermination"]/requiredResearchBuilding</xpath>
+						<value>
+							<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+						</value>
 					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ResearchProjectDef[defName="Xenogermination"]</xpath>
+						<value>
+							<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]/requiredResearchBuilding</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]/requiredResearchBuilding</xpath>
+						<value>
+							<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ResearchProjectDef[defName="GeneProcessor"]</xpath>
+						<value>
+							<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+						</value>
+					</nomatch>
 				</li>
 				
 				<li Class="PatchOperationReplace">
