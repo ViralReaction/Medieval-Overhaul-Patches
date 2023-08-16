@@ -8,7 +8,7 @@
 		<nomatch Class="PatchOperationSequence">
 			<operations>
 	
-				<!-- Vanilla Rimworld -->
+				<!-- Vanilla Rimworld
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
 					defName="Apparel_Parka" or
@@ -16,16 +16,16 @@
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<shellPosDrawSettings>
-								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+								<drawPosSouthOffset>(0, -0.003, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.003, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.003, 0)</drawPosEastOffset>
 							</shellPosDrawSettings>
 						</li>
 					</value>
-				</li>
+				</li> -->
 	
 				<!-- Medieval Overhaul -->
-				<!-- Heavy Armor -->
+				<!-- Heavy Armor
 	
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
@@ -37,15 +37,15 @@
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<shellPosDrawSettings>
-								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+								<drawPosSouthOffset>(0, -0.001, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.001, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.001, 0)</drawPosEastOffset>
 							</shellPosDrawSettings>
 						</li>
 					</value>
-				</li>
+				</li> -->
 	
-				<!-- Medium Armor -->
+				<!-- Medium Armor
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
 					defName="DankPyon_Apparel_Heavy_Hauberk" or
@@ -53,13 +53,13 @@
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<shellPosDrawSettings>
-								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
+								<drawPosSouthOffset>(0, -0.003, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  -0.003, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  -0.003, 0)</drawPosEastOffset>
 							</shellPosDrawSettings>
 						</li>
 					</value>
-				</li>
+				</li> -->
 				
 			</operations>
 		</nomatch>

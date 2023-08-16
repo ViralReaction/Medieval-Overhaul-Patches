@@ -13,10 +13,10 @@
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.08,  0.005, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-0.08,  0.005, 0)</drawPosEastOffset>
+								<drawPosNorthOffset>(0, 0.2, 0.06)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0.02)</drawPosSouthOffset>
+								<drawPosWestOffset>(0.10,  0.2, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(-0.10,  0.2, 0)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
@@ -27,10 +27,10 @@
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.001, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.1,  0.001, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-0.1,  0.001, 0)</drawPosEastOffset>
+								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0.02)</drawPosSouthOffset>
+								<drawPosWestOffset>(0.1,  0.2, 0.01)</drawPosWestOffset>
+								<drawPosEastOffset>(-0.1,  0.2, 0.01)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
@@ -45,7 +45,7 @@
 					</value>
 				</li>
 				
-				<!-- Shell Armor -->
+				<!-- Shell Armor 
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[
 					defName="VFEV_Apparel_GuardianArmor" or
@@ -61,7 +61,7 @@
 						</li>
 					
 					</value>
-				</li>
+				</li>-->
 				
 			</operations>
 		</match>

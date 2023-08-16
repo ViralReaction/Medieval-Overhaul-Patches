@@ -8,36 +8,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-					<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Combat Extended</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[@Name="DevDesigner_Cloaks"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
-						<value>
-							<li Class="VFECore.ApparelDrawPosExtension">
-								<apparelDrawSettings>
-									<drawPosNorthOffset>(0, 0.2, -0.05)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.1,  0.005, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-.1,  0.005, 0)</drawPosEastOffset>
-								</apparelDrawSettings>
-							</li>
-						</value>
-					</nomatch>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[@Name="DevDesigner_Cloaks"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
-						<value>
-							<li Class="VFECore.ApparelDrawPosExtension">
-								<apparelDrawSettings>
-									<drawPosNorthOffset>(0, 0.2, -0.05)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.002, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  0.002, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  0.002, 0)</drawPosEastOffset>
-								</apparelDrawSettings>
-							</li>
-						</value>
-					</match>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="DevDesigner_Cloaks" or defName="DevDesigner_HighElves_WhiteLionPelt"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, -0.05)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0,  0.2, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(0,  0.2, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
@@ -55,7 +37,7 @@
 						<li>Shoulders</li>
 					</value>
 				</li>
-
+				<!--
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[@Name="DevDesigner_Elves_BreastplateBase" or @Name="DevDesigner_Elves_MetalPauldrons"]</xpath>
 					<value>
@@ -67,7 +49,7 @@
 							</shellPosDrawSettings>
 						</li>
 					</value>
-				</li>
+				</li> -->
 
 			</operations>
 		</match>

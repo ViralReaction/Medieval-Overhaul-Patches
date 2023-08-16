@@ -8,36 +8,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Combat Extended</li>
-					</mods>
-					<nomatch Class="PatchOperationAddModExtension">
-						<xpath>Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]</xpath>
-						<value>
-							<li Class="VFECore.ApparelDrawPosExtension">
-								<apparelDrawSettings>
-									<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-									<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-									<drawPosWestOffset>(0.05,  0.005, 0)</drawPosWestOffset>
-									<drawPosEastOffset>(-.05,  0.005, 0)</drawPosEastOffset>
-								</apparelDrawSettings>
-							</li>
-						</value>
-					</nomatch>
-					<match Class="PatchOperationAddModExtension">
-						<xpath>Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]</xpath>
-						<value>
-							<li Class="VFECore.ApparelDrawPosExtension">
-								<apparelDrawSettings>
-									<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
-									<drawPosSouthOffset>(0, 0.002, 0)</drawPosSouthOffset>
-									<drawPosWestOffset>(0.05,  0.002, 0)</drawPosWestOffset>
-									<drawPosEastOffset>(-.05,  0.002, 0)</drawPosEastOffset>
-								</apparelDrawSettings>
-							</li>
-						</value>
-					</match>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]</xpath>
+					<value>
+						<li Class="VFECore.ApparelDrawPosExtension">
+							<apparelDrawSettings>
+								<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0.10,  0.2, 0)</drawPosWestOffset>
+								<drawPosEastOffset>(-0.10,  0.2, 0)</drawPosEastOffset>
+							</apparelDrawSettings>
+						</li>
+					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">

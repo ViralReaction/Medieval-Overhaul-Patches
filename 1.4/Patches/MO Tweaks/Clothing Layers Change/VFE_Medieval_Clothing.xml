@@ -14,7 +14,7 @@
 							<li>DankPyon_ShellAttachment</li>
 					</value>
 				</li>
-				
+			<!--	
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[defName="VFEM_Apparel_PlateArmorHeavy"]</xpath>
 					<value>
@@ -26,7 +26,7 @@
 							</shellPosDrawSettings>
 						</li>
 					</value>
-				</li>
+				</li> -->
 				
 			</operations>
 		</match>

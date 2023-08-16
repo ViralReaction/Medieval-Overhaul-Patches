@@ -8,36 +8,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<li Class="PatchOperationFindMod">
-				<mods>
-				<li>Combat Extended</li>
-				</mods>
-				<nomatch Class="PatchOperationAddModExtension">
+				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[defName="VPE_Apparel_EltexCape"]</xpath>
 					<value>
 						<li Class="VFECore.ApparelDrawPosExtension">
 							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.005, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.1,  0.005, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-.1,  0.005, 0)</drawPosEastOffset>
+								<drawPosNorthOffset>(0, 0.2, 0.05)</drawPosNorthOffset>
+								<drawPosSouthOffset>(0, 0.006, 0)</drawPosSouthOffset>
+								<drawPosWestOffset>(0.1,  0.2, 0.05)</drawPosWestOffset>
+								<drawPosEastOffset>(-0.1,  0.2, 0.05)</drawPosEastOffset>
 							</apparelDrawSettings>
 						</li>
 					</value>
-				</nomatch>
-				<match Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[defName="VPE_Apparel_EltexCape"]</xpath>
-					<value>
-						<li Class="VFECore.ApparelDrawPosExtension">
-							<apparelDrawSettings>
-								<drawPosNorthOffset>(0, 0.01, 0)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.002, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.1,  0.002, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-.1,  0.002, 0)</drawPosEastOffset>
-							</apparelDrawSettings>
-						</li>
-					</value>
-				</match>
 				</li>
 
 				<li Class="PatchOperationReplace">
