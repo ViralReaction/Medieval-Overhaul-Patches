@@ -46,14 +46,14 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="VPE_CasterGear"]/researchViewX</xpath>
+					<xpath>Defs/ResearchProjectDef[defName="VPE_EltexGear"]/researchViewX</xpath>
 					<value>
 						<researchViewX>14.0</researchViewX>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="VPE_CasterGear"]/researchViewY</xpath>
+					<xpath>Defs/ResearchProjectDef[defName="VPE_EltexGear"]/researchViewY</xpath>
 					<value>
 						<researchViewY>0.10</researchViewY>
 					</value>

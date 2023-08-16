@@ -62,4 +62,83 @@
 		</value>
 	</Operation>
 	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_RepeaterBallista"]/prerequisites</xpath>
+		<value>
+			<prerequisites>
+				<li>DankPyon_Ballista</li>
+			</prerequisites>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_RepeaterBallista"]/researchViewX</xpath>
+		<value>
+			<researchViewX>16.00</researchViewX>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_RepeaterBallista"]/researchViewY</xpath>
+		<value>
+			<researchViewY>3.55</researchViewY>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Ballista"]/researchViewX</xpath>
+		<value>
+			<researchViewX>15.00</researchViewX>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Ballista"]/researchViewY</xpath>
+		<value>
+			<researchViewY>3.55</researchViewY>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Windmill"]/researchViewX</xpath>
+		<value>
+			<researchViewX>14.00</researchViewX>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Windmill"]/researchViewY</xpath>
+		<value>
+			<researchViewY>4.10</researchViewY>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Mining"]/researchViewX</xpath>
+		<value>
+			<researchViewX>15.00</researchViewX>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Mining"]/researchViewY</xpath>
+		<value>
+			<researchViewY>4.05</researchViewY>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Trebuchet"]/researchViewX</xpath>
+		<value>
+			<researchViewX>15.00</researchViewX>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Trebuchet"]/researchViewY</xpath>
+		<value>
+			<researchViewY>3.05</researchViewY>
+		</value>
+	</Operation>
+	
 </Patch>
