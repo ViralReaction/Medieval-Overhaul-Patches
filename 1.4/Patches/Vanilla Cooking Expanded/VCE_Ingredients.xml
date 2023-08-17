@@ -169,14 +169,14 @@
 						</li>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Salt"]/statBases/Nutrition</xpath>
 					<value>
 						<Nutrition>0.05</Nutrition>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Salt"]</xpath>
 					<value>
@@ -184,13 +184,18 @@
 						<li>VCE_Salt</li>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Salt"]</xpath>
 					<value>
 						<li>DankPyon_Salt</li>
 						<li>VCE_Salt</li>
 					</value>
+				</li>
+
+				<li Class="PatchOperationSetName">
+					<xpath>Defs/RecipeDef[defName="VCE_MakeSalt" or defName="VCE_MakeSaltfromBlocks"]/products/VCE_Salt</xpath>
+					<name>DankPyon_Salt</name>
 				</li>
 
 			</operations>
