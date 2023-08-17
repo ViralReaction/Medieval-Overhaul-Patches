@@ -80,7 +80,7 @@
 							<graphicClass>Graphic_StackCount</graphicClass>
 						</graphicData>
 						<thingCategories>
-							<li>MeatRaw</li>
+							<li>DankPyon_DriedFood</li>
 						</thingCategories>
 						<statBases>
 							<Mass>0.01</Mass>
@@ -113,7 +113,6 @@
 							<li Class="CompProperties_Ingredients"/>
 						</comps>
 						<rotatable>false</rotatable>
-						<tradeability>Buyable</tradeability>
 					</ThingDef>
 					
 					<!-- Dried Insect Meat Process-->
@@ -161,7 +160,7 @@
 							<graphicClass>Graphic_StackCount</graphicClass>
 						</graphicData>
 						<thingCategories>
-							<li>MeatRaw</li>
+							<li>DankPyon_DriedFood</li>
 						</thingCategories>
 						<statBases>
 							<Mass>0.01</Mass>
@@ -186,7 +185,6 @@
 							<li Class="CompProperties_Ingredients"/>
 						</comps>
 						<rotatable>false</rotatable>
-						<tradeability>Buyable</tradeability>
 					</ThingDef>
 				</value>
 			</li>
@@ -267,7 +265,7 @@
 		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
 		<value>
 			<thingCategories>
-				<li>MeatRaw</li>
+				<li>DankPyon_DriedFood</li>
 			</thingCategories>
 		</value>
 	</Operation>
@@ -359,6 +357,30 @@
 				<li>Meat_Megaspider</li>
 				<li>DankPyon_DriedMeat_Human</li>
 				<li>DankPyon_SmokedMeat_Human</li>
+				<li>DankPyon_DriedMeat_Insect</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/tradeability</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs/li[.="Meat_Human"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<value>
+				<li>DankPyon_DriedMeat_Human</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs/li[.="Meat_Megaspider"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<value>
 				<li>DankPyon_DriedMeat_Insect</li>
 			</value>
 		</match>

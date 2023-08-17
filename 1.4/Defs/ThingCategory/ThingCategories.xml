@@ -14,5 +14,12 @@
         <parent>FoodRaw</parent>
         <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
       </ThingCategoryDef>
+	  
+	  <ThingCategoryDef>
+        <defName>DankPyon_DriedFood</defName>
+        <label>dried meat</label>
+        <parent>MeatRaw</parent>
+        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+      </ThingCategoryDef>
 
 </Defs>
