@@ -100,7 +100,7 @@
 				</li>
 				
 				<!-- Buckwheat Integration -->
-				<li Class="PatchOperationAdd">
+				<!--li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/ingredients/li/filter/thingDefs</xpath>
 					<value>
 						<li>VCE_RawBuckwheat</li>
@@ -119,7 +119,7 @@
 					<value>
 						<li>VCE_RawBuckwheat</li>
 					</value>
-				</li>
+				</li-->
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_RawBuckwheat"]/ingestible</xpath>
@@ -135,7 +135,7 @@
 					<xpath>Defs/ThingDef[defName="VCE_RawBuckwheat"]</xpath>
 					<value>
 						<thingCategories>
-							<li>Foods</li>
+							<li>DankPyon_Cereal</li>
 						</thingCategories>
 					</value>
 				</li>
@@ -185,7 +185,7 @@
 							<li>ReGrowth: Core</li>
 						</mods>
 						<match Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="VCE_Blueberry"]</xpath>
+							<xpath>Defs/ThingDef[defName="VCE_Blueberry"]/plant</xpath>
 							<value>
 								<sowResearchPrerequisites>
 									<li>RG_BerryCultivation</li>
@@ -203,40 +203,6 @@
 						<operations>
 							
 							<!-- VCE Barley -->
-							<li Class="PatchOperationAdd">
-								<xpath>Defs</xpath>
-								<value>
-					
-									<ThingDef ParentName="RoughPlantBase">
-										<defName>DankPyon_RawBarley</defName>
-										<label>barley</label>
-										<description>Barley is a grain that can be milled into flour.</description>
-										<graphicData>
-											<texPath>Plants/RawWheat</texPath>
-											<graphicClass>Graphic_StackCount</graphicClass>
-											<color>(0.9,0.9,0.9,1)</color>
-										</graphicData>
-										<statBases>
-											<MarketValue>1.1</MarketValue>
-										</statBases>
-										<ingestible>
-											<foodType>Seed</foodType>
-											<preferability>NeverForNutrition</preferability>
-										</ingestible>
-										<comps>
-											<li Class="CompProperties_Rottable">
-												<daysToRotStart>60</daysToRotStart>
-												<rotDestroys>true</rotDestroys>
-											</li>
-										</comps>
-										<thingCategories>
-											<li>Foods</li>
-										</thingCategories>
-									</ThingDef>
-					
-								</value>
-							</li>
-							
 							<li Class="PatchOperationAdd">
 								<xpath>Defs/ThingDef[defName="VCE_Barley"]/plant</xpath>
 								<value>
@@ -260,62 +226,7 @@
 								</value>
 							</li>
 							
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/ingredients/li/filter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawBarley</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/fixedIngredientFilter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawBarley</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawBarley</li>
-								</value>
-							</li>
-
 							<!--VCE Sorghum -->
-							<li Class="PatchOperationAdd">
-								<xpath>Defs</xpath>
-								<value>
-					
-									<ThingDef ParentName="RoughPlantBase">
-										<defName>DankPyon_RawSorghum</defName>
-										<label>sorghum</label>
-										<description>Sorghum is a grain that can be milled into flour.</description>
-										<graphicData>
-											<texPath>Plants/RawWheat</texPath>
-											<graphicClass>Graphic_StackCount</graphicClass>
-											<color>(0.6,0.52,0.34,1)</color>
-										</graphicData>
-										<statBases>
-											<MarketValue>1.1</MarketValue>
-										</statBases>
-										<ingestible>
-											<foodType>Seed</foodType>
-											<preferability>NeverForNutrition</preferability>
-										</ingestible>
-										<comps>
-											<li Class="CompProperties_Rottable">
-												<daysToRotStart>60</daysToRotStart>
-												<rotDestroys>true</rotDestroys>
-											</li>
-										</comps>
-										<thingCategories>
-											<li>Foods</li>
-										</thingCategories>
-									</ThingDef>
-					
-								</value>
-							</li>
-
 							<li Class="PatchOperationAdd">
 								<xpath>Defs/ThingDef[defName="VCE_Sorghum"]/plant</xpath>
 								<value>
@@ -331,63 +242,7 @@
 									<harvestedThingDef>DankPyon_RawSorghum</harvestedThingDef>
 								</value>
 							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/ingredients/li/filter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawSorghum</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/fixedIngredientFilter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawSorghum</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawSorghum</li>
-								</value>
-							</li>
-
 							<!--VCE Rye -->
-							<li Class="PatchOperationAdd">
-								<xpath>Defs</xpath>
-								<value>
-					
-									<ThingDef ParentName="RoughPlantBase">
-										<defName>DankPyon_RawRye</defName>
-										<label>sorghum</label>
-										<description>Sorghum is a grain that can be milled into flour.</description>
-										<graphicData>
-											<texPath>Plants/RawWheat</texPath>
-											<graphicClass>Graphic_StackCount</graphicClass>
-											<color>(0.36,0.25,0.2,1)</color>
-										</graphicData>
-										<statBases>
-											<MarketValue>1.1</MarketValue>
-										</statBases>
-										<ingestible>
-											<foodType>Seed</foodType>
-											<preferability>NeverForNutrition</preferability>
-										</ingestible>
-										<comps>
-											<li Class="CompProperties_Rottable">
-												<daysToRotStart>60</daysToRotStart>
-												<rotDestroys>true</rotDestroys>
-											</li>
-										</comps>
-										<thingCategories>
-											<li>Foods</li>
-										</thingCategories>
-									</ThingDef>
-					
-								</value>
-							</li>
-
 							<li Class="PatchOperationAdd">
 								<xpath>Defs/ThingDef[defName="VCE_Rye"]/plant</xpath>
 								<value>
@@ -401,27 +256,6 @@
 								<xpath>Defs/ThingDef[defName="VCE_Rye"]/plant/harvestedThingDef</xpath>
 								<value>
 									<harvestedThingDef>DankPyon_RawRye</harvestedThingDef>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/ingredients/li/filter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawRye</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/fixedIngredientFilter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawRye</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs</xpath>
-								<value>
-									<li>DankPyon_RawRye</li>
 								</value>
 							</li>
 
@@ -449,33 +283,12 @@
 								</value>
 							</li>
 
-							<li Class="PatchOperationReplace">
+							<!--li Class="PatchOperationReplace">
 								<xpath>Defs/ThingDef[defName="VCE_Oats"]/modExtensions/li[@Class="VanillaPlantsExpanded.DualCropExtension"]/outPutAmount</xpath>
 								<value>
 									<outPutAmount>15</outPutAmount>
 								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/ingredients/li/filter/thingDefs</xpath>
-								<value>
-									<li>VCE_RawOats</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk" or defName="DankPyon_CraftFlourManual"]/fixedIngredientFilter/thingDefs</xpath>
-								<value>
-									<li>VCE_RawOats</li>
-								</value>
-							</li>
-
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs</xpath>
-								<value>
-									<li>VCE_RawOats</li>
-								</value>
-							</li>
+							</li-->
 
 							<li Class="PatchOperationAdd">
 								<xpath>Defs</xpath>
@@ -593,7 +406,129 @@
 								</value>
 							</li>
 
-					
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="DankPyon_WindMill"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+								<value>
+									<li>DankPyon_MillOatProcess</li>
+								</value>
+							</li>
+							
+							<!-- Medieval Milk Press -->
+							<li Class="PatchOperationAdd">
+								<xpath>Defs</xpath>
+								<value>
+									<ThingDef ParentName="BenchBase">
+										<defName>DankPyon_VegMilkExtractor</defName>
+										<label>vegetable milk press</label>
+										<description>A small work station containing a presser to separate vegetable extract from mash. This lengthy process allows you to extract vegetable milk from rice, almonds, coconuts, oats and soybeans.</description>
+										<thingClass>Building_WorkTable_HeatPush</thingClass>
+										<drawerType>MapMeshAndRealTime</drawerType>
+										<graphicData>
+											<texPath>Production/Presser/Presser</texPath>
+											<graphicClass>Graphic_Multi</graphicClass>
+											<drawSize>(4,3)</drawSize>
+											<color>(0.75,0.75,0.75,1)</color>
+											<damageData>
+												<cornerTL>Damage/Corner</cornerTL>
+												<cornerTR>Damage/Corner</cornerTR>
+												<cornerBL>Damage/Corner</cornerBL>
+												<cornerBR>Damage/Corner</cornerBR>
+											</damageData>
+										</graphicData>
+										<!--castEdgeShadows>true</castEdgeShadows-->
+										<staticSunShadowHeight>0.20</staticSunShadowHeight>
+										<constructEffect>ConstructMetal</constructEffect>
+										<costList>
+											<DankPyon_IronIngot>30</DankPyon_IronIngot>
+											<WoodLog>30</WoodLog>
+											<DankPyon_ComponentBasic>2</DankPyon_ComponentBasic>
+										</costList>
+										<altitudeLayer>Building</altitudeLayer>
+										<fillPercent>0.5</fillPercent>
+										<useHitPoints>True</useHitPoints>
+										<statBases>
+											<WorkToBuild>2000</WorkToBuild>
+											<MaxHitPoints>180</MaxHitPoints>
+											<Flammability>1.0</Flammability>
+											<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+										</statBases>
+										<size>(2,1)</size>
+										<designationCategory>Production</designationCategory>
+										<uiOrder>2120</uiOrder>
+										<passability>PassThroughOnly</passability>
+										<pathCost>50</pathCost>
+										<hasInteractionCell>True</hasInteractionCell>
+										<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+										<surfaceType>Item</surfaceType>
+										<inspectorTabs>
+											<li>ITab_Bills</li>
+										</inspectorTabs>
+										<researchPrerequisites>
+											<li>VCE_VegMilkExtraction</li>
+										</researchPrerequisites>
+										<comps>
+										</comps>
+										<placeWorkers>
+											<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+										</placeWorkers>
+										<building>
+											<isMealSource>true</isMealSource>
+											<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+										</building>
+									</ThingDef>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/RecipeDef[defName="VCE_MilkFromRice" or defName="VCE_MilkFromAlmonds" or defName="VCE_MilkFromCoconuts" or defName="VCE_MilkFromOats"]/recipeUsers</xpath>
+								<value>
+									<li>DankPyon_VegMilkExtractor</li>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_VegMilkExtraction"]/techLevel</xpath>
+								<value>
+									<techLevel>Medieval</techLevel>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_VegMilkExtraction"]/prerequisites</xpath>
+								<value>
+									<prerequisites>
+										<li>DankPyon_BasicCooking</li>
+									</prerequisites>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="VCE_VegMilkExtractor"]/researchPrerequisites</xpath>
+								<value>
+									<li>Electricity</li>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_VegMilkExtraction"]/tab</xpath>
+								<value>
+									<tab>DankPyon_MedievalResearchTab</tab>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_VegMilkExtraction"]/researchViewX</xpath>
+								<value>
+									 <researchViewX>1.00</researchViewX>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_VegMilkExtraction"]/researchViewY</xpath>
+								<value>
+									 <researchViewY>7.10</researchViewY>
+								</value>
+							</li>
 					
 						</operations>
 					</match>

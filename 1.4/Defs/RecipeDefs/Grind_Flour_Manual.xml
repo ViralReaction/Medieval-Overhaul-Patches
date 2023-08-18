@@ -14,19 +14,18 @@
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs>
-						<li>DankPyon_RawWheat</li>
-						<li>DankPyon_RawSpelt</li>
-					</thingDefs>
+					<categories>
+						<li>DankPyon_Cereal</li>
+					</categories>
+					<thingDefs></thingDefs>
 				</filter>
 				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
-			<thingDefs>
-				<li>DankPyon_RawWheat</li>
-				<li>DankPyon_RawSpelt</li>
-			</thingDefs>
+			<categories>
+				<li>DankPyon_Cereal</li>
+			</categories>
 			<specialFiltersToDisallow>
 				<li>AllowRotten</li>
 			</specialFiltersToDisallow>

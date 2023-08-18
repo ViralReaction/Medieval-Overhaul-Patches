@@ -61,7 +61,88 @@
 			</li>
 		</comps>
 		<thingCategories>
-			<li>Foods</li>
+			<li>DankPyon_Cereal</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>DankPyon_RawBarley</defName>
+		<label>barley</label>
+		<description>Barley is a grain that can be milled into flour.</description>
+		<graphicData>
+			<texPath>Plants/RawWheat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(0.9,0.9,0.9,1)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.1</MarketValue>
+		</statBases>
+		<ingestible>
+			<foodType>Seed</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>DankPyon_Cereal</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>DankPyon_RawSorghum</defName>
+		<label>sorghum</label>
+		<description>Sorghum is a grain that can be milled into flour.</description>
+		<graphicData>
+			<texPath>Plants/RawWheat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(0.6,0.52,0.34,1)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.1</MarketValue>
+		</statBases>
+		<ingestible>
+			<foodType>Seed</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>DankPyon_Cereal</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>DankPyon_RawRye</defName>
+		<label>sorghum</label>
+		<description>Sorghum is a grain that can be milled into flour.</description>
+		<graphicData>
+			<texPath>Plants/RawWheat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(0.36,0.25,0.2,1)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.1</MarketValue>
+		</statBases>
+		<ingestible>
+			<foodType>Seed</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>DankPyon_Cereal</li>
 		</thingCategories>
 	</ThingDef>
 
