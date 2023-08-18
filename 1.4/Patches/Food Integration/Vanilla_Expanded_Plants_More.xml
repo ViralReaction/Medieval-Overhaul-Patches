@@ -23,12 +23,12 @@
 					</value>
 				</li>
 
-				<li Class="PatchOperationAdd">
+				<!--li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="DankPyon_RawGarlic"]</xpath>
 					<value>
 						<thingClass Inherit="False">VanillaPlantsExpandedMorePlants.Plant_Resistant</thingClass>
 					</value>
-				</li>
+				</li-->
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DankPyon_RawGarlic"]/description</xpath>
