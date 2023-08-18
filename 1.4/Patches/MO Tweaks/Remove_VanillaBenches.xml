@@ -25,5 +25,15 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef/recipeMaker/recipeUsers[li="FueledSmithy"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/recipeMaker/recipeUsers[li="FueledSmithy"]</xpath>
+			<value>
+				<li>DankPyon_Anvil</li>
+			</value>
+		</match>
+	</Operation>
 			
 </Patch>
