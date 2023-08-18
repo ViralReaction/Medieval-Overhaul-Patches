@@ -15,5 +15,15 @@
 			<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef/recipeUsers[li="FueledSmithy"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef/recipeUsers[li="FueledSmithy"]</xpath>
+			<value>
+				<li>DankPyon_Anvil</li>
+			</value>
+		</match>
+	</Operation>
 			
 </Patch>
