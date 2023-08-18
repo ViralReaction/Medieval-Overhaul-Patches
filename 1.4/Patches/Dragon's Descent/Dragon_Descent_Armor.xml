@@ -17,14 +17,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleHelm" or defName="DD_Apparel_DragonCrown"]/recipeMaker/recipeUsers</xpath>
-					<value>
-						<li>DankPyon_Anvil</li>
-					</value>
-				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DD_Apparel_ScaleHelm"]/recipeMaker/researchPrerequisite</xpath>
 					<value>

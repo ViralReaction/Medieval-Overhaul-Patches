@@ -20,6 +20,7 @@
 					<value>
 						<stuffCategories>
 							<li>Woody</li>
+							<li>Metallic</li>
 						</stuffCategories>
 					</value>
 				</li>
@@ -47,15 +48,6 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Wheelchair"]/recipeMaker/recipeUsers</xpath>
-					<value>
-						<recipeUsers Inherit="False">
-							<li>DankPyon_Anvil</li>
-						</recipeUsers>
-					</value>
-				</li>		
 
 			</operations>
 		</match>
