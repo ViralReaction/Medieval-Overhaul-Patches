@@ -22,13 +22,6 @@
 					</value>
 				</li>
 				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DankPyon_BedFur" or defName="DankPyon_BedFurDouble"]/comps</xpath>
-					<value>
-						<li Class="VFEV.CompProperties_CureHypothermia"/>
-					</value>
-				</li>
-				
 			</operations>
 		</match>
 	</Operation>
