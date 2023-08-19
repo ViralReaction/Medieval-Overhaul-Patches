@@ -5,10 +5,9 @@
 		<mods>
 			<li>Vanilla Cooking Expanded</li>
 		</mods>
-		
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<!-- Remove Old Recipes -->
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/RecipeDef[
@@ -25,12 +24,12 @@
 					defName="DankPyon_CookMealCheeseSoup" or
 					defName="DankPyon_CookMealCheeseSoupBulk"]					</xpath>
 				</li>
-				
+
 				<!-- Simple Soups in Pot -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-								
+
 						<ProcessorFramework.ProcessDef>
 							<defName>VCE_CookedSoupSimple</defName>
 							<thingDef>VCE_CookedSoupSimple</thingDef>
@@ -82,15 +81,15 @@
 							<efficiency>10.0</efficiency>
 							<processDays>1</processDays>
 						</ProcessorFramework.ProcessDef>
-					
+
 					</value>
 				</li>
-			
+
 				<!-- Process Bone Soup -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<RecipeDef ParentName="CookMealBase">
 							<defName>MO_CookBoneSoup</defName>
 							<label>prepare bone broth</label>
@@ -122,7 +121,7 @@
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisite>
 						</RecipeDef>
-					
+
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedBoneSoup</defName>
 							<label>uncooked bone broth</label>
@@ -153,7 +152,7 @@
 								<preferability>NeverForNutrition</preferability>
 							</ingestible>
 						</ThingDef>
-					
+
 						<ProcessorFramework.ProcessDef>
 							<defName>MO_BoneSoup</defName>
 							<thingDef>DankPyon_MealBoneSoup</thingDef>
@@ -169,12 +168,12 @@
 					
 					</value>
 				</li>
-				
+
 				<!-- Process Lentil Soup -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<RecipeDef ParentName="CookMealBase">
 							<defName>MO_CookLentilSoup</defName>
 							<label>prepare lentil soup</label>
@@ -229,7 +228,7 @@
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisite>
 						</RecipeDef>
-					
+
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedLentilSoup</defName>
 							<label>uncooked lentil broth</label>
@@ -260,7 +259,7 @@
 								<preferability>NeverForNutrition</preferability>
 							</ingestible>
 						</ThingDef>
-					
+
 						<ProcessorFramework.ProcessDef>
 							<defName>MO_LentilSoup</defName>
 							<thingDef>DankPyon_MealWinterLentilSoup</thingDef>
@@ -276,12 +275,12 @@
 					
 					</value>
 				</li>
-			
+
 				<!-- Process Mushroom Soup -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<RecipeDef ParentName="CookMealBase">
 							<defName>MO_CookMushroomSoup</defName>
 							<label>prepare mushroom soup</label>
@@ -336,7 +335,7 @@
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisite>
 						</RecipeDef>
-					
+
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedMushroomSoup</defName>
 							<label>uncooked mushroom soup</label>
@@ -380,15 +379,15 @@
 							<efficiency>5.0</efficiency>
 							<processDays>.5</processDays>
 						</ProcessorFramework.ProcessDef>
-					
+
 					</value>
 				</li>
-				
+
 				<!-- Process Bread Soup -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<RecipeDef ParentName="CookMealBase">
 							<defName>MO_CookBreadSoup</defName>
 							<label>prepare bread soup</label>
@@ -444,7 +443,7 @@
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisites>
 						</RecipeDef>
-					
+
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedBreadSoup</defName>
 							<label>uncooked bread soup</label>
@@ -475,7 +474,7 @@
 								<preferability>NeverForNutrition</preferability>
 							</ingestible>
 						</ThingDef>
-					
+
 						<ProcessorFramework.ProcessDef>
 							<defName>MO_BreadSoup</defName>
 							<thingDef>DankPyon_MealBreadSoup</thingDef>
@@ -491,12 +490,12 @@
 					
 					</value>
 				</li>
-				
+
 				<!-- Process Pumpkin Soup -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<RecipeDef ParentName="CookMealBase">
 							<defName>MO_CookPumpkinSoup</defName>
 							<label>prepare pumpkin soup</label>
@@ -552,7 +551,7 @@
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisites>
 						</RecipeDef>
-					
+
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedPumpkinSoup</defName>
 							<label>uncooked pumpkin soup</label>
@@ -583,7 +582,7 @@
 								<preferability>NeverForNutrition</preferability>
 							</ingestible>
 						</ThingDef>
-					
+
 						<ProcessorFramework.ProcessDef>
 							<defName>MO_PumpkinSoup</defName>
 							<thingDef>DankPyon_MealPumpkinSoup</thingDef>
@@ -599,12 +598,12 @@
 					
 					</value>
 				</li>
-				
+
 				<!-- Process Cheese Soup -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<RecipeDef ParentName="CookMealBase">
 							<defName>MO_CookCheeseSoup</defName>
 							<label>prepare cheese soup</label>
@@ -672,7 +671,7 @@
 								<li>VCE_SoupCooking</li>
 							</researchPrerequisites>
 						</RecipeDef>
-					
+
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MO_UncookedCheeseSoup</defName>
 							<label>uncooked cheese soup</label>
@@ -703,7 +702,7 @@
 								<preferability>NeverForNutrition</preferability>
 							</ingestible>
 						</ThingDef>
-					
+
 						<ProcessorFramework.ProcessDef>
 							<defName>MO_CheeseSoup</defName>
 							<thingDef>DankPyon_MealCheeseSoup</thingDef>
@@ -719,12 +718,9 @@
 					
 					</value>
 				</li>
-				
-			
-				
+
 			</operations>
 		</match>
-		
 	</Operation>
-	
+
 </Patch>
