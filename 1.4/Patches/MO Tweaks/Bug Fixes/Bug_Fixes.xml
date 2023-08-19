@@ -63,4 +63,12 @@
 		</value>
 	</Operation>
 	
+	
+	<!-- Cheese Nerf -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/statBases/Nutrition</xpath>
+		<value>
+			<Nutrition>0.15</Nutrition>
+		</value>
+	</Operation>
 </Patch>

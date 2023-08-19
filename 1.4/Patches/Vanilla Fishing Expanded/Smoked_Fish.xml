@@ -70,6 +70,9 @@
 								<categories>
 									<li>VCEF_RawFishCategory</li>
 								</categories>
+								<disallowedThingDefs>
+								<li>DankPyon_DriedFish</li>
+								</disallowedThingDefs>
 							</ingredientFilter>
 							<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->
 							<capacityFactor>1.0</capacityFactor>

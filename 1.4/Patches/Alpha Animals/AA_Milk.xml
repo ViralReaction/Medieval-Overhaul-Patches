@@ -5,16 +5,47 @@
 		<mods>
 			<li>Alpha Animals</li>
 		</mods>
-		
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="AA_BlueMilk" or defName="AA_GowMilk" or defName="AA_NightMilk"]/thingCategories</xpath>
-			<value>
-				<thingCategories>
-					<li>DankPyon_Milk</li>
-				</thingCategories>
-			</value>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
+						<value>
+							<thingCategories>
+								<li>DankPyon_Milk</li>
+							</thingCategories>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
+						<value>
+							<thingCategories>
+								<li>DankPyon_Milk</li>
+							</thingCategories>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
+						<value>
+							<thingCategories>
+								<li>DankPyon_Milk</li>
+							</thingCategories>
+						</value>
+					</match>
+				</li>
+
+			</operations>
 		</match>
-			
 	</Operation>
-  
+
 </Patch>

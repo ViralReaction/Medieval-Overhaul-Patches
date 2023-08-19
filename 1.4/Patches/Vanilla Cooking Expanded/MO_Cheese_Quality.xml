@@ -12,18 +12,12 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/comps</xpath>
 					<value>
-						<li>
-							<compClass>CompQuality</compClass>
-						</li>
 						<li Class="VanillaCookingExpanded.CompProperties_StackByQuality"/>
-						<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-							<ingestedThought>VCE_AteCheese</ingestedThought>
-						</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DankPyon_Wine"]/comps</xpath>
+					<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_HoneyIntoMead"]/comps</xpath>
 					<value>
 						<li Class="VanillaCookingExpanded.CompProperties_StackByQuality"/>
 					</value>

@@ -24,6 +24,7 @@
 		<li>ceteam.combatextended</li>
 		<li>accurex.medievalempireoverhaul</li>
 		<li>devdesigner.blood</li>
+		<li>vanillaexpanded.vcooke</li>
 	</loadAfter>
 	<description>Multiple patches that attempt to integrate mods into a better playthrough of Medieval Overhaul.</description>
 </ModMetaData>

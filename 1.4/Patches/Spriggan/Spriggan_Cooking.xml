@@ -46,7 +46,7 @@
 								<fuelUseFactor>0.0</fuelUseFactor>
 								<filledGraphicSuffix>Filled</filledGraphicSuffix>
 								<usesQuality>true</usesQuality>
-								<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+								<qualityDays>(1, 3, 8, 14, 20, 50, 120)</qualityDays>
 								<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
 								<customLabel/>
 								<destroyChance>0.0</destroyChance>

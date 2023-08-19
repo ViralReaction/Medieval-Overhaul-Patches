@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	
+
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Vanilla Fishing Expanded</li>
@@ -8,7 +8,7 @@
 
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<!-- Dried Fish -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_DriedFish"]</xpath>
@@ -16,11 +16,11 @@
 						<xpath>Defs/ThingDef[defName="DankPyon_DriedFish"]</xpath>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-					
+
 						<ThingDef ParentName="OrganicProductBase">
 							<defName>DankPyon_DriedFish</defName>
 							<label>dried fish</label>
@@ -51,10 +51,10 @@
 								<li Class="CompProperties_Ingredients"/>
 							</comps>
 						</ThingDef>
-					
+
 					</value>
 				</li>
-				
+
 				<!-- Dried Fish Processing -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedFishProcess"]</xpath>
@@ -62,13 +62,13 @@
 						<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedFishProcess"]</xpath>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-				
+
 						<ProcessorFramework.ProcessDef>
-						
+
 							<defName>DankPyon_DriedFishProcess</defName>
 							<thingDef>DankPyon_DriedFish</thingDef>
 							<ingredientFilter>
@@ -102,12 +102,12 @@
 							<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
 							<customLabel/>
 							<destroyChance>0.0</destroyChance>
-  
+
 						</ProcessorFramework.ProcessDef>
-						
+
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DankPyon_DriedFishProcess"]</xpath>
 					<nomatch Class="PatchOperationAdd">
@@ -117,8 +117,8 @@
 						</value>
 					</nomatch>
 				</li>
-				
-				<!-- Prevent Dried Meat from using fish -->	
+
+				<!-- Prevent Dried Meat from using fish -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/disallowedCategories/li[.="VCEF_RawFishCategory"]</xpath>
 					<nomatch Class="PatchOperationAdd">
@@ -130,10 +130,21 @@
 						</value>
 					</nomatch>
 				</li>
-				
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Salted Meat 2.0</li>
+					</mods>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedFishProcess"]/ingredientFilter/disallowedThingDefs</xpath>
+						<value>
+							<li>SM_DriedFish</li>
+						</value>
+					</match>
+				</li>
+
 			</operations>
 		</match>
-		
 	</Operation>
 				
 </Patch>
