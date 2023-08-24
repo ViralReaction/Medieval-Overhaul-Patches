@@ -21,9 +21,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_FullPlate" or defName="DevDesigner_Blood_Apparel_LordFullPlate"]/apparel/layers</xpath>
 					<value>
-						<layers>
-							<li>Middle</li>
-						</layers>
+						<li>Middle</li>
 					</value>
 				</li>
 
