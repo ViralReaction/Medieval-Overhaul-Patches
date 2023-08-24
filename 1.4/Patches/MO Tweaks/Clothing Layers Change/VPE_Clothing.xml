@@ -5,9 +5,10 @@
 		<mods>
 			<li>Vanilla Psycasts Expanded</li>
 		</mods>
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<li Class="PatchOperationAddModExtension">
 					<xpath>Defs/ThingDef[defName="VPE_Apparel_EltexCape"]</xpath>
 					<value>
@@ -33,6 +34,7 @@
 
 			</operations>
 		</match>
+
 	</Operation>
 
 </Patch>

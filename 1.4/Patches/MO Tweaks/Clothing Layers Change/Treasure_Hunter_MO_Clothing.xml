@@ -5,6 +5,7 @@
 		<mods>
 			<li>Treasure Hunter (MO Beta)</li>
 		</mods>
+
 		<match Class="PatchOperationSequence">
 			<operations>
 
@@ -33,6 +34,7 @@
 
 			</operations>
 		</match>
+
 	</Operation>
 
 </Patch>

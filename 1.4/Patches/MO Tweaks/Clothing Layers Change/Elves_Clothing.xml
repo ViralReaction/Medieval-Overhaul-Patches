@@ -37,22 +37,10 @@
 						<li>Shoulders</li>
 					</value>
 				</li>
-				<!--
-				<li Class="PatchOperationAddModExtension">
-					<xpath>Defs/ThingDef[@Name="DevDesigner_Elves_BreastplateBase" or @Name="DevDesigner_Elves_MetalPauldrons"]</xpath>
-					<value>
-						<li Class="VFECore.ApparelDrawPosExtension">
-							<shellPosDrawSettings>
-								<drawPosSouthOffset>(0, -0.004, 0)</drawPosSouthOffset>
-								<drawPosWestOffset>(0,  -0.004, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(0,  -0.004, 0)</drawPosEastOffset>
-							</shellPosDrawSettings>
-						</li>
-					</value>
-				</li> -->
 
 			</operations>
 		</match>
+
 	</Operation>
 
 </Patch>
