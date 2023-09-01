@@ -3,7 +3,7 @@
 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>[Beta] Tasty Medieval Apparel Bloatpack</li>
+			<li>Tastier Armory - Medieval European Armors</li>
 		</mods>
 		
 		<match Class="PatchOperationSequence">
