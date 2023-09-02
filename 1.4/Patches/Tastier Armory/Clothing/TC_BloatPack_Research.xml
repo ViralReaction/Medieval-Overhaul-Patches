@@ -17,24 +17,53 @@
 					defName="TC_Dress" or
 					defName="TC_FancyCoat" or
 					defName="TC_Hood" or
-					defName="TC_Tunic"]/recipeMaker/researchPrerequisite					</xpath>
+					defName="TC_Tunic" or
+					defName="TC_Quiver" or
+					defName="TC_Bag"]/recipeMaker/researchPrerequisite					</xpath>
 					<value>
 						<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
 					</value>
 				</li>
-				
-				
+
 				<!-- Padded Armor -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[
 					defName="TC_GambesonCoat" or
 					defName="TC_ArmingDoublet" or
-					defName="TC_Surcoat"]/recipeMaker/researchPrerequisite					</xpath>
+					defName="TC_Surcoat" or
+					defName="TC_CoifPadded"]/recipeMaker/researchPrerequisite					</xpath>
 					<value>
 						<researchPrerequisite>DankPyon_ProtectiveClothing</researchPrerequisite>
 					</value>
 				</li>
-				
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+
+							<li Class="PatchOperationReplace">
+							<xpath>Defs/ThingDef[defName="TC_Jupon"]/recipeMaker/researchPrerequisite</xpath>
+								<value>
+									<researchPrerequisite>DankPyon_ProtectiveClothing</researchPrerequisite>
+								</value>
+							</li>
+							
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="TC_Jupon"]/statBases/StuffEffectMultiplierArmor</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="TC_Jupon"]/statBases/StuffEffectMultiplierArmor</xpath>
+									<value>
+									<StuffEffectMultiplierArmor>3</StuffEffectMultiplierArmor>
+									</value>
+								</match>
+							</li>
+
+						</operations>
+					</match>
+				</li>
 				
 				<!-- Chain Armor -->
 				<li Class="PatchOperationReplace">
