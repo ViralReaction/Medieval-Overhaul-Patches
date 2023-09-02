@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Layered Wall Destruction</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_CastleWall"]</xpath>
+					<value>
+						<comps>
+							<li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+								<NextLayerDef>DankPyon_CastleWall_Shootable</NextLayerDef>
+								<NextLayerDef_Alternative>DankPyon_CastleWall_Destr_Climbable</NextLayerDef_Alternative>
+							</li>
+						</comps>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_CastleWallEmbrasures"]</xpath>
+					<value>
+						<comps Inherit="False">
+							<li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+								<NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+								<NextLayerDef_Alternative>DankPyon_CastleWall_Destr_Climbable</NextLayerDef_Alternative>
+							</li>
+						</comps>
+					</value>
+				</li>
+
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_CastleWall"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<!--  New HP =  300 - (100 + 50)/3 -->
+						<MaxHitPoints>950</MaxHitPoints>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_CastleWallEmbrasures"]/statBases/MaxHitPoints</xpath>
+					<value>
+						<!--  New HP =  300 - (100 + 50)/3 -->
+						<MaxHitPoints>750</MaxHitPoints>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+					
+						<ThingDef ParentName="LWD_LayerBase">
+							<defName>DankPyon_CastleWall_Shootable</defName>
+							<label>loophole wall</label>
+							<description>A damaged wall. Multiple small holes allow shooting through. Impassable. Somehow still capable of holding up a roof.</description>
+							<graphicData>
+								<texPath>Buildings/Linked/CastleWall_Shoot</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<linkType>CornerFiller</linkType>
+								<linkFlags>
+									<li>Wall</li>
+									<li>Rock</li>
+								</linkFlags>
+								<damageData>
+									<cornerTL>Damage/Corner</cornerTL>
+									<cornerTR>Damage/Corner</cornerTR>
+									<cornerBL>Damage/Corner</cornerBL>
+									<cornerBR>Damage/Corner</cornerBR>
+									<edgeTop>Damage/Edge</edgeTop>
+									<edgeBot>Damage/Edge</edgeBot>
+									<edgeLeft>Damage/Edge</edgeLeft>
+									<edgeRight>Damage/Edge</edgeRight>
+								</damageData>
+							</graphicData>
+							<statBases>
+								<WorkToBuild>800</WorkToBuild>
+								<MaxHitPoints>100</MaxHitPoints>
+								<Flammability>1.0</Flammability>
+							</statBases>
+							<passability>Impassable</passability>
+							<fillPercent>0.6</fillPercent>
+							<coversFloor>true</coversFloor>
+							<holdsRoof>true</holdsRoof>
+							<staticSunShadowHeight>0.5</staticSunShadowHeight>
+							<blockLight>false</blockLight>
+							<stuffCategories>
+							  <li>Stony</li>
+							</stuffCategories>
+							<building>
+								<relatedBuildCommands>
+									<li MayRequire="CETeam.CombatExtended">CE_Embrasure</li>
+								</relatedBuildCommands>
+							</building>
+							<comps>
+								<li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+									<NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+									<ParentLayerDef>DankPyon_CastleWall</ParentLayerDef>
+								</li>
+							</comps>
+							<designationHotKey>Misc3</designationHotKey>
+						</ThingDef>
+						  
+						<ThingDef ParentName="LWD_LayerBase">
+							<defName>DankPyon_CastleWall_Destr_Climbable</defName>
+							<label>breached wall</label>
+							<description>A damaged wall. Large hole allow climbing over it. Obstructs sight. Somehow still capable of holding up a roof.</description>
+							<graphicData>
+								<texPath>Buildings/Linked/CastleWall_Climb</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<linkType>CornerFiller</linkType>
+								<linkFlags>
+									<li>Wall</li>
+									<li>Rock</li>
+								</linkFlags>
+								<damageData>
+									<cornerTL>Damage/Corner</cornerTL>
+									<cornerTR>Damage/Corner</cornerTR>
+									<cornerBL>Damage/Corner</cornerBL>
+									<cornerBR>Damage/Corner</cornerBR>
+									<edgeTop>Damage/Edge</edgeTop>
+									<edgeBot>Damage/Edge</edgeBot>
+									<edgeLeft>Damage/Edge</edgeLeft>
+									<edgeRight>Damage/Edge</edgeRight>
+								</damageData>
+							</graphicData>
+							<statBases>
+								<WorkToBuild>800</WorkToBuild>
+								<MaxHitPoints>100</MaxHitPoints>
+								<Flammability>1.0</Flammability>
+							</statBases>
+							<pathCost>42</pathCost>
+							<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+							<passability>PassThroughOnly</passability>
+							<castEdgeShadows>true</castEdgeShadows>
+							<fillPercent>0.85</fillPercent>
+							<holdsRoof>true</holdsRoof>
+							<staticSunShadowHeight>0.5</staticSunShadowHeight>
+							<blockLight>true</blockLight>
+							<stuffCategories>
+							  <li>Stony</li>
+							</stuffCategories>
+							<building>
+								<relatedBuildCommands>
+									<li MayRequire="CETeam.CombatExtended">CE_Embrasure</li>
+								</relatedBuildCommands>
+							</building>
+							<comps>
+								<li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+									<NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+									<ParentLayerDef>DankPyon_CastleWall</ParentLayerDef>
+								</li>
+							</comps>
+						</ThingDef>
+						
+						<ThingDef ParentName="LWD_LayerBase">
+							<defName>DankPyon_Castle_Shootable</defName>
+							<label>loophole wall</label>
+							<description>A damaged wall. Multiple small holes allow shooting through. Impassable. Somehow still capable of holding up a roof.</description>
+							<graphicData>
+								<texPath>Buildings/Linked/CastleWall_Shoot</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<linkType>CornerFiller</linkType>
+								<linkFlags>
+									<li>Wall</li>
+									<li>Rock</li>
+								</linkFlags>
+								<damageData>
+									<cornerTL>Damage/Corner</cornerTL>
+									<cornerTR>Damage/Corner</cornerTR>
+									<cornerBL>Damage/Corner</cornerBL>
+									<cornerBR>Damage/Corner</cornerBR>
+									<edgeTop>Damage/Edge</edgeTop>
+									<edgeBot>Damage/Edge</edgeBot>
+									<edgeLeft>Damage/Edge</edgeLeft>
+									<edgeRight>Damage/Edge</edgeRight>
+								</damageData>
+							</graphicData>
+							<statBases>
+								<WorkToBuild>800</WorkToBuild>
+								<MaxHitPoints>100</MaxHitPoints>
+								<Flammability>1.0</Flammability>
+							</statBases>
+							<passability>Impassable</passability>
+							<fillPercent>0.6</fillPercent>
+							<coversFloor>true</coversFloor>
+							<holdsRoof>true</holdsRoof>
+							<staticSunShadowHeight>0.5</staticSunShadowHeight>
+							<blockLight>false</blockLight>
+							<stuffCategories>
+							  <li>Stony</li>
+							</stuffCategories>
+							<building>
+								<relatedBuildCommands>
+									<li MayRequire="CETeam.CombatExtended">CE_Embrasure</li>
+								</relatedBuildCommands>
+							</building>
+							<comps>
+								<li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+									<NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+									<ParentLayerDef>DankPyon_CastleWall</ParentLayerDef>
+								</li>
+							</comps>
+							<designationHotKey>Misc3</designationHotKey>
+						</ThingDef>
+						  
+						<ThingDef ParentName="LWD_LayerBase">
+							<defName>DankPyon_Castle_Destr_Climbable</defName>
+							<label>breached wall</label>
+							<description>A damaged wall. Large hole allow climbing over it. Obstructs sight. Somehow still capable of holding up a roof.</description>
+							<graphicData>
+								<texPath>Buildings/Linked/CastleWall_Climb</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<linkType>CornerFiller</linkType>
+								<linkFlags>
+									<li>Wall</li>
+									<li>Rock</li>
+								</linkFlags>
+								<damageData>
+									<cornerTL>Damage/Corner</cornerTL>
+									<cornerTR>Damage/Corner</cornerTR>
+									<cornerBL>Damage/Corner</cornerBL>
+									<cornerBR>Damage/Corner</cornerBR>
+									<edgeTop>Damage/Edge</edgeTop>
+									<edgeBot>Damage/Edge</edgeBot>
+									<edgeLeft>Damage/Edge</edgeLeft>
+									<edgeRight>Damage/Edge</edgeRight>
+								</damageData>
+							</graphicData>
+							<statBases>
+								<WorkToBuild>800</WorkToBuild>
+								<MaxHitPoints>100</MaxHitPoints>
+								<Flammability>1.0</Flammability>
+							</statBases>
+							<pathCost>42</pathCost>
+							<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+							<passability>PassThroughOnly</passability>
+							<castEdgeShadows>true</castEdgeShadows>
+							<fillPercent>0.85</fillPercent>
+							<holdsRoof>true</holdsRoof>
+							<staticSunShadowHeight>0.5</staticSunShadowHeight>
+							<blockLight>true</blockLight>
+							<stuffCategories>
+							  <li>Stony</li>
+							</stuffCategories>
+							<building>
+								<relatedBuildCommands>
+									<li MayRequire="CETeam.CombatExtended">CE_Embrasure</li>
+								</relatedBuildCommands>
+							</building>
+							<comps>
+								<li Class="LayeredDestruction.CompProperties_LayeredDestruction">
+									<NextLayerDef>Wall_Destr_Rubble</NextLayerDef>
+									<ParentLayerDef>DankPyon_CastleWall</ParentLayerDef>
+								</li>
+							</comps>
+						</ThingDef>
+					
+					</value>
+				</li>
+
+			</operations>
+		</match>
+
+	</Operation>
+
+</Patch>
