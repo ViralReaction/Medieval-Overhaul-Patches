@@ -535,7 +535,7 @@
 								<texPath>Furniture/LogSlabBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(1,1)</drawSize>
+								<drawSize>(1.5,1)</drawSize>
 								<damageData>
 									<rect>(0,0.05,0.5,0.95)</rect>
 								</damageData>
@@ -595,7 +595,7 @@
 								<texPath>Furniture/BedWicker</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(1,1)</drawSize>
+								<drawSize>(1.5,1)</drawSize>
 								<damageData>
 									 <rect>(0,0.05,0.5,0.95)</rect>
 								</damageData>
@@ -656,7 +656,7 @@
 								<texPath>Furniture/StrawBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(1,1)</drawSize>
+								<drawSize>(1.5,1)</drawSize>
 								<damageData>
 									 <rect>(0,0.05,0.5,0.95)</rect>
 								</damageData>
@@ -719,7 +719,7 @@
 								<texPath>Furniture/BedFur</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(1,1)</drawSize>
+								<drawSize>(1.5,1)</drawSize>
 								<damageData>
 									<rect>(0,0.05,0.5,0.95)</rect>
 								</damageData>
