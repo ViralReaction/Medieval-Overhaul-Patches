@@ -6,31 +6,31 @@
 			<li>[sd] medicaddons (unofficial)</li>
 			<li>Hospitals Extended</li>
 		</mods>
-		
+
 		<match Class="PatchOperationSequence">
 			<operations>
-					
+
 				<!-- Link Beds -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[
-					defName="DankPyon_BedLog" or
-					defName="DankPyon_BedWicker" or
-					defName="DankPyon_BedWicker" or
-					defName="DankPyon_StrawBedDouble" or
-					defName="DankPyon_BedFur" or
-					defName="DankPyon_BedFur" or
-					defName="DankPyon_BedFurDouble" or
-					defName="DankPyon_RoyalTudorBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities					</xpath>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[
 						defName="DankPyon_BedLog" or
 						defName="DankPyon_BedWicker" or
-						defName="DankPyon_BedWicker" or
+						defName="DankPyon_BedWickerDouble" or
+						defName="DankPyon_StrawBed" or
 						defName="DankPyon_StrawBedDouble" or
 						defName="DankPyon_BedFur" or
-						defName="DankPyon_BedFur" or
 						defName="DankPyon_BedFurDouble" or
-						defName="DankPyon_RoyalTudorBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities						</xpath>
+						defName="DankPyon_RoyalTudorBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities					</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[
+							defName="DankPyon_BedLog" or
+							defName="DankPyon_BedWicker" or
+							defName="DankPyon_BedWickerDouble" or
+							defName="DankPyon_StrawBed" or
+							defName="DankPyon_StrawBedDouble" or
+							defName="DankPyon_BedFur" or
+							defName="DankPyon_BedFurDouble" or
+							defName="DankPyon_RoyalTudorBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities						</xpath>
 						<value>
 							<li>sd_medicaddons_medieval_surg_washpan</li>
 							<li>sd_medicaddons_medieval_surg_instruments</li>
@@ -44,9 +44,9 @@
 							<li>EndTable</li>
 							<li>Dresser</li>
 						</value>
-					</nomatch>
+					</match>
 				</li>
-				
+
 				<!-- Change to Base Iron -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="sd_medicaddons_medieval_surg_instruments" or defName="sd_medicaddons_medieval_surg_lamp"]/costList/Steel</xpath>
@@ -55,7 +55,7 @@
 						<name>DankPyon_IronIngot</name>
 					</match>
 				</li>
-				
+
 				<!-- Prevents Tab Error -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ResearchTabDef[defName="sd_medicaddons_ResearchTab"]</xpath>
@@ -66,10 +66,60 @@
 						</value>
 					</match>
 				</li>
-					
+				
+				
+				<!-- Link Beds -->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Big and Small Furniture</li>
+					</mods>
+					<match Class="PatchOperationConditional">
+						<xpath>Defs/ThingDef[
+							defName="DankPyon_BS_BedLog" or
+							defName="DankPyon_BS_BedWicker" or
+							defName="DankPyon_BS_BedWickerDouble" or
+							defName="DankPyon_BS_StrawBed" or
+							defName="DankPyon_BS_StrawBedDouble" or
+							defName="DankPyon_BS_BedFur" or
+							defName="DankPyon_BS_BedFurDouble" or
+							defName="DankPyon_BS_SmolBedLog" or
+							defName="DankPyon_BS_SmolBedWicker" or
+							defName="DankPyon_SmolStrawBed" or
+							defName="DankPyon_BS_SmolBedFur" or
+							defName="DankPyon_BS_SmolRoyalTudorBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities						</xpath>
+						<match Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[
+							defName="DankPyon_BS_BedLog" or
+							defName="DankPyon_BS_BedWicker" or
+							defName="DankPyon_BS_BedWickerDouble" or
+							defName="DankPyon_BS_StrawBed" or
+							defName="DankPyon_BS_StrawBedDouble" or
+							defName="DankPyon_BS_BedFur" or
+							defName="DankPyon_BS_BedFurDouble" or
+							defName="DankPyon_BS_SmolBedLog" or
+							defName="DankPyon_BS_SmolBedWicker" or
+							defName="DankPyon_SmolStrawBed" or
+							defName="DankPyon_BS_SmolBedFur" or
+							defName="DankPyon_BS_SmolRoyalTudorBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities							</xpath>
+							<value>
+								<li>sd_medicaddons_medieval_surg_washpan</li>
+								<li>sd_medicaddons_medieval_surg_instruments</li>
+								<li>sd_medicaddons_medieval_surg_lamp</li>
+								<li>sd_medicaddons_industrial_surg_instruments</li>
+								<li>sd_medicaddons_industrial_surg_lamp</li>
+								<li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
+								<li>sd_medicaddons_spacer_surg_instruments</li>
+								<li>sd_medicaddons_spacer_surg_lamp</li>
+								<li>VitalsMonitor</li>
+								<li>EndTable</li>
+								<li>Dresser</li>
+							</value>
+						</match>
+					</match>
+				</li>
+
 			</operations>
 		</match>
-
 	</Operation>
-	
+
 </Patch>
