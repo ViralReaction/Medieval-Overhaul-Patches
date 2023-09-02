@@ -31,12 +31,12 @@
 	</Operation>
 	
 	<!-- Change Complex Clothing to Industrial -->
-	<Operation Class="PatchOperationReplace">
+	<!--Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="ComplexClothing"]/techLevel</xpath>
 		<value>
 			<techLevel>Industrial</techLevel>
 		</value>
-	</Operation>
+	</Operation-->
 	
 	<!-- Change Some Weapon Stuff -->
 	<Operation Class="PatchOperationReplace">
