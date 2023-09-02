@@ -7,7 +7,7 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<!-- Remove Blackpowder -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ResearchProjectDef[defName="KIT_Blackpowder"]</xpath>
@@ -15,26 +15,33 @@
 						<xpath>Defs/ResearchProjectDef[defName="KIT_Blackpowder"]</xpath>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="KIT_LineInfantry"]/tab</xpath>
 					<value>
 						<tab>DankPyon_MedievalResearchTab</tab>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="KIT_LineInfantry"]/researchViewX</xpath>
 					<value>
 						<researchViewX>16.00</researchViewX>
 					</value>
 				</li>
-	
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="KIT_LineInfantry"]/researchViewY</xpath>
 					<value>
 						<researchViewY>5.20</researchViewY>
 					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef/tab[.="KIT_ResearchTab"]</xpath>
+					<nomatch Class="PatchOperationRemove">
+						<xpath>Defs/ResearchTabDef[defName="KIT_ResearchTab"]</xpath>
+					</nomatch>
 				</li>
 
 				<!-- Change Research -->
@@ -79,7 +86,7 @@
 									</value>
 								</match>
 							</li>
-							
+
 							<!-- Organ Turret -->
 							<li Class="PatchOperationConditional">
 								<xpath>Defs/ThingDef[defName="KIT_Turret_Bombard"]/researchPrerequisites</xpath>
@@ -130,7 +137,7 @@
 									</value>
 								</match>
 							</li>
-							
+
 							<!-- Organ Turret -->
 							<li Class="PatchOperationConditional">
 								<xpath>Defs/ThingDef[defName="KIT_Turret_Bombard"]/researchPrerequisites</xpath>
