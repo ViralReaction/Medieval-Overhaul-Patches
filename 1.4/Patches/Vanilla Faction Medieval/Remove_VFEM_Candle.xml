@@ -17,12 +17,12 @@
 					</match>
 				</li>
 				
-				<li Class="PatchOperationConditional">
+				<!--li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="VFEM_Candle"]</xpath>
 					<match Class="PatchOperationRemove">
 						<xpath>Defs/ThingDef[defName="VFEM_Candle"]</xpath>
 					</match>
-				</li>
+				</li-->
 				
 			</operations>
 		</match>
