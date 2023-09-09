@@ -362,8 +362,11 @@
 		</match>
 	</Operation>
 	
-	<Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/tradeability</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/tradeability</xpath>
+		</match>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
