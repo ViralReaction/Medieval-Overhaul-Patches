@@ -55,11 +55,16 @@
 				 -->
 				 
 				<!-- Onion Integration -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 				
 				<li Class="PatchOperationReplace">
@@ -84,11 +89,16 @@
 				</li>
 				
 				<!-- Pumpkin Integration -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 
 				<li Class="PatchOperationReplace">
@@ -113,11 +123,16 @@
 				</li>
 				
 				<!-- Cabbage Integration -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 				
 				<li Class="PatchOperationReplace">
@@ -142,11 +157,16 @@
 				</li>
 				
 				<!-- Tomato Integration -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 				
 				<li Class="PatchOperationReplace">

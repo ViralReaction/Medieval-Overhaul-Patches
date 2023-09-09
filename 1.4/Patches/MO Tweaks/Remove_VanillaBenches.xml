@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-	
+
 	<!-- Hide Vanilla Benches -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
-		<match Class="PatchOperationRemove">
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>XML Extensions</li>
+		</mods>
+		<match Class="PatchOperationConditional">
 			<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
+			</match>
 		</match>
 	</Operation>
-			
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
-		<match Class="PatchOperationRemove">
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>XML Extensions</li>
+		</mods>
+		<match Class="PatchOperationConditional">
 			<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
+			<match Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
+			</match>
 		</match>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/RecipeDef/recipeUsers[li="FueledSmithy"]</xpath>
 		<match Class="PatchOperationAdd">
@@ -25,7 +35,7 @@
 			</value>
 		</match>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef/recipeMaker/recipeUsers[li="FueledSmithy"]</xpath>
 		<match Class="PatchOperationAdd">
@@ -35,5 +45,5 @@
 			</value>
 		</match>
 	</Operation>
-			
+
 </Patch>

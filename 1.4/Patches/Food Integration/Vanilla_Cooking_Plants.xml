@@ -7,13 +7,19 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-
+				
+				
 				<!--Wheat Integration -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 
 				<li Class="PatchOperationReplace">
@@ -53,11 +59,16 @@
 				</li>
 				
 				<!--Sugar Integration-->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Sugarcane"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Sugarcane"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 				
 				<li Class="PatchOperationReplace">
@@ -68,11 +79,16 @@
 				</li>
 
 				<!-- All Spice Integration -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VCE_Allspice"]/plant/sowTags</xpath>
-					<value>
-						<sowTags/>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Allspice"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</nomatch>
 				</li>
 				
 				<li Class="PatchOperationReplace">

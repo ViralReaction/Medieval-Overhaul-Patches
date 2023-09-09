@@ -5,10 +5,10 @@
 		<mods>
 			<li>MendAndRecycle</li>
 		</mods>
-	
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="Mending"]/prerequisites</xpath>
 					<value>
@@ -31,14 +31,14 @@
 						<tab>DankPyon_MedievalResearchTab</tab>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="Mending"]/researchViewX</xpath>
 					<value>
 						<researchViewX>8.0</researchViewX>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="Mending"]/researchViewY</xpath>
 					<value>
@@ -52,6 +52,7 @@
 						<workAmount>720</workAmount>
 					</value>
 				</li>
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName="MendComplexWeapon"]/workAmount</xpath>
 					<value>
@@ -79,7 +80,7 @@
 						<xpath>Defs/ThingDef[defName="TableMending"]/comps/li[@Class="CompProperties_Power"]</xpath>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="TableMending"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
 					<match Class="PatchOperationRemove">

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Fortifications - Medieval - Material</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="FT_Stonestacking" or defName="FT_Stonecrushing"]</xpath>
+					<value>
+						<tab>DankPyon_MedievalResearchTab</tab>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
