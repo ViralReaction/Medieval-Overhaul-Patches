@@ -46,6 +46,28 @@
 			</thingDefs>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages" or defName="DankPyon_MakeSausagesBulk"]</xpath>
+		<value>
+			<defaultIngredientFilter Inherit="False">
+				<thingDefs>
+					<li>DankPyon_Spices</li>
+				</thingDefs>
+				<categories>
+					<li>MeatRaw</li>
+				</categories>
+				<disallowedCategories>
+					<li>EggsFertilized</li>
+				</disallowedCategories>
+				<disallowedThingDefs>
+					<li>Meat_Human</li>
+					<li>Meat_Megaspider</li>
+					<li>InsectJelly</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</value>
+	</Operation>
 
 	<!-- Mashed Potatoes -->
 	<Operation Class="PatchOperationConditional">

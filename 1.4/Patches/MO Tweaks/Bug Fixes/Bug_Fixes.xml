@@ -71,4 +71,41 @@
 			<Nutrition>0.15</Nutrition>
 		</value>
 	</Operation>
+	
+	<!-- Fix Sausage Nutrition Missing -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages" or defName="DankPyon_MakeSausagesBulk"]</xpath>
+		<value>
+			<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages"]/ingredients/li[1]/count</xpath>
+		<value>
+			<count>0.50</count>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausagesBulk"]/ingredients/li[1]/count</xpath>
+		<value>
+			<count>5</count>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages"]/ingredients/li[2]/count</xpath>
+		<value>
+			<count>0.1</count>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausagesBulk"]/ingredients/li[2]/count</xpath>
+		<value>
+			<count>1</count>
+		</value>
+	</Operation>
+	
 </Patch>
