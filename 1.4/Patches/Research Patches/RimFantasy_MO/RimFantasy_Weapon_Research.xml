@@ -7,7 +7,7 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-		
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[
 					@Name="RF_BaseWeapon_ArcaneBattleAxes" or
