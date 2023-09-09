@@ -20,7 +20,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="RF_BaseWeapon_ArcaneBows"]/recipeMaker/researchPrerequisite</xpath>
 					<value>
@@ -30,7 +30,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[
 					@Name="RF_BaseWeapon_ArcaneHalberds" or
@@ -42,7 +42,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[
 					@Name="RF_BaseWeapon_ArcaneWarHammers" or
@@ -55,7 +55,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="RF_BaseWeapon_ArcaneRings"]/recipeMaker/researchPrerequisite</xpath>
 					<value>
@@ -65,11 +65,9 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
-		
+
 			</operations>
 		</match>
-		
 	</Operation>
-		
+
 </Patch>
