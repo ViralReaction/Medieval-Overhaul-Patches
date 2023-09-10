@@ -5,9 +5,10 @@
 		<mods>
 			<li>Vanilla Cooking Expanded</li>
 		</mods>
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<!-- Simple Bakes -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef[defName="VCE_CookBakeSimple" or defName="VCE_CookBakeSimpleBulk"]/ingredients/li/filter/thingDefs</xpath>
@@ -20,7 +21,7 @@
 						</value>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="VCE_CookBakeSimple" or defName="VCE_CookBakeSimpleBulk"]</xpath>
 					<value>
@@ -31,7 +32,7 @@
 						</fixedIngredientFilter>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef[defName="VCE_CookBakeFine" or defName="VCE_CookBakeFineBulk" or defName="VCE_CookBakeLavish" or defName="VCE_CookBakeLavishBulk"]/ingredients/li[3]/filter/thingDefs</xpath>
 					<match Class="PatchOperationReplace">
@@ -43,7 +44,7 @@
 						</value>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef[defName="VCE_CookBakeGourmet" or defName="VCE_CookBakeGourmetBulk"]/ingredients/li[4]/filter/thingDefs</xpath>
 					<match Class="PatchOperationReplace">
@@ -55,7 +56,7 @@
 						</value>
 					</match>
 				</li>
-		
+
 				<!-- Spices -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DankPyon_Spices"]/thingCategories</xpath>
@@ -104,7 +105,7 @@
 						</li>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Spices"]</xpath>
 					<match Class="PatchOperationReplace">
@@ -115,7 +116,7 @@
 						</value>
 					</match>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Spices"]</xpath>
 					<match Class="PatchOperationReplace">
@@ -126,54 +127,66 @@
 						</value>
 					</match>
 				</li>
-				
+
 				<!-- Salt -->
-				<li Class="PatchOperationReplace">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_Salt"]/thingCategories</xpath>
-					<value>
-						<thingCategories>
-							<li>VCE_Condiments</li>
-						</thingCategories>
-					</value>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_Salt"]/thingCategories</xpath>
+						<value>
+							<thingCategories>
+								<li>VCE_Condiments</li>
+							</thingCategories>
+						</value>
+					</match>
 				</li>
 
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_Salt"]</xpath>
-					<value>
-						<ingredient>
-							<mergeCompatibilityTags>
-								<li>Condiments</li>
-							</mergeCompatibilityTags>
-						</ingredient>
-					</value>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_Salt"]</xpath>
+						<value>
+							<ingredient>
+								<mergeCompatibilityTags>
+									<li>Condiments</li>
+								</mergeCompatibilityTags>
+							</ingredient>
+						</value>
+					</match>
 				</li>
 
-				<li Class="PatchOperationReplace">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_Salt"]/ingestible</xpath>
-					<value>
-						<ingestible>
-							<preferability>NeverForNutrition</preferability>
-							<specialThoughtAsIngredient>VCE_ConsumedSalt</specialThoughtAsIngredient>
-							<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
-						</ingestible>
-					</value>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_Salt"]/ingestible</xpath>
+						<value>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+								<specialThoughtAsIngredient>VCE_ConsumedSalt</specialThoughtAsIngredient>
+								<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+							</ingestible>
+						</value>
+					</match>
 				</li>
 
-				<li Class="PatchOperationAddModExtension">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="DankPyon_Salt"]</xpath>
-					<value>
-						<li Class="AnimalBehaviours.AnimalStatExtension">
-							<statToAdd>
-								<li>VCE_CondimentEffects</li>
-							</statToAdd>
-							<statValues>
-								<li>VCE_CondimentEffectsTitle</li>
-							</statValues>
-							<statDescriptions>
-								<li>VCE_CondimentEffectsSalt</li>
-							</statDescriptions>
-						</li>
-					</value>
+					<match Class="PatchOperationAddModExtension">
+						<xpath>Defs/ThingDef[defName="DankPyon_Salt"]</xpath>
+						<value>
+							<li Class="AnimalBehaviours.AnimalStatExtension">
+								<statToAdd>
+									<li>VCE_CondimentEffects</li>
+								</statToAdd>
+								<statValues>
+									<li>VCE_CondimentEffectsTitle</li>
+								</statValues>
+								<statDescriptions>
+									<li>VCE_CondimentEffectsSalt</li>
+								</statDescriptions>
+							</li>
+						</value>
+					</match>
 				</li>
 
 				<li Class="PatchOperationReplace">
@@ -183,20 +196,26 @@
 					</value>
 				</li>
 
-				<li Class="PatchOperationReplace">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Salt"]</xpath>
-					<value>
-						<li>DankPyon_Salt</li>
-						<li>VCE_Salt</li>
-					</value>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Salt"]</xpath>
+						<value>
+							<li>DankPyon_Salt</li>
+							<li>VCE_Salt</li>
+						</value>
+					</match>
 				</li>
 
-				<li Class="PatchOperationReplace">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Salt"]</xpath>
-					<value>
-						<li>DankPyon_Salt</li>
-						<li>VCE_Salt</li>
-					</value>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Salt"]</xpath>
+						<value>
+							<li>DankPyon_Salt</li>
+							<li>VCE_Salt</li>
+						</value>
+					</match>
 				</li>
 
 				<li Class="PatchOperationSetName">
@@ -207,5 +226,5 @@
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>
