@@ -18,13 +18,16 @@
 		<li>mlie.vanillabooksexpandedexpanded</li>
 		<li>Argon.TribalMedicineRemake</li>
 		<li>ninja.lowtoolcabinet</li>
-		<li>adamas.perfectmedievalplaythrough</li>
-		<li>jsin.medievaloverhaulmisc</li>
 		<li>zenlor.motweaks</li>
 		<li>ceteam.combatextended</li>
 		<li>accurex.medievalempireoverhaul</li>
+		<li>jsin.medievaloverhaulmisc</li>
+		<li>adamas.perfectmedievalplaythrough</li>
 		<li>devdesigner.blood</li>
 		<li>vanillaexpanded.vcooke</li>
+		<li>mlie.rc2.core</li>
 	</loadAfter>
+	<incompatibleWith>
+	</incompatibleWith>
 	<description>Multiple patches that attempt to integrate mods into a better playthrough of Medieval Overhaul.</description>
 </ModMetaData>
