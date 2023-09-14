@@ -31,8 +31,11 @@
 					</value>
 				</li>
 				
-				<li Class="PatchOperationRemove">
+				<li Class="PatchoperationConditional">
+					<xpath>Defs/ResearchProjectDef/tab[.="DarkAges"]</xpath>
+				<nomatch Class="PatchOperationRemove">
 					<xpath>Defs/ResearchTabDef[defName="DarkAges"]</xpath>
+				</nomatch>
 				</li>
 
 			</operations>
