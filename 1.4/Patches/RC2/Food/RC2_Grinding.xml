@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Millstone -->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
+								</match>
+							</li>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
+								</match>
+							</li>
+						
+						</operations>
+					</nomatch>
+				</li>
+
+				<!--li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[@Name="RC2_MillingBase"]/recipeUsers</xpath>
+					<value>
+						<li>DankPyon_Millstone</li>
+					</value>
+				</li-->
+
+				<!-- Sugar -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeets"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeets"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeetsBulk"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeetsBulk"]</xpath>
+					</match>
+				</li>
+				
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcane"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcane"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcaneBulk"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcaneBulk"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar" or defName="DankPyon_CraftSugarBulk"]/ingredients/li/filter/thingDefs</xpath>
+					<value>
+						<li>RC2_RawSugarBeets</li>
+						<li>RC2_RawSugarcane</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar" or defName="DankPyon_CraftSugarBulk"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>RC2_RawSugarBeets</li>
+						<li>RC2_RawSugarcane</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar"]/label</xpath>
+					<value>
+					<label>grind sugar</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar"]/description</xpath>
+					<value>
+					<description>Process plants into a delicious, tooth-destroying white powder.</description>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar"]/jobString</xpath>
+					<value>
+					<jobString>Grinding plants into sugar.</jobString>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugarBulk"]/label</xpath>
+					<value>
+					<label>grind sugar x10</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugarBulk"]/description</xpath>
+					<value>
+					<description>Process plants into a delicious, tooth-destroying white powder. Makes 10 sugar</description>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugarBulk"]/jobString</xpath>
+					<value>
+					<jobString>Grinding plants into 10 sugar.</jobString>
+					</value>
+				</li>
+				
+				<!-- Flour -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="RC2_ProcessGrain"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_ProcessGrain"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="RC2_ProcessGrainBulk"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_ProcessGrainBulk"]</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="RC2_RawBarley"]/thingCategories
+					</xpath>
+					<value>
+						<thingCategories>
+							<li>DankPyon_Cereal</li>
+						</thingCategories>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/ingredients/li/filter/categories</xpath>
+					<value>
+						<li>RC2_GrainsRaw</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/fixedIngredientFilter/categories</xpath>
+					<value>
+						<li>RC2_GrainsRaw</li>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

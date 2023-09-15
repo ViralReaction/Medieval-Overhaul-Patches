@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>XML Extensions</li>
+					</mods>
+					<nomatch Class="PatchOperationRemove">
+						<xpath>Defs/RecipeDef[defName="RC2_TrimMeat" or defName="RC2_TrimMeatBulk"]</xpath>
+					</nomatch>
+				</li>
+
+				<!-- Fruit Drying -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defname="RC2_PrepareFruit" or defName="RC2_PrepareFruitBulk"]/recipeUsers</xpath>
+					<value>
+						<li>DankPyon_RusticCookingTable</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+						defName="DankPyon_RawGrapes" or
+						defName="DankPyon_RawApples" or
+						defName="DankPyon_RawLemons" or
+						defName="DankPyon_RawMulberry" or
+						defName="DankPyon_RawPumpkins" or
+						defName="DankPyon_GriffonBerry"]
+					</xpath>
+					<value>
+						<thingCategories Inherit="False">
+							<li>RC2_VegetablesRaw</li>
+						</thingCategories>
+					</value>
+				</li>
+
+				<!-- Vegetable Pickling -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defname="RC2_BrineVegetables" or defName="RC2_BrineVegetablesBulk"]/recipeUsers</xpath>
+					<value>
+					<li>DankPyon_RusticCookingTable</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[
+						defName="DankPyon_RawTomatoes" or
+						defName="DankPyon_RawCabbages" or
+						defName="DankPyon_RawCarrots" or
+						defName="DankPyon_RawGarlic" or
+						defName="DankPyon_RawOnions" or
+						defName="DankPyon_RawLentils" or
+						defName="DankPyon_RawMacci"]
+					</xpath>
+					<value>
+						<thingCategories Inherit="False">
+							<li>RC2_VegetablesRaw</li>
+						</thingCategories>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
