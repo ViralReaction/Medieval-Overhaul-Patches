@@ -11,26 +11,6 @@
 
 				<li Class="XmlExtensions.OptionalPatch">
 					<modId>VR.MOPatches</modId>
-					<key>building_bloat</key>
-					<defaultValue>true</defaultValue>
-					<caseTrue>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
-							<match Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
-							</match>
-						</li>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
-							<match Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
-							</match>
-						</li>
-					</caseTrue>
-				</li>
-
-				<li Class="XmlExtensions.OptionalPatch">
-					<modId>VR.MOPatches</modId>
 					<key>plant_bloat</key>
 					<defaultValue>true</defaultValue>
 					<caseTrue>

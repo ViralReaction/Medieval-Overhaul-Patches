@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.FindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+		<caseTrue>
+			<Operation Class="PatchOperationInsert">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.Checkbox" and (label="Remove jewelry decay?")]</xpath>
+				<order>Append</order>
+				<value>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<key>RC2_trim_meat</key>
+						<label>Use Rim Cuisine 2 Trimmed Meat?</label>
+						<defaultValue>false</defaultValue>
+					</li>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="XmlExtensions.OptionalPatch">
+					<modId>VR.MOPatches</modId>
+					<key>RC2_trim_meat</key>
+					<defaultValue>false</defaultValue>
+					<caseTrue>
+						<!--li Class="PatchOperationReplace">
+							<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DankPyon_DriedMeatProcess"]</xpath>
+							<value>
+								<li>RC2_DriedMeat_Process</li>
+							</value>
+						</li-->
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
+							<value>
+								<thingDefs>
+									<li>RC2_TrimmedMeat</li>
+								</thingDefs>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]/fixedIngredientFilter</xpath>
+							<value>
+								<disallowedCategories>
+									<li>DankPyon_DriedFood</li>
+								</disallowedCategories>
+							</value>
+						</li>
+					</caseTrue>
+					<caseFalse>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
+							</match>
+						</li>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
+							</match>
+						</li>
+					</caseFalse>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="XmlExtensions.OptionalPatch">
+					<modId>VR.MOPatches</modId>
+					<key>building_bloat</key>
+					<defaultValue>true</defaultValue>
+					<caseTrue>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
+							</match>
+						</li>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
+							</match>
+						</li>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
+							</match>
+						</li>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
+							</match>
+						</li>
+					</caseTrue>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

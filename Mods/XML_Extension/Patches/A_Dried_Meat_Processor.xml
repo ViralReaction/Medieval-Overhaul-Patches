@@ -6,7 +6,7 @@
 			<li>XML Extensions</li>
 		</mods>
 		<!-- Meat Rack -->
-		<nomatch Class="PatchOperationSequence">
+		<match Class="PatchOperationSequence">
 			<operations>
 		
 				<li Class="PatchOperationConditional">
@@ -390,7 +390,7 @@
 				</li>
 
 			</operations>
-		</nomatch>
+		</match>
 	</Operation>
 
 </Patch>
