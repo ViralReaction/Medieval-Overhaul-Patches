@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>XML Extensions</li>
+		</mods>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[@Name="DankPyon_NecklaceBase"]/statBases</xpath>
-		<value>
-			<DeteriorationRate>0</DeteriorationRate>
-		</value>
-	</Operation>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[@Name="DankPyon_RingBase"]/statBases</xpath>
-		<value>
-			<DeteriorationRate>0</DeteriorationRate>
-		</value>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="DankPyon_NecklaceBase"]/statBases</xpath>
+					<value>
+						<DeteriorationRate>0</DeteriorationRate>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="DankPyon_RingBase"]/statBases</xpath>
+					<value>
+						<DeteriorationRate>0</DeteriorationRate>
+					</value>
+				</li>
+
+			</operations>
+		</nomatch>
 	</Operation>
 
 </Patch>

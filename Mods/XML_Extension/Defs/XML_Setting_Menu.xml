@@ -41,6 +41,16 @@
 				<min>500</min>
 				<max>10000</max>
 			</li>
+			<li Class="XmlExtensions.Setting.GapLine"/>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Individual Tweaks</text>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>jewelry_decay</key>
+				<label>Remove jewelry decay?</label>
+				<defaultValue>true</defaultValue>
+			</li>
 			<li Class="XmlExtensions.Setting.ResetSettings"/>
 		</settings>
 	</XmlExtensions.SettingsMenuDef>

@@ -21,8 +21,8 @@
 		</mods>
 		<caseTrue>
 			<Operation Class="PatchOperationInsert">
-				 <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.ResetSettings"]</xpath>
-				<order>Prepend</order>
+				 <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.Numeric" and (label="Esoteric Studies:")]</xpath>
+				<order>Append</order>
 				<value>
 					<li Class="XmlExtensions.Setting.Numeric">
 						<key>arcane_mo_cost</key>
