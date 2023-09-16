@@ -7,8 +7,8 @@
 		</mods>
 		<caseTrue>
 			<Operation Class="PatchOperationInsert">
-				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.Checkbox" and (label="Remove jewelry decay?")]</xpath>
-				<order>Append</order>
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.ResetSettings"]</xpath>
+				<order>Prepend</order>
 				<value>
 					<li Class="XmlExtensions.Setting.Checkbox">
 						<key>RC2_trim_meat</key>
