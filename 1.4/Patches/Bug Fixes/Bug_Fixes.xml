@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	
+
 	<!-- Fix Missing Thrumbo Horn -->
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="Thrumbo"]</xpath>
@@ -16,7 +16,7 @@
 			</li>
 		</value>
 	</Operation>
-	
+
 	<!-- Fix Bread -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_MealBread"]/comps</xpath>
@@ -25,7 +25,7 @@
 			<li Class="CompProperties_FoodPoisonable"/>
 		</value>
 	</Operation>
-	
+
 	<!-- Fix Missing Baby Food -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
@@ -40,30 +40,52 @@
 			</value>
 		</match>
 	</Operation>
-	
+
 	<!-- Relabel Honeycomb -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/label</xpath>
 		<value>
-			<label>carrion honeycomb</label>
+			<label>oswin honeycomb</label>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/description</xpath>
 		<value>
 			<description>This is a honeycomb produced by carrion bees. Honeycombs can be procesed in a Honey Extractor to get honey and beeswax.</description>
 		</value>
 	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Extract_HoneyBulk"]/products/DankPyon_Wax</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Extract_HoneyBulk"]/products</xpath>
+			<value>
+				<DankPyon_Wax>25</DankPyon_Wax>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Extract_Honey"]/products</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Extract_Honey"]/products</xpath>
+			<value>
+				<specialProducts>
+					<li>Butchery</li>
+				</specialProducts>
+			</value>
+		</match>
+	</Operation>
 	
+	<!-- Fix Bean and Onion Recipe -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealBoiledBeansAndOnion"]/ingredients/li[3]/count</xpath>
 		<value>
 			<count>0.06</count>
 		</value>
 	</Operation>
-	
-	
+
 	<!-- Cheese Nerf -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/statBases/Nutrition</xpath>
@@ -71,7 +93,7 @@
 			<Nutrition>0.15</Nutrition>
 		</value>
 	</Operation>
-	
+
 	<!-- Fix Sausage Nutrition Missing -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages" or defName="DankPyon_MakeSausagesBulk"]</xpath>
@@ -79,33 +101,33 @@
 			<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages"]/ingredients/li[1]/count</xpath>
 		<value>
 			<count>0.50</count>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausagesBulk"]/ingredients/li[1]/count</xpath>
 		<value>
 			<count>5</count>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages"]/ingredients/li[2]/count</xpath>
 		<value>
 			<count>0.1</count>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausagesBulk"]/ingredients/li[2]/count</xpath>
 		<value>
 			<count>1</count>
 		</value>
 	</Operation>
-	
+
 </Patch>
