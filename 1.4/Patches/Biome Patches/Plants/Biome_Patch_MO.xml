@@ -10,8 +10,8 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/BiomeDef[defName="Tundra"]/wildPlants</xpath>
 		<value>
-			<DankPyon_Plant_Garlic>0.001</DankPyon_Plant_Garlic>
-			<DankPyon_Plant_Onions>0.001</DankPyon_Plant_Onions>
+			<DankPyon_Plant_Garlic>0.07</DankPyon_Plant_Garlic>
+			<DankPyon_Plant_Onions>0.07</DankPyon_Plant_Onions>
 			<DankPyon_Plant_Mushrooms>0.07</DankPyon_Plant_Mushrooms>
 			<DankPyon_Plant_Carrots>0.07</DankPyon_Plant_Carrots>
 			<DankPyon_Plant_Wheat>0.2</DankPyon_Plant_Wheat>
@@ -53,7 +53,7 @@
 			<DankPyon_Plant_Mushrooms>0.08</DankPyon_Plant_Mushrooms>
 			<DankPyon_Plant_Wheat>0.08</DankPyon_Plant_Wheat>
 			<DankPyon_Plant_Carrots>0.05</DankPyon_Plant_Carrots>
-			<DankPyon_Plant_Herb>0.05</DankPyon_Plant_Herb>
+			<DankPyon_Plant_Herb>0.02</DankPyon_Plant_Herb>
 			<DankPyon_Plant_Cabbages>0.05</DankPyon_Plant_Cabbages>
 			<DankPyon_Plant_Pumpkins>0.05</DankPyon_Plant_Pumpkins>
 			<DankPyon_Tree_Apple>0.03</DankPyon_Tree_Apple>
@@ -143,12 +143,12 @@
 			<DankPyon_Plant_Mushrooms>0.08</DankPyon_Plant_Mushrooms>
 			<DankPyon_Plant_Wheat>0.08</DankPyon_Plant_Wheat>
 			<DankPyon_Plant_Carrots>0.05</DankPyon_Plant_Carrots>
-			<DankPyon_Plant_Herb>0.05</DankPyon_Plant_Herb>
+			<DankPyon_Plant_Herb>0.02</DankPyon_Plant_Herb>
 			<DankPyon_Plant_Cabbages>0.05</DankPyon_Plant_Cabbages>
 			<DankPyon_Plant_Pumpkins>0.05</DankPyon_Plant_Pumpkins>
 			<DankPyon_Tree_Apple>0.03</DankPyon_Tree_Apple>
 			<DankPyon_MacciPlant>0.03</DankPyon_MacciPlant>
 		</value>
 	</Operation>
-	
+
 </Patch>
