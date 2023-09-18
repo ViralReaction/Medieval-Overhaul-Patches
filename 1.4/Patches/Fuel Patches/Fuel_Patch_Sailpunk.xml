@@ -9,47 +9,39 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<!-- Fuel -->
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/ThingDef[
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[.="WoodLog"]
-					</xpath>
-				</li>
-
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="SADinghy"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
 					<value>
-						<li>DankPyon_RawWood</li>
-						<li>DankPyon_RawDarkWood</li>
-						<li>DankPyon_DarkWoodLog</li>
-						<li>DankPyon_ElvenWoodLog</li>
-						<li>DankPyon_DryadWoodLog</li>
-						<li>DankPyon_AncientWoodLog</li>
+						<li>DankPyon_Straw</li>
+						<li>DankPyon_DriedHay</li>
 					</value>
 				</li>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"
-						]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs
-					</xpath>
-					<value>
-						<li>DankPyon_RawWood</li>
-						<li>DankPyon_RawDarkWood</li>
-						<li>DankPyon_DarkWoodLog</li>
-						<li>DankPyon_ElvenWoodLog</li>
-						<li>DankPyon_DryadWoodLog</li>
-						<li>DankPyon_AncientWoodLog</li>
-						<li>DankPyon_Coal</li>
-					</value>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>LWM's Fuel Filter</li>
+					</mods>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="SADinghy"]/comps</xpath>
+								<value>
+									<li Class="ESCP_FuelExtension.CompProperties_StoreFuelThing"/>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="SADinghy"]</xpath>
+								<value>
+									<inspectorTabs>
+										<li>ESCP_FuelExtension.ITab_Fuel</li>
+									</inspectorTabs>
+								</value>
+							</li>
+
+						</operations>
+					</nomatch>
 				</li>
 
 				<li Class="PatchOperationReplace">
