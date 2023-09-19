@@ -454,7 +454,7 @@
 			</thingDefs>
 		</value>
 	</Operation>
-	
+
 	<!-- Rations -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealRations" or defName="DankPyon_CookMealRationsBulk"]</xpath>
@@ -486,6 +486,20 @@
 					<li>InsectJelly</li>
 				</disallowedThingDefs>
 			</defaultIngredientFilter>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealRations"]/ingredients/li[contains(.,'DankPyon_Salt')]/count</xpath>
+		<value>
+			<count>0.2</count>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsBulk"]/ingredients/li[contains(.,'DankPyon_Salt')]/count</xpath>
+		<value>
+			<count>1</count>
 		</value>
 	</Operation>
 
