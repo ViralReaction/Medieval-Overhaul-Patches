@@ -24,9 +24,9 @@
 					<match Class="PatchOperationAdd">
 						<xpath>Defs/ThingDef[defName="GU_RedWood"]/comps</xpath>
 						<value>
-								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
-									<rate>1</rate>
-								</li>
+							<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+								<rate>1</rate>
+							</li>
 						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
@@ -46,9 +46,9 @@
 					<match Class="PatchOperationAdd">
 						<xpath>Defs/ThingDef[defName="AB_MushroomWoodLog"]/comps</xpath>
 						<value>
-								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
-									<rate>2</rate>
-								</li>
+							<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+								<rate>2</rate>
+							</li>
 						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
@@ -61,6 +61,331 @@
 							</comps>
 						</value>
 					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="AB_CrystalWood"]/comps</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="AB_CrystalWood"]/comps</xpath>
+						<value>
+							<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+								<rate>1</rate>
+							</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="AB_CrystalWood"]</xpath>
+						<value>
+							<comps>
+								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+									<rate>1</rate>
+								</li>
+							</comps>
+						</value>
+					</nomatch>
+				</li>
+
+				<!-- Red Wood Replace -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+
+						<!-- GU RedWood -->
+						<ThingDef ParentName="ResourceVerbBase" Name="DankPyon_GU_RedWood">
+							<defName>DankPyon_GU_RedWood</defName>
+							<label>red timber</label>
+							<description>This red tinged wood is oddly strong, and a sweet scent emanates from it. Less flammable than terrestrial wood, but quite ugly.</description>
+							<graphicData>
+								<texPath>Resources/WoodPlank</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<color>(111,20,11)</color>
+							</graphicData>
+							<equippedAngleOffset>-20</equippedAngleOffset>
+							<soundInteract>Wood_Drop</soundInteract>
+							<soundDrop>Wood_Drop</soundDrop>
+							<statBases>
+								<MarketValue>2</MarketValue>
+								<MaxHitPoints>200</MaxHitPoints>
+								<Mass>0.2</Mass>
+								<Flammability>0.60</Flammability>
+								<DeteriorationRate>0.2</DeteriorationRate>
+								<SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+								<BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+								<StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
+								<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+								<StuffPower_Armor_Heat>0.40</StuffPower_Armor_Heat>
+								<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+							</statBases>
+							<burnableByRecipe>true</burnableByRecipe>
+							<healthAffectsPrice>false</healthAffectsPrice>
+							<minRewardCount>10</minRewardCount>
+							<stuffProps>
+								<stuffAdjective>red timber</stuffAdjective>
+								<categories>
+									<li>Woody</li>
+									<li>AB_ExoticWooden</li>
+								</categories>
+								<commonality>0.50</commonality>
+								<color>(131,158,67)</color>
+								<constructEffect>ConstructWood</constructEffect>
+								<appearance>Planks</appearance>
+								<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+								<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+								<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+								<statFactors>
+									<MaxHitPoints>0.75</MaxHitPoints>
+									<Beauty>4</Beauty>
+									<Flammability>0.8</Flammability>
+									<WorkToMake>0.85</WorkToMake>
+									<WorkToBuild>0.85</WorkToBuild>
+									<DoorOpenSpeed>1.25</DoorOpenSpeed>
+								</statFactors>
+							</stuffProps>
+							<isTechHediff>true</isTechHediff>
+							<thingCategories>
+								<li>DankPyon_Wood</li>
+							</thingCategories>
+							<techHediffsTags>
+								<li>Poor</li>
+							</techHediffsTags>
+							<tools>
+								<li>
+									<label>log</label>
+									<capacities>
+										<li>Blunt</li>
+									</capacities>
+									<power>12</power>
+									<cooldownTime>2</cooldownTime>
+								</li>
+							</tools>
+							<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+							<comps>
+								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+									<rate>1</rate>
+								</li>
+							</comps>
+						</ThingDef>
+	
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="GU_RedWood"]/stuffProps/categories</xpath>
+					<value>
+						<li>DankPyon_RawWood</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GU_RedWood"]/thingCategories</xpath>
+					<value>
+						<thingCategories>
+							<li>DankPyon_RawWood</li>
+						</thingCategories>
+					</value>
+				</li>
+
+				<!-- Mushroom Stalks Replace -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+
+						<!-- Mushroom Stalks -->
+						<ThingDef ParentName="ResourceVerbBase" Name="DankPyon_AB_MushroomWoodLog">
+							<defName>DankPyon_AB_MushroomWoodLog</defName>
+							<label>mushroom timber</label>
+							<description>These mushroom stalks have been hardened by age until they are almost as firm as a low quality wood. Very flammable, and not very resistant.</description>
+							<graphicData>
+								<texPath>Resources/WoodPlank</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<color>(114,114,114)</color>
+							</graphicData>
+							<equippedAngleOffset>-20</equippedAngleOffset>
+							<soundInteract>Wood_Drop</soundInteract>
+							<soundDrop>Wood_Drop</soundDrop>
+							<statBases>
+								<MarketValue>2</MarketValue>
+								<MaxHitPoints>200</MaxHitPoints>
+								<Mass>0.2</Mass>
+								<Flammability>1.2</Flammability>
+								<DeteriorationRate>0.2</DeteriorationRate>
+								<StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
+								<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+								<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+								<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+								<SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+								<BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+							</statBases>
+							<burnableByRecipe>true</burnableByRecipe>
+							<healthAffectsPrice>false</healthAffectsPrice>
+							<minRewardCount>10</minRewardCount>
+							<stuffProps>
+								<stuffAdjective>mushroom timber</stuffAdjective>
+								<categories>
+									<li>Woody</li>
+									<li>AB_ExoticWooden</li>
+								</categories>
+								<commonality>0.50</commonality>
+								<color>(131,158,67)</color>
+								<constructEffect>ConstructWood</constructEffect>
+								<appearance>Planks</appearance>
+								<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+								<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+								<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+								<statFactors>
+									<MaxHitPoints>0.75</MaxHitPoints>
+									<Beauty>4</Beauty>
+									<Flammability>1.2</Flammability>
+									<WorkToMake>0.85</WorkToMake>
+									<WorkToBuild>0.85</WorkToBuild>
+									<DoorOpenSpeed>1.25</DoorOpenSpeed>
+								</statFactors>
+							</stuffProps>
+							<isTechHediff>true</isTechHediff>
+							<thingCategories>
+								<li>DankPyon_Wood</li>
+							</thingCategories>
+							<techHediffsTags>
+								<li>Poor</li>
+							</techHediffsTags>
+							<tools>
+								<li>
+									<label>log</label>
+									<capacities>
+										<li>Blunt</li>
+									</capacities>
+									<power>12</power>
+									<cooldownTime>2</cooldownTime>
+								</li>
+							</tools>
+							<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+							<comps>
+								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+									<rate>1</rate>
+								</li>
+							</comps>
+						</ThingDef>
+	
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="AB_MushroomWoodLog"]/stuffProps/categories</xpath>
+					<value>
+						<li>DankPyon_RawWood</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="AB_MushroomWoodLog"]/thingCategories</xpath>
+					<value>
+						<thingCategories>
+							<li>DankPyon_RawWood</li>
+						</thingCategories>
+					</value>
+				</li>
+
+				<!-- Crystal Wood Replace -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+
+						<!-- Mushroom Stalks -->
+						<ThingDef ParentName="ResourceVerbBase" Name="DankPyon_AB_CrystalWood">
+							<defName>DankPyon_AB_CrystalWood</defName>
+							<label>crystalline timber</label>
+							<description>These brittle crystalline strands can be extracted from crystal flowers. Not flammable, but not strong at all.</description>
+							<graphicData>
+								<texPath>Resources/WoodPlank</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<color>(62,207,189)</color>
+							</graphicData>
+							<equippedAngleOffset>-20</equippedAngleOffset>
+							<soundInteract>Wood_Drop</soundInteract>
+							<soundDrop>Wood_Drop</soundDrop>
+							<statBases>
+								<MarketValue>2</MarketValue>
+								<MaxHitPoints>50</MaxHitPoints>
+								<Mass>0.2</Mass>
+								<Flammability>0</Flammability>
+								<DeteriorationRate>0.2</DeteriorationRate>
+								<StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
+								<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+								<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+								<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+								<SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+								<BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+							</statBases>
+							<burnableByRecipe>true</burnableByRecipe>
+							<healthAffectsPrice>false</healthAffectsPrice>
+							<minRewardCount>10</minRewardCount>
+							<stuffProps>
+								<stuffAdjective>crystalline timber</stuffAdjective>
+								<categories>
+									<li>Woody</li>
+									<li>AB_ExoticWooden</li>
+								</categories>
+								<commonality>0.50</commonality>
+								<color>(131,158,67)</color>
+								<constructEffect>ConstructWood</constructEffect>
+								<appearance>Planks</appearance>
+								<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+								<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+								<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+								<statFactors>
+									<MaxHitPoints>0.75</MaxHitPoints>
+									<Beauty>4</Beauty>
+									<Flammability>0</Flammability>
+									<WorkToMake>0.85</WorkToMake>
+									<WorkToBuild>0.85</WorkToBuild>
+									<DoorOpenSpeed>1.25</DoorOpenSpeed>
+								</statFactors>
+							</stuffProps>
+							<isTechHediff>true</isTechHediff>
+							<thingCategories>
+								<li>DankPyon_Wood</li>
+							</thingCategories>
+							<techHediffsTags>
+								<li>Poor</li>
+							</techHediffsTags>
+							<tools>
+								<li>
+									<label>log</label>
+									<capacities>
+										<li>Blunt</li>
+									</capacities>
+									<power>12</power>
+									<cooldownTime>2</cooldownTime>
+								</li>
+							</tools>
+							<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+							<comps>
+								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+									<rate>0.5</rate>
+								</li>
+							</comps>
+						</ThingDef>
+
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="AB_CrystalWood"]/stuffProps/categories</xpath>
+					<value>
+						<li>DankPyon_RawWood</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="AB_CrystalWood"]/thingCategories</xpath>
+					<value>
+						<thingCategories>
+							<li>DankPyon_RawWood</li>
+						</thingCategories>
+					</value>
 				</li>
 
 			</operations>
