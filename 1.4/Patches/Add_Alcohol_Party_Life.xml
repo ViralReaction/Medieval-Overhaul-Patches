@@ -15,6 +15,7 @@
 						<li>DankPyon_Ale</li>
 						<li>DankPyon_Cider</li>
 						<li>DankPyon_Wine</li>
+						<li>DankPyon_Wine_Mulberry</li>
 					</value>
 				</li>
 				
@@ -22,11 +23,14 @@
 					<mods>
 						<li>ↁ House Sanguin</li>
 					</mods>
-					<match Class="PatchOperationAdd">
-						<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept</xpath>
-						<value>
-							<li>DevDesigner_BloodWine</li>
-						</value>
+					<match Class="PatchOperationConditional">
+						<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept/li[.="DevDesigner_BloodWine"]</xpath>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept</xpath>
+							<value>
+								<li>DevDesigner_BloodWine</li>
+							</value>
+						</nomatch>
 					</match>
 				</li>
 				
