@@ -51,6 +51,11 @@
 				<label>Remove jewelry decay?</label>
 				<defaultValue>true</defaultValue>
 			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>mo_wild_plants</key>
+				<label>Wild MO Plants?</label>
+				<defaultValue>true</defaultValue>
+			</li>
 			<li Class="XmlExtensions.Setting.ResetSettings"/>
 		</settings>
 	</XmlExtensions.SettingsMenuDef>

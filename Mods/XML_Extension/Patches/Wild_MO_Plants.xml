@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>VR.MOPatches</modId>
+		<key>mo_wild_plants</key>
+		<defaultValue>true</defaultValue>
+		<caseTrue>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="Tundra"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.07</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.07</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Mushrooms>0.07</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Carrots>0.07</DankPyon_Plant_Carrots>
+					<DankPyon_Plant_Wheat>0.02</DankPyon_Plant_Wheat>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.05</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.05</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.01</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.07</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Carrots>0.07</DankPyon_Plant_Carrots>
+					<DankPyon_Plant_Spelt>0.03</DankPyon_Plant_Spelt>
+					<DankPyon_Plant_Cabbages>0.05</DankPyon_Plant_Cabbages>
+					<DankPyon_Plant_Pumpkins>0.05</DankPyon_Plant_Pumpkins>
+					<DankPyon_MacciPlant>0.01</DankPyon_MacciPlant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="ColdBog"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.07</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.07</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Mushrooms>0.1</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Carrots>0.03</DankPyon_Plant_Carrots>
+					<DankPyon_Plant_Cabbages>0.03</DankPyon_Plant_Cabbages>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.05</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.05</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.02</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.08</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Spelt>0.08</DankPyon_Plant_Spelt>
+					<DankPyon_Plant_Carrots>0.05</DankPyon_Plant_Carrots>
+					<DankPyon_Plant_Herb>0.02</DankPyon_Plant_Herb>
+					<DankPyon_Plant_Cabbages>0.05</DankPyon_Plant_Cabbages>
+					<DankPyon_Plant_Pumpkins>0.05</DankPyon_Plant_Pumpkins>
+					<DankPyon_Tree_Apple>0.03</DankPyon_Tree_Apple>
+					<DankPyon_MacciPlant>0.03</DankPyon_MacciPlant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.05</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.05</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.01</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.1</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Carrots>0.04</DankPyon_Plant_Carrots>
+					<DankPyon_Plant_Cabbages>0.025</DankPyon_Plant_Cabbages>
+					<DankPyon_Plant_Pumpkins>0.025</DankPyon_Plant_Pumpkins>
+					<DankPyon_Tree_Apple>0.02</DankPyon_Tree_Apple>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.001</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.001</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.01</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.05</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Herb>0.005</DankPyon_Plant_Herb>
+					<DankPyon_Plant_Pumpkins>0.001</DankPyon_Plant_Pumpkins>
+					<DankPyon_Tree_Lemon>0.02</DankPyon_Tree_Lemon>
+					<DankPyon_MacciPlant>0.01</DankPyon_MacciPlant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.05</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.05</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.001</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.05</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Pumpkins>0.001</DankPyon_Plant_Pumpkins>
+					<DankPyon_Tree_Lemon>0.02</DankPyon_Tree_Lemon>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="AridShrubland"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.01</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.01</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.1</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.1</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Spelt>0.08</DankPyon_Plant_Spelt>
+					<DankPyon_Plant_Herb>0.05</DankPyon_Plant_Herb>
+					<DankPyon_Plant_Pumpkins>0.01</DankPyon_Plant_Pumpkins>
+					<DankPyon_Tree_Lemon>0.05</DankPyon_Tree_Lemon>
+					<DankPyon_MacciPlant>0.05</DankPyon_MacciPlant>
+				</value>
+			</li>
+			<!--li Class="PatchOperationAdd">
+					<xpath>Defs/BiomeDef[defName="Desert"]/wildPlants</xpath>
+					<value>
+						<DankPyon_Plant_Garlic>0.02</DankPyon_Plant_Garlic>
+						<DankPyon_Plant_Onions>0.02</DankPyon_Plant_Onions>
+						<DankPyon_Plant_Lentils>0.01</DankPyon_Plant_Lentils>
+						<DankPyon_Plant_Mushrooms>0.1</DankPyon_Plant_Mushrooms>
+						<DankPyon_Plant_Wheat>0.04</DankPyon_Plant_Wheat>
+						<DankPyon_Plant_Herb>0.1</DankPyon_Plant_Herb>
+						<DankPyon_Plant_Pumpkins>0.02</DankPyon_Plant_Pumpkins>
+						<DankPyon_Tree_Lemon>0.05</DankPyon_Tree_Lemon>
+						<DankPyon_MacciPlant>0.02</DankPyon_MacciPlant>
+					</value>
+				</Operation-->
+			<!--li Class="PatchOperationAdd">
+					<xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildPlants</xpath>
+					<value>
+						<DankPyon_Plant_Garlic>0.01</DankPyon_Plant_Garlic>
+						<DankPyon_Plant_Onions>0.01</DankPyon_Plant_Onions>
+						<DankPyon_Plant_Pumpkins>0.01</DankPyon_Plant_Pumpkins>
+						<DankPyon_MacciPlant>0.001</DankPyon_MacciPlant>
+					</value>
+				</Operation-->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest" or defName="DankPyon_AncientForest"]/wildPlants</xpath>
+				<value>
+					<DankPyon_Plant_Garlic>0.05</DankPyon_Plant_Garlic>
+					<DankPyon_Plant_Onions>0.05</DankPyon_Plant_Onions>
+					<DankPyon_Plant_Lentils>0.02</DankPyon_Plant_Lentils>
+					<DankPyon_Plant_Mushrooms>0.08</DankPyon_Plant_Mushrooms>
+					<DankPyon_Plant_Carrots>0.05</DankPyon_Plant_Carrots>
+					<DankPyon_Plant_Herb>0.02</DankPyon_Plant_Herb>
+					<DankPyon_Plant_Cabbages>0.05</DankPyon_Plant_Cabbages>
+					<DankPyon_Plant_Pumpkins>0.05</DankPyon_Plant_Pumpkins>
+					<DankPyon_Tree_Apple>0.03</DankPyon_Tree_Apple>
+				</value>
+			</li>
+		</caseTrue>
+	</Operation>
+
+</Patch>
