@@ -37,7 +37,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_Wax"]/label</xpath>
 		<value>
-			<label>carrion wax</label>
+			<label>oswin wax</label>
 		</value>
 	</Operation>
 				
