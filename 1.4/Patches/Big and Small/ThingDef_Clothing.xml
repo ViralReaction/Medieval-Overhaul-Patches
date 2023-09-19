@@ -9,7 +9,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<!-- Apothecary Outfit -->
+				<!-- Nissse Cap -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="BS_Nisse_Cap"]/recipeMaker/researchPrerequisite</xpath>
 					<match Class="PatchOperationReplace">

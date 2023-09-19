@@ -5,10 +5,10 @@
 		<mods>
 			<li>Big and Small Genes</li>
 		</mods>
-		
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/RecipeDef[
 					defName="BS_CookLargeMealSimple" or
@@ -50,7 +50,7 @@
 						</value>
 					</nomatch>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName="BS_CookLargeMealSurvival" or defName="BS_CookLargeMealSurvivalBulk"]/researchPrerequisite</xpath>
 					<value>
@@ -60,7 +60,7 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="BS_MealLargeSurvivalPack"]/graphicData</xpath>
 					<value>
@@ -71,10 +71,10 @@
 						</graphicData>
 					</value>
 				</li>
-	
+
 			</operations>
 		</match>
-		
+
 	</Operation>
-	
+
 </Patch>
