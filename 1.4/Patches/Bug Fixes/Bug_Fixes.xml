@@ -31,13 +31,30 @@
 		<mods>
 			<li>Biotech</li>
 		</mods>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[defName="Make_BabyFood" or defName="Make_BabyFoodBulk"]</xpath>
-			<value>
-				<recipeUsers>
-					<li>DankPyon_RusticCookingTable</li>
-				</recipeUsers>
-			</value>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes/li[.="Make_BabyFood"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes</xpath>
+					<value>
+							<li>Make_BabyFood</li>
+					</value>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes/li[.="Make_BabyFoodBulk"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes</xpath>
+					<value>
+							<li>Make_BabyFoodBulk</li>
+					</value>
+				</nomatch>
+			</li>
+
+			</operations>
 		</match>
 	</Operation>
 
