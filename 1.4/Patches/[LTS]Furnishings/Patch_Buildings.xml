@@ -5,62 +5,45 @@
 		<mods>
 			<li>[LTS]Furnishing</li>
 		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Vanilla Cooking Expanded</li>
+			</mods>
 
-		<match Class="PatchOperationSequence">
-			<operations>
+			<match Class="PatchOperationSequence">
+				<operations>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="LTS_Firepit" or defName="LTS_Fireplace" or defName="LTS_FirepitRound"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-					<value>
-						<li>DankPyon_RawWood</li>
-						<li>DankPyon_RawDarkWood</li>
-						<li>DankPyon_DarkWoodLog</li>
-						<li>DankPyon_ElvenWoodLog</li>
-						<li>DankPyon_DryadWoodLog</li>
-						<li>DankPyon_AncientWoodLog</li>
-					</value>
-				</li>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealBreadSoup"]</xpath>
+					</li>
 
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Cooking Expanded</li>
-					</mods>
-					<match Class="PatchOperationSequence">
-						<operations>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealBreadSoupBulk"]</xpath>
+					</li>
 
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealBreadSoup"]</xpath>
-							</li>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealCheeseSoup"]</xpath>
+					</li>
 
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealBreadSoupBulk"]</xpath>
-							</li>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealCheeseSoupBulk"]</xpath>
+					</li>
 
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealCheeseSoup"]</xpath>
-							</li>
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes</xpath>
+						<value>
+							<li>MO_CookBoneSoup</li>
+							<li>MO_CookLentilSoup</li>
+							<li>MO_CookMushroomSoup</li>
+							<li>MO_CookBreadSoup</li>
+							<li>MO_CookPumpkinSoup</li>
+							<li>MO_CookCheeseSoup</li>
+						</value>
+					</li>
 
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealCheeseSoupBulk"]</xpath>
-							</li>
+				</operations>
+			</match>
 
-							<li Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes</xpath>
-								<value>
-									<li>MO_CookBoneSoup</li>
-									<li>MO_CookLentilSoup</li>
-									<li>MO_CookMushroomSoup</li>
-									<li>MO_CookBreadSoup</li>
-									<li>MO_CookPumpkinSoup</li>
-									<li>MO_CookCheeseSoup</li>
-								</value>
-							</li>
-
-						</operations>
-					</match>
-				</li>
-
-			</operations>
 		</match>
 	</Operation>
 
