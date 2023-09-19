@@ -53,5 +53,19 @@
 			<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_GlowingResin")]</xpath>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+		<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_ShieldLiving"]/statBases/StuffEffectMultiplierArmor</xpath>
+			<value>
+				<ArmorRating_Sharp>0.361</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.317</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.286</ArmorRating_Heat>
+			</value>
+		</nomatch>
+	</Operation>
 
 </Patch>
