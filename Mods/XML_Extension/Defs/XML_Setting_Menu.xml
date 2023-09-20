@@ -52,6 +52,11 @@
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>food_quality</key>
+				<label>Wine/Cheese Quality?</label>
+				<defaultValue>true</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>mo_wild_plants</key>
 				<label>Wild MO Plants?</label>
 				<defaultValue>true</defaultValue>
