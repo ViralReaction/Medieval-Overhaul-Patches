@@ -13,9 +13,9 @@
 				<operations>
 
 					<li Class="PatchOperationConditional">
-						<xpath>Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
+						<xpath>Defs/ThingDef[defName="VCE_GowCheese"]/thingCategories</xpath>
 						<match Class="PatchOperationReplace">
-							<xpath>Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
+							<xpath>Defs/ThingDef[defName="VCE_GowCheese"]/thingCategories</xpath>
 							<value>
 								<thingCategories>
 									<li>DankPyon_Cheese</li>
