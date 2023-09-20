@@ -79,39 +79,49 @@
 			<qualityDays>(1, 3, 8, 14, 20, 50, 120)</qualityDays>
 		</value>
 	</Operation>
-	
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/comps</xpath>
-		<value>
-			<li>
-				<compClass>CompQuality</compClass>
 
-			</li>
-			<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-				<ingestedThought>DankPyon_AteCheese</ingestedThought>
-			</li>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationRemove">
-	<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/ingestible/tasteThought</xpath>
-	</Operation>
-				
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/comps</xpath>
-		<value>
-			<li>
-				<compClass>CompQuality</compClass>
-			</li>
-			<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-				<ingestedThought>DankPyon_DrankWine</ingestedThought>
-			</li>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationRemove">
-	<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/ingestible/tasteThought</xpath>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>XML Extensions</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CompQuality</compClass>
+
+						</li>
+						<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+							<ingestedThought>DankPyon_AteCheese</ingestedThought>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/ingestible/tasteThought</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CompQuality</compClass>
+						</li>
+						<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+							<ingestedThought>DankPyon_DrankWine</ingestedThought>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/ingestible/tasteThought</xpath>
+				</li>
+
+			</operations>
+		</nomatch>
 	</Operation>
 
-	
 </Patch>
