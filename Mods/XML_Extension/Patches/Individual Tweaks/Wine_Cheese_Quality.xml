@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>VR.MOPatches</modId>
+		<key>food_quality</key>
+		<defaultValue>true</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/comps</xpath>
+				<value>
+					<li>
+						<compClass>CompQuality</compClass>
+					</li>
+					<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+						<ingestedThought>DankPyon_AteCheese</ingestedThought>
+					</li>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/ingestible/tasteThought</xpath>
+			</Operation>
+
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/comps</xpath>
+				<value>
+					<li>
+						<compClass>CompQuality</compClass>
+					</li>
+					<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+						<ingestedThought>DankPyon_DrankWine</ingestedThought>
+					</li>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/ingestible/tasteThought</xpath>
+			</Operation>
+			<!-- House Sanguin -->
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>ↁ House Sanguin</li>
+				</mods>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DevDesigner_BloodWine"]/comps</xpath>
+					<value>
+						<li>
+							<compClass>CompQuality</compClass>
+						</li>
+						<li>
+							<compClass>CompEquippable</compClass>
+						</li>
+						<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+							<ingestedThought>DankPyon_DrankWine</ingestedThought>
+						</li>
+					</value>
+				</match>
+			</Operation>
+		</caseTrue>
+		<caseFalse>
+			<!--VCE Cheese -->
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Cooking Expanded</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="VCE_Cheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="VCE_Cheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+							</match>
+						</li>
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="VCE_Cheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="VCE_Cheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+							</match>
+						</li>
+					</operations>
+				</match>
+			</Operation>
+			<!--Alpha Bee Cheese -->
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Cooking Expanded</li>
+				</mods>
+				<match Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Bees</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BeeCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BeeCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BeeCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BeeCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+						</operations>
+					</match>
+				</match>
+			</Operation>
+			<!-- Alpha Animal Cheese -->
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Cooking Expanded</li>
+				</mods>
+				<match Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BlueCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BlueCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BlueCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BlueCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_NightCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_NightCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_NightCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_NightCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_GowCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_GowCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_GowCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_GowCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+						</operations>
+					</match>
+				</match>
+			</Operation>
+			<!-- Insectoid Cheese -->
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Cooking Expanded</li>
+				</mods>
+				<match Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Factions Expanded - Insectoids</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_InsectCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_InsectCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_InsectCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_InsectCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+						</operations>
+					</match>
+				</match>
+			</Operation>
+			<!-- Vanilla Genetics Expanded Cheese -->
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Cooking Expanded</li>
+				</mods>
+				<match Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Genetics Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_WeirdCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_WeirdCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_WeirdCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_WeirdCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_MechaCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_MechaCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_MechaCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_MechaCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BearffaloCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BearffaloCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BearffaloCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BearffaloCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_ThrumffaloGouda"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_ThrumffaloGouda"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_LumpyCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_LumpyCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_LumpyCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_LumpyCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_ChickenffaloCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_ChickenffaloCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BrownCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BrownCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_BrownCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_BrownCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_HairyCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_HairyCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_HairyCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_HairyCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_RatCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_RatCheese"]/comps/li[contains(.,'CompQuality')]</xpath>
+								</match>
+							</li>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VCE_RatCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VCE_RatCheese"]/comps/li[@Class="VFECore.CompProperties_IngestedThoughtFromQuality"]</xpath>
+								</match>
+							</li>
+						</operations>
+					</match>
+				</match>
+			</Operation>
+
+		</caseFalse>
+	</Operation>
+
+</Patch>

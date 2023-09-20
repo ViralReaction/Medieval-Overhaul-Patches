@@ -20,44 +20,5 @@
 			</Operation>
 		</caseTrue>
 	</Operation>
-	
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>VR.MOPatches</modId>
-		<key>food_quality</key>
-		<defaultValue>true</defaultValue>
-		<caseTrue>
-			<Operation Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/comps</xpath>
-				<value>
-					<li>
-						<compClass>CompQuality</compClass>
-					</li>
-					<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-						<ingestedThought>DankPyon_AteCheese</ingestedThought>
-					</li>
-				</value>
-			</Operation>
-
-			<Operation Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/ingestible/tasteThought</xpath>
-			</Operation>
-
-			<Operation Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/comps</xpath>
-				<value>
-					<li>
-						<compClass>CompQuality</compClass>
-					</li>
-					<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-						<ingestedThought>DankPyon_DrankWine</ingestedThought>
-					</li>
-				</value>
-			</Operation>
-
-			<Operation Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="DankPyon_Wine" or defName="DankPyon_Mead"]/ingestible/tasteThought</xpath>
-			</Operation>
-		</caseTrue>
-	</Operation>
 
 </Patch>
