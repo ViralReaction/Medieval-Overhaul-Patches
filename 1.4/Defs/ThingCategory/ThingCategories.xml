@@ -2,31 +2,66 @@
 <Defs>
 
 	<ThingCategoryDef>
-        <defName>Feed</defName>
-        <label>animal feed</label>
-        <parent>Foods</parent>
-        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
-      </ThingCategoryDef>
-	  
-	  <ThingCategoryDef>
-        <defName>MO_Flour</defName>
-        <label>flour</label>
-        <parent>FoodRaw</parent>
-        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
-      </ThingCategoryDef>
-	  
-	  <ThingCategoryDef>
-        <defName>DankPyon_DriedFood</defName>
-        <label>dried meat</label>
-        <parent>MeatRaw</parent>
-        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
-      </ThingCategoryDef>
-	  
-	   <ThingCategoryDef>
-        <defName>DankPyon_Cereal</defName>
-        <label>grains</label>
-        <parent>Foods</parent>
-        <iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
-      </ThingCategoryDef>
+		<defName>Feed</defName>
+		<label>animal feed</label>
+		<parent>Foods</parent>
+		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>MO_Flour</defName>
+		<label>flour</label>
+		<parent>FoodRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_DriedFood</defName>
+		<label>dried meat</label>
+		<parent>MeatRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_Cereal</defName>
+		<label>grains</label>
+		<parent>Foods</parent>
+		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_TinyHides</defName>
+		<label>tiny hides</label>
+		<parent>DankPyon_Hides</parent>
+		<iconPath>Resources/HideLarge</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_SmallHides</defName>
+		<label>small hides</label>
+		<parent>DankPyon_Hides</parent>
+		<iconPath>Resources/HideLarge</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_MediumHides</defName>
+		<label>medium hides</label>
+		<parent>DankPyon_Hides</parent>
+		<iconPath>Resources/HideLarge</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_LargeHides</defName>
+		<label>large hides</label>
+		<parent>DankPyon_Hides</parent>
+		<iconPath>Resources/HideLarge</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>DankPyon_HugeHides</defName>
+		<label>huge hides</label>
+		<parent>DankPyon_Hides</parent>
+		<iconPath>Resources/HideLarge</iconPath>
+	</ThingCategoryDef>
 
 </Defs>

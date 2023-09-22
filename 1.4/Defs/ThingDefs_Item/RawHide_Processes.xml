@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
+		<defName>DankPyon_RawHidesProcess_Tiny</defName>
+		<thingDef>DankPyon_Leather_Rawhide</thingDef>
+		<ingredientFilter>
+			<categories>
+				<li>DankPyon_TinyHides</li>
+			</categories>
+		</ingredientFilter>
+		<efficiency>15.0</efficiency>
+		<capacityFactor>15.0</capacityFactor>
+	</ProcessorFramework.ProcessDef>
+
+	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
+		<defName>DankPyon_RawHidesProcess_Small</defName>
+		<thingDef>DankPyon_Leather_Rawhide</thingDef>
+		<ingredientFilter>
+			<categories>
+				<li>DankPyon_SmallHides</li>
+			</categories>
+		</ingredientFilter>
+		<efficiency>20.0</efficiency>
+		<capacityFactor>20.0</capacityFactor>
+	</ProcessorFramework.ProcessDef>
+
+	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
+		<defName>DankPyon_RawHidesProcess_Medium</defName>
+		<thingDef>DankPyon_Leather_Rawhide</thingDef>
+		<ingredientFilter>
+			<categories>
+				<li>DankPyon_MediumHides</li>
+			</categories>
+		</ingredientFilter>
+		<efficiency>25.0</efficiency>
+		<capacityFactor>25.0</capacityFactor>
+	</ProcessorFramework.ProcessDef>
+
+	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
+		<defName>DankPyon_RawHidesProcess_Large</defName>
+		<thingDef>DankPyon_Leather_Rawhide</thingDef>
+		<ingredientFilter>
+			<categories>
+				<li>DankPyon_LargeHides</li>
+			</categories>
+		</ingredientFilter>
+		<efficiency>30.0</efficiency>
+		<capacityFactor>30.0</capacityFactor>
+	</ProcessorFramework.ProcessDef>
+
+	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
+		<defName>DankPyon_RawHidesProcess_Huge</defName>
+		<thingDef>DankPyon_Leather_Rawhide</thingDef>
+		<ingredientFilter>
+			<categories>
+				<li>DankPyon_HugeHides</li>
+			</categories>
+		</ingredientFilter>
+		<efficiency>60.0</efficiency>
+		<capacityFactor>60.0</capacityFactor>
+	</ProcessorFramework.ProcessDef>
+
+</Defs>
