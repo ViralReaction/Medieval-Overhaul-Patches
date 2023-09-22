@@ -161,4 +161,11 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ApparelLayerDef[defName="DankPyon_ShellAttachment"]/drawOrder</xpath>
+		<value>
+		<drawOrder>10</drawOrder>
+		</value>
+	</Operation>
+
 </Patch>
