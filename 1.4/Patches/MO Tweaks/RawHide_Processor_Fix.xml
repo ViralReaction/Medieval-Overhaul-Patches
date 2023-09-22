@@ -3,7 +3,7 @@
 	
 	<!-- Proccess Modify Sun -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DummyLeather"]/sunFactor</xpath>
+		<xpath>Defs/ProcessorFramework.ProcessDef[@Name="DankPyon_BaseHidesProcess"]/sunFactor</xpath>
 		<value>
 			<sunFactor>0.5~1.0</sunFactor>
 		</value>
@@ -11,7 +11,7 @@
 
 	<!-- Proccess Modify Wind -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DummyLeather"]/windFactor</xpath>
+		<xpath>Defs/ProcessorFramework.ProcessDef[@Name="DankPyon_BaseHidesProcess"]/windFactor</xpath>
 		<value>
 			<windFactor>0.75~1.25</windFactor>
 		</value>
