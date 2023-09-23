@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<Operation Class="XmlExtensions.FindMod">
+		<mods>
+			<li>Tribal Medicine 2.0</li>
+		</mods>
+		<caseTrue>
+			<Operation Class="PatchOperationInsert">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.Numeric" and (label="Esoteric Studies:")]</xpath>
+				<order>Append</order>
+				<value>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>tribal_medicine_mo_cost</key>
+						<label>Tribal Medicine:</label>
+						<defaultValue>1000</defaultValue>
+						<min>500</min>
+						<max>10000</max>
+					</li>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Tribal Medicine 2.0</li>
+		</mods>
+		<match Class="XmlExtensions.UseSetting">
+			<modId>VR.MOPatches</modId><!--String that XML Extensions can identify your mod with-->
+			<key>tribal_medicine_mo_cost</key><!--Key to identify the setting (only used internally, invisible to user)-->
+			<defaultValue>1000</defaultValue><!--What you want the default value of the setting to be-->
+			<apply>
+				<Operation Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/baseCost</xpath>
+					<value>
+						<baseCost>{tribal_medicine_mo_cost}</baseCost><!--Use the setting's value-->
+					</value>
+				</Operation>
+			</apply>
+		</match>
+	</Operation>
+
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Tribal Medicine 2.0</li>
@@ -13,14 +53,6 @@
 					<xpath>Defs/ThingDef[defName="TM_MedicineTribal" or @Name="TM_TeaBase"]/recipeMaker/recipeUsers</xpath>
 					<value>
 						<li>DankPyon_RusticCookingTable</li>
-					</value>
-				</li>
-
-				<!-- Reduce from 5000 -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/baseCost</xpath>
-					<value>
-						<baseCost>1000</baseCost>
 					</value>
 				</li>
 
