@@ -140,31 +140,4 @@
 		</apply>
 	</Operation>
 
-	<!--Operation Class="XmlExtensions.OptionalPatch">
-		<modId>VR.MOPatches</modId>
-		<key>trimmed_meat</key>
-		<defaultValue>true</defaultValue>
-		<caseTrue>
-			<Operation Class="PatchOperationReplace">
-				<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
-				<value>
-					<thingDefs>
-						<li>DankPyon_TrimmedMeat</li>
-					</thingDefs>
-				</value>
-			</Operation>
-			<Operation Class="PatchOperationReplace">
-				<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/categories</xpath>
-				<value>
-					<thingDefs>
-						<li>DankPyon_TrimmedMeat</li>
-					</thingDefs>
-				</value>
-			</Operation>
-		</caseTrue>
-		<caseFalse>
-			
-		</caseFalse>
-	</Operation-->
-
 </Patch>
