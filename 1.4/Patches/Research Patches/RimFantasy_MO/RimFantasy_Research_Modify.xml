@@ -17,18 +17,6 @@
 					</value>
 				</li>
 
-				<li Class="PatchOperationFindMod">
-					<mods>
-					<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ResearchProjectDef[defName="RF_ArcaneCrafting"]/baseCost</xpath>
-						<value>
-							<baseCost>1000</baseCost>
-						</value>
-					</nomatch>
-				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[
 					defName="RF_ArcaneDefences" or

@@ -54,19 +54,7 @@
 				</li>
 				 -->
 				 
-				<!-- Onion Integration -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/sowTags</xpath>
-						<value>
-							<sowTags/>
-						</value>
-					</nomatch>
-				</li>
-				
+				<!-- Onion Integration -->			
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/harvestedThingDef</xpath>
 					<value>
@@ -89,18 +77,6 @@
 				</li>
 				
 				<!-- Pumpkin Integration -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/sowTags</xpath>
-						<value>
-							<sowTags/>
-						</value>
-					</nomatch>
-				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/harvestedThingDef</xpath>
 					<value>
@@ -123,18 +99,6 @@
 				</li>
 				
 				<!-- Cabbage Integration -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/sowTags</xpath>
-						<value>
-							<sowTags/>
-						</value>
-					</nomatch>
-				</li>
-				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/harvestedThingDef</xpath>
 					<value>
@@ -156,19 +120,7 @@
 					</value>
 				</li>
 				
-				<!-- Tomato Integration -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/sowTags</xpath>
-						<value>
-							<sowTags/>
-						</value>
-					</nomatch>
-				</li>
-				
+				<!-- Tomato Integration -->				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/harvestedThingDef</xpath>
 					<value>
