@@ -62,22 +62,7 @@
 						<xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
 					</match>
 				</li>
-				
-				<!-- Hide Stew Pot -->
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VCE_StewPot"]/designationCategory</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="VCE_StewPot"]/designationCategory</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VCE_StewPot"]/researchPrerequisites</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="VCE_StewPot"]/researchPrerequisites</xpath>
-					</match>
-				</li>
-				
+
 			</operations>
 		</match>
 		
