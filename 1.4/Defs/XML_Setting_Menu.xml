@@ -69,7 +69,12 @@
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>mo_wild_plants</key>
 				<label>Wild MO Plants?</label>
-				<defaultValue>true</defaultValue>
+				<defaultValue>false</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>lindwurm_giddyup</key>
+				<label>Lindwurm Mountable? (Optional due to being odd looking)</label>
+				<defaultValue>false</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.ResetSettings"/>
 		</settings>
