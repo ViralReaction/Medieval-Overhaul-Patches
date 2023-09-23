@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
+	<!-- Trimmed Human Meat -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>DankPyon_TrimmedMeat</defName>
+		<label>Trimmed Meat</label>
+		<description>Trimmed meat that is ready to dry or smoke.</description>
+		<graphicData>
+			<texPath>Meal/DriedMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>MeatRaw</li>
+		</thingCategories>
+		<statBases>
+			<Mass>0.01</Mass>
+			<MarketValue>2.5</MarketValue>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<ingredient>
+			<mergeCompatibilityTags>
+			</mergeCompatibilityTags>
+		</ingredient>
+		<ingestible>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Ingredients"/>
+		</comps>
+		<rotatable>false</rotatable>
+	</ThingDef>
 	
 	<!-- Trimmed Human Meat -->
 	<ThingDef ParentName="OrganicProductBase">
@@ -45,9 +80,9 @@
 			<texPath>Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<thingCategories>
+		<!--thingCategories>
 			<li>DankPyon_DriedFood</li>
-		</thingCategories>
+		</thingCategories-->
 		<statBases>
 			<MarketValue>13</MarketValue>
 			<Nutrition>0.7</Nutrition>
@@ -143,9 +178,9 @@
 			<texPath>Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		<thingCategories>
+		<!--thingCategories>
 			<li>DankPyon_DriedFood</li>
-		</thingCategories>
+		</thingCategories-->
 		<statBases>
 			<MarketValue>13</MarketValue>
 			<Nutrition>0.7</Nutrition>

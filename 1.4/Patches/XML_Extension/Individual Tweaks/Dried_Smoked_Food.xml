@@ -6,6 +6,14 @@
 		<key>dried_smoked_food</key>
 		<defaultValue>true</defaultValue>
 		<caseTrue>
+			
+			<!-- 1:1 Meat to Dried -->
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/efficiency</xpath>
+				<value>
+					<efficiency>1</efficiency>
+				</value>
+			</Operation>
 
 			<Operation Class="PatchOperationAttributeSet">
 				<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]</xpath>
@@ -69,14 +77,39 @@
 
 		</caseTrue>
 		<caseFalse>
-
 			<Operation Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="DankPyon_DriedMeat"]/ingestible</xpath>
 				<value>
 					<tasteThought>DankPyon_DriedMeat</tasteThought>
 				</value>
 			</Operation>
+		</caseFalse>
+	</Operation>
 
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>VR.MOPatches</modId>
+		<key>trimmed_meat</key>
+		<defaultValue>true</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
+				<value>
+					<thingDefs>
+						<li>DankPyon_TrimmedMeat</li>
+					</thingDefs>
+				</value>
+			</Operation>
+		</caseTrue>
+		<caseFalse>
+			<Operation Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="DankPyon_TrimmedMeat"]</xpath>
+			</Operation>
+			<Operation Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat"]</xpath>
+			</Operation>
+			<Operation Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat_Bulk"]</xpath>
+			</Operation>
 		</caseFalse>
 	</Operation>
 

@@ -58,7 +58,12 @@
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>dried_smoked_food</key>
-				<label>Dried Food Nutrition Change?</label>
+				<label>Dried Meat Nutrition Change? (Only effects normal dried meat)</label>
+				<defaultValue>true</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>trimmed_meat</key>
+				<label>Trimmed Meat Recipe? (For regular dried meat)</label>
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
