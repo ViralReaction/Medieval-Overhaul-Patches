@@ -98,9 +98,6 @@
 						<value>option1</value>
 						<apply>
 							<Operation Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[defName="DankPyon_TrimmedMeat"]</xpath>
-							</Operation>
-							<Operation Class="PatchOperationRemove">
 								<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat"]</xpath>
 							</Operation>
 							<Operation Class="PatchOperationRemove">
@@ -159,7 +156,6 @@
 		</caseTrue>
 	</Operation>
 	
-	
 	<Operation Class="XmlExtensions.FindMod">
 		<mods>
 			<li>RimCuisine 2 Core (Continued)</li>
@@ -176,15 +172,6 @@
 							<li>
 								<value>option1</value>
 								<apply>
-									<Operation Class="PatchOperationRemove">
-										<xpath>Defs/ThingDef[defName="DankPyon_TrimmedMeat"]</xpath>
-									</Operation>
-									<Operation Class="PatchOperationRemove">
-										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat"]</xpath>
-									</Operation>
-									<Operation Class="PatchOperationRemove">
-										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat_Bulk"]</xpath>
-									</Operation>
 									<Operation Class="PatchOperationConditional">
 										<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
 										<match Class="PatchOperationRemove">
@@ -220,7 +207,7 @@
 								<value>option3</value>
 								<apply>
 									<Operation Class="PatchOperationReplace">
-										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/thingDefs</xpath>
+										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
 										<value>
 											<thingDefs>
 												<li>RC2_TrimmedMeat</li>
@@ -228,7 +215,7 @@
 										</value>
 									</Operation>
 									<Operation Class="PatchOperationReplace">
-										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/thingDefs</xpath>
+										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/categories</xpath>
 										<value>
 											<thingDefs>
 												<li>RC2_TrimmedMeat</li>
@@ -250,9 +237,6 @@
 											<li>DankPyon_FakeMeat</li>
 											<li>DankPyon_FakeMeat_Insect</li>
 										</value>
-									</Operation>
-									<Operation Class="PatchOperationRemove">
-										<xpath>Defs/ThingDef[defName="DankPyon_TrimmedMeat"]</xpath>
 									</Operation>
 									<Operation Class="PatchOperationRemove">
 										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat"]</xpath>
