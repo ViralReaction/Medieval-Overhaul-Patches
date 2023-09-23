@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="XmlExtensions.FindMod">
+	<!--Operation Class="XmlExtensions.FindMod">
 		<mods>
 			<li>RimCuisine 2 Core (Continued)</li>
 		</mods>
 		<caseTrue>
 			<Operation Class="PatchOperationInsert">
-				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[@Class="XmlExtensions.Setting.ResetSettings"]</xpath>
-				<order>Prepend</order>
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[contains(.,'trimmed_meat')]</xpath>
+				<order>Append</order>
 				<value>
 					<li Class="XmlExtensions.Setting.Checkbox">
 						<key>RC2_trim_meat</key>
@@ -18,61 +18,136 @@
 				</value>
 			</Operation>
 		</caseTrue>
-	</Operation>
-
-	<Operation Class="PatchOperationFindMod">
+	</Operation-->
+	
+	<Operation Class="XmlExtensions.FindMod">
 		<mods>
 			<li>RimCuisine 2 Core (Continued)</li>
 		</mods>
-
-		<match Class="PatchOperationSequence">
-			<operations>
-			
-				<li Class="XmlExtensions.OptionalPatch">
-					<modId>VR.MOPatches</modId>
-					<key>RC2_trim_meat</key>
-					<defaultValue>false</defaultValue>
-					<caseTrue>
-						<!--li Class="PatchOperationReplace">
-							<xpath>Defs/ThingDef[defName="DankPyon_DryingRack"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DankPyon_DriedMeatProcess"]</xpath>
-							<value>
-								<li>RC2_DriedMeat_Process</li>
-							</value>
-						</li-->
-						<li Class="PatchOperationReplace">
-							<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
-							<value>
-								<thingDefs>
-									<li>RC2_TrimmedMeat</li>
-								</thingDefs>
-							</value>
-						</li>
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]/fixedIngredientFilter</xpath>
-							<value>
-								<disallowedCategories>
-									<li>DankPyon_DriedFood</li>
-								</disallowedCategories>
-							</value>
-						</li>
-					</caseTrue>
-					<caseFalse>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
-							<match Class="PatchOperationRemove">
-								<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
-							</match>
-						</li>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
-							<match Class="PatchOperationRemove">
-								<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
-							</match>
-						</li>
-					</caseFalse>
-				</li>
-			</operations>
-		</match>
+		<caseTrue>
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/XmlExtensions.SettingsMenuDef[modId="VR.MOPatches"]/settings/li[contains(.,'trimmed_meat')]/buttons</xpath>
+				<value>
+					<li>
+						<label>RC2 Trimmed Meat Recipe:</label>
+						<value>option3</value>
+						<tooltip>For when you want to use RimCuisine2 trimmed meat.</tooltip>
+						<highlight>true</highlight>
+					</li>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+	
+	
+	<Operation Class="XmlExtensions.FindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+		<caseTrue>
+			<Operation Class="XmlExtensions.UseSetting">
+				<modId>VR.MOPatches</modId>
+				<key>trimmed_meat</key>
+				<defaultValue>option2</defaultValue>
+				<apply>
+					<Operation Class="XmlExtensions.PatchByCase">
+						<value>{trimmed_meat}</value>
+						<cases>
+							<li>
+								<value>option1</value>
+								<apply>
+									<Operation Class="PatchOperationRemove">
+										<xpath>Defs/ThingDef[defName="DankPyon_TrimmedMeat"]</xpath>
+									</Operation>
+									<Operation Class="PatchOperationRemove">
+										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat"]</xpath>
+									</Operation>
+									<Operation Class="PatchOperationRemove">
+										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat_Bulk"]</xpath>
+									</Operation>
+									<Operation Class="PatchOperationConditional">
+										<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
+										<match Class="PatchOperationRemove">
+											<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
+										</match>
+									</Operation>
+									<Operation Class="PatchOperationConditional">
+										<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
+										<match Class="PatchOperationRemove">
+											<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
+										</match>
+									</Operation>
+								</apply>
+							</li>
+							<li>
+								<value>option2</value>
+								<apply>
+									<Operation Class="PatchOperationConditional">
+										<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
+										<match Class="PatchOperationRemove">
+											<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]</xpath>
+										</match>
+									</Operation>
+									<Operation Class="PatchOperationConditional">
+										<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
+										<match Class="PatchOperationRemove">
+											<xpath>Defs/RecipeDef[defName="RC2_TrimMeatBulk"]</xpath>
+										</match>
+									</Operation>
+								</apply>
+							</li>
+							<li>
+								<value>option3</value>
+								<apply>
+									<Operation Class="PatchOperationReplace">
+										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/thingDefs</xpath>
+										<value>
+											<thingDefs>
+												<li>RC2_TrimmedMeat</li>
+											</thingDefs>
+										</value>
+									</Operation>
+									<Operation Class="PatchOperationReplace">
+										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/thingDefs</xpath>
+										<value>
+											<thingDefs>
+												<li>RC2_TrimmedMeat</li>
+											</thingDefs>
+										</value>
+									</Operation>
+									<Operation Class="PatchOperationAdd">
+										<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]/fixedIngredientFilter</xpath>
+										<value>
+											<disallowedCategories>
+												<li>DankPyon_DriedFood</li>
+											</disallowedCategories>
+										</value>
+									</Operation>
+									<Operation Class="PatchOperationAdd">
+										<xpath>Defs/RecipeDef[defName="RC2_TrimMeat"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+										<value>
+											<li>DankPyon_TrimmedMeat</li>
+											<li>DankPyon_FakeMeat</li>
+											<li>DankPyon_FakeMeat_Insect</li>
+										</value>
+									</Operation>
+									<Operation Class="PatchOperationRemove">
+										<xpath>Defs/ThingDef[defName="DankPyon_TrimmedMeat"]</xpath>
+									</Operation>
+									<Operation Class="PatchOperationRemove">
+										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat"]</xpath>
+									</Operation>
+									<Operation Class="PatchOperationRemove">
+										<xpath>Defs/RecipeDef[defName="DankPyon_TrimmedMeat_Bulk"]</xpath>
+									</Operation>
+								</apply>
+							</li>
+						</cases>
+					</Operation>
+				</apply>
+			</Operation>
+	
+		</caseTrue>
 	</Operation>
 
 	<Operation Class="PatchOperationFindMod">
@@ -88,30 +163,30 @@
 					<key>building_bloat</key>
 					<defaultValue>true</defaultValue>
 					<caseTrue>
-						<li Class="PatchOperationConditional">
+						<Operation Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
 							<match Class="PatchOperationRemove">
 								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
 							</match>
-						</li>
-						<li Class="PatchOperationConditional">
+						</Operation>
+						<Operation Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
 							<match Class="PatchOperationRemove">
 								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
 							</match>
-						</li>
-						<li Class="PatchOperationConditional">
+						</Operation>
+						<Operation Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
 							<match Class="PatchOperationRemove">
 								<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
 							</match>
-						</li>
-						<li Class="PatchOperationConditional">
+						</Operation>
+						<Operation Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
 							<match Class="PatchOperationRemove">
 								<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
 							</match>
-						</li>
+						</Operation>
 					</caseTrue>
 				</li>
 

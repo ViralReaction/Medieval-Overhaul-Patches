@@ -49,31 +49,60 @@
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>jewelry_decay</key>
 				<label>Remove jewelry decay?</label>
+				<tooltip>Removes deterioration for jewelry</tooltip>
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>food_quality</key>
 				<label>Wine/Cheese Quality?</label>
+				<tooltip>Adds quality for wine and cheeses.</tooltip>
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>dried_smoked_food</key>
-				<label>Dried Meat Nutrition Change? (Only effects normal dried meat)</label>
+				<label>Dried Meat Nutrition Change?</label>
+				<tooltip>Turn regular dried meat into a raw ingredient with lowered nutrition and cost to make. Best for perserving meats through winter.</tooltip>
 				<defaultValue>true</defaultValue>
 			</li>
-			<li Class="XmlExtensions.Setting.Checkbox">
+			<!--li Class="XmlExtensions.Setting.Checkbox">
 				<key>trimmed_meat</key>
 				<label>Trimmed Meat Recipe? (For regular dried meat)</label>
 				<defaultValue>true</defaultValue>
+			</li-->
+			<li Class="XmlExtensions.Setting.Gap">
+				<spacing>12</spacing>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Trimmed Meat Options:</text>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>trimmed_meat</key>
+				<defaultValue>option2</defaultValue>
+				<spacing>-1</spacing>
+				<buttons>
+					<li>
+						<label>None:</label>
+						<value>option1</value>
+						<tooltip>This only prevents trimmed meat for normal meat. Human and Insect meat will continue to have trimmed meat.</tooltip>
+						<highlight>true</highlight>
+					</li>
+					<li>
+						<label>MO Trimmed Meat Recipe:</label>
+						<value>option2</value>
+						<tooltip>This enables a trimmed meat recipe. Best used with Ideology and venerated animals.</tooltip>
+						<highlight>true</highlight>
+					</li>
+					<!--All buttons listed here-->
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.Gap">
+				<spacing>12</spacing>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>mo_wild_plants</key>
 				<label>Wild MO Plants?</label>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<key>lindwurm_giddyup</key>
-				<label>Lindwurm Mountable? (Optional due to being odd looking)</label>
+				<tooltip>Adds various Medieval Overhaul plants to biomes as wild plants.</tooltip>
 				<defaultValue>false</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.ResetSettings"/>
