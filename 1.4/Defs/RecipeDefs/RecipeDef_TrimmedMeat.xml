@@ -5,12 +5,11 @@
 		<defName>DankPyon_MakeFakeHumanMeat</defName>
 		<label>trim human meat</label>
 		<description>trim human meat for drying and smoking.</description>
-		<jobString>Trim 1 human 
-		meat.</jobString>
+		<jobString>trimming meat.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<workAmount>1</workAmount>
+		<workAmount>50</workAmount>
 		<recipeUsers>
 			<li>ButcherSpot</li>
 			<li>DankPyon_ButchersBlock</li>
@@ -24,11 +23,47 @@
 						<li>Meat_Human</li>
 					</thingDefs>
 				</filter>
-				<count>1</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<products>
-			<DankPyon_FakeMeat>1</DankPyon_FakeMeat>
+			<DankPyon_FakeMeat>5</DankPyon_FakeMeat>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Meat_Human</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>DankPyon_MakeFakeHumanMeat_Bulk</defName>
+		<label>trim human meat in bulk</label>
+		<description>trim human meat for drying and smoking.</description>
+		<jobString>trimming meat.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>250</workAmount>
+		<recipeUsers>
+			<li>ButcherSpot</li>
+			<li>DankPyon_ButchersBlock</li>
+			<li>TableButcher</li>
+			<li>DankPyon_RusticCookingTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Meat_Human</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<DankPyon_FakeMeat>50</DankPyon_FakeMeat>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -42,11 +77,11 @@
 		<defName>DankPyon_MakeFakeInsectMeat</defName>
 		<label>trim insect meat</label>
 		<description>trim insect meat for drying and smoking.</description>
-		<jobString>Trim 1 insect meat.</jobString>
+		<jobString>trimming meat.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<workAmount>1</workAmount>
+		<workAmount>50</workAmount>
 		<recipeUsers>
 			<li>ButcherSpot</li>
 			<li>DankPyon_ButchersBlock</li>
@@ -60,11 +95,47 @@
 						<li>Meat_Megaspider</li>
 					</thingDefs>
 				</filter>
-				<count>1</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<products>
-			<DankPyon_FakeMeat_Insect>1</DankPyon_FakeMeat_Insect>
+			<DankPyon_FakeMeat_Insect>5</DankPyon_FakeMeat_Insect>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Meat_Megaspider</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>DankPyon_MakeFakeInsectMeat_Bulk</defName>
+		<label>trim insect meat in bulk</label>
+		<description>trim insect meat for drying and smoking.</description>
+		<jobString>trimming meat.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>250</workAmount>
+		<recipeUsers>
+			<li>ButcherSpot</li>
+			<li>DankPyon_ButchersBlock</li>
+			<li>TableButcher</li>
+			<li>DankPyon_RusticCookingTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Meat_Megaspider</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<DankPyon_FakeMeat_Insect>50</DankPyon_FakeMeat_Insect>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
