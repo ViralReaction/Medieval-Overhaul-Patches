@@ -5,9 +5,10 @@
 		<mods>
 			<li>Vanilla Ideology Expanded - Memes and Structures</li>
 		</mods>
+
 		<match Class="PatchOperationSequence">
 			<operations>
-			
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/VanillaMemesExpanded.SupportedDrinksForPreceptDefs[defName="VME_SupportedDrinksForPreceptDef"]/supportedDrinksForPrecept</xpath>
 					<value>
@@ -18,7 +19,7 @@
 						<li>DankPyon_Wine_Mulberry</li>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationFindMod">
 					<mods>
 						<li>ↁ House Sanguin</li>
@@ -33,9 +34,9 @@
 						</nomatch>
 					</match>
 				</li>
-				
+
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>
