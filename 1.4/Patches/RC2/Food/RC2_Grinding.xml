@@ -9,43 +9,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<!--li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[@Name="RC2_MillingBase"]/recipeUsers</xpath>
-					<value>
-						<li>DankPyon_Millstone</li>
-					</value>
-				</li-->
-
 				<!-- Sugar -->
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeets"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeets"]</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeetsBulk"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeetsBulk"]</xpath>
-					</match>
-				</li>
-				
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcane"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcane"]</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcaneBulk"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcaneBulk"]</xpath>
-					</match>
-				</li>
-				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar" or defName="DankPyon_CraftSugarBulk"]/ingredients/li/filter/thingDefs</xpath>
 					<value>
@@ -105,20 +69,6 @@
 				</li>
 				
 				<!-- Flour -->
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RC2_ProcessGrain"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_ProcessGrain"]</xpath>
-					</match>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef[defName="RC2_ProcessGrainBulk"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_ProcessGrainBulk"]</xpath>
-					</match>
-				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="RC2_RawBarley"]/thingCategories
 					</xpath>
