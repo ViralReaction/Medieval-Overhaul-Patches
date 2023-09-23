@@ -10,18 +10,6 @@
 			<operations>
 
 				<!-- Wheat -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="RC2_PlantWheat"]/plant/sowTags</xpath>
-						<value>
-							<sowTags/>
-						</value>
-					</nomatch>
-				</li>
-
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="RC2_PlantWheat"]/plant/harvestedThingDef</xpath>
 					<value>
@@ -362,46 +350,6 @@
 					</value>
 				</li>
 
-				<!-- Chickpea -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantChickpeas" or defName="RC2_PlantChickpeasHydro"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="RC2_ChickpeaBase"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
-				</li>
-
-				<!-- Onion -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantOnion" or defName="RC2_PlantOnionHydro"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="RC2_OnionBase"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
-				</li>
-
 				<!-- Cabbage Patch -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="RC2_CabbageBase"]/label</xpath>
@@ -422,26 +370,6 @@
 					<value>
 						<sowTags/>
 					</value>
-				</li>
-
-				<!-- Carrots -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantCarrot" or defName="RC2_PlantCarrotHydro"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="RC2_CarrotBase"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
 				</li>
 
 				<!-- Beetroot -->
@@ -670,26 +598,6 @@
 						</value>
 					</match>
 				</li>
-
-				<!-- Tomato -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantTomato" or defName="RC2_PlantTomatoHydro"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[@Name="RC2_TomatoBase"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
-				</li>
 				
 				<!-- Yam -->
 				<li Class="PatchOperationReplace">
@@ -799,112 +707,23 @@
 				</li>
 				
 				<!-- Eggplant -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Plants Expanded</li>
-					</mods>
-					<match Class="PatchOperationFindMod">
-						<mods>
-							<li>XML Extensions</li>
-						</mods>
-						<nomatch Class="PatchOperationSequence">
-							<operations>
-								<li Class="PatchOperationReplace">
-									<xpath>Defs/ThingDef[defName="RC2_PlantEggPlant"]/plant/sowResearchPrerequisites</xpath>
-									<value>
-										<sowResearchPrerequisites/>
-									</value>
-								</li>
-								<li Class="PatchOperationReplace">
-									<xpath>Defs/ThingDef[defName="RC2_PlantEggPlant"]/plant/sowTags</xpath>
-									<value>
-										<sowTags/>
-									</value>
-								</li>
-							</operations>
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationReplace">
+				<li Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="RC2_PlantEggPlant"]/plant/sowResearchPrerequisites</xpath>
 						<value>
 							<sowResearchPrerequisites>
 								<li>DankPyon_IntermediateAgriculture</li>
 							</sowResearchPrerequisites>
 						</value>
-					</nomatch>
 				</li>
 
 				<!-- Agave -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Plants Expanded</li>
-					</mods>
-					<match Class="PatchOperationFindMod">
-						<mods>
-							<li>XML Extensions</li>
-						</mods>
-						<nomatch Class="PatchOperationSequence">
-							<operations>
-								<li Class="PatchOperationRemove">
-									<xpath>Defs/ThingDef[defName="RC2_PlantAgave"]/plant/sowResearchPrerequisites</xpath>
-								</li>
-								<li Class="PatchOperationReplace">
-									<xpath>Defs/ThingDef[defName="RC2_PlantAgave"]/plant/sowTags</xpath>
-									<value>
-										<sowTags/>
-									</value>
-								</li>
-							</operations>
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationReplace">
+				<li Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="RC2_PlantAgave"]/plant/sowResearchPrerequisites</xpath>
 						<value>
 							<sowResearchPrerequisites>
 								<li>DankPyon_IntermediateAgriculture</li>
 							</sowResearchPrerequisites>
 						</value>
-					</nomatch>
-				</li>
-
-				<!-- Pumpkin -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantPumpkin"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[defName="RC2_PlantPumpkin"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
-				</li>
-
-				<!-- Sugarcane -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantSugarcane"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[defName="RC2_PlantSugarcane"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
 				</li>
 				
 				<!-- RC2 Advanced Plants -->
@@ -979,27 +798,7 @@
 						<sowResearchPrerequisites Inherit="False"/>
 					</value>
 				</li>
-				
-				<!-- Grapes -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="RC2_PlantGrapes"]/plant/sowTags</xpath>
-								<value>
-									<sowTags/>
-								</value>
-							</li>
-							<li Class="PatchOperationRemove">
-								<xpath>Defs/ThingDef[defName="RC2_PlantGrapes"]/plant/sowResearchPrerequisites</xpath>
-							</li>
-						</operations>
-					</nomatch>
-				</li>
-				
+
 				<!-- Cactus Fruit -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="RC2_PlantCactusFruit"]/plant/sowResearchPrerequisites</xpath>
@@ -1021,30 +820,6 @@
 				</li>
 				
 				<!-- Pineapple -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Plants Expanded - More Plants</li>
-					</mods>
-					<match Class="PatchOperationFindMod">
-						<mods>
-							<li>XML Extensions</li>
-						</mods>
-						<nomatch Class="PatchOperationSequence">
-							<operations>
-								<li Class="PatchOperationRemove">
-									<xpath>Defs/ThingDef[@Name="RC2_PineappleBase"]/plant/sowResearchPrerequisites</xpath>
-								</li>
-								<li Class="PatchOperationReplace">
-									<xpath>Defs/ThingDef[defName="RC2_PlantPineapple" or defName="RC2_PlantPineappleHydro"]/plant/sowTags</xpath>
-									<value>
-										<sowTags/>
-									</value>
-								</li>
-							</operations>
-						</nomatch>
-					</match>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
 							<li Class="PatchOperationReplace">
 								<xpath>Defs/ThingDef[@Name="RC2_PineappleBase"]/plant/sowResearchPrerequisites</xpath>
 								<value>
@@ -1071,9 +846,6 @@
 									<sowResearchPrerequisites Inherit="False"/>
 								</value>
 							</li>
-						</operations>
-					</nomatch>
-				</li>
 
 				<!-- Trees -->
 				<li Class="PatchOperationReplace">

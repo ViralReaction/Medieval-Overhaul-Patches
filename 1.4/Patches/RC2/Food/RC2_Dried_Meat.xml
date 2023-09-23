@@ -9,33 +9,6 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationRemove">
-						<xpath>Defs/RecipeDef[defName="RC2_TrimMeat" or defName="RC2_TrimMeatBulk"]</xpath>
-					</nomatch>
-				</li>
-
 				<!-- Fruit Drying -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defname="RC2_PrepareFruit" or defName="RC2_PrepareFruitBulk"]/recipeUsers</xpath>

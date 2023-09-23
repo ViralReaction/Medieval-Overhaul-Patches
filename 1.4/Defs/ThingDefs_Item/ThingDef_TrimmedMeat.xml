@@ -49,8 +49,7 @@
 			<li>DankPyon_DriedFood</li>
 		</thingCategories>
 		<statBases>
-			<Mass>0.01</Mass>
-			<MarketValue>2.5</MarketValue>
+			<MarketValue>13</MarketValue>
 			<Nutrition>0.7</Nutrition>
 		</statBases>
 		<ingestible>
@@ -58,6 +57,7 @@
 			<preferability>DesperateOnly</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>RawMeat_Eat</ingestSound>
+			<tasteThought>DankPyon_DriedMeat</tasteThought>
 			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
 			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
 		</ingestible>
@@ -147,15 +147,15 @@
 			<li>DankPyon_DriedFood</li>
 		</thingCategories>
 		<statBases>
-			<Mass>0.01</Mass>
-			<MarketValue>2.5</MarketValue>
-			<Nutrition>0.05</Nutrition>
+			<MarketValue>13</MarketValue>
+			<Nutrition>0.7</Nutrition>
 		</statBases>
 		<ingestible>
 			<foodType>Meat</foodType>
-			<preferability>DesperateOnly</preferability>
+			<preferability>MealAwful</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>RawMeat_Eat</ingestSound>
+			<tasteThought>DankPyon_DriedMeat</tasteThought>
 			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
 			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
 		</ingestible>

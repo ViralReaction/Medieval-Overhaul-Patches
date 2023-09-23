@@ -9,32 +9,6 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
-				<!-- Millstone -->
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>XML Extensions</li>
-					</mods>
-					<nomatch Class="PatchOperationSequence">
-						<operations>
-
-							<li Class="PatchOperationConditional">
-								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
-								<match Class="PatchOperationRemove">
-									<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
-								</match>
-							</li>
-
-							<li Class="PatchOperationConditional">
-								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
-								<match Class="PatchOperationRemove">
-									<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
-								</match>
-							</li>
-						
-						</operations>
-					</nomatch>
-				</li>
-
 				<!--li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[@Name="RC2_MillingBase"]/recipeUsers</xpath>
 					<value>
