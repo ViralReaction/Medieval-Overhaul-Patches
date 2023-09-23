@@ -89,7 +89,7 @@
 							<MeleePenetrationFactor>0.3</MeleePenetrationFactor>
 						</value>
 					</li>
-				
+
 					<!-- Mushroom -->
 					<li Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="DankPyon_AB_MushroomWoodLog"]/tools</xpath>
@@ -106,7 +106,7 @@
 							</tools>
 						</value>
 					</li>
-				
+
 					<li Class="PatchOperationAdd">
 						<xpath>Defs/ThingDef[defName="DankPyon_AB_MushroomWoodLog"]</xpath>
 						<value>
@@ -168,7 +168,7 @@
 							<MeleePenetrationFactor>0.3</MeleePenetrationFactor>
 						</value>
 					</li>
-				
+
 					<!-- Crystalline -->
 					<li Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="DankPyon_AB_CrystalWood"]/tools</xpath>
