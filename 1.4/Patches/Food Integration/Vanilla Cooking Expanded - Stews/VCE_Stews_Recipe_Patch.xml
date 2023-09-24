@@ -55,13 +55,6 @@
 						</researchPrerequisites>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
-					<match Class="PatchOperationRemove">
-						<xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
-					</match>
-				</li>
 
 			</operations>
 		</match>
