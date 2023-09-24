@@ -14,7 +14,7 @@
 						<key>lindwurm_giddyup</key>
 						<label>Lindwurm Mountable?</label>
 						<tooltip>Enable to allow Lindwurms to be mountable. Optional due to looking weird.</tooltip>
-						<defaultValue>false</defaultValue>
+						<defaultValue>true</defaultValue>
 					</li>
 				</value>
 			</Operation>
@@ -32,14 +32,14 @@
 					<modId>VR.MOPatches</modId>
 					<key>lindwurm_giddyup</key>
 					<defaultValue>true</defaultValue>
-					<caseTrue>
+					<caseFalse>
 						<Operation Class="PatchOperationAddModExtension">
 							<xpath>Defs/ThingDef[defName = "DankPyon_LindwurmForest" or defName="DankPyon_LindwurmCave"]</xpath>
 							<value>
 								<li Class="GiddyUp.NotMountable"/>
 							</value>
 						</Operation>
-					</caseTrue>
+					</caseFalse>
 				</li>
 
 			</operations>
