@@ -11,7 +11,7 @@
 				
 				
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals/TM_Bush_DarkBerries</xpath>
+					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildPlants/TM_Bush_DarkBerries</xpath>
 					<nomatch Class="PatchOperationAdd">
 						<xpath>Defs/BiomeDef [defName="DankPyon_AncientForest"]/wildPlants</xpath>
 						<value>
@@ -24,7 +24,7 @@
 				</li>
 				
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals/TM_Bush_DarkBerries</xpath>
+					<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildPlants/TM_Bush_DarkBerries</xpath>
 					<nomatch Class="PatchOperationAdd">
 						<xpath>Defs/BiomeDef [defName="DankPyon_DarkForest"]/wildPlants</xpath>
 						<value>
