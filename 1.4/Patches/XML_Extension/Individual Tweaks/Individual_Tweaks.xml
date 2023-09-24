@@ -20,19 +20,5 @@
 			</Operation>
 		</caseTrue>
 	</Operation>
-	
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>VR.MOPatches</modId>
-		<key>lindwurm_giddyup</key>
-		<defaultValue>true</defaultValue>
-		<caseTrue>
-			<Operation Class="PatchOperationAddModExtension">
-						<xpath>Defs/ThingDef[defName = "DankPyon_LindwurmForest" or defName="DankPyon_LindwurmCave"]</xpath>
-						<value>
-							<li Class="GiddyUp.NotMountable"/>
-						</value>
-			</Operation>
-		</caseTrue>
-	</Operation>
 
 </Patch>
