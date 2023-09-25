@@ -11,7 +11,7 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingCategories>
-			<li>MeatRaw</li>
+			<li>DankPyon_TrimmedMeat</li>
 		</thingCategories>
 		<statBases>
 			<Mass>0.01</Mass>
@@ -46,7 +46,7 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingCategories>
-			<li>MeatRaw</li>
+			<li>DankPyon_TrimmedMeat</li>
 		</thingCategories>
 		<statBases>
 			<Mass>0.01</Mass>
@@ -145,7 +145,7 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingCategories>
-			<li>MeatRaw</li>
+			<li>DankPyon_TrimmedMeat</li>
 		</thingCategories>
 		<statBases>
 			<Mass>0.01</Mass>

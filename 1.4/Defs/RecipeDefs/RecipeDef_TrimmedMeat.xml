@@ -31,15 +31,25 @@
 		</products>
 		<fixedIngredientFilter>
 			<categories>
-				<li>FoodRaw</li>
+				<li>MeatRaw</li>
 			</categories>
+			<disallowedCategories>
+				<li>DankPyon_DriedFood</li>
+				<li>DankPyon_TrimmedMeat</li>
+			</disallowedCategories>
 			<specialFiltersToDisallow>
 				<li>AllowPlantFood</li>
 			</specialFiltersToDisallow>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>InsectJelly</li>
+				<li>Milk</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<categories>
-				<li>FoodRaw</li>
+				<li>MeatRaw</li>
 			</categories>
 			<disallowedCategories>
 				<li>EggsFertilized</li>
@@ -86,6 +96,16 @@
 			<categories>
 				<li>MeatRaw</li>
 			</categories>
+			<disallowedCategories>
+				<li>DankPyon_DriedFood</li>
+				<li>DankPyon_TrimmedMeat</li>
+			</disallowedCategories>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>InsectJelly</li>
+				<li>Milk</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<categories>
@@ -96,9 +116,7 @@
 			</disallowedCategories>
 			<disallowedThingDefs>
 				<li>Meat_Human</li>
-				<li>DankPyon_FakeMeat</li>
 				<li>Meat_Megaspider</li>
-				<li>DankPyon_FakeMeat_Insect</li>
 				<li>InsectJelly</li>
 				<li>Milk</li>
 			</disallowedThingDefs>

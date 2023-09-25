@@ -21,6 +21,13 @@
 		<parent>MeatRaw</parent>
 		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
 	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>DankPyon_TrimmedMeat</defName>
+		<label>trimmed meat</label>
+		<parent>MeatRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+	</ThingCategoryDef>
 
 	<ThingCategoryDef>
 		<defName>DankPyon_Cereal</defName>
