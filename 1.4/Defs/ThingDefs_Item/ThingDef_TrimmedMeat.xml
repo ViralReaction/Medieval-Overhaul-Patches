@@ -32,6 +32,10 @@
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			 </li>
 		</comps>
 		<rotatable>false</rotatable>
 	</ThingDef>
@@ -67,6 +71,10 @@
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Ingredients"/>
+			 <li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			 </li>
 		</comps>
 		<rotatable>false</rotatable>
 	</ThingDef>
@@ -166,6 +174,10 @@
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
 		</comps>
 		<rotatable>false</rotatable>
 	</ThingDef>
