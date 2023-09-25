@@ -25,10 +25,40 @@
 		</ingestible>
 	</ThingDef>
 	
+	<!-- ==================== Hay Pile ==================== -->
+  	<ThingDef ParentName="DankPyon_Bale1x2Base">
+		<defName>DankPyon_DriedHayBale1x2c</defName>
+		<label>dried hay bale</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Storage/Bale1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(137,132,0)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<DankPyon_DriedHay>20</DankPyon_DriedHay>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="DankPyon_Bale2x2Base">
+		<defName>DankPyon_DriedHayBale2x2c</defName>
+		<label>dried hay bale(2x2)</label>
+		<graphicData>
+			<texPath>Storage/Bale2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(137,132,0)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<DankPyon_DriedHay>40</DankPyon_DriedHay>
+		</costList>
+	</ThingDef>
+	
 	<ThingDef ParentName="DankPyon_StorageBase">
 		<defName>DankPyon_HayPile</defName>
-		<label>hay pile</label>
-		<description>A pile of dried feed grasses.</description>
+		<label>dried hay pile</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
 		<thingClass>Building_Storage</thingClass>
 		<graphicData>
 			<texPath>Storage/StrawPile</texPath>
@@ -47,14 +77,16 @@
 			<MaxHitPoints>100</MaxHitPoints> 
 			<Mass>8</Mass>
 			<WorkToBuild>500</WorkToBuild>
-			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
 		</statBases>
-
 		<building>
 			<maxItemsInCell>4</maxItemsInCell>
 			<fixedStorageSettings Inherit="false">
 				<filter>
 					<thingDefs>
+						<li>DankPyon_Straw</li>
+						<li>DankPyon_RawFlax</li>
+						<li>Hay</li>
 						<li>DankPyon_DriedHay</li>
 					</thingDefs>
 				</filter>
@@ -63,11 +95,15 @@
 				<priority>Important</priority>
 				<filter>
 					<thingDefs>
+						<li>DankPyon_Straw</li>
+						<li>DankPyon_RawFlax</li>
+						<li>Hay</li>
 						<li>DankPyon_DriedHay</li>
 					</thingDefs>
 				</filter>
 			</defaultStorageSettings>
 		</building>
+		<designatorDropdown>DankPyon_Pile1x2c</designatorDropdown>
 	</ThingDef>
 
 </Defs>
