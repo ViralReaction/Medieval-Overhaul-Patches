@@ -5,11 +5,10 @@
 		<mods>
 			<li>Apothecary (Continued)</li>
 		</mods>
-		
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildPlants/Plant_AYAloeVera</xpath>
 					<nomatch Class="PatchOperationAdd">
@@ -34,7 +33,7 @@
 						</value>
 					</nomatch>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildPlants/Plant_AYAloeVera</xpath>
 					<nomatch Class="PatchOperationAdd">
@@ -59,10 +58,9 @@
 						</value>
 					</nomatch>
 				</li>
-				
+
 			</operations>
 		</match>
-		
 	</Operation>
-	
+
 </Patch>

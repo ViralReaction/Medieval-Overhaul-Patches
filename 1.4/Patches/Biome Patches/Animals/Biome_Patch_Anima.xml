@@ -5,10 +5,10 @@
 		<mods>
 			<li>Anima Animals - Community Pack (temp)[HH]</li>
 		</mods>
-			
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals</xpath>
 					<value>
@@ -20,7 +20,7 @@
 						<AnimaFox>0.035</AnimaFox>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals</xpath>
 					<value>
@@ -32,11 +32,9 @@
 						<AnimaFox>0.035</AnimaFox>
 					</value>
 				</li>
-				
-										
+					
 			</operations>
 		</match>
-			
 	</Operation>
-  
+
 </Patch>

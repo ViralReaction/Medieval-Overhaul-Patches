@@ -8,7 +8,7 @@
 
 		<match Class="PatchOperationSequence">
 			<operations>
-					
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals</xpath>
 					<value>
@@ -17,7 +17,7 @@
 						<ESCP_Spriggan_Matron>0.015</ESCP_Spriggan_Matron>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals</xpath>
 					<value>
@@ -29,7 +29,6 @@
 
 			</operations>
 		</match>
-			
 	</Operation>
-	
+
 </Patch>

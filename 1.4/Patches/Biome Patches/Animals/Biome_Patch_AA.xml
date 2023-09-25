@@ -5,10 +5,10 @@
 		<mods>
 			<li>Alpha Animals</li>
 		</mods>
-			
+
 		<match Class="PatchOperationSequence">
 			<operations>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals/AA_AcanthamoebaGiganteaSmall</xpath>
 					<nomatch Class="PatchOperationAdd">
@@ -78,7 +78,7 @@
 						</value>
 					</nomatch>
 				</li>
-				
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals/AA_AcanthamoebaGiganteaSmall</xpath>
 					<nomatch Class="PatchOperationAdd">
@@ -148,10 +148,9 @@
 						</value>
 					</nomatch>
 				</li>
-										
+
 			</operations>
 		</match>
-			
 	</Operation>
-  
+
 </Patch>
