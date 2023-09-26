@@ -2,53 +2,105 @@
 <Patch>
 
 	<!-- Piles -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Bale1x2c"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+
+				<!-- ==================== Hay Pile ==================== -->
+				<ThingDef ParentName="DankPyon_Bale1x2Base">
+					<defName>DankPyon_DriedHayBale1x2c</defName>
+					<label>dried hay bale</label>
+					<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+					<graphicData>
+						<texPath>Storage/Bale1x2</texPath>
+						<graphicClass>Graphic_Multi</graphicClass>
+						<drawSize>(4,3)</drawSize>
+						<color>(137,132,0)</color>
+					</graphicData>
+					<costList Inherit="false">
+						<DankPyon_DriedHay>20</DankPyon_DriedHay>
+					</costList>
+				</ThingDef>
+
+				<ThingDef ParentName="DankPyon_Bale2x2Base">
+					<defName>DankPyon_DriedHayBale2x2c</defName>
+					<label>dried hay bale(2x2)</label>
+					<graphicData>
+						<texPath>Storage/Bale2x2</texPath>
+						<graphicClass>Graphic_Multi</graphicClass>
+						<drawSize>(4,4)</drawSize>
+						<color>(137,132,0)</color>
+					</graphicData>
+					<costList Inherit="false">
+						<DankPyon_DriedHay>40</DankPyon_DriedHay>
+					</costList>
+				</ThingDef>
+
+			</value>
+		</match>
+	</Operation>
+
 	<!-- Hay Pile -->
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_Bale1x2c"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Bale1x2c"]/building/fixedStorageSettings/filter/thingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedHay</li>
 			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_Bale1x2c"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Bale1x2c"]/building/defaultStorageSettings/filter/thingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedHay</li>
 			</value>
+		</match>
 	</Operation>
 
 	<!-- Hay Pile -->
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_HayPile1x2c"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_HayPile1x2c"]/building/fixedStorageSettings/filter/thingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedHay</li>
 			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_HayPile1x2c"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_HayPile1x2c"]/building/defaultStorageSettings/filter/thingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedHay</li>
 			</value>
+		</match>
 	</Operation>
 	
 	<!-- Barrel of Wood -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_BarrelWoodLog"]/building/fixedStorageSettings/filter/thingDefs</xpath>
-			<value>
-				<categories>
-					<li>DankPyon_RawWood</li>
-				</categories>
-			</value>
+		<value>
+			<categories>
+				<li>DankPyon_RawWood</li>
+			</categories>
+		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_BarrelWoodLog"]/building/defaultStorageSettings/filter/thingDefs</xpath>
-			<value>
-				<categories>
-					<li>DankPyon_RawWood</li>
-				</categories>
-			</value>
+		<value>
+			<categories>
+				<li>DankPyon_RawWood</li>
+			</categories>
+		</value>
 	</Operation>
 	
 	<!-- Large Grain -->
@@ -57,81 +109,87 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="DankPyon_BarrelWoodLog"]/building/fixedStorageSettings/filter</xpath>
-			<value>
-				<categories>
-					<li>DankPyon_Cereal</li>
-				</categories>
-			</value>
+		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Grain"]/building/fixedStorageSettings/filter</xpath>
+		<value>
+			<categories>
+				<li>DankPyon_Cereal</li>
+			</categories>
+		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Grain"]/building/defaultStorageSettings/filter</xpath>
-			<value>
-				<categories>
-					<li>DankPyon_Cereal</li>
-				</categories>
-			</value>
+		<value>
+			<categories>
+				<li>DankPyon_Cereal</li>
+			</categories>
+		</value>
 	</Operation>
 	
 	<!-- Mead Shelf -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Mead"]/building/fixedStorageSettings/filter/thingDefs</xpath>
-			<value>
-				<li>DankPyon_Honey</li>
-			</value>
+		<value>
+			<li>DankPyon_Honey</li>
+		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Mead"]/building/defaultStorageSettings/filter/thingDefs</xpath>
-			<value>
-				<li>DankPyon_Honey</li>
-			</value>
+		<value>
+			<li>DankPyon_Honey</li>
+		</value>
 	</Operation>
 	
 	<!-- Cheese Cupboard -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_RusticCupboardCheese"]/building/fixedStorageSettings/filter/categories</xpath>
-			<value>
-				<li>DankPyon_Milk</li>
-			</value>
+		<value>
+			<li>DankPyon_Milk</li>
+		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_RusticCupboardCheese"]/building/defaultStorageSettings/filter/categories</xpath>
-			<value>
-				<li>DankPyon_Milk</li>
-			</value>
+		<value>
+			<li>DankPyon_Milk</li>
+		</value>
 	</Operation>
 	
 	<!-- Wine Cupboard -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_RusticCupboardWine"]/building/fixedStorageSettings/filter/thingDefs</xpath>
-			<value>
-				<li>DankPyon_Wine_Mulberry</li>
-			</value>
+		<value>
+			<li>DankPyon_Wine_Mulberry</li>
+		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="DankPyon_RusticCupboardWine"]/building/defaultStorageSettings/filter/thingDefs</xpath>
-			<value>
-				<li>DankPyon_Wine_Mulberry</li>
-			</value>
+		<value>
+			<li>DankPyon_Wine_Mulberry</li>
+		</value>
 	</Operation>
 	
 	<!-- Dairy Stall -->
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_TableMarket_Dairy"]/building/fixedStorageSettings/filter/categories</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_TableMarket_Dairy"]/building/fixedStorageSettings/filter/categories</xpath>
 			<value>
 				<li>DankPyon_Milk</li>
 			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_TableMarket_Dairy"]/building/defaultStorageSettings/filter/categories</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_TableMarket_Dairy"]/building/defaultStorageSettings/filter/categories</xpath>
 			<value>
 				<li>DankPyon_Milk</li>
 			</value>
+		</match>
 	</Operation>
 	
 </Patch>
