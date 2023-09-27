@@ -101,7 +101,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationFindMod">
+	<!--Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Biotech</li>
 		</mods>
@@ -122,7 +122,7 @@
 				</li>
 			</operations>
 		</match>
-	</Operation>
+	</Operation-->
 
 	<!-- Pumpkin Fritters -->
 	<Operation Class="PatchOperationConditional">
