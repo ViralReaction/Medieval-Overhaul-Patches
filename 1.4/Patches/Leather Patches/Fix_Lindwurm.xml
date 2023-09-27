@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/PawnKindDef[defName="DankPyon_LindwurmForest"]/lifeStages/li[3]/butcherBodyPart/bodyPartGroup[.="HeadAttackTool"]</xpath>
+		<nomatch Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DankPyon_LindwurmForest"]/lifeStages/li[3]/butcherBodyPart/bodyPartGroup</xpath>
+			<value>
+				<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/PawnKindDef[defName="DankPyon_LindwurmCave"]/lifeStages/li[3]/butcherBodyPart/bodyPartGroup[.="HeadAttackTool"]</xpath>
+		<nomatch Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DankPyon_LindwurmCave"]/lifeStages/li[3]/butcherBodyPart/bodyPartGroup</xpath>
+			<value>
+				<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>
