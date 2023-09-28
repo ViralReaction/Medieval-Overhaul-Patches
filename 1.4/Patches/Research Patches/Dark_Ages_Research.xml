@@ -41,40 +41,5 @@
 			</operations>
 		</match>
 	</Operation>
-	
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Dark Ages : Medieval Tools</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="DA_Tools"]/tab</xpath>
-					<value>
-						<tab>
-							<li>DankPyon_MedievalResearchTab</li>
-						</tab>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="DA_Tools"]/researchViewX</xpath>
-					<value>
-						<researchViewX>8.00</researchViewX>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="DA_Tools"]/researchViewY</xpath>
-					<value>
-						<researchViewY>2.95</researchViewY>
-					</value>
-				</li>
-
-
-			</operations>
-		</match>
-	</Operation>
 
 </Patch>
