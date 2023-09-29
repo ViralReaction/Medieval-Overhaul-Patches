@@ -3,7 +3,7 @@
 
 	<!-- Add Fueled Stove Recipes -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/RecipeDef[contains(recipeUsers,'FueledStove')]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[not(contains(recipeUsers,'DankPyon_RusticCookingTable')) and (contains(recipeUsers,'FueledStove'))]/recipeUsers</xpath>
 		<value>
 			<li>DankPyon_RusticCookingTable</li>
 		</value>
