@@ -16,21 +16,44 @@
 						</tab>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="DA_Catacombs"]/researchViewX</xpath>
 					<value>
-						<researchViewX>3.00</researchViewX>
+						<researchViewX>5.00</researchViewX>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="DA_Catacombs"]/researchViewY</xpath>
 					<value>
-						<researchViewY>4.15</researchViewY>
+						<researchViewY>7.0</researchViewY>
 					</value>
 				</li>
-				
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DA_BloodflameCatacomb"]/tab</xpath>
+					<value>
+						<tab>
+							<li>DankPyon_MedievalResearchTab</li>
+						</tab>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DA_BloodflameCatacomb"]/researchViewX</xpath>
+					<value>
+						<researchViewX>6.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DA_BloodflameCatacomb"]/researchViewY</xpath>
+					<value>
+						<researchViewY>7.0</researchViewY>
+					</value>
+				</li>
+
 				<li Class="PatchoperationConditional">
 					<xpath>Defs/ResearchProjectDef/tab[.="DarkAges"]</xpath>
 				<nomatch Class="PatchOperationRemove">
