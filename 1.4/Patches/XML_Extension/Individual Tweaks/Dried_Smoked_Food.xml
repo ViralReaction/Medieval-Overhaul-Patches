@@ -108,7 +108,7 @@
 					<li>
 						<value>option2</value>
 						<apply>
-							<Operation Class="PatchOperationAdd">
+							<Operation Class="PatchOperationReplace">
 								<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
 								<value>
 									<thingDefs>
@@ -116,7 +116,7 @@
 									</thingDefs>
 								</value>
 							</Operation>
-							<Operation Class="PatchOperationAdd">
+							<Operation Class="PatchOperationReplace">
 								<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/categories</xpath>
 								<value>
 									<thingDefs>
@@ -206,7 +206,7 @@
 							<li>
 								<value>option3</value>
 								<apply>
-									<Operation Class="PatchOperationAdd">
+									<Operation Class="PatchOperationReplace">
 										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_DriedMeatProcess"]/ingredientFilter/categories</xpath>
 										<value>
 											<thingDefs>
@@ -214,7 +214,7 @@
 											</thingDefs>
 										</value>
 									</Operation>
-									<Operation Class="PatchOperationAdd">
+									<Operation Class="PatchOperationReplace">
 										<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_SmokedMeatProcess"]/ingredientFilter/categories</xpath>
 										<value>
 											<thingDefs>
