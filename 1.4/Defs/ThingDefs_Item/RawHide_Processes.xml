@@ -38,6 +38,18 @@
 	</ProcessorFramework.ProcessDef>
 
 	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
+		<defName>DankPyon_RawHidesProcess_Generic</defName>
+		<thingDef>DankPyon_Leather_Rawhide</thingDef>
+		<ingredientFilter>
+			<categories>
+				<li>DankPyon_GenericHides</li>
+			</categories>
+		</ingredientFilter>
+		<efficiency>25.0</efficiency>
+		<capacityFactor>25.0</capacityFactor>
+	</ProcessorFramework.ProcessDef>
+
+	<ProcessorFramework.ProcessDef ParentName="DankPyon_BaseHidesProcess">
 		<defName>DankPyon_RawHidesProcess_Large</defName>
 		<thingDef>DankPyon_Leather_Rawhide</thingDef>
 		<ingredientFilter>
