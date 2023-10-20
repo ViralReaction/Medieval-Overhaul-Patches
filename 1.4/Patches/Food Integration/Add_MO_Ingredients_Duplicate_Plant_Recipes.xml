@@ -2,11 +2,14 @@
 <Patch>
 
 	<!-- Add Fueled Stove Recipes -->
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/RecipeDef[not(contains(recipeUsers,'DankPyon_RusticCookingTable')) and (contains(recipeUsers,'FueledStove'))]/recipeUsers</xpath>
-		<value>
-			<li>DankPyon_RusticCookingTable</li>
-		</value>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[not(contains(recipeUsers,'DankPyon_RusticCookingTable')) and (contains(recipeUsers,'FueledStove'))]/recipeUsers</xpath>
+			<value>
+				<li>DankPyon_RusticCookingTable</li>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- Corn -->
