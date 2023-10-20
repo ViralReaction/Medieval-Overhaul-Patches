@@ -46,6 +46,15 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_Hide_HideGeneric"]</xpath>
+		<value>
+			<thingCategories Inherit="False">
+				<li>DankPyon_GenericHides</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[@Name="DankPyon_HideBaseLarge"]</xpath>
 		<value>
 			<thingCategories Inherit="False">
@@ -91,6 +100,7 @@
 			<li>DankPyon_RawHidesProcess_Tiny</li>
 			<li>DankPyon_RawHidesProcess_Small</li>
 			<li>DankPyon_RawHidesProcess_Medium</li>
+			<li>DankPyon_RawHidesProcess_Generic</li>
 			<li>DankPyon_RawHidesProcess_Large</li>
 			<li>DankPyon_RawHidesProcess_Huge</li>
 		</value>
