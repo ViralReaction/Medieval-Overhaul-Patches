@@ -180,45 +180,51 @@
 					<mods>
 						<li>Alpha Bees</li>
 					</mods>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter/thingDefs</xpath>
-						<value>
-							<li>DankPyon_Honey</li>
-						</value>
-					</nomatch>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll" or defName="VFEV_Make_SweetrollBulk" or defName="VFEV_Make_SweetrollBulkier"]/fixedIngredientFilter</xpath>
-						<value>
-							<fixedIngredientFilter>
-								<categories>
-									<li>EggsUnfertilized</li>
-									<li>RB_Honeys</li>
-								</categories>
-							</fixedIngredientFilter>
-						</value>
+					<match Class="PatchOperationSequence">
+						<operations>
+						
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll" or defName="VFEV_Make_SweetrollBulk" or defName="VFEV_Make_SweetrollBulkier"]/ingredients/li[2]/filter/thingDefs</xpath>
+								<value>
+									<categories>
+										<li>RB_Honeys</li>
+									</categories>
+								</value>
+							</li>
+						
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll" or defName="VFEV_Make_SweetrollBulk" or defName="VFEV_Make_SweetrollBulkier"]/fixedIngredientFilter</xpath>
+								<value>
+									<fixedIngredientFilter>
+										<categories>
+											<li>EggsUnfertilized</li>
+											<li>RB_Honeys</li>
+										</categories>
+									</fixedIngredientFilter>
+								</value>
+							</li>
+						
+						</operations>
 					</match>
-				</li>
-
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Alpha Bees</li>
-					</mods>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll" or defName="VFEV_Make_SweetrollBulk" or defName="VFEV_Make_SweetrollBulkier"]/ingredients/li[2]/filter/thingDefs</xpath>
-						<value>
-							<categories>
-								<li>RB_Honeys</li>
-							</categories>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationReplace">
-						<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath>
-						<value>
-							<thingDefs>
-								<li>VFEV_Honey</li>
-								<li>DankPyon_Honey</li>
-							</thingDefs>
-						</value>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+						
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/fixedIngredientFilter/thingDefs</xpath>
+								<value>
+									<li>DankPyon_Honey</li>
+								</value>
+							</li>
+						
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li/filter/thingDefs/li[.="VFEV_Honey"]</xpath>
+								<!--xpath>Defs/RecipeDef[defName="VFEV_Make_Sweetroll"]/ingredients/li[2]/filter/thingDefs</xpath-->
+								<value>
+									<li>VFEV_Honey</li>
+									<li>DankPyon_Honey</li>
+								</value>
+							</li>
+						</operations>
 					</nomatch>
 				</li>
 
