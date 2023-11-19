@@ -5,17 +5,22 @@
 		<mods>
 			<li>ESCP - Spriggan</li>
 		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Medieval Overhaul: Leather Patches - Fork</li>
+			</mods>
+			<nomatch Class="PatchOperationSequence">
+				<operations>
 					
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="ESCP_SprigganThingBase"]/race/leatherDef</xpath>
-					<value>
-						<leatherDef>DankPyon_RawWood</leatherDef>
-					</value>
-				</li>
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[@Name="ESCP_SprigganThingBase"]/race/leatherDef</xpath>
+						<value>
+							<leatherDef>DankPyon_RawWood</leatherDef>
+						</value>
+					</li>
 					
-			</operations>
+				</operations>
+			</nomatch>
 		</match>
 	</Operation>
 	
