@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Milkshakes - Digital Deluxe Edition</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Milk Shakes -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[
+					defName="Sierra_MakeAmbrosiaMilkshakeSmall" or
+					defName="Sierra_MakeAmbrosiaMilkshakeMedium" or
+					defName="Sierra_MakeBerryMilkshakeSmall" or
+					defName="Sierra_MakeBerryMilkshakeMedium" or
+					defName="Sierra_MakeBlueberryMilkshakeSmall" or
+					defName="Sierra_MakeBlueberryMilkshakeMedium" or
+					defName="Sierra_MakeChocolateMilkshakeSmall" or
+					defName="Sierra_MakeChocolateMilkshakeMedium" or
+					defName="Sierra_MakeMilkshakeSmall" or
+					defName="Sierra_MakeMilkshakeMedium" or
+					defName="Sierra_MakeMixedBerryMilkshakeSmall" or
+					defName="Sierra_MakeMixedBerryMilkshakeMedium" or
+					defName="Sierra_MakeStrawberryMilkshakeSmall" or
+					defName="Sierra_MakeStrawberryMilkshakeMedium"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef[defName="Sierra_MakeAmbrosiaMilkshakeSmall" or defName="Sierra_MakeAmbrosiaMilkshakeMedium"]/ingredients/li[1]/filter/thingDefs</xpath>
+						<value>
+							<categories>
+								<li>DankPyon_Milk</li>
+							</categories>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[
+					defName="Sierra_MakeAmbrosiaMilkshakeSmall" or
+					defName="Sierra_MakeAmbrosiaMilkshakeMedium" or
+					defName="Sierra_MakeBerryMilkshakeSmall" or
+					defName="Sierra_MakeBerryMilkshakeMedium" or
+					defName="Sierra_MakeBlueberryMilkshakeSmall" or
+					defName="Sierra_MakeBlueberryMilkshakeMedium" or
+					defName="Sierra_MakeChocolateMilkshakeSmall" or
+					defName="Sierra_MakeChocolateMilkshakeMedium" or
+					defName="Sierra_MakeMilkshakeSmall" or
+					defName="Sierra_MakeMilkshakeMedium" or
+					defName="Sierra_MakeMixedBerryMilkshakeSmall" or
+					defName="Sierra_MakeMixedBerryMilkshakeMedium" or
+					defName="Sierra_MakeStrawberryMilkshakeSmall" or
+					defName="Sierra_MakeStrawberryMilkshakeMedium"
+					]</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<categories>
+								<li>DankPyon_Milk</li>
+							</categories>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
