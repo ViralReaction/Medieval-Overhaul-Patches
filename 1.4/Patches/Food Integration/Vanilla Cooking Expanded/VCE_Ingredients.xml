@@ -111,19 +111,79 @@
 					<match Class="PatchOperationReplace">
 						<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Spices"]</xpath>
 						<value>
-							<li>DankPyon_Salt</li>
+							<li>DankPyon_Spices</li>
 							<li>VCE_RawSpices</li>
 						</value>
 					</match>
 				</li>
 
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Spices"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Spices"]</xpath>
 					<match Class="PatchOperationReplace">
 						<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Spices"]</xpath>
 						<value>
-							<li>DankPyon_Salt</li>
+							<li>DankPyon_Spices</li>
 							<li>VCE_RawSpices</li>
+						</value>
+					</match>
+				</li>
+				
+				<!-- Sugar -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]/thingCategories</xpath>
+					<value>
+						<thingCategories>
+							<li>VCE_Condiments</li>
+						</thingCategories>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
+					<value>
+						<ingredient>
+							<mergeCompatibilityTags>
+								<li>Condiments</li>
+							</mergeCompatibilityTags>
+						</ingredient>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
+					<value>
+						<li Class="AnimalBehaviours.AnimalStatExtension">
+							<statToAdd>
+								<li>VCE_CondimentEffects</li>
+							</statToAdd>
+							<statValues>
+								<li>VCE_CondimentEffectsTitle</li>
+							</statValues>
+							<statDescriptions>
+								<li>VCE_VCE_CondimentEffectsSugar</li>
+							</statDescriptions>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Sugar"]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[.="DankPyon_Sugar"]</xpath>
+						<value>
+							<li>DankPyon_Sugar</li>
+							<li>VCE_RawSugar</li>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Sugar"]</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[.="DankPyon_Sugar"]</xpath>
+						<value>
+							<li>DankPyon_Sugar</li>
+							<li>VCE_RawSugar</li>
 						</value>
 					</match>
 				</li>
