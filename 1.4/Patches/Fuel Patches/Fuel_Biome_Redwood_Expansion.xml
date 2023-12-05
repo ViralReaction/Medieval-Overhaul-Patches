@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biome Expansion: Redwood forest</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs[li="DankPyon_Coal"]</xpath>
+						<value>
+							<li>SequoiaWoodLog</li>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="SequoiaWoodLog"]/comps</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="SequoiaWoodLog"]/comps</xpath>
+						<value>
+							<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+								<rate>2</rate>
+							</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="SequoiaWoodLog"]</xpath>
+						<value>
+							<comps>
+								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+									<rate>2</rate>
+								</li>
+							</comps>
+						</value>
+					</nomatch>
+				</li>
+
+				<!-- Red Wood Replace -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+
+						<!-- SequoiaWoodLog -->
+						<ThingDef ParentName="ResourceVerbBase" Name="DankPyon_SequoiaWoodLog">
+							<defName>DankPyon_SequoiaWoodLog</defName>
+							<label>sequoia timber</label>
+							<description>Wood from sequoia trees. Useful for building structures and weapons. It's more resistant to fire than normal wood, and slightly harder. Useful in construction projects and also slightly more valuable than normal wood, due it's age.</description>
+							<graphicData>
+								<texPath>Resources/WoodPlank</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<color>(95,40,19)</color>
+							</graphicData>
+							<equippedAngleOffset>-20</equippedAngleOffset>
+							<soundInteract>Wood_Drop</soundInteract>
+							<soundDrop>Wood_Drop</soundDrop>
+							<statBases>
+								<MarketValue>2</MarketValue>
+								<MaxHitPoints>200</MaxHitPoints>
+								<Mass>0.2</Mass>
+								<Flammability>0.60</Flammability>
+								<DeteriorationRate>0.2</DeteriorationRate>
+								<SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+								<BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+								<StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
+								<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+								<StuffPower_Armor_Heat>0.40</StuffPower_Armor_Heat>
+								<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+								<StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+							</statBases>
+							<burnableByRecipe>true</burnableByRecipe>
+							<healthAffectsPrice>false</healthAffectsPrice>
+							<minRewardCount>10</minRewardCount>
+							<stuffProps>
+								<stuffAdjective>sequoia timber</stuffAdjective>
+								<categories>
+									<li>Woody</li>
+								</categories>
+								<commonality>0.50</commonality>
+								<color>(95,40,19)</color>
+								<constructEffect>ConstructWood</constructEffect>
+								<appearance>Planks</appearance>
+								<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+								<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+								<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+								<statFactors>
+									<MaxHitPoints>0.75</MaxHitPoints>
+									<Beauty>4</Beauty>
+									<Flammability>0.8</Flammability>
+									<WorkToMake>0.85</WorkToMake>
+									<WorkToBuild>0.85</WorkToBuild>
+									<DoorOpenSpeed>1.25</DoorOpenSpeed>
+								</statFactors>
+							</stuffProps>
+							<isTechHediff>true</isTechHediff>
+							<thingCategories>
+								<li>DankPyon_Wood</li>
+							</thingCategories>
+							<techHediffsTags>
+								<li>Poor</li>
+							</techHediffsTags>
+							<tools>
+								<li>
+									<label>log</label>
+									<capacities>
+										<li>Blunt</li>
+									</capacities>
+									<power>12</power>
+									<cooldownTime>2</cooldownTime>
+								</li>
+							</tools>
+							<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+							<comps>
+								<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+									<rate>2</rate>
+								</li>
+							</comps>
+						</ThingDef>
+	
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SequoiaWoodLog"]/stuffProps/categories</xpath>
+					<value>
+						 <categories>
+							<li>DankPyon_RawWood</li>
+						 </categories>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SequoiaWoodLog"]/thingCategories</xpath>
+					<value>
+						<thingCategories>
+							<li>DankPyon_RawWood</li>
+						</thingCategories>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
