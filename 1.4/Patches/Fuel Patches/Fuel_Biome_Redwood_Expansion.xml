@@ -53,16 +53,16 @@
 							<graphicData>
 								<texPath>Resources/WoodPlank</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
-								<color>(95,40,19)</color>
+								<color>(126,43,16)</color>
 							</graphicData>
 							<equippedAngleOffset>-20</equippedAngleOffset>
 							<soundInteract>Wood_Drop</soundInteract>
 							<soundDrop>Wood_Drop</soundDrop>
 							<statBases>
-								<MarketValue>2</MarketValue>
+								<MarketValue>2.7</MarketValue>
 								<MaxHitPoints>200</MaxHitPoints>
 								<Mass>0.2</Mass>
-								<Flammability>0.60</Flammability>
+								<Flammability>0.75</Flammability>
 								<DeteriorationRate>0.2</DeteriorationRate>
 								<SharpDamageMultiplier>0.6</SharpDamageMultiplier>
 								<BluntDamageMultiplier>0.8</BluntDamageMultiplier>
@@ -81,7 +81,7 @@
 									<li>Woody</li>
 								</categories>
 								<commonality>0.50</commonality>
-								<color>(95,40,19)</color>
+								<color>(126,43,16)</color>
 								<constructEffect>ConstructWood</constructEffect>
 								<appearance>Planks</appearance>
 								<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
@@ -89,7 +89,7 @@
 								<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
 								<statFactors>
 									<MaxHitPoints>0.75</MaxHitPoints>
-									<Beauty>4</Beauty>
+									<Beauty>1</Beauty>
 									<Flammability>0.8</Flammability>
 									<WorkToMake>0.85</WorkToMake>
 									<WorkToBuild>0.85</WorkToBuild>
@@ -127,9 +127,9 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="SequoiaWoodLog"]/stuffProps/categories</xpath>
 					<value>
-						 <categories>
+						<categories>
 							<li>DankPyon_RawWood</li>
-						 </categories>
+						</categories>
 					</value>
 				</li>
 
@@ -140,6 +140,95 @@
 							<li>DankPyon_RawWood</li>
 						</thingCategories>
 					</value>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+				
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/tools</xpath>
+								<value>
+									<tools>
+										<li Class="CombatExtended.ToolCE">
+											<capacities>
+												<li>Blunt</li>
+											</capacities>
+											<power>2</power>
+											<cooldownTime>0.99</cooldownTime>
+											<armorPenetrationBlunt>0.288</armorPenetrationBlunt>
+										</li>
+									</tools>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]</xpath>
+								<value>
+									<equippedStatOffsets>
+										<MeleeCritChance>0.2</MeleeCritChance>
+										<MeleeParryChance>1</MeleeParryChance>
+										<MeleeDodgeChance>0.13</MeleeDodgeChance>
+									</equippedStatOffsets>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/statBases</xpath>
+								<value>
+									<Bulk>0.07</Bulk>
+									<MeleeCounterParryBonus>1.33</MeleeCounterParryBonus>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/statBases/StuffPower_Armor_Sharp</xpath>
+								<value>
+									<StuffPower_Armor_Sharp>0.15</StuffPower_Armor_Sharp>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/statBases/StuffPower_Armor_Blunt</xpath>
+								<value>
+									<StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/statBases/StuffPower_Armor_Heat</xpath>
+								<value>
+									<StuffPower_Armor_Heat>0.025</StuffPower_Armor_Heat>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/statBases/SharpDamageMultiplier</xpath>
+								<value>
+									<SharpDamageMultiplier>0.7</SharpDamageMultiplier>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/statBases/BluntDamageMultiplier</xpath>
+								<value>
+									<BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="DankPyon_SequoiaWoodLog"]/stuffProps/statFactors</xpath>
+								<value>
+									<Mass>0.3</Mass>
+									<MeleePenetrationFactor>0.3</MeleePenetrationFactor>
+								</value>
+							</li>
+
+						</operations>
+					</match>
 				</li>
 
 			</operations>
