@@ -51,7 +51,7 @@
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>jewelry_decay</key>
 				<label>Remove jewelry decay?</label>
-				<tooltip>Removes deterioration for jewelry</tooltip>
+				<tooltip>Removes deterioration for jewelry.</tooltip>
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -65,6 +65,12 @@
 				<label>Dried Meat Nutrition Change?</label>
 				<tooltip>Turn regular dried meat into a raw ingredient with lowered nutrition and cost to make. Best for perserving meats through winter. Due to hardcoded issues, human and insect meals will not be changed.</tooltip>
 				<defaultValue>true</defaultValue>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>boomalope_tar</key>
+				<label>Boomalopes Milk Tar?</label>
+				<tooltip>Replaces Chemfuel for Tar when milking Boomalopes.</tooltip>
+				<defaultValue>false</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Gap">
 				<spacing>12</spacing>
