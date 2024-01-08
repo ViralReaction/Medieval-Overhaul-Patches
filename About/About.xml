@@ -32,6 +32,7 @@
 		<li>devdesigner.blood</li>
 		<li>vanillaexpanded.vcooke</li>
 		<li>mlie.rc2.core</li>
+		<li>dankpyon.medieval.overhaul</li>
 	</loadAfter>
 	<incompatibleWith>
 		<li>jsin.medievaloverhaulmisc</li>

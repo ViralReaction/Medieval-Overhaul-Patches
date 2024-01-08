@@ -185,6 +185,15 @@
 						</thingCategories>
 					</value>
 				</li>
+				
+				<li Class="PatchOPerationAdd">
+					<xpath>Defs/ThingDef[defName="GU_RedWood"]</xpath>
+					<value>
+						<butcherProducts>
+							<DankPyon_GU_RedWood>2</DankPyon_GU_RedWood>
+						</butcherProducts>
+					</value>
+				</li>
 
 				<!-- Mushroom Stalks Replace -->
 				<li Class="PatchOperationAdd">
@@ -286,6 +295,15 @@
 						</thingCategories>
 					</value>
 				</li>
+				
+				<li Class="PatchOPerationAdd">
+					<xpath>Defs/ThingDef[defName="AB_MushroomWoodLog"]</xpath>
+					<value>
+						<butcherProducts>
+							<DankPyon_AB_MushroomWoodLog>2</DankPyon_AB_MushroomWoodLog>
+						</butcherProducts>
+					</value>
+				</li>
 
 				<!-- Crystal Wood Replace -->
 				<li Class="PatchOperationAdd">
@@ -385,6 +403,169 @@
 						<thingCategories>
 							<li>DankPyon_RawWood</li>
 						</thingCategories>
+					</value>
+				</li>
+
+				<li Class="PatchOPerationAdd">
+					<xpath>Defs/ThingDef[defName="AB_CrystalWood"]</xpath>
+					<value>
+						<butcherProducts>
+							<DankPyon_AB_CrystalWood>2</DankPyon_AB_CrystalWood>
+						</butcherProducts>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+					
+						<RecipeDef ParentName="DankPyon_MakeTimberBase">
+							<defName>DankPyon_Make_RedWoodBulk</defName>
+							<label>make redwood timber x40</label>
+							<description>Cuts raw wood into timber.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>GU_RedWood</li>
+										</thingDefs>
+									</filter>
+									<count>20</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>GU_RedWood</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<DankPyon_GU_RedWood>40</DankPyon_GU_RedWood>
+							</products>
+						</RecipeDef>
+
+						<RecipeDef ParentName="DankPyon_MakeTimberBase">
+							<defName>DankPyon_Make_RedWoodBulkExtra</defName>
+							<label>make redwood timber x200</label>
+							<description>Cuts raw wood into timber.</description>
+							<workAmount>3000</workAmount>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>GU_RedWood</li>
+										</thingDefs>
+									</filter>
+									<count>100</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>GU_RedWood</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<DankPyon_GU_RedWood>200</DankPyon_GU_RedWood>
+							</products>
+						</RecipeDef>
+
+						<RecipeDef ParentName="DankPyon_MakeTimberBase">
+							<defName>DankPyon_Make_MushroomWoodBulk</defName>
+							<label>make mushroom timber x40</label>
+							<description>Cuts raw wood into timber.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>AB_MushroomWoodLog</li>
+										</thingDefs>
+									</filter>
+									<count>20</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>AB_MushroomWoodLog</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<DankPyon_AB_MushroomWoodLog>40</DankPyon_AB_MushroomWoodLog>
+							</products>
+						</RecipeDef>
+
+						<RecipeDef ParentName="DankPyon_MakeTimberBase">
+							<defName>DankPyon_Make_MushroomWoodBulkExtra</defName>
+							<label>make mushroom timber x200</label>
+							<description>Cuts raw wood into timber.</description>
+							<workAmount>3000</workAmount>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>AB_MushroomWoodLog</li>
+										</thingDefs>
+									</filter>
+									<count>100</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>AB_MushroomWoodLog</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<DankPyon_AB_MushroomWoodLog>200</DankPyon_AB_MushroomWoodLog>
+							</products>
+						</RecipeDef>
+					
+						<RecipeDef ParentName="DankPyon_MakeTimberBase">
+							<defName>DankPyon_Make_CrystalWoodBulk</defName>
+							<label>make crystal timber x40</label>
+							<description>Cuts raw wood into timber.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>AB_CrystalWood</li>
+										</thingDefs>
+									</filter>
+									<count>20</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>AB_CrystalWood</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<DankPyon_AB_CrystalWood>40</DankPyon_AB_CrystalWood>
+							</products>
+						</RecipeDef>
+
+						<RecipeDef ParentName="DankPyon_MakeTimberBase">
+							<defName>DankPyon_Make_CrystalWoodBulkExtra</defName>
+							<label>make crystal timber x200</label>
+							<description>Cuts raw wood into timber.</description>
+							<workAmount>3000</workAmount>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>AB_CrystalWood</li>
+										</thingDefs>
+									</filter>
+									<count>100</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>AB_CrystalWood</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<DankPyon_AB_CrystalWood>200</DankPyon_AB_CrystalWood>
+							</products>
+						</RecipeDef>
+					
 					</value>
 				</li>
 
