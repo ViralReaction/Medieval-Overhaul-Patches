@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>VR.MOPatches</modId>
+		<key>alchemical_drug</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationAddModExtension">
+				<xpath>Defs/ThingDef[defName="DankPyon_AlchemyBench"]</xpath>
+				<value>
+					<li Class="RecipeInheritance.ThingDefExtension">
+						<inheritRecipesFrom>
+							<li>DrugLab</li>
+						</inheritRecipesFrom>
+					</li>
+				</value>
+			</Operation>
+			<Operation Class="PatchOperationAdd">
+				<xpath>Defs/WorkGiverDef[defName="DoBillsProduceDrugs"]/fixedBillGiverDefs</xpath>
+				<value>
+					<li>DankPyon_AlchemyBench</li>
+				</value>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+</Patch>

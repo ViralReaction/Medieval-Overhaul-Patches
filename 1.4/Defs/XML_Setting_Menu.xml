@@ -72,6 +72,12 @@
 				<tooltip>Replaces Chemfuel for Tar when milking Boomalopes.</tooltip>
 				<defaultValue>false</defaultValue>
 			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>alchemical_drug</key>
+				<label>Alchemy Table Drugs?</label>
+				<tooltip>Allows the alchemy table to inherit drug recipes.</tooltip>
+				<defaultValue>false</defaultValue>
+			</li>
 			<li Class="XmlExtensions.Setting.Gap">
 				<spacing>12</spacing>
 			</li>
