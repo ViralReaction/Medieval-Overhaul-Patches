@@ -81,33 +81,6 @@
 			<li Class="XmlExtensions.Setting.Gap">
 				<spacing>12</spacing>
 			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Trimmed Meat Options:</text>
-				<anchor>Middle</anchor>
-			</li>
-			<li Class="XmlExtensions.Setting.RadioButtons">
-				<key>trimmed_meat</key>
-				<defaultValue>option2</defaultValue>
-				<spacing>-1</spacing>
-				<buttons>
-					<li>
-						<label>None:</label>
-						<value>option1</value>
-						<tooltip>This only prevents trimmed meat for normal meat.  Due to hardcoded issues, human and insect meals will not be changed.</tooltip>
-						<highlight>true</highlight>
-					</li>
-					<li>
-						<label>MO Trimmed Meat Recipe:</label>
-						<value>option2</value>
-						<tooltip>This enables a trimmed meat recipe. Best used with Ideology and venerated animals.</tooltip>
-						<highlight>true</highlight>
-					</li>
-					<!--All buttons listed here-->
-				</buttons>
-			</li>
-			<li Class="XmlExtensions.Setting.Gap">
-				<spacing>12</spacing>
-			</li>
 			<li Class="XmlExtensions.Setting.Gap">
 				<spacing>12</spacing>
 			</li>

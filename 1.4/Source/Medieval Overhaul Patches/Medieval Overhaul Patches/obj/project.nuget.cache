@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gOK4NoDIebX+mjvYm0vftCUB7JMERR5UnbyPoqbvYwJswdolLf1VsEoWdJ80v+As9qbFcaQOZ7ZJZkUYyGeogw==",
+  "dgSpecHash": "aivP+hL+pq1pSdnCUsv/Fqx60oM9yByGXoWbM2fgD4LMoiaByZebD5FE5tProFynbJakD2vlkQHrl2WEAaSbrg==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.4\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Enurta\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",
+    "C:\\Users\\Enurta\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3901\\krafs.rimworld.ref.1.4.3901.nupkg.sha512"
+  ],
   "logs": []
 }
