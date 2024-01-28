@@ -63,7 +63,7 @@
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>dried_smoked_food</key>
 				<label>Dried Meat Nutrition Change?</label>
-				<tooltip>Turn regular dried meat into a raw ingredient with lowered nutrition and cost to make. Best for perserving meats through winter. Due to hardcoded issues, human and insect meals will not be changed.</tooltip>
+				<tooltip>Turn regular dried meat into a raw ingredient with lowered nutrition and cost to make. Best for perserving meats through winter.</tooltip>
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
