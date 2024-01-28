@@ -7,7 +7,7 @@
 		<thingDef>DankPyon_DriedMeat_Human</thingDef>
 		<ingredientFilter>
 			<thingDefs>
-				<li>DankPyon_FakeMeat</li>
+				<li>Meat_Human</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>DankPyon_DriedMeat_Human</li>
@@ -44,7 +44,7 @@
 		<thingDef>DankPyon_DriedMeat_Insect</thingDef>
 		<ingredientFilter>
 			<thingDefs>
-				<li>DankPyon_FakeMeat_Insect</li>
+				<li>Meat_Megaspider</li>
 			</thingDefs>
 		</ingredientFilter>
 		<processDays>2.5</processDays><!-- in days, a day is 60,000 ticks -->
@@ -78,7 +78,7 @@
 		<thingDef>DankPyon_SmokedMeat_Human</thingDef>
 		<ingredientFilter>
 			<thingDefs>
-				<li>DankPyon_FakeMeat</li>
+				<li>Meat_Human</li>
 			</thingDefs>
 		</ingredientFilter>
 		<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->
@@ -112,7 +112,7 @@
 		<thingDef>DankPyon_SmokedMeat_Insect</thingDef>
 		<ingredientFilter>
 			<thingDefs>
-				<li>DankPyon_FakeMeat_Insect</li>
+				<li>Meat_Megaspider</li>
 			</thingDefs>
 		</ingredientFilter>
 		<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->

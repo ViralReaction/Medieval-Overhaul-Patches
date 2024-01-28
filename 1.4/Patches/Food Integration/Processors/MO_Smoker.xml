@@ -74,9 +74,7 @@
 				<disallowedThingDefs>
 					<li>DankPyon_DriedMeat</li>
 					<li>Meat_Human</li>
-					<li>DankPyon_FakeMeat</li>
 					<li>Meat_Megaspider</li>
-					<li>DankPyon_FakeMeat_Insect</li>
 					<li>DankPyon_DriedMeat_Human</li>
 					<li>DankPyon_DriedMeat_Insect</li>
 				</disallowedThingDefs>
@@ -87,9 +85,7 @@
 			<value>
 				<li>DankPyon_DriedMeat</li>
 				<li>Meat_Human</li>
-				<li>DankPyon_FakeMeat</li>
 				<li>Meat_Megaspider</li>
-				<li>DankPyon_FakeMeat_Insect</li>
 				<li>DankPyon_DriedMeat_Human</li>
 				<li>DankPyon_DriedMeat_Insect</li>
 			</value>

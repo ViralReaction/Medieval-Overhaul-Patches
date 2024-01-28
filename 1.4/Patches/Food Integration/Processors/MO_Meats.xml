@@ -103,9 +103,7 @@
 					<li>DankPyon_DriedMeat</li>
 					<li>DankPyon_SmokedMeat</li>
 					<li>Meat_Human</li>
-					<li>DankPyon_FakeMeat</li>
 					<li>Meat_Megaspider</li>
-					<li>DankPyon_FakeMeat_Insect</li>
 					<!--li>DankPyon_DriedMeat_Human</li>
 					<li>DankPyon_SmokedMeat_Human</li>
 					<li>DankPyon_DriedMeat_Insect</li-->
@@ -118,9 +116,7 @@
 				<li>DankPyon_DriedMeat</li>
 				<li>DankPyon_SmokedMeat</li>
 				<li>Meat_Human</li>
-				<li>DankPyon_FakeMeat</li>
 				<li>Meat_Megaspider</li>
-				<li>DankPyon_FakeMeat_Insect</li>
 				<!--li>DankPyon_DriedMeat_Human</li>
 				<li>DankPyon_SmokedMeat_Human</li>
 				<li>DankPyon_DriedMeat_Insect</li-->
@@ -141,7 +137,6 @@
 			<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedMeat_Human</li>
-				<li>DankPyon_FakeMeat</li>
 			</value>
 		</match>
 	</Operation>
@@ -152,7 +147,6 @@
 			<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
 			<value>
 				<li>DankPyon_DriedMeat_Insect</li>
-				<li>DankPyon_FakeMeat_Insect</li>
 			</value>
 		</match>
 	</Operation>
