@@ -81,6 +81,33 @@
 			<li Class="XmlExtensions.Setting.Gap">
 				<spacing>12</spacing>
 			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Trimmed Meat Options:</text>
+				<anchor>Middle</anchor>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>trimmed_meat</key>
+				<defaultValue>option1</defaultValue>
+				<spacing>-1</spacing>
+				<buttons>
+					<li>
+						<label>None:</label>
+						<value>option1</value>
+						<tooltip>No trimmed meat.</tooltip>
+						<highlight>true</highlight>
+					</li>
+					<li>
+						<label>MO Trimmed Meat Recipe:</label>
+						<value>option2</value>
+						<tooltip>This enables a trimmed meat recipe for the extra verisimilitude.</tooltip>
+						<highlight>true</highlight>
+					</li>
+					<!--All buttons listed here-->
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.Gap">
+				<spacing>12</spacing>
+			</li>
 			<li Class="XmlExtensions.Setting.Gap">
 				<spacing>12</spacing>
 			</li>

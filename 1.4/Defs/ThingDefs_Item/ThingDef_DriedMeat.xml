@@ -1,6 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<!-- Trimmed Human Meat -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>DankPyon_TrimmedMeat</defName>
+		<label>Trimmed Meat</label>
+		<description>Trimmed meat that is ready to dry or smoke.</description>
+		<graphicData>
+			<texPath>Meal/DriedMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>DankPyon_TrimmedMeat</li>
+		</thingCategories>
+		<statBases>
+			<Mass>0.01</Mass>
+			<MarketValue>2.5</MarketValue>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<ingredient>
+			<mergeCompatibilityTags>
+			</mergeCompatibilityTags>
+		</ingredient>
+		<ingestible>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			 </li>
+		</comps>
+		<rotatable>false</rotatable>
+	</ThingDef>
+
+	<!-- Trimmed Human Meat -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>DankPyon_FakeMeat</defName>
+		<label>Trimmed Human Meat</label>
+		<description>Trimmed human meat that is ready to dry or smoke.</description>
+		<graphicData>
+			<texPath>Meal/DriedMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>DankPyon_TrimmedMeat</li>
+		</thingCategories>
+		<statBases>
+			<Mass>0.01</Mass>
+			<MarketValue>2.5</MarketValue>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<ingredient>
+			<mergeCompatibilityTags>
+			</mergeCompatibilityTags>
+		</ingredient>
+		<ingestible>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Ingredients"/>
+			 <li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			 </li>
+		</comps>
+		<rotatable>false</rotatable>
+	</ThingDef>
+
+	<!-- Trimmed Insect Meats -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>DankPyon_FakeMeat_Insect</defName>
+		<label>Trimmed Insect Meat</label>
+		<description>Trimmed insect meat that is ready to dry or smoke.</description>
+		<graphicData>
+			<texPath>Meal/DriedMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>DankPyon_TrimmedMeat</li>
+		</thingCategories>
+		<statBases>
+			<Mass>0.01</Mass>
+			<MarketValue>2.5</MarketValue>
+			<Nutrition>0.7</Nutrition>
+		</statBases>
+		<ingredient>
+			<mergeCompatibilityTags>
+			</mergeCompatibilityTags>
+		</ingredient>
+		<ingestible>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+	</ThingDef>
+
 	<!-- Dried Human Meats -->
 	<ThingDef ParentName="MealBase">
 		<defName>DankPyon_DriedMeat_Human</defName>
