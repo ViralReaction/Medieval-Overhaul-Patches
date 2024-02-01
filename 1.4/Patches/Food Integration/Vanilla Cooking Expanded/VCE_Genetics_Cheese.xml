@@ -159,7 +159,7 @@
 							</ProcessorFramework.ProcessDef>
 
 							<ProcessorFramework.ProcessDef>
-								<defName>VCE_MO_WeirdMilkIntoCheese</defName>
+								<defName>VCE_MO_MechaMilkIntoCheese</defName>
 								<thingDef>VCE_MechaCheese</thingDef>
 								<ingredientFilter>
 									<thingDefs>
@@ -430,6 +430,7 @@
 						<xpath>Defs/ThingDef[defName="DankPyon_Presser"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
 						<value>
 							<li>VCE_MO_WeirdMilkIntoCheese</li>
+							<li>VCE_MO_MechaMilkIntoCheese</li>
 							<li>VCE_MO_BearffaloMilkIntoCheese</li>
 							<li>VCE_MO_ThrumffaloMilkIntoCheese</li>
 							<li>VCE_MO_MuffalochickenMilkIntoCheese</li>
