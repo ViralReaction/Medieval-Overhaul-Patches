@@ -7,6 +7,13 @@
 			<Nutrition>0.01</Nutrition>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/description</xpath>
+		<value>
+			<description>Leftover stalks from harvesting grain, harvested and compacted for storage. Straw is a poor animal feed, and inedible for humans.</description>
+		</value>
+	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
