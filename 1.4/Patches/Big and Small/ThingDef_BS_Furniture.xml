@@ -71,6 +71,8 @@
 							<techLevel>Medieval</techLevel>
 							<uiIconScale>0.90</uiIconScale>
 							<researchPrerequisites Inherit="false"/>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -83,7 +85,7 @@
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
 								<damageData>
-									 <rect>(0,0.05,1.5,2.90)</rect>
+									<rect>(0,0.05,1.5,2.90)</rect>
 								</damageData>
 							</graphicData>
 							<comps>
@@ -131,6 +133,8 @@
 							<designationHotKey>Misc2</designationHotKey>
 							<techLevel>Medieval</techLevel>
 							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -143,7 +147,7 @@
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
 								<damageData>
-									 <rect>(0,0.05,3,2.90)</rect>
+									<rect>(0,0.05,3,2.90)</rect>
 								</damageData>
 							</graphicData>
 
@@ -193,6 +197,8 @@
 							<designationHotKey>Misc2</designationHotKey>
 							<techLevel>Medieval</techLevel>
 							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -205,7 +211,7 @@
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
 								<damageData>
-									 <rect>(0,0.05,1.5,2.90)</rect>
+									<rect>(0,0.05,1.5,2.90)</rect>
 								</damageData>
 							</graphicData>
 							<comps>
@@ -255,6 +261,8 @@
 							<castEdgeShadows>True</castEdgeShadows>
 							<designationHotKey>Misc2</designationHotKey>
 							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -267,7 +275,7 @@
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
 								<damageData>
-									 <rect>(0,0.05,3,2.90)</rect>
+									<rect>(0,0.05,3,2.90)</rect>
 								</damageData>
 							</graphicData>
 							<comps>
@@ -318,206 +326,10 @@
 							<castEdgeShadows>True</castEdgeShadows>
 							<designationHotKey>Misc2</designationHotKey>
 							<uiIconScale>0.90</uiIconScale>
-						</ThingDef>
-						
-						<ThingDef ParentName="DankPyon_BedWithQualityBase">
-							<defName>DankPyon_BS_BedFur</defName>
-							<label>giant fur bed</label>
-							<description>A cozy bed made from pieces of soft and comfy fur.</description>
-							<graphicData>
-								<texPath>Furniture/BedFur</texPath>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(3.05,3.05)</drawSize>
-								<damageData>
-									 <rect>(0,0.05,1.5,2.90)</rect>
-								</damageData>
-							</graphicData>
-
-							<comps>
-								<li Class="CompProperties_AffectedByFacilities">
-									<linkableFacilities>
-										<li>DankPyon_RusticEndTable</li>
-										<li>DankPyon_RusticDresser</li>
-										<li>DankPyon_RusticChest</li>
-										<li>DankPyon_MetalStrongbox</li>
-										<li>DankPyon_RusticCloset</li>
-									</linkableFacilities>
-								</li>
-								<li Class="BigAndSmall.CompProperties_Bed">
-									<sleepingSlotCount>1</sleepingSlotCount>
-								</li>
-								<li MayRequire="OskarPotocki.VFE.Vikings" Class="VFEV.CompProperties_CureHypothermia"/>
-							</comps>
-							<statBases>
-								<MaxHitPoints>140</MaxHitPoints>
-								<Flammability>1.0</Flammability>
-								<Beauty>1</Beauty>
-								<WorkToBuild>800</WorkToBuild>
-								<Mass>30</Mass>
-								<BedRestEffectiveness>1.01</BedRestEffectiveness>
-								<Comfort>0.80</Comfort>
-								<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
-								<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
-							</statBases>
-							<size>(2,3)</size>
-							<stuffCategories>
-								<li>Leathery</li>
-								<li>Fabric</li>
-							</stuffCategories>
-							<costStuffCount>30</costStuffCount>
-							<costList>
-								<WoodLog>100</WoodLog>
-							</costList>
-							<building>
-								<bed_showSleeperBody>False</bed_showSleeperBody>
-								<bed_healPerDay>4</bed_healPerDay>
-								<bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
-								<bed_maxBodySize>9999</bed_maxBodySize>
-							</building>
-							<fillPercent>0.4</fillPercent>
-							<pathCost>42</pathCost>
-							<staticSunShadowHeight>0.17</staticSunShadowHeight>
-							<castEdgeShadows>True</castEdgeShadows>
-							<designationHotKey>Misc2</designationHotKey>
-							<uiIconScale>0.90</uiIconScale>
-						</ThingDef>
-	
-						<ThingDef ParentName="DankPyon_ArtableBedBase">
-							<defName>DankPyon_BS_BedFurDouble</defName>
-							<label>giant double fur bed</label>
-							<description>A cozy double-wide bed that fits two people.</description>
-							<graphicData>
-								<texPath>Furniture/BedFurDouble</texPath>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(3.05,3.05)</drawSize>
-								<damageData>
-									 <rect>(0,0.05,3,2.90)</rect>
-								</damageData>
-							</graphicData>
-							<comps>
-								<li Class="CompProperties_AffectedByFacilities">
-									<linkableFacilities>
-										<li>DankPyon_RusticEndTable</li>
-										<li>DankPyon_RusticDresser</li>
-										<li>DankPyon_RusticChest</li>
-										<li>DankPyon_MetalStrongbox</li>
-										<li>DankPyon_RusticCloset</li>
-									</linkableFacilities>
-								</li>
-								<li Class="BigAndSmall.CompProperties_Bed">
-									<sleepingSlotCount>2</sleepingSlotCount>
-								</li>
-								<li MayRequire="OskarPotocki.VFE.Vikings" Class="VFEV.CompProperties_CureHypothermia"/>
-							</comps>
-							<statBases>
-								<MaxHitPoints>200</MaxHitPoints>
-								<Flammability>1.0</Flammability>
-								<WorkToBuild>1500</WorkToBuild>
-								<Mass>50</Mass>
-								<Comfort>0.85</Comfort>
-								<Beauty>4</Beauty>
-								<BedRestEffectiveness>1</BedRestEffectiveness>
-								<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
-								<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
-								<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
-							</statBases>
-							<size>(3,3)</size>
-							<stuffCategories>
-								<li>Leathery</li>
-								<li>Fabric</li>
-							</stuffCategories>
-							<costStuffCount>60</costStuffCount>
-							<costList>
-								<WoodLog>145</WoodLog>
-							</costList>
-							<building>
-								<bed_showSleeperBody>False</bed_showSleeperBody>
-								<bed_healPerDay>4</bed_healPerDay>
-								<bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
-								<bed_maxBodySize>9999</bed_maxBodySize>
-							</building>
-							<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-							<fillPercent>0.4</fillPercent>
-							<pathCost>42</pathCost>
-							<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
-							<staticSunShadowHeight>0.17</staticSunShadowHeight>
-							<castEdgeShadows>True</castEdgeShadows>
-							<designationHotKey>Misc3</designationHotKey>
-							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
-						<!--ThingDef ParentName="DankPyon_ArtableBedBase">
-							<defName>DankPyon_BS_RoyalTudorBed</defName>
-							<label>giant royal tudor bed</label>
-							<description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits two.</description>
-							<graphicData>
-								<texPath>Furniture/RoyalTudorBed</texPath>
-								<graphicClass>Graphic_Multi</graphicClass>
-								<shaderType>CutoutComplex</shaderType>
-								<drawSize>(6.05,6.05)</drawSize>
-								<damageData>
-									<rect>(0,0.05,2,1.95)</rect>
-								</damageData>
-							</graphicData>
-							<comps>
-								<li Class="CompProperties_AffectedByFacilities">
-									<linkableFacilities>
-										<li>DankPyon_RoyalEndTable</li>
-										<li>DankPyon_RoyalDresser</li>
-										<li>DankPyon_RoyalCloset</li>
-										<li>DankPyon_RoyalChest</li>
-									</linkableFacilities>
-								</li>
-								<li Class="BigAndSmall.CompProperties_Bed">
-									<sleepingSlotCount>2</sleepingSlotCount>
-								</li>
-							</comps>
-							<statBases>
-								<MaxHitPoints>220</MaxHitPoints>
-								<Flammability>1.0</Flammability>
-								<WorkToBuild>60000</WorkToBuild>
-								<Mass>85</Mass>
-								<Beauty>100</Beauty>
-								<BedRestEffectiveness>1.15</BedRestEffectiveness>
-								<Comfort>0.95</Comfort>
-								<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
-								<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
-								<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">30</StyleDominance>
-							</statBases>
-							<size>(3,3)</size>
-							<stuffCategories>
-								<li>Metallic</li>
-								<li>Woody</li>
-								<li>Stony</li>
-							</stuffCategories>
-							<costStuffCount>250</costStuffCount>
-							<costList>
-								<Gold>100</Gold>
-								<DankPyon_Silk>300</DankPyon_Silk>
-							</costList>
-							<building>
-								<bed_showSleeperBody>False</bed_showSleeperBody>
-								<bed_healPerDay/>
-								<bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
-								<bed_maxBodySize>9999</bed_maxBodySize>
-							</building>
-							<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-							<fillPercent>0.5</fillPercent>
-							<pathCost>42</pathCost>
-							<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
-							<staticSunShadowHeight>0.17</staticSunShadowHeight>
-							<castEdgeShadows>True</castEdgeShadows>
-							<designationHotKey>Misc4</designationHotKey>
-							<techLevel>Medieval</techLevel>
-							<constructionSkillPrerequisite>9</constructionSkillPrerequisite>
-							<uiIconScale>0.75</uiIconScale>
-							<researchPrerequisites>
-								<li>DankPyon_RoyalRusticFurniture</li>
-							</researchPrerequisites>
-						</ThingDef-->
-		
 					</value>
 				</li>
 
@@ -585,6 +397,8 @@
 							<techLevel>Medieval</techLevel>
 							<uiIconScale>0.90</uiIconScale>
 							<researchPrerequisites Inherit="false"/>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -597,7 +411,7 @@
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(1.5,1)</drawSize>
 								<damageData>
-									 <rect>(0,0.05,0.5,0.95)</rect>
+									<rect>(0,0.05,0.5,0.95)</rect>
 								</damageData>
 							</graphicData>
 							<comps>
@@ -646,6 +460,8 @@
 							<designationHotKey>Misc2</designationHotKey>
 							<techLevel>Medieval</techLevel>
 							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -658,7 +474,7 @@
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(1.5,1)</drawSize>
 								<damageData>
-									 <rect>(0,0.05,0.5,0.95)</rect>
+									<rect>(0,0.05,0.5,0.95)</rect>
 								</damageData>
 							</graphicData>
 							<comps>
@@ -709,6 +525,8 @@
 							<castEdgeShadows>True</castEdgeShadows>
 							<designationHotKey>Misc2</designationHotKey>
 							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_BedWithQualityBase">
@@ -772,6 +590,8 @@
 							<castEdgeShadows>True</castEdgeShadows>
 							<designationHotKey>Misc2</designationHotKey>
 							<uiIconScale>0.90</uiIconScale>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 
 						<ThingDef ParentName="DankPyon_ArtableBedBase">
@@ -843,6 +663,8 @@
 							<researchPrerequisites>
 								<li>DankPyon_RoyalRusticFurniture</li>
 							</researchPrerequisites>
+							<interactionCellOffset>(2,2,2)</interactionCellOffset>
+							<designationCategory>BS_Furniture</designationCategory>
 						</ThingDef>
 		
 					</value>
@@ -880,6 +702,36 @@
 						<xpath>Defs/ThingDef[@Name="DankPyon_ArtableBedBase"]/building</xpath>
 						<value>
 							<bed_maxBodySize>1.9</bed_maxBodySize>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+						<value>
+							<li>DankPyon_BS_SmolRoyalTudorBed</li>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+						<value>
+							<li>DankPyon_BS_SmolRoyalTudorBed</li>
+						</value>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="SlabDoubleBed"]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+						<value>
+							<li>DankPyon_BS_SmolRoyalTudorBed</li>
 						</value>
 					</match>
 				</li>
