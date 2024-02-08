@@ -10,6 +10,16 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_ShelfFilledIngot"]/building/fixedStorageSettings/filter/categories</xpath>
+		<match Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_ShelfFilledIngot"]/building/fixedStorageSettings/filter/categories</xpath>
+			<value>
+				<li>DankPyon_Metallic</li>
+			</value>
+		</match>
+	</Operation>
 
 	<!-- Piles -->
 	<Operation Class="PatchOperationConditional">
