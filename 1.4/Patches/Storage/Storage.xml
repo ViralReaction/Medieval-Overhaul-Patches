@@ -13,11 +13,14 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_ShelfFilledIngot"]/building/fixedStorageSettings/filter/categories</xpath>
-		<match Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="DankPyon_ShelfFilledIngot"]/building/fixedStorageSettings/filter/categories</xpath>
-			<value>
-				<li>DankPyon_Metallic</li>
-			</value>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingCategoryDef[defName="DankPyon_Metallic"]</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DankPyon_ShelfFilledIngot"]/building/fixedStorageSettings/filter/categories</xpath>
+				<value>
+					<li>DankPyon_Metallic</li>
+				</value>
+			</match>
 		</match>
 	</Operation>
 
