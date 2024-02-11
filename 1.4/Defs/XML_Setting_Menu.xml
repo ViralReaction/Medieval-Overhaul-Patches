@@ -68,8 +68,8 @@
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>boomalope_tar</key>
-				<label>Boomalopes Milk Tar?</label>
-				<tooltip>Replaces Chemfuel for Tar when milking Boomalopes.</tooltip>
+				<label>Chemfuel Milk to Tar?</label>
+				<tooltip>Replaces Chemfuel for Tar when milking.</tooltip>
 				<defaultValue>false</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">

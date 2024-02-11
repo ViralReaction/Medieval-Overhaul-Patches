@@ -9,7 +9,7 @@
 
 			<!-- Boomalope Milk Tar -->
 			<Operation Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Boomalope"]/comps/li[@Class="CompProperties_Milkable"]/milkDef</xpath>
+				<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Milkable"]/milkDef[.="Chemfuel"]</xpath>
 				<value>
 					<milkDef>DankPyon_Tar</milkDef>
 				</value>
