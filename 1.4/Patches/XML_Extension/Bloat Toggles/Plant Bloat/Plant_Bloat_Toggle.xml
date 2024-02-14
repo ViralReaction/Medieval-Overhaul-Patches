@@ -12,6 +12,17 @@
 					<sowTags/>
 				</value>
 			</Operation>
+			<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Factions Expanded - Tribals</li>
+				</mods>
+				<match Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="Plant_Corn"]/plant/sowResearchPrerequisites</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="Plant_Corn"]/plant/sowResearchPrerequisites</xpath>
+					</match>					
+				</match>
+			</Operation>
 		</caseTrue>
 		<caseFalse>
 			<Operation Class="PatchOperationAdd">

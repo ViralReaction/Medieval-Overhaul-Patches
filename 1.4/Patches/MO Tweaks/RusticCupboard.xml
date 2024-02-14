@@ -70,6 +70,9 @@
 							<clearBuildingArea>false</clearBuildingArea>
 							<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 							<designationCategory>DankPyon_RusticFurniture</designationCategory>
+							<researchPrerequisites>
+								<li>VFET_Furniture</li>
+							</researchPrerequisites>
 						</ThingDef>
 	
 					</value>
