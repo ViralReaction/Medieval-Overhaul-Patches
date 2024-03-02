@@ -584,7 +584,7 @@
 								</disallowedThingDefs>
 							</defaultIngredientFilter>
 							<products>
-								<MO_UncookedBeanOnion>1</MO_UncookedBeanOnion>
+								<MO_UncookedHeartyStew>1</MO_UncookedHeartyStew>
 							</products>
 							<skillRequirements>
 								<Cooking>6</Cooking>
@@ -776,11 +776,8 @@
 					
 					</value>
 				</li>
-				
-				
+
 			</operations>
 		</match>
-		
 	</Operation>
-	
 </Patch>

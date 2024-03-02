@@ -503,4 +503,49 @@
 		</value>
 	</Operation>
 
+	<!-- Hearty Stew -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStew"]/label</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStew"]/label</xpath>
+			<value>
+				<label>cook hearty stew x4</label>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStew"]/jobString</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStew"]/jobString</xpath>
+			<value>
+				<jobString>Cooking 4 hearty stews.</jobString>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStew"]/fixedIngredientFilter</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStew"]/fixedIngredientFilter</xpath>
+			<value>
+				<thingDefs>
+					<li>DankPyon_Salt</li>
+				</thingDefs>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStewBulk"]/fixedIngredientFilter</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_CookMealHeartyStewBulk"]/fixedIngredientFilter</xpath>
+			<value>
+				<thingDefs>
+					<li>DankPyon_Salt</li>
+				</thingDefs>
+			</value>
+		</match>
+	</Operation>
+
 </Patch>
