@@ -32,7 +32,7 @@
 		</fixedIngredientFilter>
 		<products>
 			<DankPyon_Flour>1</DankPyon_Flour>
-			<Hay>1</Hay>
+			<DankPyon_Straw>1</DankPyon_Straw>
 		</products>
 		<workSkill>Cooking</workSkill>
 		<recipeUsers>
