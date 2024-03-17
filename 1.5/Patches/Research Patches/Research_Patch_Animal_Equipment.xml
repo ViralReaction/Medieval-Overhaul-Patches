@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Animal Equipment</li>
+		</mods>
+		
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="ComplexAnimalClothing"]/prerequisites</xpath>
+			<value>
+				<prerequisites>
+					<li>AnimalRidingGear</li>
+					<li>DankPyon_Tailoring</li>
+				</prerequisites>
+			</value>
+		</match>
+		
+	</Operation>
+		
+</Patch>

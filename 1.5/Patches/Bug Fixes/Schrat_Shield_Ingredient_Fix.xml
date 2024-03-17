@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]</xpath>
+		<value>
+			<li Class="DankPyon.AdditionalButcherProducts">
+				<butcherOptions>
+					<li>
+						<thingDef>DankPyon_SchratHeart</thingDef>
+						<amount>1</amount>
+						<chance>0.50</chance>
+					</li>
+					<li>
+						<thingDef>DankPyon_AncientWood</thingDef>
+						<amount>1</amount>
+						<chance>0.50</chance>
+					</li>
+					<li>
+						<thingDef>DankPyon_GlowingResin</thingDef>
+						<amount>1</amount>
+						<chance>0.50</chance>
+					</li>
+				</butcherOptions>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/race/deathActionWorkerClass[.="AnimalBehaviours.DeathActionWorker_DropOnDeath"]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/race/deathActionWorkerClass[.="AnimalBehaviours.DeathActionWorker_DropOnDeath"]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_SchratHeart")]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_SchratHeart")]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_AncientWood")]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_AncientWood")]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_GlowingResin")]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_Schrat"]/comps/li[@Class="AnimalBehaviours.CompProperties_DropOnDeath" and (resourceDef="DankPyon_GlowingResin")]</xpath>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+		<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_ShieldLiving"]/statBases/StuffEffectMultiplierArmor</xpath>
+			<value>
+				<ArmorRating_Sharp>0.361</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.317</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.286</ArmorRating_Heat>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

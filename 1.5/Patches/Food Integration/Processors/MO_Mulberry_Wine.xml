@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs</xpath>
+		<value>
+		
+			<RecipeDef>
+				<defName>DankPyon_MakeMustMulberry</defName>
+				<label>make mulberry must</label>
+				<description>Make mulberry must by crushing mulberries. Needs to undergo fermentation in order to become wine.</description>
+				<jobString>Making mulberry must.</jobString>
+				<workAmount>1000</workAmount>
+				<recipeUsers>
+					<li>Brewery</li>
+				</recipeUsers>
+				<ingredients>
+					<li>
+						<filter>
+							<thingDefs>
+								<li>DankPyon_RawMulberry</li>
+							</thingDefs>
+						</filter>
+						<count>25</count>
+					</li>
+				</ingredients>
+				<fixedIngredientFilter>
+					<thingDefs>
+						<li>DankPyon_RawMulberry</li>
+					</thingDefs>
+				</fixedIngredientFilter>
+				<products>
+					<DankPyon_MustWine_Mulberry>5</DankPyon_MustWine_Mulberry>
+				</products>
+				<researchPrerequisites>
+					<li>Brewing</li>
+				</researchPrerequisites>
+			</RecipeDef>
+			
+			<ProcessorFramework.ProcessDef>
+				<defName>DankPyon_MustIntoMulberryWine</defName>
+				<thingDef>DankPyon_Wine_Mulberry</thingDef>
+				<ingredientFilter>
+					<thingDefs>
+						<li>DankPyon_MustWine_Mulberry</li>
+					</thingDefs>
+				</ingredientFilter>
+				<processDays>6</processDays><!-- in days, a day is 60,000 ticks -->
+				<capacityFactor>1.0</capacityFactor><!-- do not use too many decimals e.g 0.333 is fine for 1/3 -->
+				<efficiency>1</efficiency>
+				<usesTemperature>true</usesTemperature>
+				<temperatureSafe>-1.0~32.0</temperatureSafe>
+				<temperatureIdeal>7.0~32.0</temperatureIdeal>
+				<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour><!-- percent per degree per hour -->
+				<speedBelowSafe>0.1</speedBelowSafe>
+				<speedAboveSafe>1.0</speedAboveSafe>
+				<sunFactor>1.0~1.0</sunFactor>
+				<rainFactor>1.0~1.0</rainFactor>
+				<snowFactor>1.0~1.0</snowFactor>
+				<windFactor>1.0~1.0</windFactor>
+				<unpoweredFactor>0.0</unpoweredFactor>
+				<unfueledFactor>0.0</unfueledFactor>
+				<powerUseFactor>1.0</powerUseFactor>
+				<fuelUseFactor>1.0</fuelUseFactor>
+				<filledGraphicSuffix/>
+				<usesQuality>true</usesQuality>
+				 <qualityDays>(1, 3, 8, 14, 20, 50, 120)</qualityDays>
+				<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
+				<customLabel/>
+				<destroyChance>0.0</destroyChance>
+				<bonusOutputs><!-- 
+    <thingDef>(1.0, 1.0)</thingDef> -->
+				</bonusOutputs>
+			</ProcessorFramework.ProcessDef>
+			
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+		<value>
+			<li>DankPyon_MustIntoMulberryWine</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Wine_Mulberry"]/description</xpath>
+		<value>
+			<description>Liquor of many faces. Old vintages are dainty drinks intended for connoisseurs and rather finicky tongues - mandatory positions at royal parties, feasts and masquerades. Younger are often sold to peasants in roadside inns, diluted with water as much as innkeepers conscience allows</description>
+		</value>
+	</Operation>
+	
+</Patch>

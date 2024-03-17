@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Lighting and Heat</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/stuffCategories</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="MLH_Bonfire"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>DankPyon_RawWood</li>
+								<li>Woody</li>
+							</stuffCategories>
+							<costStuffCount>100</costStuffCount>
+						</value>
+					</nomatch>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="MLH_Bonfire" or defName="MLH_SmallFireplace" or defName="MLH_LargeFireplace"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+					<value>
+						<li>DankPyon_RawWood</li>
+						<li>DankPyon_RawDarkWood</li>
+						<li>DankPyon_DarkWoodLog</li>
+						<li>DankPyon_ElvenWoodLog</li>
+						<li>DankPyon_DryadWoodLog</li>
+						<li>DankPyon_AncientWoodLog</li>
+						<li>DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/constructEffect</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/constructEffect</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/costList</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/costList</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/uiIconPath</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="MLH_Bonfire"]/uiIconPath</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="MLH_Chandelier"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="MLH_Chandelier"]/comps</xpath>
+						<value>
+							<li Class="CompProperties_Refuelable">
+								<fuelConsumptionRate>2</fuelConsumptionRate>
+								<fuelCapacity>40.0</fuelCapacity>
+								<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+								<fuelFilter>
+									<thingDefs>
+										<li>DankPyon_Tallow</li>
+										<li>DankPyon_Wax</li>
+									</thingDefs>
+								</fuelFilter>
+								<initialFuelPercent>1</initialFuelPercent>
+								<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+							</li>
+						</value>
+					</nomatch>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Bees</li>
+					</mods>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="MLH_Chandelier"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+						<value>
+							<li>RB_Beeswax</li>
+							<li>RB_Brittlewax</li>
+							<li>RB_RedBeeswax</li>
+							<li>RB_HeavyWax</li>
+							<li>RB_WhiteBeeswax</li>
+							<li>RB_BlueBeeswax</li>
+							<li>RB_Steelwax</li>
+							<li>RB_BlackBeeswax</li>
+						</value>
+					</match>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

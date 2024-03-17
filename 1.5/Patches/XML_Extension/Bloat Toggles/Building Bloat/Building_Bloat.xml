@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>VR.MOPatches</modId>
+		<key>building_bloat</key>
+		<defaultValue>true</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/designationCategory</xpath>
+				</match>
+			</Operation>
+			<Operation Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="FueledStove" or defName="FueledSmithy"]/researchPrerequisites</xpath>
+				</match>
+			</Operation>
+		</caseTrue>
+	</Operation>
+
+</Patch>

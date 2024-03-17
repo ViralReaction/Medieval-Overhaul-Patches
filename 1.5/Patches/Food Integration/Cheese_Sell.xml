@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<!-- Cheese Comp Properties -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/tradeability</xpath>
+		<value>
+			<tradeability>Sellable</tradeability>
+		</value>
+	</Operation>
+
+</Patch>

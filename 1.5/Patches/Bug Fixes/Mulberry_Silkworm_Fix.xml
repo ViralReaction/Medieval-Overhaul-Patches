@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/modExtensions/li[@Class="VanillaPlantsExpanded.DualCropExtension" and (secondaryOutput="DankPyon_Silkworm")]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]/modExtensions/li[@Class="VanillaPlantsExpanded.DualCropExtension" and (secondaryOutput="DankPyon_Silkworm")]</xpath>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]</xpath>
+		<value>
+			<li Class="Medieval_Overhaul_Patches.PlantProperties">
+				<secondaryDrop>DankPyon_Silkworm</secondaryDrop>
+				<secondaryDropAmountRange>3</secondaryDropAmountRange>
+				<secondaryDropChance>1</secondaryDropChance>
+				<secondaryNotWhenLeafless>true</secondaryNotWhenLeafless>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_Tree_Mulberry"]</xpath>
+		<value>
+			<thingClass>Medieval_Overhaul_Patches.Plant_SecondaryDrop</thingClass>
+		</value>
+	</Operation>
+		
+</Patch>

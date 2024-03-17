@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Tribal Medicine 2.0</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildPlants/TM_Bush_DarkBerries</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/BiomeDef [defName="DankPyon_AncientForest"]/wildPlants</xpath>
+						<value>
+							<TM_Bush_DarkBerries>0.04</TM_Bush_DarkBerries>
+							<TM_Plant_RedPetals>0.07</TM_Plant_RedPetals>
+							<TM_Plant_Broots>0.01</TM_Plant_Broots>
+							<TM_Plant_Shrooms>0.02</TM_Plant_Shrooms>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildPlants/TM_Bush_DarkBerries</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/BiomeDef [defName="DankPyon_DarkForest"]/wildPlants</xpath>
+						<value>
+							<TM_Bush_DarkBerries>0.04</TM_Bush_DarkBerries>
+							<TM_Plant_RedPetals>0.07</TM_Plant_RedPetals>
+							<TM_Plant_Broots>0.01</TM_Plant_Broots>
+							<TM_Plant_Shrooms>0.02</TM_Plant_Shrooms>
+						</value>
+					</nomatch>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- Description says two -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_RusticBookshelf"]/comps/li[@Class="CompProperties_Facility"]/maxSimultaneous</xpath>
+		<value>
+			<maxSimultaneous>2</maxSimultaneous>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_RusticBookshelf"]/thingClass</xpath>
+		<value>
+			<thingClass>Building</thingClass>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+	<xpath>Defs/ThingDef[defName="DankPyon_RusticBookshelf"]/building</xpath>
+	</Operation>
+	
+	<!-- Linkable Royal Bookshelf -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_AdvancedResearchBench" or defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		<value>
+			<li>DankPyon_RoyalBookshelf</li>
+		</value>
+	</Operation>
+
+</Patch>

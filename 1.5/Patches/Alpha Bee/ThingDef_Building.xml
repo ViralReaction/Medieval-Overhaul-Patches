@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Bees</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+												
+				<!--Climatized Beehouse use MO resource -->
+				<li Class="PatchOperationSetName">
+					<xpath>Defs/ThingDef[defName="RB_ClimatizedBeehouse"]/costList/Steel</xpath>
+					<name>DankPyon_IronIngot</name>
+				</li>
+				
+				<!-- Move MO Beehouse to Alpha Bee Research -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_Apiary"]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>RB_BasicBeekeeping</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<!-- Hide Centrifuge -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/designationCategory</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/designationCategory</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/researchPrerequisites</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="RB_Honey_Centrifuge"]/researchPrerequisites</xpath>
+					</match>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

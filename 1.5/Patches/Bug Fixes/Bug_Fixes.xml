@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Fix Missing Thrumbo Horn -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Thrumbo"]</xpath>
+		<value>
+			<li Class="DankPyon.AdditionalButcherProducts">
+				<butcherOptions>
+					<li>
+						<thingDef>ThrumboHorn</thingDef>
+						<amount>1</amount>
+						<chance>100</chance>
+					</li>
+				</butcherOptions>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Fix Bread -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_MealBread"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+		</value>
+	</Operation>
+
+	<!-- Fix Missing Baby Food -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes/li[.="Make_BabyFood"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes</xpath>
+					<value>
+							<li>Make_BabyFood</li>
+					</value>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes/li[.="Make_BabyFoodBulk"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/recipes</xpath>
+					<value>
+							<li>Make_BabyFoodBulk</li>
+					</value>
+				</nomatch>
+			</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+	<!-- Relabel Honeycomb -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/label</xpath>
+		<value>
+			<label>oswin honeycomb</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/description</xpath>
+		<value>
+			<description>This is a honeycomb produced by carrion bees. Honeycombs can be procesed in a Honey Extractor to get honey and beeswax.</description>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Bees</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Extract_HoneyBulk"]/products/DankPyon_Wax</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="DankPyon_Extract_HoneyBulk"]/products</xpath>
+						<value>
+							<DankPyon_Wax>25</DankPyon_Wax>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Extract_Honey"]/products</xpath>
+					<match Class="PatchOperationConditional">
+						<xpath>Defs/RecipeDef[defName="DankPyon_Extract_Honey"]/specialProducts</xpath>
+						<nomatch Class="PatchOperationReplace">
+							<xpath>Defs/RecipeDef[defName="DankPyon_Extract_Honey"]/products</xpath>
+							<value>
+								<specialProducts>
+									<li>Butchery</li>
+								</specialProducts>
+							</value>
+						</nomatch>
+					</match>
+				</li>
+
+			</operations>
+		</nomatch>
+	</Operation>
+	
+	<!-- Fix Bean and Onion Recipe -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_CookMealBoiledBeansAndOnion"]/ingredients/li[3]/count</xpath>
+		<value>
+			<count>0.06</count>
+		</value>
+	</Operation>
+
+	<!-- Cheese Nerf -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_MealCheese" or defName="DankPyon_MealGoatCheese" or defName="DankPyon_MealSheepCheese"]/statBases/Nutrition</xpath>
+		<value>
+			<Nutrition>0.15</Nutrition>
+		</value>
+	</Operation>
+
+	<!-- Fix Sausage Nutrition Missing -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages" or defName="DankPyon_MakeSausagesBulk"]</xpath>
+		<value>
+			<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages"]/ingredients/li[1]/count</xpath>
+		<value>
+			<count>0.50</count>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausagesBulk"]/ingredients/li[1]/count</xpath>
+		<value>
+			<count>5</count>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausages"]/ingredients/li[2]/count</xpath>
+		<value>
+			<count>0.1</count>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeSausagesBulk"]/ingredients/li[2]/count</xpath>
+		<value>
+			<count>1</count>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ApparelLayerDef[defName="DankPyon_ShellAttachment"]/drawOrder</xpath>
+		<value>
+		<drawOrder>10</drawOrder>
+		</value>
+	</Operation>
+
+</Patch>

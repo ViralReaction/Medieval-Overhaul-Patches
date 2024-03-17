@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	
+	<!-- Vanilla Research Position Change -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]/researchViewX</xpath>
+		<value>
+			<researchViewX>4.00</researchViewX>
+		</value>
+	</Operation>
+				
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]/researchViewY</xpath>
+		<value>
+			<researchViewY>4.10</researchViewY>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Stonecutting"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+				
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="Stonecutting"]/researchViewY</xpath>
+		<value>
+			<researchViewY>4.15</researchViewY>
+		</value>
+	</Operation>
+	
+	
+	
+	<!-- Royalty Research Position Change -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Harp"]/researchViewX</xpath>
+					<value>
+						<researchViewX>5.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Harp"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.80</researchViewY>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Piano"]/researchViewX</xpath>
+					<value>
+						<researchViewX>5.00</researchViewX>
+					</value>
+				</li>
+	
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Piano"]/researchViewY</xpath>
+					<value>
+						<researchViewY>4.65</researchViewY>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Harpsichord"]/researchViewX</xpath>
+					<value>
+						<researchViewX>5.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Harpsichord"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.25</researchViewY>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- MO Research Position Change -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Steel"]/researchViewX</xpath>
+		<value>
+			<researchViewX>15.00</researchViewX>
+		</value>
+	</Operation>
+				
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Steel"]/researchViewY</xpath>
+		<value>
+			<researchViewY>5.15</researchViewY>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Tar"]/researchViewX</xpath>
+		<value>
+			<researchViewX>15.00</researchViewX>
+		</value>
+	</Operation>
+				
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Tar"]/researchViewY</xpath>
+		<value>
+			<researchViewY>4.60</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/researchViewX</xpath>
+					<value>
+						<researchViewX>15.00</researchViewX>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/researchViewY</xpath>
+					<value>
+						<researchViewY>5.75</researchViewY>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

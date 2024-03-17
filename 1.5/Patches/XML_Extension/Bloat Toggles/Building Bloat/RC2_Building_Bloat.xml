@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="XmlExtensions.OptionalPatch">
+					<modId>VR.MOPatches</modId>
+					<key>building_bloat</key>
+					<defaultValue>true</defaultValue>
+					<caseTrue>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/researchPrerequisites</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_Quernstone"]/designationCategory</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/researchPrerequisites</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="RC2_MeatDryingRack"]/designationCategory</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeets"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeets"]</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeetsBulk"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarBeetsBulk"]</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcane"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcane"]</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcaneBulk"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_ProcessSugarcaneBulk"]</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_ProcessGrain"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_ProcessGrain"]</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/RecipeDef[defName="RC2_ProcessGrainBulk"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/RecipeDef[defName="RC2_ProcessGrainBulk"]</xpath>
+							</match>
+						</Operation>
+
+					</caseTrue>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

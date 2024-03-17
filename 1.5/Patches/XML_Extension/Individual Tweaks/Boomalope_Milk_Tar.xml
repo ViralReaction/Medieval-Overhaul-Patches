@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>VR.MOPatches</modId>
+		<key>boomalope_tar</key>
+		<defaultValue>true</defaultValue>
+		<caseTrue>
+
+			<!-- Boomalope Milk Tar -->
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Milkable"]/milkDef[.="Chemfuel"]</xpath>
+				<value>
+					<milkDef>DankPyon_Tar</milkDef>
+				</value>
+			</Operation>
+
+		</caseTrue>
+	</Operation>
+
+
+
+</Patch>

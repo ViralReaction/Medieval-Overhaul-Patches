@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[LTS]Furnishing</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Vanilla Cooking Expanded</li>
+			</mods>
+
+			<match Class="PatchOperationSequence">
+				<operations>
+
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealBreadSoup"]</xpath>
+					</li>
+
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealBreadSoupBulk"]</xpath>
+					</li>
+
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealCheeseSoup"]</xpath>
+					</li>
+
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes/li[.="DankPyon_CookMealCheeseSoupBulk"]</xpath>
+					</li>
+
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[@Name="LTS_StoveBenchBase"]/recipes</xpath>
+						<value>
+							<li>MO_CookBoneSoup</li>
+							<li>MO_CookLentilSoup</li>
+							<li>MO_CookMushroomSoup</li>
+							<li>MO_CookBreadSoup</li>
+							<li>MO_CookPumpkinSoup</li>
+							<li>MO_CookCheeseSoup</li>
+						</value>
+					</li>
+
+				</operations>
+			</match>
+
+		</match>
+	</Operation>
+
+</Patch>

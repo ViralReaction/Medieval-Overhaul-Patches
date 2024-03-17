@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Straw"]/comps</xpath>
+			<value>
+				<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+					<rate>0.75</rate>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Straw"]</xpath>
+			<value>
+				<comps>
+					<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+						<rate>0.75</rate>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+				
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Hay"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Hay"]/comps</xpath>
+			<value>
+				<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+					<rate>0.5</rate>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Hay"]</xpath>
+			<value>
+				<comps>
+					<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+						<rate>0.5</rate>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+				
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_DriedHay"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_DriedHay"]/comps</xpath>
+			<value>
+				<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+					<rate>0.75</rate>
+				</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_DriedHay"]</xpath>
+			<value>
+				<comps>
+					<li Class="ESCP_FuelExtension.CompProperties_FuelRate">
+						<rate>0.75</rate>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

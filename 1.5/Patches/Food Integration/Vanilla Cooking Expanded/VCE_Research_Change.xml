@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Soup Research Change -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/tab</xpath>
+					<value>
+						<tab>DankPyon_MedievalResearchTab</tab>
+					</value>
+				</li>
+							
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>DankPyon_BasicCooking</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/researchViewX</xpath>
+					<value>
+						<researchViewX>0.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/researchViewY</xpath>
+					<value>
+						<researchViewY>6.40</researchViewY>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

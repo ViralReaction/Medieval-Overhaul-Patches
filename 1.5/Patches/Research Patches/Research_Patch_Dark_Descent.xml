@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimWorld - The Dark Descent</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+		
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="DarkDescent_OrbTableResearch"]</xpath>
+					<value>
+						<prerequisites>
+							<li>Esoteric_Studies</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="DarkDescent_VitaeResearch"]</xpath>
+					<value>
+						<prerequisites>
+							<li>Esoteric_Studies</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+		
+</Patch>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>pphhyy's Demigryphs</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="DankPyon_AncientForest"]/wildAnimals</xpath>
+					<value>
+						<pphhyy_Demigryph>0.07</pphhyy_Demigryph>
+						<pphhyy_CrimsonDemigryph>0.025</pphhyy_CrimsonDemigryph>
+						<pphhyy_CheetahDemigryph>0.04</pphhyy_CheetahDemigryph>
+						<pphhyy_VultureDemigryph>0.01</pphhyy_VultureDemigryph>
+						<pphhyy_LeopardDemigryph>0.03</pphhyy_LeopardDemigryph>
+						<pphhyy_PantherDemigryph>0.01</pphhyy_PantherDemigryph>
+						<pphhyy_TigerDemigryph>0.07</pphhyy_TigerDemigryph>
+						<pphhyy_Daermigryph>0.03</pphhyy_Daermigryph>
+						<pphhyy_JadeDemigryph>0.01</pphhyy_JadeDemigryph>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="DankPyon_DarkForest"]/wildAnimals</xpath>
+					<value>
+						<pphhyy_CrimsonDemigryph>0.025</pphhyy_CrimsonDemigryph>
+						<pphhyy_CheetahDemigryph>0.04</pphhyy_CheetahDemigryph>
+						<pphhyy_VultureDemigryph>0.01</pphhyy_VultureDemigryph>
+						<pphhyy_JadeDemigryph>0.01</pphhyy_JadeDemigryph>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

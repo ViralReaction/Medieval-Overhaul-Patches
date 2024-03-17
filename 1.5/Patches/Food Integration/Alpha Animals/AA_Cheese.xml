@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Vanilla Cooking Expanded</li>
+			</mods>
+			<nomatch Class="PatchOperationSequence">
+				<operations>
+				
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_PressCheeseProcess"]/ingredientFilter/thingDefs</xpath>
+						<value>
+							<li>AA_BlueMilk</li>
+							<li>AA_GowMilk</li>
+							<li>AA_NightMilk</li>
+						</value>
+					</li>
+										
+				</operations>
+			</nomatch>
+		</match>	
+	</Operation>
+  
+</Patch>

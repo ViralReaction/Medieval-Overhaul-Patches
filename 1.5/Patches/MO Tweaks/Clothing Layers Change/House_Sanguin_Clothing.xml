@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ↁ House Sanguin</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_Cape"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>DankPyon_ShellAttachment</li>
+						</layers>
+					</value>
+				</li>
+				
+				<!--li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DevDesigner_Blood_Apparel_FullPlate" or defName="DevDesigner_Blood_Apparel_LordFullPlate"]/apparel/layers</xpath>
+					<value>
+						<li>Middle</li>
+					</value>
+				</li-->
+
+			</operations>
+		</match>
+
+	</Operation>
+
+</Patch>

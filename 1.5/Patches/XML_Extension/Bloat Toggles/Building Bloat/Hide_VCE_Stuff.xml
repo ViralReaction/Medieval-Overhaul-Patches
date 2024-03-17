@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="XmlExtensions.OptionalPatch">
+					<modId>VR.MOPatches</modId>
+					<key>building_bloat</key>
+					<defaultValue>true</defaultValue>
+					<caseTrue>
+						<!-- Hide Cheese Press -->
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="VCE_CheesePress"]/designationCategory</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="VCE_CheesePress"]/designationCategory</xpath>
+							</match>
+						</Operation>
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="VCE_CheesePress"]/researchPrerequisites</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="VCE_CheesePress"]/researchPrerequisites</xpath>
+							</match>
+						</Operation>
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
+							</match>
+						</Operation>
+					</caseTrue>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded - Stews</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="XmlExtensions.OptionalPatch">
+					<modId>VR.MOPatches</modId>
+					<key>building_bloat</key>
+					<defaultValue>true</defaultValue>
+					<caseTrue>
+
+						<!-- Hide Stew Pot -->
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="VCE_StewPot"]/designationCategory</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="VCE_StewPot"]/designationCategory</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="VCE_StewPot"]/researchPrerequisites</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="VCE_StewPot"]/researchPrerequisites</xpath>
+							</match>
+						</Operation>
+
+						<Operation Class="PatchOperationConditional">
+							<xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
+							<match Class="PatchOperationRemove">
+								<xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
+							</match>
+						</Operation>
+
+					</caseTrue>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

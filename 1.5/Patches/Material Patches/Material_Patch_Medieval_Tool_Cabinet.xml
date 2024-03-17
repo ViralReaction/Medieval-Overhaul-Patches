@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Tool Cabinet (1.4)</li>
+		</mods>
+		
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="ToolCabinet"]/costList/Steel</xpath>
+			<match Class="PatchOperationSetName">
+				<xpath>Defs/ThingDef[defName="ToolCabinet"]/costList/Steel</xpath>
+				<name>DankPyon_IronIngot</name>
+			</match>
+		</match>
+		
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ↁ House Sanguin</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Giddy-Up 2</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Faction Restrictions Still Borken on Giddy Up 2 -->
+					<li Class="PatchOperationConditional">
+						<xpath>Defs/FactionDef[defName="DevDesigner_FierceHouseSanguin"]/modExtensions/li[@Class="GiddyUpCore.FactionRestrictions"]</xpath>
+						<match Class="PatchOperationRemove">
+							<xpath>Defs/FactionDef[defName="DevDesigner_FierceHouseSanguin"]/modExtensions/li[@Class="GiddyUpCore.FactionRestrictions"]</xpath>
+						</match>
+					</li>
+				
+					<li Class="PatchOperationConditional">
+						<xpath>Defs/PawnKindDef[defName="DevDesigner_KnightSanguin"]/modExtensions/li[@Class="GiddyUpCore.CustomMounts"]</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>Defs/PawnKindDef[defName="DevDesigner_KnightSanguin"]/modExtensions/li[@Class="GiddyUpCore.CustomMounts"]</xpath>
+							<value>
+								<li Class="GiddyUp.CustomMounts">
+									<mountChance>95</mountChance>
+									<possibleMounts>
+										<li>
+											<key>Horse</key>
+											<value>1</value>
+										</li>
+									</possibleMounts>
+								</li>
+							</value>
+						</match>
+					</li>
+				
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>

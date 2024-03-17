@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Divine Order</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/prerequisites</xpath>
+					</match>
+				</li>
+				
+		<!--		<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/researchViewX</xpath>
+					<value>
+						<researchViewX>14.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderSmithing"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.10</researchViewY>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderEliteArmor"]/researchViewX</xpath>
+					<value>
+						<researchViewX>15.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="BotchJob_DivineOrderEliteArmor"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.10</researchViewY>
+					</value>
+				</li> -->
+				
+			</operations>
+		</match>
+	</Operation>
+		
+</Patch>

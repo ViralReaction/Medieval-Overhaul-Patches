@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded - Stews</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+							
+				<!-- Remove Old Recipes -->
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[
+					defName="DankPyon_CookMealWeakStew" or
+					defName="DankPyon_CookMealWeakStewBulk" or
+					defName="DankPyon_CookMealVegetablePot" or
+					defName="DankPyon_CookMealVegetablePotBulk" or
+					defName="DankPyon_CookMealBoiledBeansAndOnion" or
+					defName="DankPyon_CookMealBoiledBeanAndOnionBulk" or
+					defName="DankPyon_CookMealHeartyStew" or
+					defName="DankPyon_CookMealHeartyStewBulk" or
+					defName="DankPyon_CookMealHuntersStew" or
+					defName="DankPyon_CookMealHuntersStewBulk"]					</xpath>
+				</li>
+				
+				<!-- Stew Processor
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/thingClass</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/thingClass</xpath>
+					</match>
+				</li-->
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/tickerType</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]</xpath>
+						<value>
+							<tickerType>Normal</tickerType>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/tickerType</xpath>
+						<value>
+							<tickerType>Normal</tickerType>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/drawerType</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]</xpath>
+						<value>
+							<drawerType>MapMeshAndRealTime</drawerType>
+						</value>
+					</nomatch>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/drawerType</xpath>
+						<value>
+							<drawerType>MapMeshAndRealTime</drawerType>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs</xpath>
+					</match>
+				</li>
+							
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps</xpath>
+					<value>
+						<li Class="ProcessorFramework.CompProperties_Processor">
+							<capacity>2</capacity>
+							<independentProcesses>false</independentProcesses>
+							<processes>
+								<li>VCE_CookedStewSimple</li>
+								<li>VCE_CookedStewFine</li>
+								<li>VCE_CookedStewLavish</li>
+								<li>MO_WeakStew</li>
+								<li>MO_VegetablePot</li>
+								<li>MO_BeanOnion</li>
+								<li>MO_HeartyStew</li>
+								<li>MO_HunterStew</li>
+							</processes>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Simple Stews in Pot -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+								
+						<ProcessorFramework.ProcessDef>
+							<defName>VCE_CookedStewSimple</defName>
+							<thingDef>VCE_CookedStewSimple</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>VCE_UncookedStewSimple</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>2</capacityFactor>
+							<efficiency>10.0</efficiency>
+							<processDays>.5</processDays>
+						</ProcessorFramework.ProcessDef>
+
+						<ProcessorFramework.ProcessDef>
+							<defName>VCE_CookedStewFine</defName>
+							<thingDef>VCE_CookedStewFine</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>VCE_UncookedStewFine</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>2</capacityFactor>
+							<efficiency>10.0</efficiency>
+							<processDays>.7</processDays>
+						</ProcessorFramework.ProcessDef>
+
+						<ProcessorFramework.ProcessDef>
+							<defName>VCE_CookedStewLavish</defName>
+							<thingDef>VCE_CookedStewLavish</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>VCE_UncookedStewLavish</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>2</capacityFactor>
+							<efficiency>10.0</efficiency>
+							<processDays>1</processDays>
+						</ProcessorFramework.ProcessDef>
+						
+					</value>
+				</li>
+				
+				
+				<!-- Tier 1 Stews -->
+				<!-- Process Weak Stew -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<RecipeDef ParentName="CookMealBase">
+							<defName>MO_CookWeakStew</defName>
+							<label>prepare weak stew</label>
+							<description>Prepare a weak stew.</description>
+							<jobString>Preparing weak stew.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_RusticCookingTable</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>MeatRaw</li>
+										</categories>
+									</filter>
+									<count>1</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawCabbages</li>
+										</thingDefs>
+									</filter>
+									<count>1</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawGarlic</li>
+										</thingDefs>
+									</filter>
+									<count>0.5</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+								<thingDefs>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+								<thingDefs>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<products>
+								<MO_UncookedWeakStew>1</MO_UncookedWeakStew>
+							</products>
+							<researchPrerequisite>
+								<li>DankPyon_StewPot</li>
+							</researchPrerequisite>
+						</RecipeDef>
+					
+						<ThingDef ParentName="RoughPlantBase">
+							<defName>MO_UncookedWeakStew</defName>
+							<label>uncooked weak stew</label>
+							<description>An uncooked weak stew. This needs to be cooked in a stew pot to be edible.</description>
+							<graphicData>
+								<texPath>Meal/WeakStew</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<MarketValue>60</MarketValue>
+								<Flammability>1.3</Flammability>
+								<WorkToMake>300</WorkToMake>
+								<Mass>2.5</Mass>
+							</statBases>
+							<tradeability>None</tradeability>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>4</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients"/>
+							</comps>
+							<thingSetMakerTags/>
+							<thingCategories>
+								<li>VCE_UncookedStews</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+							</ingestible>
+						</ThingDef>
+					
+						<ProcessorFramework.ProcessDef>
+							<defName>MO_WeakStew</defName>
+							<thingDef>DankPyon_MealWeakStew</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>MO_UncookedWeakStew</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>1</capacityFactor>
+							<efficiency>5.0</efficiency>
+							<processDays>.5</processDays>
+						</ProcessorFramework.ProcessDef>
+					
+					</value>
+				</li>
+				
+				<!-- Process Vegetable Pot -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<RecipeDef ParentName="CookMealBase">
+							<defName>MO_CookVegetablePot</defName>
+							<label>prepare vegetable pot</label>
+							<description>Prepare a vegetable pot.</description>
+							<jobString>Preparing vegetable pot.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_RusticCookingTable</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>PlantFoodRaw</li>
+										</categories>
+									</filter>
+									<count>2.5</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>PlantFoodRaw</li>
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>PlantFoodRaw</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<products>
+								<MO_UncookedVegetablePot>1</MO_UncookedVegetablePot>
+							</products>
+							<researchPrerequisite>
+								<li>DankPyon_StewPot</li>
+							</researchPrerequisite>
+						</RecipeDef>
+					
+						<ThingDef ParentName="RoughPlantBase">
+							<defName>MO_UncookedVegetablePot</defName>
+							<label>uncooked vegetable pot</label>
+							<description>An uncooked vegetable pot. This needs to be cooked in a stew pot to be edible.</description>
+							<graphicData>
+								<texPath>Meal/VegetablePot</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<MarketValue>60</MarketValue>
+								<Flammability>1.3</Flammability>
+								<WorkToMake>300</WorkToMake>
+								<Mass>2.5</Mass>
+							</statBases>
+							<tradeability>None</tradeability>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>4</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients"/>
+							</comps>
+							<thingSetMakerTags/>
+							<thingCategories>
+								<li>VCE_UncookedStews</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+							</ingestible>
+						</ThingDef>
+					
+						<ProcessorFramework.ProcessDef>
+							<defName>MO_VegetablePot</defName>
+							<thingDef>DankPyon_MealVegetablePot</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>MO_UncookedVegetablePot</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>1</capacityFactor>
+							<efficiency>5.0</efficiency>
+							<processDays>.5</processDays>
+						</ProcessorFramework.ProcessDef>
+					
+					</value>
+				</li>
+				
+				<!-- Process Bean and Onion Stew -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<RecipeDef ParentName="CookMealBase">
+							<defName>MO_CookBeanOnion</defName>
+							<label>prepare boiled lentils with onion</label>
+							<description>Prepare a lentil and onion stew.</description>
+							<jobString>Preparing lentil and onion stew.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_RusticCookingTable</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawLentils</li>
+										</thingDefs>
+									</filter>
+									<count>1.5</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawOnions</li>
+										</thingDefs>
+									</filter>
+									<count>0.75</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawGarlic</li>
+										</thingDefs>
+									</filter>
+									<count>0.30</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<products>
+								<MO_UncookedBeanOnion>1</MO_UncookedBeanOnion>
+							</products>
+							<researchPrerequisite>
+								<li>DankPyon_StewPot</li>
+							</researchPrerequisite>
+						</RecipeDef>
+					
+						<ThingDef ParentName="RoughPlantBase">
+							<defName>MO_UncookedBeanOnion</defName>
+							<label>uncooked lentil and onion stew</label>
+							<description>An uncooked lentil and onion stew. This needs to be cooked in a stew pot to be edible.</description>
+							<graphicData>
+								<texPath>Meal/BoiledBeansAndOnion</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<MarketValue>60</MarketValue>
+								<Flammability>1.3</Flammability>
+								<WorkToMake>300</WorkToMake>
+								<Mass>2.5</Mass>
+							</statBases>
+							<tradeability>None</tradeability>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>4</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients"/>
+							</comps>
+							<thingSetMakerTags/>
+							<thingCategories>
+								<li>VCE_UncookedStews</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+							</ingestible>
+						</ThingDef>
+					
+						<ProcessorFramework.ProcessDef>
+							<defName>MO_BeanOnion</defName>
+							<thingDef>DankPyon_MealBoiledBeansAndOnion</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>MO_UncookedBeanOnion</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>1</capacityFactor>
+							<efficiency>5.0</efficiency>
+							<processDays>.5</processDays>
+						</ProcessorFramework.ProcessDef>
+					
+					</value>
+				</li>
+				
+				<!-- Tier 2 Stews -->
+				<!-- Process Hearty Stew -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<RecipeDef ParentName="CookMealBase">
+							<defName>MO_CookHeartyStew</defName>
+							<label>prepare hearty stew</label>
+							<description>Prepare a hearty stew.</description>
+							<jobString>Preparing hearty stew.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_RusticCookingTable</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>MeatRaw</li>
+										</categories>
+									</filter>
+									<count>1.0</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawOnions</li>
+										</thingDefs>
+									</filter>
+									<count>0.90</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawCabbages</li>
+										</thingDefs>
+									</filter>
+									<count>1.0</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawCarrots</li>
+										</thingDefs>
+									</filter>
+									<count>1.50</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_Salt</li>
+										</thingDefs>
+									</filter>
+									<count>0.40</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+								<thingDefs>
+									<li>DankPyon_RawOnions</li>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+									<li>DankPyon_Salt</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+								<thingDefs>
+									<li>DankPyon_RawOnions</li>
+									<li>DankPyon_RawCabbages</li>
+									<li>DankPyon_RawGarlic</li>
+									<li>DankPyon_Salt</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<products>
+								<MO_UncookedHeartyStew>1</MO_UncookedHeartyStew>
+							</products>
+							<skillRequirements>
+								<Cooking>6</Cooking>
+							</skillRequirements>
+							<researchPrerequisites>
+								<li>DankPyon_IntermediateCooking</li>
+								<li>DankPyon_StewPot</li>
+							</researchPrerequisites>
+						</RecipeDef>
+					
+						<ThingDef ParentName="RoughPlantBase">
+							<defName>MO_UncookedHeartyStew</defName>
+							<label>uncooked hearty stew</label>
+							<description>An uncooked hearty stew. This needs to be cooked in a stew pot to be edible.</description>
+							<graphicData>
+								<texPath>Meal/HeartyStew</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<MarketValue>80</MarketValue>
+								<Flammability>1.3</Flammability>
+								<WorkToMake>300</WorkToMake>
+								<Mass>2.5</Mass>
+							</statBases>
+							<tradeability>None</tradeability>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>4</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients"/>
+							</comps>
+							<thingSetMakerTags/>
+							<thingCategories>
+								<li>VCE_UncookedStews</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+							</ingestible>
+						</ThingDef>
+					
+						<ProcessorFramework.ProcessDef>
+							<defName>MO_HeartyStew</defName>
+							<thingDef>DankPyon_MealHeartyStew</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>MO_UncookedHeartyStew</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>1</capacityFactor>
+							<efficiency>5.0</efficiency>
+							<processDays>1.0</processDays>
+						</ProcessorFramework.ProcessDef>
+					
+					</value>
+				</li>
+				
+				<!-- Hunter's Stew -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+				
+						<RecipeDef ParentName="CookMealBase">
+							<defName>MO_CookHunterStew</defName>
+							<label>prepare hunter's stew</label>
+							<description>Prepare a hunter's stew.</description>
+							<jobString>Preparing hunter's stew.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>ElectricStove</li>
+								<li>FueledStove</li>
+								<li>DankPyon_RusticCookingTable</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_Sausages</li>
+										</thingDefs>
+									</filter>
+									<count>2.0</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawCabbages</li>
+										</thingDefs>
+									</filter>
+									<count>1.0</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawOnions</li>
+										</thingDefs>
+									</filter>
+									<count>0.9</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>DankPyon_RawGarlic</li>
+										</thingDefs>
+									</filter>
+									<count>1.0</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowPlantFood</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FoodRaw</li>
+								</categories>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+									<li>Milk</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<products>
+								<MO_UncookedHunterStew>1</MO_UncookedHunterStew>
+							</products>
+							<skillRequirements>
+								<Cooking>6</Cooking>
+							</skillRequirements>
+							<researchPrerequisites>
+								<li>DankPyon_IntermediateCooking</li>
+								<li>DankPyon_StewPot</li>
+							</researchPrerequisites>
+						</RecipeDef>
+					
+						<ThingDef ParentName="RoughPlantBase">
+							<defName>MO_UncookedHunterStew</defName>
+							<label>uncooked hunter stew</label>
+							<description>An uncooked hearty stew. This needs to be cooked in a stew pot to be edible.</description>
+							<graphicData>
+								<texPath>Meal/HuntersStew</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<MarketValue>88</MarketValue>
+								<Flammability>1.3</Flammability>
+								<WorkToMake>300</WorkToMake>
+								<Mass>2.5</Mass>
+							</statBases>
+							<tradeability>None</tradeability>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>4</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients"/>
+							</comps>
+							<thingSetMakerTags/>
+							<thingCategories>
+								<li>VCE_UncookedStews</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+							</ingestible>
+						</ThingDef>
+					
+						<ProcessorFramework.ProcessDef>
+							<defName>MO_HunterStew</defName>
+							<thingDef>DankPyon_MealHuntersStew</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>MO_UncookedHunterStew</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>1</capacityFactor>
+							<efficiency>5.0</efficiency>
+							<processDays>1.0</processDays>
+						</ProcessorFramework.ProcessDef>
+					
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+</Patch>
