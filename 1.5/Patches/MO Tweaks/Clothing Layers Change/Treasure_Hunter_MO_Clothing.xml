@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Treasure Hunter (MO Beta)</li>
-		</mods>
+	<!-- <Operation Class="PatchOperationFindMod"> -->
+		<!-- <mods> -->
+			<!-- <li>Treasure Hunter (MO Beta)</li> -->
+		<!-- </mods> -->
 
-		<match Class="PatchOperationSequence">
-			<operations>
+		<!-- <match Class="PatchOperationSequence"> -->
+			<!-- <operations> -->
 
-				<li Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath>
-						<value>
-							<li Class="VFECore.ApparelDrawPosExtension">
-								<apparelDrawSettings>
-									<drawPosNorthOffset>(0, 0.2, 0.05)</drawPosNorthOffset>
-								<drawPosSouthOffset>(0, 0.006, 0.02)</drawPosSouthOffset>
-								<drawPosWestOffset>(0.10,  0.2, 0)</drawPosWestOffset>
-								<drawPosEastOffset>(-0.10,  0.2, 0)</drawPosEastOffset>
-								</apparelDrawSettings>
-							</li>
-						</value>
-				</li>
+				<!-- <li Class="PatchOperationReplace"> -->
+						<!-- <xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/modExtensions/li[@Class="VFECore.ApparelDrawPosExtension"]</xpath> -->
+						<!-- <value> -->
+							<!-- <li Class="VFECore.ApparelDrawPosExtension"> -->
+								<!-- <apparelDrawSettings> -->
+									<!-- <drawPosNorthOffset>(0, 0.2, 0.05)</drawPosNorthOffset> -->
+								<!-- <drawPosSouthOffset>(0, 0.006, 0.02)</drawPosSouthOffset> -->
+								<!-- <drawPosWestOffset>(0.10,  0.2, 0)</drawPosWestOffset> -->
+								<!-- <drawPosEastOffset>(-0.10,  0.2, 0)</drawPosEastOffset> -->
+								<!-- </apparelDrawSettings> -->
+							<!-- </li> -->
+						<!-- </value> -->
+				<!-- </li> -->
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/apparel/layers</xpath>
-					<value>
-						<layers>
-							<li>DankPyon_ShellAttachment</li>
-						</layers>
-					</value>
-				</li>
+				<!-- <li Class="PatchOperationReplace"> -->
+					<!-- <xpath>Defs/ThingDef[@Name="EEG_SimpleCapeBase"]/apparel/layers</xpath> -->
+					<!-- <value> -->
+						<!-- <layers> -->
+							<!-- <li>DankPyon_ShellAttachment</li> -->
+						<!-- </layers> -->
+					<!-- </value> -->
+				<!-- </li> -->
 
-			</operations>
-		</match>
+			<!-- </operations> -->
+		<!-- </match> -->
 
-	</Operation>
+	<!-- </Operation> -->
 
 </Patch>

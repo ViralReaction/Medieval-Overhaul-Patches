@@ -35,46 +35,4 @@
 		<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
 	</ThingCategoryDef>
 
-	<ThingCategoryDef>
-		<defName>DankPyon_TinyHides</defName>
-		<label>tiny hides</label>
-		<parent>DankPyon_Hides</parent>
-		<iconPath>Resources/HideLarge</iconPath>
-	</ThingCategoryDef>
-
-	<ThingCategoryDef>
-		<defName>DankPyon_SmallHides</defName>
-		<label>small hides</label>
-		<parent>DankPyon_Hides</parent>
-		<iconPath>Resources/HideLarge</iconPath>
-	</ThingCategoryDef>
-
-	<ThingCategoryDef>
-		<defName>DankPyon_MediumHides</defName>
-		<label>medium hides</label>
-		<parent>DankPyon_Hides</parent>
-		<iconPath>Resources/HideLarge</iconPath>
-	</ThingCategoryDef>
-
-	<ThingCategoryDef>
-		<defName>DankPyon_LargeHides</defName>
-		<label>large hides</label>
-		<parent>DankPyon_Hides</parent>
-		<iconPath>Resources/HideLarge</iconPath>
-	</ThingCategoryDef>
-
-	<ThingCategoryDef>
-		<defName>DankPyon_HugeHides</defName>
-		<label>huge hides</label>
-		<parent>DankPyon_Hides</parent>
-		<iconPath>Resources/HideLarge</iconPath>
-	</ThingCategoryDef>
-
-	<ThingCategoryDef>
-		<defName>DankPyon_GenericHides</defName>
-		<label>generic hides</label>
-		<parent>DankPyon_Hides</parent>
-		<iconPath>Resources/HideLarge</iconPath>
-	</ThingCategoryDef>
-
 </Defs>

@@ -105,21 +105,21 @@
 						<harvestedThingDef>DankPyon_RawCabbages</harvestedThingDef>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="DankPyon_Plant_Cabbages"]/plant</xpath>
 					<value>
 						<dieFromToxicFallout>false</dieFromToxicFallout>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DankPyon_Plant_Cabbages"]/description</xpath>
 					<value>
 						<description>Green heads of cabbage. A vegetable made up of many leaves stacked on top of each other. Cabbage is especially good as an ingredient in salads and soups.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Cabbages are unaffected by toxic fallout and, contrary to other plants, won't die from it.</description>
 					</value>
 				</li>
-				
+
 				<!-- Tomato Integration -->				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/harvestedThingDef</xpath>
@@ -127,7 +127,7 @@
 						<harvestedThingDef>DankPyon_RawTomatoes</harvestedThingDef>
 					</value>
 				</li>
-				
+
 				<!-- Add Research -->
 				<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="VCE_Beet" or defName="VCE_Peas"]/plant</xpath>
@@ -137,7 +137,7 @@
 						</sowResearchPrerequisites>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="VCE_Pepper" or defName="VCE_Eggplant" or defName="VCE_Agave"]/plant</xpath>
 				<value>
@@ -146,7 +146,7 @@
 						</sowResearchPrerequisites>
 					</value>
 				</li>
-				
+
 			</operations>
 		</match>
 	</Operation>

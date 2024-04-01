@@ -45,7 +45,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 			
-			<li Class="PatchOperationConditional">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="Apparel_Tailcap"]/recipeMaker/researchPrerequisite</xpath>
 					<match Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="Apparel_Tailcap"]/recipeMaker/researchPrerequisite</xpath>

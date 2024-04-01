@@ -7,3 +7,10 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Pa
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.4\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\obj\Debug\Medieval Overhaul Patches.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.4\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\bin\Debug\0Harmony.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.4\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\bin\Debug\ProcessorFramework.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Assemblies\Medieval Overhaul Patches.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Assemblies\Medieval Overhaul Patches.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\obj\Debug\Medieval Overhaul Patches.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\obj\Debug\Medieval Overhaul Patches.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\obj\Debug\Medieval Overhaul Patches.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\obj\Debug\Medieval Overhaul Patches.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Medieval-Overhaul-Patches\1.5\Source\Medieval Overhaul Patches\Medieval Overhaul Patches\obj\Debug\Medieval Overhaul Patches.pdb

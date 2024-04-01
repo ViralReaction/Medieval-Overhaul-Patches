@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.4\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.5\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.4\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.5\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.4\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.5\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj",
         "projectName": "Medieval Overhaul Patches",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.4\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.5\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\Medieval Overhaul Patches.csproj",
         "packagesPath": "C:\\Users\\Enurta\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.4\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Medieval-Overhaul-Patches\\1.5\\Source\\Medieval Overhaul Patches\\Medieval Overhaul Patches\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -32,20 +32,7 @@
         }
       },
       "frameworks": {
-        "net48": {
-          "dependencies": {
-            "Krafs.Publicizer": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.1, )"
-            },
-            "Krafs.Rimworld.Ref": {
-              "target": "Package",
-              "version": "[1.4.3901, )"
-            }
-          }
-        }
+        "net48": {}
       },
       "runtimes": {
         "win": {
