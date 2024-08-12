@@ -134,6 +134,10 @@
 			<MarketValue>13</MarketValue>
 			<Nutrition>0.7</Nutrition>
 		</statBases>
+		<ingredient>
+			<mergeCompatibilityTags>
+			</mergeCompatibilityTags>
+		</ingredient>
 		<ingestible>
 			<foodType>Meat</foodType>
 			<preferability>DesperateOnly</preferability>

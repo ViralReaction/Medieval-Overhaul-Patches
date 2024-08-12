@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+		<defName>MakeAmmo_Arrow_Iron</defName>
+		<label>make iron arrows x10</label>
+		<description>Craft 10 iron arrows.</description>
+		<jobString>Making iron arrows.</jobString>
+		<workAmount>300</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DankPyon_IronIngot</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				<li>DankPyon_IronIngot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Arrow_Iron>10</Ammo_Arrow_Iron>
+		</products>
+	</RecipeDef>
+						
+	<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+		<defName>MakeAmmo_GreatArrow_Iron</defName>
+		<label>make iron great arrows x10</label>
+		<description>Craft 10 iron great arrows.</description>
+		<jobString>Making iron great arrows.</jobString>
+		<workAmount>400</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DankPyon_IronIngot</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				<li>DankPyon_IronIngot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_GreatArrow_Iron>10</Ammo_GreatArrow_Iron>
+		</products>
+	</RecipeDef>
+
+</Defs>

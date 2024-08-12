@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Add Tribal to Cooking Table -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="TM_MedicineTribal" or @Name="TM_TeaBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>DankPyon_RusticCookingTable</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]</xpath>
+		<value>
+			<tab>DankPyon_MedievalResearchTab</tab>
+		</value>
+	</Operation>
+				
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]/researchViewY</xpath>
+		<value>
+			 <researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+				
+	<!--li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]</xpath>
+					<value>
+						<researchViewY>0.0</researchViewY>
+					</value>
+				</li-->
+
+	<!-- Slightly reduce bonus -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/StatDef[defName="MedicalQualityMax" or defName="MedicalPotency"]/parts/li[@Class="StatPart_Quality"]</xpath>
+		<value>
+			<li Class="StatPart_Quality">
+				<factorAwful>0.4</factorAwful>
+				<factorPoor>0.6</factorPoor>
+				<factorNormal>1</factorNormal>
+				<factorGood>1.1</factorGood>
+				<factorExcellent>1.2</factorExcellent>
+				<factorMasterwork>1.35</factorMasterwork>
+				<factorLegendary>1.5</factorLegendary>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Remove Old Recipes -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/RecipeDef[
+					defName="DankPyon_CookMealVegetablePot" or
+					defName="DankPyon_CookMealVegetablePotBulk" or
+					defName="DankPyon_CookMealBoiledBeansAndOnion" or
+					defName="DankPyon_CookMealBoiledBeanAndOnionBulk" or
+					defName="DankPyon_CookMealHuntersStew" or
+					defName="DankPyon_CookMealHuntersStewBulk"]		</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/tickerType</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]</xpath>
+			<value>
+				<tickerType>Normal</tickerType>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/tickerType</xpath>
+			<value>
+				<tickerType>Normal</tickerType>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/drawerType</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]</xpath>
+			<value>
+				<drawerType>MapMeshAndRealTime</drawerType>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/drawerType</xpath>
+			<value>
+				<drawerType>MapMeshAndRealTime</drawerType>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps</xpath>
+		<value>
+			<li Class="ProcessorFramework.CompProperties_Processor">
+				<capacity>2</capacity>
+				<independentProcesses>false</independentProcesses>
+				<processes>
+					<li>VCE_CookedStewSimple</li>
+					<li>VCE_CookedStewFine</li>
+					<li>VCE_CookedStewLavish</li>
+					<li>MO_VegetablePot</li>
+					<li>MO_BeanOnion</li>
+					<li>MO_HunterStew</li>
+				</processes>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Remove Old Recipes -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/RecipeDef[
+			defName="DankPyon_CookMealBoneSoup" or
+			defName="DankPyon_CookMealBoneSoupBulk" or
+			defName="DankPyon_CookMealWinterLentilSoup" or
+			defName="DankPyon_CookMealWinterLentilSoupBulk" or
+			defName="DankPyon_CookMealMushroomSoup" or
+			defName="DankPyon_CookMealMushroomSoupBulk" or
+			defName="DankPyon_CookMealBreadSoup" or
+			defName="DankPyon_CookMealBreadSoupBulk" or
+			defName="DankPyon_CookMealPumpkinSoup" or
+			defName="DankPyon_CookMealPumpkinSoupBulk" or
+			defName="DankPyon_CookMealCheeseSoup" or
+			defName="DankPyon_CookMealCheeseSoupBulk"]</xpath>
+	</Operation>
+
+
+</Patch>

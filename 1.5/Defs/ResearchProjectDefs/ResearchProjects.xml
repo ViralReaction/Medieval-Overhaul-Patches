@@ -8,8 +8,8 @@
 		<baseCost>1000</baseCost>
 		<tab>DankPyon_MedievalResearchTab</tab>
 		<techLevel>Medieval</techLevel>
-		<researchViewX>13.00</researchViewX>
-		<researchViewY>5.60</researchViewY>
+		 <researchViewX>5.00</researchViewX>
+		<researchViewY>6.6</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

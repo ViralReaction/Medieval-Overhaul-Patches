@@ -78,10 +78,6 @@
 											<li>DankPyon_RawWood</li>
 											<li>DankPyon_RawDarkWood</li>
 											<li>WoodLog</li>
-											<li>DankPyon_DarkWoodLog</li>
-											<li>DankPyon_ElvenWoodLog</li>
-											<li>DankPyon_DryadWoodLog</li>
-											<li>DankPyon_AncientWoodLog</li>
 										</thingDefs>
 									</fuelFilter>
 									<initialFuelPercent>0.0</initialFuelPercent>

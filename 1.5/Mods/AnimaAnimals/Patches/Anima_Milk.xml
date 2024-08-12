@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="AnimaThrumboMilk"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>DankPyon_Milk</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_PressCheeseProcess"]/ingredientFilter/thingDefs/li[.="AnimaThrumboMilk"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_PressCheeseProcess"]/ingredientFilter/thingDefs</xpath>
+			<value>
+				<li>AnimaThrumboMilk</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

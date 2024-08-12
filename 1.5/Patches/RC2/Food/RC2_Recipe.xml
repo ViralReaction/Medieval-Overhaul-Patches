@@ -26,21 +26,21 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="RC2_MakeHardtack"]/ingredients/li/filter/categories</xpath>
 					<value>
-						<li>MO_Flour</li>
+						<li>DankPyon_Flour</li>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="RC2_MakeHardtack"]/fixedIngredientFilter/categories</xpath>
 					<value>
-						<li>MO_Flour</li>
+						<li>DankPyon_Flour</li>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="RC2_MakeHardtack"]/defaultIngredientFilter/categories</xpath>
 					<value>
-						<li>MO_Flour</li>
+						<li>DankPyon_Flour</li>
 					</value>
 				</li>
 
