@@ -55,24 +55,6 @@
 				<defaultValue>true</defaultValue>
 			</li>
 			<li Class="XmlExtensions.Setting.Checkbox">
-				<key>food_quality</key>
-				<label>Wine/Cheese Quality?</label>
-				<tooltip>Adds quality for wine and cheeses.</tooltip>
-				<defaultValue>true</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<key>dried_smoked_food</key>
-				<label>Dried Meat Nutrition Change?</label>
-				<tooltip>Turn regular dried meat into a raw ingredient with lowered nutrition and cost to make. Best for perserving meats through winter.</tooltip>
-				<defaultValue>true</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<key>boomalope_tar</key>
-				<label>Chemfuel Milk to Tar?</label>
-				<tooltip>Replaces Chemfuel for Tar when milking.</tooltip>
-				<defaultValue>false</defaultValue>
-			</li>
-			<li Class="XmlExtensions.Setting.Checkbox">
 				<key>alchemical_drug</key>
 				<label>Alchemy Table Drugs?</label>
 				<tooltip>Allows the alchemy table to inherit drug recipes.</tooltip>
