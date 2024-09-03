@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+		<settings>
+			<li>plant_bloat</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/sowTags</xpath>
+					<value>
+						<sowTags/>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/sowTags</xpath>
+					<value>
+						<sowTags/>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/sowTags</xpath>
+					<value>
+						<sowTags/>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/sowTags</xpath>
+					<value>
+						<sowTags/>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant/sowTags</xpath>
+					<value>
+						<sowTags/>
+					</value>
+				</li>
+
+			</operations>
+		</active>
+		<inactive>
+			<operation>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VCE_Garlic"]/plant</xpath>
+					<value>
+						<sowResearchPrerequisites>
+							<li>DankPyon_BasicAgriculture</li>
+						</sowResearchPrerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VCE_Chickpea"]/plant</xpath>
+					<value>
+						<sowResearchPrerequisites>
+							<li>DankPyon_BasicAgriculture</li>
+						</sowResearchPrerequisites>
+					</value>
+				</li>
+			</operations>
+		</inactive>
+	</Operation>
+
+</Patch>

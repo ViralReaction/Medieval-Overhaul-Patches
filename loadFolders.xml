@@ -2,9 +2,11 @@
 
 <loadFolders>
 	<v1.4>
+		<li>/</li>
 		<li>1.4</li>
 	</v1.4>
 	<v1.5>
+		<li>/</li>
 		<li>1.5</li>
 		<li IfModActive="ceteam.combatextended">1.5/Mods/CombatExtended</li>
 		<li IfModActive="onyxae.dragonsdescent">1.5/Mods/DragonsDescent</li>
@@ -48,5 +50,7 @@
 		<li IfModActive="vanillaexpanded.vappe">1.5/Mods/VE_Apparel</li>
 		<li IfModActive="vanillaexpanded.varme">1.5/Mods/VE_Armor</li>
 		<li IfModActive="oskarpotocki.vfe.tribals">1.5/Mods/VE_Tribal</li>
+		<li IfModActive="mlie.rc2.core">1.5/Mods/RC2</li>
+		<li IfModActive="dd.unofficial.notfood.mendandrecycle,notfood.mendandrecycle">1.5/Mods/MendRecycle</li>
 	</v1.5>
 </loadFolders>

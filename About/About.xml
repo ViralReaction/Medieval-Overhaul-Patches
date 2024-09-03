@@ -14,12 +14,6 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2553700067</steamWorkshopUrl>
 			<downloadUrl>https://github.com/SirLalaPyon/MedievalOverhaul</downloadUrl>
 		</li>
-		<li>
-			<packageId>imranfish.xmlextensions</packageId>
-			<displayName>XML Extensions</displayName>
-			<steamWorkshopUrl>steam://url/CommunityFilePage/2574315206</steamWorkshopUrl>
-			<downloadUrl>https://github.com/15adhami/XmlExtensions/wiki</downloadUrl>
-		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>mlie.vanillabooksexpandedexpanded</li>

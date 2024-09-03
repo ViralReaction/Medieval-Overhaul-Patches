@@ -49,20 +49,16 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Grain"]/building/fixedStorageSettings/filter</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Grain"]/building/fixedStorageSettings/filter/categories</xpath>
 		<value>
-			<categories>
-				<li>DankPyon_Cereal</li>
-			</categories>
+			<li>DankPyon_Cereal</li>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Grain"]/building/defaultStorageSettings/filter</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_LargeShelf_Grain"]/building/defaultStorageSettings/filter/categories</xpath>
 		<value>
-			<categories>
-				<li>DankPyon_Cereal</li>
-			</categories>
+			<li>DankPyon_Cereal</li>
 		</value>
 	</Operation>
 

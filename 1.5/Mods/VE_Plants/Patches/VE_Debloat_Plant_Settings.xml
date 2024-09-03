@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+		<settings>
+			<li>plant_bloat</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/sowTags</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/sowTags</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Pumpkin"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/sowTags</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/sowTags</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant/sowTags</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant/sowTags</xpath>
+						<value>
+							<sowTags/>
+						</value>
+					</match>
+				</li>
+
+			</operations>
+		</active>
+		<inactive>
+			<operation>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VCE_Onion"]/plant</xpath>
+						<sowResearchPrerequisites>
+							<li>DankPyon_BasicAgriculture</li>
+						</sowResearchPrerequisites>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DankPyon_Plant_Pumpkins"]/plant</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DankPyon_Plant_Pumpkins"]/plant</xpath>
+						<sowResearchPrerequisites>
+							<li>DankPyon_AdvancedAgriculture</li>
+						</sowResearchPrerequisites>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VCE_Cabbage"]/plant</xpath>
+						<sowResearchPrerequisites>
+							<li>DankPyon_AdvancedAgriculture</li>
+						</sowResearchPrerequisites>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VCE_Tomato"]/plant</xpath>
+						<sowResearchPrerequisites>
+							<li>DankPyon_AdvancedAgriculture</li>
+						</sowResearchPrerequisites>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/plant</xpath>
+						<sowResearchPrerequisites>
+							<li>Cocoa</li>
+						</sowResearchPrerequisites>
+					</match>
+				</li>
+
+			</inactive>
+		</operations>
+	</Operation>
+
+</Patch>
