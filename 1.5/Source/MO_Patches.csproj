@@ -39,10 +39,12 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adjust_Research.cs" />
-    <Compile Include="CustomWidget.cs" />
-    <Compile Include="FileName.cs" />
-    <Compile Include="Listing_MO_Patches.cs" />
+    <Compile Include="Utility\PatchOperation_EnumToggle.cs" />
+    <Compile Include="Utility\Utilities.cs" />
+    <Compile Include="Utility\CustomWidget.cs" />
+    <Compile Include="Utility\MayRequireCEAttribute.cs" />
+    <Compile Include="Utility\MOPatchDefOf.cs" />
+    <Compile Include="Utility\Listing_MO_Patches.cs" />
     <Compile Include="Settings\ModSettings_Patches.cs" />
     <Compile Include="Settings\Mod_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -14,6 +14,30 @@ namespace MO_Patches
     public static class CustomWidget
     {
 
+        public static void DrawIntOptionWithButtons(Rect rect, ref int value, string label, int minValue, int maxValue, int spinnerValue)
+        {
+            TextAnchor anchor = Text.Anchor;
+            Text.Anchor = TextAnchor.MiddleLeft;
+            Rect labelRect = new Rect(rect.x, rect.y, rect.width - 100f, rect.height);
+            Widgets.Label(labelRect, label);
+            float buttonWidth = 30f;
+            float textWidth = 50f;
+            float spacing = 5f;
+            float totalWidth = buttonWidth * 2 + textWidth + spacing * 2;
+            float availableX = rect.xMax - totalWidth;
+            if (Widgets.ButtonText(new Rect(availableX, rect.y, buttonWidth, rect.height), "-"))
+            {
+                value = Math.Max(value - spinnerValue, minValue);
+            }
+            string buffer = value.ToString();
+            Widgets.TextFieldNumeric(new Rect(availableX + buttonWidth + spacing, rect.y, textWidth, rect.height), ref value, ref buffer, minValue, maxValue);
+            if (Widgets.ButtonText(new Rect(availableX + buttonWidth + textWidth + spacing * 2, rect.y, buttonWidth, rect.height), "+"))
+            {
+                value = Math.Min(value + spinnerValue, maxValue);
+            }
+
+            Text.Anchor = anchor;
+        }
         public static float HorizontalSlider(Rect rect, float value, float min, float max, bool drawLabel = true, string label = null, string leftAlignedLabel = null, string rightAlignedLabel = null, float roundTo = -1f)
         {
             int controlID = GUIUtility.GetControlID(FocusType.Passive);

@@ -33,7 +33,15 @@ namespace MO_Patches
         }
         public void PostLoad()
         {
-            LongEventHandler.ExecuteWhenFinished( () => Utilities.ChangeResearch(MOPatchDefOf.Esoteric_Studies, settings.esoteric_cost));
+            LongEventHandler.ExecuteWhenFinished(() => Utilities.ChangeResearch(MOPatchDefOf.Esoteric_Studies, settings.esoteric_cost));
+            if (Utilities.RimFantasyIsEnabled)
+            {
+                LongEventHandler.ExecuteWhenFinished(() => Utilities.ChangeResearch(ResearchProjectDef.Named("RF_ArcaneCrafting"), settings.arcane_mo_cost));
+            }
+            if (Utilities.TribalMedicineIsEnabled)
+            {
+                    LongEventHandler.ExecuteWhenFinished(() => Utilities.ChangeResearch(ResearchProjectDef.Named("TM_AncientTribalMedicine"), settings.arcane_mo_cost));
+            }
         }
 
     }

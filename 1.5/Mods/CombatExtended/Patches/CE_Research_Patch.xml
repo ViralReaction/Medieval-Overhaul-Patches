@@ -106,5 +106,23 @@
 			<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]</xpath>
 		</match>
 	</Operation>
+	
+	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+		<settings>
+			<li>schematic_gunpowder</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+					</match>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
 
 </Patch>
