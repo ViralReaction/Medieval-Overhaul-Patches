@@ -11,8 +11,7 @@ namespace MO_Patches
 {
     public class PatchOperation_EnumToggle : PatchOperation
     {
-        public string enumTypeString;  // The enum type as a string (e.g., "MO_Patches.DarkForestDifficulty")
-        public string enumSettingName; // The name of the enum field in the settings (e.g., "CurrentEnumSetting")
+        public string enumSettingName; // The name of the enum field in the settings (e.g., "darkForestDifficultyMode")
         public string settingsTypeString;  // The settings class that holds the enum (e.g., "MO_Patches.ModSettings_MOPatches")
 
         public List<PatchOperationMapping> operationMapping;  // List of mappings between enum value and operations

@@ -81,9 +81,12 @@ namespace MO_Patches
                 return GetType().GetFields().Where(p => p.FieldType == typeof(bool) && (bool)p.GetValue(this)).Select(p => p.Name);
             }
         }
+        private Vector2 scrollPosition;
         public void DoSettingsWindowContents(Rect inRect)
         {
-            Rect rect = new(inRect.x, inRect.y, inRect.width, inRect.height);
+            Rect rect = new(inRect.x, inRect.y, inRect.width - 20f, 2000f);
+            float contentHeight = 700f;
+            Widgets.BeginScrollView(inRect, ref this.scrollPosition, new Rect(inRect.x, inRect.y, rect.width, contentHeight), true);
             Listing_MO_Patches options = new();
             options.Begin(rect);
             options.GapLine();
@@ -154,7 +157,10 @@ namespace MO_Patches
             {
                 ResetSettingsToDefault();
             }
+            contentHeight = options.CurHeight +100f;
             options.End();
+            Widgets.EndScrollView();
+            rect.height = contentHeight;
         }
         public void ResetSettingsToDefault()
         {
