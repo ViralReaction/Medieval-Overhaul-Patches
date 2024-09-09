@@ -9,9 +9,9 @@
 			</thingCategories>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/ingredients/li/filter</xpath>
+		<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/ingredients/li/filter</xpath>
 		<value>
 			<categories>
 				<li>DankPyon_Cereal</li>
@@ -20,14 +20,14 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/fixedIngredientFilter</xpath>
+		<xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual" or defName="DankPyon_CraftFlour" or defName="DankPyon_CraftFlourBulk"]/fixedIngredientFilter</xpath>
 		<value>
 			<categories>
 				<li>DankPyon_Cereal</li>
 			</categories>
 		</value>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs/li[.="DankPyon_RawWheat"]</xpath>
 	</Operation>
@@ -40,5 +40,5 @@
 			</categories>
 		</value>
 	</Operation>
-				
+
 </Patch>
