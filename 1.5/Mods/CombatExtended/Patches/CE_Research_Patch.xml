@@ -107,7 +107,7 @@
 		</match>
 	</Operation>
 	
-	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
 			<li>schematic_gunpowder</li>
 		</settings>

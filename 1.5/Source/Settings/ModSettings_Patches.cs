@@ -53,7 +53,7 @@ namespace MO_Patches
             Scribe_Values.Look(ref building_bloat, "building_bloat", true);
             Scribe_Values.Look(ref plant_bloat, "plant_bloat", true);
             Scribe_Values.Look(ref alchemical_drug, "alchemical_drug", true);
-            Scribe_Values.Look(ref alchemical_drug, "medieval_drug", true);
+            Scribe_Values.Look(ref medieval_drug, "medieval_drug", true);
             Scribe_Values.Look(ref mo_wild_plants, "mo_wild_plants", true);
             
             Scribe_Values.Look(ref schematic_gunpowder, "schematic_gunpowder", false);
@@ -63,9 +63,9 @@ namespace MO_Patches
             Scribe_Values.Look(ref tribal_medicine_mo_cost, "tribal_medicine_mo_cost", 1000);
             Scribe_Values.Look(ref darkForestDifficultyMode, "darkForestDifficultyMode", DarkForestDifficulty.Normal);
 
-            Scribe_Values.Look(ref chemfuel_replace, "experimental_patches", false);
+            Scribe_Values.Look(ref experimental_patches, "experimental_patches", false);
             Scribe_Values.Look(ref chemfuel_replace, "chemfuel_replace", false);
-            Scribe_Values.Look(ref chemfuel_replace, "component_replace", false);
+            Scribe_Values.Look(ref component_replace, "component_replace", false);
             Scribe_Collections.Look(ref settingMode, "settingMode", LookMode.Value, LookMode.Value);
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
@@ -74,7 +74,7 @@ namespace MO_Patches
             }
 
         }
-        public IEnumerable<string> ToggleSettings
+        public IEnumerable<string> toggleSettings
         {
             get
             {

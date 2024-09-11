@@ -39,6 +39,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utility\FileName.cs" />
     <Compile Include="Utility\PatchOperation_EnumToggle.cs" />
     <Compile Include="Utility\Utilities.cs" />
     <Compile Include="Utility\CustomWidget.cs" />

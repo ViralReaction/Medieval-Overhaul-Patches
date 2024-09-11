@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
 			<li>plant_bloat</li>
 		</settings>
@@ -27,8 +27,10 @@
 					</value>
 				</li>
 
-			</active>
-			<inactive>
+			</operations>
+		</active>
+		<inactive Class="PatchOperationSequence">
+			<operations>
 
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="VCE_Wheat"]/plant</xpath>
@@ -54,9 +56,9 @@
 						</sowResearchPrerequisites>
 					</value>
 				</li>
-
-			</inactive>
-		</operations>
+	
+			</operations>
+		</inactive>
 	</Operation>
 
 </Patch>

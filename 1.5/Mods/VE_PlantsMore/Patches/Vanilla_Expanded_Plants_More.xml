@@ -101,7 +101,8 @@
 				defName="VCE_Okra" or
 				defName="VCE_Beans" or
 				defName="VCE_Lotus" or
-				defName="VCE_WaterChestnut"]/plant		</xpath>
+				defName="VCE_WaterChestnut"]/plant
+		</xpath>
 		<value>
 			<sowResearchPrerequisites>
 				<li>DankPyon_IntermediateAgriculture</li>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
 			<li>alchemical_drug</li>
 		</settings>
@@ -29,7 +29,7 @@
 		</active>
 	</Operation>
 	
-	<Operation Class="MedievalOverhaul.PatchOperation_ToggleSettings">
+	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
 			<li>medieval_drug</li>
 		</settings>

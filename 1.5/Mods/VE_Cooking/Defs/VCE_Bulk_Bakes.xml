@@ -83,10 +83,10 @@
 		<skillRequirements>
 			<Cooking>6</Cooking>
 		</skillRequirements>
-		<researchPrerequisites>
-			<li>DankPyon_BasicCooking</li>
-			<li>DankPyon_Oven</li>
-		</researchPrerequisites>
+		<!-- <researchPrerequisites> -->
+			<!-- <li>DankPyon_BasicCooking</li> -->
+			<!-- <li>DankPyon_Oven</li> -->
+		<!-- </researchPrerequisites> -->
 	</RecipeDef>
 
 	<RecipeDef ParentName="VCE_CookBakeMealBase">
@@ -137,10 +137,10 @@
 		<skillRequirements>
 			<Cooking>8</Cooking>
 		</skillRequirements>
-		<researchPrerequisites>
-			<li>DankPyon_IntermediateCooking</li>
-			<li>DankPyon_Oven</li>
-		</researchPrerequisites>
+		<!-- <researchPrerequisites> -->
+			<!-- <li>DankPyon_IntermediateCooking</li> -->
+			<!-- <li>DankPyon_Oven</li> -->
+		<!-- </researchPrerequisites> -->
 	</RecipeDef>
 
 </Defs>
