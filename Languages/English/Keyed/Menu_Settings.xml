@@ -10,7 +10,7 @@
 	<MO_Patches_Settings_Plant_Deboat_Title>Remove plant duplicates:</MO_Patches_Settings_Plant_Deboat_Title>
 	<MO_Patches_Settings_Plant_Deboat_Desc>Removes overlapping plant types from the game.</MO_Patches_Settings_Plant_Deboat_Desc>
 
-	<MO_Patches_Settings_Building_Deboat_Title>Remove plant duplicates:</MO_Patches_Settings_Building_Deboat_Title>
+	<MO_Patches_Settings_Building_Deboat_Title>Remove building duplicates:</MO_Patches_Settings_Building_Deboat_Title>
 	<MO_Patches_Settings_Building_Deboat_Desc>Removes overlapping building types from the game</MO_Patches_Settings_Building_Deboat_Desc>
 
 	<!-- Individual Tweaks -->

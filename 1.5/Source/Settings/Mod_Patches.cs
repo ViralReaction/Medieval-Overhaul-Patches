@@ -17,6 +17,7 @@ namespace MO_Patches
         {
             settings = GetSettings<ModSettings_MOPatches>();
             PostLoad();
+            Log.Message("Loading Medieval Overhaul Patches");
         }
 
         public override string SettingsCategory()
