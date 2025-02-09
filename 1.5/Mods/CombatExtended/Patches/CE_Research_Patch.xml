@@ -72,9 +72,6 @@
 			<prerequisites>
 				<li>DankPyon_Alchemy</li>
 			</prerequisites>
-			<requiredResearchFacilities>
-				<li>DankPyon_Book_Gunpowder</li>
-			</requiredResearchFacilities>
 			<tab>DankPyon_MedievalResearchTab</tab>
 		</value>
 	</Operation>
@@ -100,13 +97,29 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DankPyon_Schematic_Gunpowder"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="MedievalOverhaul.BookOutcomeProperties_GainResearchDefinable"]/researchProjects/li/researchProject</xpath>
+		<value>
+			<researchProject>CE_Gunpowder</researchProject>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"]</xpath>
+		<value>
+			<li Class="MedievalOverhaul.RequiredSchematic">
+				<schematicDef>DankPyon_Schematic_Gunpowder</schematicDef>
+			</li>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]</xpath>
 		<match Class="PatchOperationRemove">
 			<xpath>Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]</xpath>
 		</match>
 	</Operation>
-	
+
 	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
 			<li>schematic_gunpowder</li>
@@ -115,9 +128,9 @@
 			<operations>
 
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+					<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"]/modExtensions/li[@Class="MedievalOverhaul.RequiredSchematic"]</xpath>
 					<match Class="PatchOperationRemove">
-						<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"][requiredResearchFacilities]/requiredResearchFacilities</xpath>
+						<xpath>Defs/ResearchProjectDef[defName="CE_Gunpowder"]/modExtensions/li[@Class="MedievalOverhaul.RequiredSchematic"]</xpath>
 					</match>
 				</li>
 
