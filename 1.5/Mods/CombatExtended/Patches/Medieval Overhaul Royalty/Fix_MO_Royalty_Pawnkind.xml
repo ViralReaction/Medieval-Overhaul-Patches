@@ -65,9 +65,9 @@
 					</li>
 				
 					<li Class="PatchOperationConditional">
-						<xpath>Defs/PawnKindDef[contains(defName, 'Empire_Fighter_Grenadier') and (contains(weaponTags, 'DankPyon_Crossbow') or contains(weaponTags, 'DankPyon_Arbelest'))]/apparelRequired/li[.="CE_Apparel_TribalBackpack"]</xpath>
+						<xpath>Defs/PawnKindDef[contains(defName, 'Medieval_Empire_Grenadier') and (contains(weaponTags, 'DankPyon_Crossbow') or contains(weaponTags, 'DankPyon_Arbelest'))]/apparelRequired/li[.="CE_Apparel_TribalBackpack"]</xpath>
 						<nomatch Class="PatchOperationAdd">
-							<xpath>Defs/PawnKindDef[contains(defName, 'Empire_Fighter_Grenadier') and (contains(weaponTags, 'DankPyon_Crossbow') or contains(weaponTags, 'DankPyon_Arbelest'))]/apparelRequired</xpath>
+							<xpath>Defs/PawnKindDef[contains(defName, 'Medieval_Empire_Grenadier') and (contains(weaponTags, 'DankPyon_Crossbow') or contains(weaponTags, 'DankPyon_Arbelest'))]/apparelRequired</xpath>
 							<value>
 								<li>CE_Apparel_TribalBackpack</li>
 							</value>
