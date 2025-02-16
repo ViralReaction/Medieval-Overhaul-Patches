@@ -57,49 +57,49 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Thefirstjump"]/researchViewX</xpath>
 		<value>
-			<researchViewX>14.00</researchViewX>
+			<researchViewX>12.00</researchViewX>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Thefirstjump"]/researchViewY</xpath>
 		<value>
-			<researchViewY>1.95</researchViewY>
+			<researchViewY>1.90</researchViewY>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_RidingintheWinds"]/researchViewX</xpath>
 		<value>
-			<researchViewX>15.00</researchViewX>
+			<researchViewX>13.00</researchViewX>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_RidingintheWinds"]/researchViewY</xpath>
 		<value>
-			<researchViewY>1.95</researchViewY>
+			<researchViewY>1.90</researchViewY>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Merchantoftheskies"]/researchViewX</xpath>
 		<value>
-			<researchViewX>16.00</researchViewX>
+			<researchViewX>14.00</researchViewX>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Merchantoftheskies"]/researchViewY</xpath>
 		<value>
-			<researchViewY>1.30</researchViewY>
+			<researchViewY>1.40</researchViewY>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_WindsofWar"]/researchViewX</xpath>
 		<value>
-			<researchViewX>16.00</researchViewX>
+			<researchViewX>14.00</researchViewX>
 		</value>
 	</Operation>
 
@@ -113,7 +113,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Conqueringthewinds"]/researchViewX</xpath>
 		<value>
-			<researchViewX>16.00</researchViewX>
+			<researchViewX>14.00</researchViewX>
 		</value>
 	</Operation>
 
@@ -127,14 +127,14 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Windjewel"]/researchViewX</xpath>
 		<value>
-			<researchViewX>17.00</researchViewX>
+			<researchViewX>15.00</researchViewX>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Research_Windjewel"]/researchViewY</xpath>
 		<value>
-			<researchViewY>1.95</researchViewY>
+			<researchViewY>1.90</researchViewY>
 		</value>
 	</Operation>
 
