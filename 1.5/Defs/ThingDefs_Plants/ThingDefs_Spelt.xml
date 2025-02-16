@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="PlantBase">
 		<defName>DankPyon_Plant_Spelt</defName>
-		<label>spelt plant</label>
+		<label>einkorn plant</label>
 		<description>A thin, fragile grain plant which produces small yellow seeds. Takes a relatively long time to grow and yields lots of food, but requires further processing to be eatable. Needs fertile soil to grow well.</description>
 		<statBases>
 			<MaxHitPoints>80</MaxHitPoints>
@@ -40,8 +40,8 @@
 	
 	<ThingDef ParentName="RoughPlantBase">
 		<defName>DankPyon_RawSpelt</defName>
-		<label>spelt</label>
-		<description>Spelt is a grain that can be milled into flour.</description>
+		<label>einkorn</label>
+		<description>Einkorn is a grain that can be milled into flour.</description>
 		<graphicData>
 			<texPath>Plants/RawWheat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
