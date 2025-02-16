@@ -9,7 +9,17 @@
 					defName="DankPyon_CookMealBoiledBeansAndOnion" or
 					defName="DankPyon_CookMealBoiledBeanAndOnionBulk" or
 					defName="DankPyon_CookMealHuntersStew" or
-					defName="DankPyon_CookMealHuntersStewBulk"]		</xpath>
+					defName="DankPyon_CookMealHuntersStewBulk"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/label</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/label</xpath>
+			<value>
+				<label>Stew Pot</label>
+			</value>
+		</match>
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
@@ -52,9 +62,9 @@
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs/li[.="ITab_Bills"]</xpath>
 		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs</xpath>
+			<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/inspectorTabs/li[.="ITab_Bills"]</xpath>
 		</match>
 	</Operation>
 
@@ -62,17 +72,47 @@
 		<xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/comps</xpath>
 		<value>
 			<li Class="ProcessorFramework.CompProperties_Processor">
-				<capacity>2</capacity>
+				<capacity>6</capacity>
 				<independentProcesses>false</independentProcesses>
 				<processes>
+					<li>VCE_CookedSoupSimple</li>
+					<li>VCE_CookedSoupFine</li>
+					<li>VCE_CookedSoupLavish</li>
+					<li>VCE_CookedSoupGourmet</li>
 					<li>VCE_CookedStewSimple</li>
 					<li>VCE_CookedStewFine</li>
 					<li>VCE_CookedStewLavish</li>
+					<li>MO_BoneSoup</li>
+					<li>MO_LentilSoup</li>
+					<li>MO_MushroomSoup</li>
+					<li>MO_BreadSoup</li>
+					<li>MO_PumpkinSoup</li>
+					<li>MO_CheeseSoup</li>
 					<li>MO_VegetablePot</li>
 					<li>MO_BeanOnion</li>
 					<li>MO_HunterStew</li>
 				</processes>
 			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ThingDef[defName="MO_SoupPot"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VCE_CookedSoupLavish"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>VCE_CookedStewSimple</li>
+			<li>VCE_CookedStewFine</li>
+			<li>VCE_CookedStewLavish</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ThingDef[defName="MO_SoupPot"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="MO_CheeseSoup"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>MO_VegetablePot</li>
+			<li>MO_BeanOnion</li>
+			<li>MO_HunterStew</li>
 		</value>
 	</Operation>
 
