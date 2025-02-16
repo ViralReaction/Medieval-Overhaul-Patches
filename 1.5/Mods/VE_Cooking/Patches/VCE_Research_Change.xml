@@ -35,7 +35,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]/researchViewY</xpath>
 		<value>
-			<researchViewY>6.40</researchViewY>
+			<researchViewY>5.40</researchViewY>
 		</value>
 	</Operation>
 
