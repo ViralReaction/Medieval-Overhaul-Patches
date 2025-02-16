@@ -19,7 +19,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="SADinghy"]/comps</xpath>
 					<value>
-						<li Class="ESCP_FuelExtension.CompProperties_StoreFuelThing"/>
+						<li Class="MedievalOverhaul.CompProperties_StoreFuelThing"/>
 					</value>
 				</li>
 
@@ -27,7 +27,7 @@
 					<xpath>Defs/ThingDef[defName="SADinghy"]</xpath>
 					<value>
 						<inspectorTabs>
-							<li>ESCP_FuelExtension.ITab_Fuel</li>
+							<li>MedievalOverhaul.ITab_Fuel</li>
 						</inspectorTabs>
 					</value>
 				</li>
@@ -38,13 +38,12 @@
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[
-						defName="SADinghy" or
-						defName="SAPioneer" or
-						defName="SAFatMuffalo" or
-						defName="SASpitefulMoth" or
-						defName="SAAdvancedpioneer" or
-						defName="SASandmanta"
-						]/comps/li[@Class="CompProperties_Refuelable"]/initialFuelPercent
+		defName="SADinghy" or
+		defName="SAPioneer" or
+		defName="SAFatMuffalo" or
+		defName="SASpitefulMoth" or
+		defName="SAAdvancedpioneer" or
+		defName="SASandmanta"]/comps/li[@Class="CompProperties_Refuelable"]/initialFuelPercent
 		</xpath>
 		<value>
 			<initialFuelPercent>0.01</initialFuelPercent>
