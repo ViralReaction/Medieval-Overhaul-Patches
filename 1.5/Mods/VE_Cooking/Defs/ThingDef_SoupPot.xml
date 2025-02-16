@@ -24,7 +24,7 @@
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
-		<costStuffCount>100</costStuffCount>
+		<costStuffCount>40</costStuffCount>
 		<altitudeLayer>Building</altitudeLayer>
 		<rotatable>true</rotatable>
 		<neverMultiSelect>true</neverMultiSelect>
