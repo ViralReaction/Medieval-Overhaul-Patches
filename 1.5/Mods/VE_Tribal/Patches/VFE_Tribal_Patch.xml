@@ -340,9 +340,9 @@
 
 	<!-- Furniture -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="DankPyon_BedLog"]/researchPrerequisites</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_BedLog" or defName="DankPyon_BedLogDouble"]/researchPrerequisites</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="DankPyon_BedLog"]/researchPrerequisites</xpath>
+			<xpath>Defs/ThingDef[defName="DankPyon_BedLog" or defName="DankPyon_BedLogDouble"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites Inherit="false">
 					<li>VFET_Furniture</li>
@@ -350,7 +350,7 @@
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="DankPyon_BedLog"]</xpath>
+			<xpath>Defs/ThingDef[defName="DankPyon_BedLog" or defName="DankPyon_BedLogDouble"]</xpath>
 			<value>
 				<researchPrerequisites Inherit="false">
 					<li>VFET_Furniture</li>
