@@ -29,11 +29,11 @@
 	</Operation>
 
 	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter/thingDefs/li[.="DankPyon_RawWheat"]</xpath>
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess" or defName="DankPyon_WaterMillProcess"]/ingredientFilter/thingDefs/li[.="DankPyon_RawWheat"]</xpath>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess"]/ingredientFilter</xpath>
+		<xpath>Defs/ProcessorFramework.ProcessDef[defName="DankPyon_MillProcess" or defName="DankPyon_WaterMillProcess"]/ingredientFilter</xpath>
 		<value>
 			<categories>
 				<li>DankPyon_Cereal</li>
