@@ -19,13 +19,13 @@
 	<!-- Fruit Tree Integration -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
-					defName="VCE_PeachTree" or
-					defName="VCE_CherryTree" or
-					defName="VCE_PlumTree" or
-					defName="VCE_PearTree" or
-					defName="VCE_Opuntia" or
-					defName="VCE_BananaTree" or
-					defName="VCE_OrangeTree"]/plant
+		defName="VCE_PeachTree" or
+		defName="VCE_CherryTree" or
+		defName="VCE_PlumTree" or
+		defName="VCE_PearTree" or
+		defName="VCE_Opuntia" or
+		defName="VCE_BananaTree" or
+		defName="VCE_OrangeTree"]/plant
 		</xpath>
 		<value>
 			<sowResearchPrerequisites>
