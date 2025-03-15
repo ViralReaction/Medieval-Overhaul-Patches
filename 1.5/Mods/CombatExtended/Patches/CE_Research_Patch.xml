@@ -30,7 +30,7 @@
 			</value>
 		</match>
 	</Operation>
-	
+
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[contains(recipeMaker/researchPrerequisites/li,'DankPyon_Gunpowder')]/recipeMaker/researchPrerequisites[.="DankPyon_Gunpowder"]</xpath>
 		<match Class="PatchOperationReplace">
@@ -97,11 +97,14 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_Schematic_Gunpowder"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="MedievalOverhaul.BookOutcomeProperties_GainResearchDefinable"]/researchProjects/li/researchProject</xpath>
-		<value>
-			<researchProject>CE_Gunpowder</researchProject>
-		</value>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Schematic_Gunpowder"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="MedievalOverhaul.BookOutcomeProperties_GainResearchDefinable"]/researchProjects/li/researchProject</xpath>
+			<value>
+				<researchProject>CE_Gunpowder</researchProject>
+			</value>
+		</match>
 	</Operation>
 
 	<Operation Class="PatchOperationAddModExtension">
