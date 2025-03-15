@@ -63,15 +63,22 @@
 	</Operation>
 
 	<!-- Reduce MO candle heat -->
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[
 				defName="DankPyon_Candles_Beeswax" or
 				defName="DankPyon_CandleStand_Beeswax" or
 				defName="DankPyon_Candles" or
-				defName="DankPyon_CandleStand"]/comps/li[@Class="CompProperties_HeatPusher"]/heatPerSecond		</xpath>
-		<value>
-			<heatPerSecond>0.5</heatPerSecond>
-		</value>
+				defName="DankPyon_CandleStand"]/comps/li[@Class="CompProperties_HeatPusher"]/heatPerSecond</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+				defName="DankPyon_Candles_Beeswax" or
+				defName="DankPyon_CandleStand_Beeswax" or
+				defName="DankPyon_Candles" or
+				defName="DankPyon_CandleStand"]/comps/li[@Class="CompProperties_HeatPusher"]/heatPerSecond</xpath>
+			<value>
+				<heatPerSecond>0.5</heatPerSecond>
+			</value>
+		</match>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
