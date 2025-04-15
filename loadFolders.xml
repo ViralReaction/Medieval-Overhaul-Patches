@@ -54,6 +54,7 @@
 		<li IfModActive="mlie.rc2.core">1.5/Mods/RC2</li>
 		<li IfModActive="dd.unofficial.notfood.mendandrecycle,notfood.mendandrecycle">1.5/Mods/MendRecycle</li>
 		<li IfModActive="owlchemist.giddyup">1.5/Mods/GiddyUp</li>
+		<li IfModActive="VanillaExpanded.VPlantsEMushrooms">1.5/Mods/VE_Mushroom</li>
 	</v1.5>
 
 </loadFolders>
