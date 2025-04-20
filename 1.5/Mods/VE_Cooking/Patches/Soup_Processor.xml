@@ -17,6 +17,50 @@
 			defName="DankPyon_CookMealCheeseSoup" or
 			defName="DankPyon_CookMealCheeseSoupBulk"]</xpath>
 	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealBoneSoup"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealBoneSoupBulk"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealWinterLentilSoup"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealWinterLentilSoupBulk"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealMushroomSoup"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealMushroomSoupBulk"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealBreadSoupBulk"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealPumpkinSoup"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealPumpkinSoupBulk"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealCheeseSoup"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef/recipes/li[.="DankPyon_CookMealCheeseSoupBulk"]</xpath>
+	</Operation>
 
 
 </Patch>
