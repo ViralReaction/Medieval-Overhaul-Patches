@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Soup Recipes -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[
+			defName="VCE_CookStewSimple" or
+			defName="VCE_CookStewFine" or
+			defName="VCE_CookStewLavish"]/recipeUsers/li[.="DankPyon_RusticCookingTable"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[
+				defName="VCE_CookStewSimple" or
+				defName="VCE_CookStewFine" or
+				defName="VCE_CookStewLavish"]/recipeUsers</xpath>
+			<value>
+				<li>DankPyon_RusticCookingTable</li>
+			</value>
+		</match>
+	</Operation>
+
+	<!-- Change Recipe Research Requirements -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="VCE_CookStewSimple"]/researchPrerequisite</xpath>
+		<value>
+			<researchPrerequisite>
+				<li>DankPyon_StewPot</li>
+			</researchPrerequisite>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="VCE_CookStewFine"]/researchPrerequisite</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>DankPyon_StewPot</li>
+				<li>DankPyon_IntermediateCooking</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="VCE_CookStewLavish"]/researchPrerequisite</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>DankPyon_StewPot</li>
+				<li>DankPyon_AdvancedCooking</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+</Patch>

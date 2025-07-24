@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- VE Apparel -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+			defName = "VAE_Apparel_PeltCoat" or
+			defName = "VAE_Apparel_TribalPoncho" or
+			defName = "VAE_Apparel_TribalKilt" or
+			defName = "VAE_Footwear_Boots" or
+			defName = "VAE_Footwear_Shoes" or
+			defName = "VAE_Handwear_Gloves" or
+			defName = "VAE_Apparel_Tunic" or
+			defName = "VAE_Apparel_Blouse" or
+			defName = "VAE_Apparel_Apron"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>DankPyon_TailorsBench</li>
+		</value>
+	</Operation>
+		
+	
+</Patch>

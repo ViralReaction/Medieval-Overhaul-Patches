@@ -56,5 +56,56 @@
 		<li IfModActive="owlchemist.giddyup">1.5/Mods/GiddyUp</li>
 		<li IfModActive="VanillaExpanded.VPlantsEMushrooms">1.5/Mods/VE_Mushroom</li>
 	</v1.5>
+	
+	<v1.6>
+		<li>/</li>
+		<li>1.6</li>
+		<li IfModActive="ceteam.combatextended">1.6/Mods/CombatExtended</li>
+		<li IfModActive="onyxae.dragonsdescent">1.6/Mods/DragonsDescent</li>
+		<li IfModActive="escp.trolls">1.6/Mods/ESCP_Trolls</li>
+		<li IfModActive="escp.spriggan">1.6/Mods/ESCP_Spriggan</li>
+		<li IfModActive="sarg.alphaanimals">1.6/Mods/AlphaAnimals</li>
+		<li IfModActive="pphhyy.demigryphsmod">1.6/Mods/Demigryph</li>
+		<li IfModActive="sarg.magicalmenagerie">1.6/Mods/AlphaMythology</li>
+		<li IfModActive="vr.animaanimalscombined">1.6/Mods/AnimaAnimals</li>
+		<li IfModActive="vanillaexpanded.vcooke">1.6/Mods/VE_Cooking</li>
+		<li IfModActive="sarg.rimbees">1.6/Mods/AlphaBees</li>
+		<li IfModActive="argon.saltedmeatremake">1.6/Mods/SaltedMeat</li>
+		<li IfModActive="vanillaexpanded.vcookestews">1.6/Mods/VE_Stews</li>
+		<li IfModActive="redmattis.bsfurniture">1.6/Mods/BS_Furniture</li>
+		<li IfModActive="redmattis.bigsmall.core">1.6/Mods/BS_Genes</li>
+		<li IfModActive="redmattis.bigsmall">1.6/Mods/BS_Races</li>
+		<li IfModActive="argon.tribalmedicineremake">1.6/Mods/TribalMedicine</li>
+		<li IfModActive="mlie.apothecary">1.6/Mods/Apothecary</li>
+		<li IfModActive="vanillaexpanded.vplantse">1.6/Mods/VE_Plants</li>
+		<li IfModActive="vanillaexpanded.vplantsemore">1.6/Mods/VE_PlantsMore</li>
+		<li IfModActive="rince.gaulishgojuice">1.6/Mods/MedievalGoJuice</li>
+		<li IfModActive="sarg.alphavehiclesneolithic">1.6/Mods/AlphaVehicle</li>
+		<li IfModActive="vexedtrees980.rimgnoblinsbiotech">1.6/Mods/Gnoblins</li>
+		<li IfModActive="thevillain.animalfoodsextended">1.6/Mods/AnimalFood</li>
+		<li IfModActive="finch.blood">1.6/Mods/HouseSanguin</li>
+		<li IfModActive="snek.aramid">1.6/Mods/Aramid</li>
+		<li IfModActive="mlie.insulation">1.6/Mods/Insulation</li>
+		<li IfModActive="danadriel.sailpunkairships">1.6/Mods/Sailpunk</li>
+		<li IfModActive="regrowth.botr.core">1.6/Mods/Regrowth</li>
+		<li IfModActive="phant0m5.modeepveinmines">1.6/Mods/DeepMining</li>
+		<li IfModActive="vanillaexpanded.vpsycastse">1.6/Mods/VE_Psycast</li>
+		<li IfModActive="oskarpotocki.vfe.empire">1.6/Mods/VE_Empire</li>
+		<li IfModActive="sierra.rf.medievaloverhaul">1.6/Mods/RimFantasy</li>
+		<li IfModActive="botchjob.divineorder">1.6/Mods/DivineOrder</li>
+		<li IfModActive="van.dacrypts">1.6/Mods/DarkAgeCrypt</li>
+		<li IfModActive="mlie.notonlyjustacannon">1.6/Mods/NotJustCannon</li>
+		<li IfModActive="owlchemist.animalgear.equipment">1.6/Mods/AnimalEquipment</li>
+		<li IfModActive="anumeric.dirtywindows,owlchemist.windows">1.6/Mods/Windows</li>
+		<li IfModActive="aoba.fortress.medieval.material">1.6/Mods/FortificationsMaterial</li>
+		<li IfModActive="vanillaexpanded.vbookse">1.6/Mods/VE_Books</li>
+		<li IfModActive="vanillaexpanded.vappe">1.6/Mods/VE_Apparel</li>
+		<li IfModActive="vanillaexpanded.varme">1.6/Mods/VE_Armor</li>
+		<li IfModActive="oskarpotocki.vfe.tribals">1.6/Mods/VE_Tribal</li>
+		<li IfModActive="mlie.rc2.core">1.6/Mods/RC2</li>
+		<li IfModActive="dd.unofficial.notfood.mendandrecycle,notfood.mendandrecycle">1.6/Mods/MendRecycle</li>
+		<li IfModActive="owlchemist.giddyup">1.6/Mods/GiddyUp</li>
+		<li IfModActive="VanillaExpanded.VPlantsEMushrooms">1.6/Mods/VE_Mushroom</li>
+	</v1.6>
 
 </loadFolders>

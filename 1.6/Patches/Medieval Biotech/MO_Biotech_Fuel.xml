@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GeneProcessor"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter</xpath>
+					<value>
+						<fuelFilter>
+							<thingDefs>
+								<li>DankPyon_RawWood</li>
+								<li>DankPyon_RawDarkWood</li>
+								<li>DankPyon_Coal</li>
+							</thingDefs>
+						</fuelFilter>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>

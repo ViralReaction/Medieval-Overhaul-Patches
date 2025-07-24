@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Nissse Cap -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="BS_Nisse_Cap"]/recipeMaker/researchPrerequisite</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="BS_Nisse_Cap"]/recipeMaker/researchPrerequisite</xpath>
+			<value>
+				<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="BS_Nisse_Cap"]</xpath>
+			<value>
+				<recipeMaker>
+					<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
+				</recipeMaker>
+			</value>
+		</nomatch>
+	</Operation>
+	
+</Patch>
