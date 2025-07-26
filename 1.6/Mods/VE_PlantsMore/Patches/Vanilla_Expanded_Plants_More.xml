@@ -350,6 +350,7 @@
 							<graphicData>
 								<texPath>Things/Building/Production/Presser/Presser</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
+								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(4,3)</drawSize>
 								<color>(0.75,0.75,0.75,1)</color>
 								<damageData>
@@ -405,14 +406,14 @@
 						</ThingDef>
 					</value>
 				</li>
-							
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="VCE_MilkFromRice" or defName="VCE_MilkFromAlmonds" or defName="VCE_MilkFromCoconuts" or defName="VCE_MilkFromOats"]/recipeUsers</xpath>
 					<value>
 						<li>DankPyon_VegMilkExtractor</li>
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName="VCE_MilkFromRice" or defName="VCE_MilkFromAlmonds" or defName="VCE_MilkFromCoconuts" or defName="VCE_MilkFromOats"]/researchPrerequisite</xpath>
 					<value>

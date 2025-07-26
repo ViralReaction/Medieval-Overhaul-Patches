@@ -67,12 +67,12 @@
 		<li IfModActive="sarg.magicalmenagerie">1.6/Mods/AlphaMythology</li>
 		<li IfModActive="vr.animaanimalscombined">1.6/Mods/AnimaAnimals</li>
 		<li IfModActive="vanillaexpanded.vcooke">1.6/Mods/VE_Cooking</li>
+		<li IfModActiveAll="vanillaexpanded.vcooke,sarg.alphaanimals">1.6/Mods/VE_Cooking/Mods/AlphaAnimals</li>
 		<li IfModActive="sarg.rimbees">1.6/Mods/AlphaBees</li>
 		<li IfModActive="argon.saltedmeatremake">1.6/Mods/SaltedMeat</li>
 		<li IfModActive="vanillaexpanded.vcookestews">1.6/Mods/VE_Stews</li>
 		<li IfModActive="redmattis.bsfurniture">1.6/Mods/BS_Furniture</li>
 		<li IfModActive="redmattis.bigsmall.core">1.6/Mods/BS_Genes</li>
-		<li IfModActive="redmattis.bigsmall">1.6/Mods/BS_Races</li>
 		<li IfModActive="argon.tribalmedicineremake">1.6/Mods/TribalMedicine</li>
 		<li IfModActive="mlie.apothecary">1.6/Mods/Apothecary</li>
 		<li IfModActive="vanillaexpanded.vplantse">1.6/Mods/VE_Plants</li>
