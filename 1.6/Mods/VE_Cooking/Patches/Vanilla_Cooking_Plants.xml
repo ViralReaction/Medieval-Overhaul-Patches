@@ -30,7 +30,7 @@
 		<match Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="VCE_Wheat"]</xpath>
 			<value>
-				<li Class="VanillaPlantsExpanded.DualCropExtension">
+				<li Class="VEF.Plants.DualCropExtension">
 					<secondaryOutput>DankPyon_Straw</secondaryOutput>
 					<outPutAmount>15</outPutAmount>
 				</li>

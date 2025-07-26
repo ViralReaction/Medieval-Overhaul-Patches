@@ -7,7 +7,7 @@
 		<label>Trimmed Meat</label>
 		<description>Trimmed meat that is ready to dry or smoke.</description>
 		<graphicData>
-			<texPath>Meal/DriedMeat</texPath>
+			<texPath>Things/Item/Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingCategories>
@@ -46,7 +46,7 @@
 		<label>Trimmed Human Meat</label>
 		<description>Trimmed human meat that is ready to dry or smoke.</description>
 		<graphicData>
-			<texPath>Meal/DriedMeat</texPath>
+			<texPath>Things/Item/Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingCategories>
@@ -85,7 +85,7 @@
 		<label>Trimmed Insect Meat</label>
 		<description>Trimmed insect meat that is ready to dry or smoke.</description>
 		<graphicData>
-			<texPath>Meal/DriedMeat</texPath>
+			<texPath>Things/Item/Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingCategories>
@@ -124,7 +124,7 @@
 		<label>Dried Human Meat</label>
 		<description>Dried human meat to preserve and prolong shelf life. Does not rehydrate very well and only true cannibals can stomach it.</description>
 		<graphicData>
-			<texPath>Meal/DriedMeat</texPath>
+			<texPath>Things/Item/Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<!--thingCategories>
@@ -162,7 +162,7 @@
 		<label>Smoked Human Meat</label>
 		<description>Smoked human meat to preserve and prolong shelf life.</description>
 		<graphicData>
-			<texPath>Meal/SmokedMeat</texPath>
+			<texPath>Things/Item/Meal/SmokedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -191,7 +191,7 @@
 		<label>Dried Insect Meat</label>
 		<description>Dried insect meat to preserve and prolong shelf life.Does not rehydrate very well and not many can stomach it</description>
 		<graphicData>
-			<texPath>Meal/DriedMeat</texPath>
+			<texPath>Things/Item/Meal/DriedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<!--thingCategories>
@@ -225,7 +225,7 @@
 		<label>Smoked Insect Meat</label>
 		<description>Dried meat to preserve and prolong shelf life.</description>
 		<graphicData>
-			<texPath>Meal/SmokedMeat</texPath>
+			<texPath>Things/Item/Meal/SmokedMeat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>

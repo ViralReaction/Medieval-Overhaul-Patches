@@ -8,7 +8,7 @@
 		<description>Dried stalks of grain, used especially as fodder, harvested and compacted for storage. Straw is good animal feed, but inedible for humans.</description>
 		<stackLimit>200</stackLimit>
 		<graphicData>
-			<texPath>Resources/Straw</texPath>
+			<texPath>Things/Item/Resource/Straw</texPath>
 			<color>(0.75,1,0.75,1)</color>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
@@ -31,7 +31,7 @@
 		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
 		<thingClass>Building_Storage</thingClass>
 		<graphicData>
-			<texPath>Storage/StrawPile</texPath>
+			<texPath>Things/Building/Storage/StrawPile</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2.70,2.70)</drawSize>
 			<color>(0.75,1,0.75,1)</color>
@@ -44,7 +44,7 @@
 		</costList>
 		<stuffCategories Inherit="false"/>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints> 
+			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>8</Mass>
 			<WorkToBuild>500</WorkToBuild>
 			<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
@@ -77,32 +77,32 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="DankPyon_Bale1x2Base">
-					<defName>DankPyon_DriedHayBale1x2c</defName>
-					<label>dried hay bale</label>
-					<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
-					<graphicData>
-						<texPath>Storage/Bale1x2</texPath>
-						<graphicClass>Graphic_Multi</graphicClass>
-						<drawSize>(4,3)</drawSize>
-						<color>(137,132,0)</color>
-					</graphicData>
-					<costList Inherit="false">
-						<DankPyon_DriedHay>20</DankPyon_DriedHay>
-					</costList>
-				</ThingDef>
+		<defName>DankPyon_DriedHayBale1x2c</defName>
+		<label>dried hay bale</label>
+		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+			<color>(137,132,0)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<DankPyon_DriedHay>20</DankPyon_DriedHay>
+		</costList>
+	</ThingDef>
 
-				<ThingDef ParentName="DankPyon_Bale2x2Base">
-					<defName>DankPyon_DriedHayBale2x2c</defName>
-					<label>dried hay bale(2x2)</label>
-					<graphicData>
-						<texPath>Storage/Bale2x2</texPath>
-						<graphicClass>Graphic_Multi</graphicClass>
-						<drawSize>(4,4)</drawSize>
-						<color>(137,132,0)</color>
-					</graphicData>
-					<costList Inherit="false">
-						<DankPyon_DriedHay>40</DankPyon_DriedHay>
-					</costList>
-				</ThingDef>
+	<ThingDef ParentName="DankPyon_Bale2x2Base">
+		<defName>DankPyon_DriedHayBale2x2c</defName>
+		<label>dried hay bale(2x2)</label>
+		<graphicData>
+			<texPath>Things/Building/Storage/Bale2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(137,132,0)</color>
+		</graphicData>
+		<costList Inherit="false">
+			<DankPyon_DriedHay>40</DankPyon_DriedHay>
+		</costList>
+	</ThingDef>
 
 </Defs>

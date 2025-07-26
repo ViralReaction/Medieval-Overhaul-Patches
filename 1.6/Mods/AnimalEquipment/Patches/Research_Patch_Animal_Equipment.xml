@@ -6,7 +6,6 @@
 		<value>
 			<prerequisites>
 				<li>AnimalRidingGear</li>
-				<li>DankPyon_Tailoring</li>
 			</prerequisites>
 		</value>
 	</Operation>

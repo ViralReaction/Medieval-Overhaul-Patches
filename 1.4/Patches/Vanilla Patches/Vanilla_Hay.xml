@@ -4,7 +4,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Hay"]/graphicData/texPath</xpath>
 		<value>
-			<texPath>Resources/Straw</texPath>
+			<texPath>Things/Item/Resource/Straw</texPath>
 			<color>(0.50,0.75,0.50,1)</color>
 		</value>
 	</Operation>

@@ -3,13 +3,6 @@
 
 	<!-- Add Tribal to Cooking Table -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="TM_MedicineTribal" or @Name="TM_TeaBase"]/recipeMaker/recipeUsers</xpath>
-		<value>
-			<li>DankPyon_RusticCookingTable</li>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ResearchProjectDef[defName="TM_AncientTribalMedicine"]</xpath>
 		<value>
 			<tab>DankPyon_MedievalResearchTab</tab>

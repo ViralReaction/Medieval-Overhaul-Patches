@@ -8,22 +8,6 @@
 		
 		<match Class="PatchOperationSequence">
 			<operations>
-				
-				<!-- Tailoring -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[
-					defName="TC_Chaperon" or
-					defName="TC_Cloak" or
-					defName="TC_Dress" or
-					defName="TC_FancyCoat" or
-					defName="TC_Hood" or
-					defName="TC_Tunic" or
-					defName="TC_Quiver" or
-					defName="TC_Bag"]/recipeMaker/researchPrerequisite					</xpath>
-					<value>
-						<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-					</value>
-				</li>
 
 				<!-- Padded Armor -->
 				<li Class="PatchOperationReplace">

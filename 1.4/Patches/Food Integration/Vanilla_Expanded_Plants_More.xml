@@ -57,7 +57,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_Carrot"]/graphicData/texPath</xpath>
 					<value>
-						<texPath>Plants/CarrotPlant</texPath>
+						<texPath>Things/Plants/FullGrown/CarrotPlant</texPath>
 					</value>
 				</li>
 
@@ -402,7 +402,7 @@
 										<thingClass>Building_WorkTable_HeatPush</thingClass>
 										<drawerType>MapMeshAndRealTime</drawerType>
 										<graphicData>
-											<texPath>Production/Presser/Presser</texPath>
+											<texPath>Things/Building/Production/Presser/Presser</texPath>
 											<graphicClass>Graphic_Multi</graphicClass>
 											<drawSize>(4,3)</drawSize>
 											<color>(0.75,0.75,0.75,1)</color>

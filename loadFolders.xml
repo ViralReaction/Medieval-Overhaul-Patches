@@ -9,7 +9,6 @@
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
-		<li IfModActive="ceteam.combatextended">1.5/Mods/CombatExtended</li>
 		<li IfModActive="onyxae.dragonsdescent">1.5/Mods/DragonsDescent</li>
 		<li IfModActive="escp.trolls">1.5/Mods/ESCP_Trolls</li>
 		<li IfModActive="escp.spriggan">1.5/Mods/ESCP_Spriggan</li>
@@ -56,11 +55,10 @@
 		<li IfModActive="owlchemist.giddyup">1.5/Mods/GiddyUp</li>
 		<li IfModActive="VanillaExpanded.VPlantsEMushrooms">1.5/Mods/VE_Mushroom</li>
 	</v1.5>
-	
+
 	<v1.6>
 		<li>/</li>
 		<li>1.6</li>
-		<li IfModActive="ceteam.combatextended">1.6/Mods/CombatExtended</li>
 		<li IfModActive="onyxae.dragonsdescent">1.6/Mods/DragonsDescent</li>
 		<li IfModActive="escp.trolls">1.6/Mods/ESCP_Trolls</li>
 		<li IfModActive="escp.spriggan">1.6/Mods/ESCP_Spriggan</li>

@@ -1,59 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- Headgear -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>BotchJob_DivineOrderSmithing</li>
-					<li>DankPyon_Tailoring</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-	</Operation>
-				
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>BotchJob_DivineOrderSmithing</li>
-					<li>DankPyon_Tailoring</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-	</Operation>
-				
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderHood"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderHood"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>BotchJob_DivineOrderSmithing</li>
-					<li>DankPyon_Tailoring</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-	</Operation>
-				
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderMerchantHat"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderMerchantHat"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>BotchJob_DivineOrderSmithing</li>
-					<li>DankPyon_Tailoring</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-	</Operation>
-				
 	<!-- Clothes -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="BotchJob_DivineOrderTunic"]/recipeMaker/researchPrerequisite</xpath>
@@ -75,7 +22,6 @@
 			<value>
 				<researchPrerequisites>
 					<li>BotchJob_DivineOrderSmithing</li>
-					<li>DankPyon_Tailoring</li>
 				</researchPrerequisites>
 			</value>
 		</match>
@@ -228,20 +174,7 @@
 			</value>
 		</match>
 	</Operation>
-				
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BotchJob_InquisitorCloak"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="BotchJob_InquisitorCloak"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>BotchJob_DivineOrderEliteArmor</li>
-					<li>DankPyon_Tailoring</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-	</Operation>
-				
+
 	<!-- Herald -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="BotchJob_HeraldHelmet"]/recipeMaker/researchPrerequisite</xpath>

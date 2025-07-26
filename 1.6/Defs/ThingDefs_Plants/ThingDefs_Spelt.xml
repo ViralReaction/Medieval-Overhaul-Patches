@@ -10,7 +10,7 @@
 			<Nutrition>0.2</Nutrition>
 		</statBases>
 		<graphicData>
-			<texPath>Plants/WheatPlant</texPath>
+			<texPath>Things/Plants/FullGrown/WheatPlant</texPath>
 			<color>(0.75,0.75,0.75,1)</color>
 			<graphicClass>Graphic_Random</graphicClass>
 		</graphicData>
@@ -32,7 +32,7 @@
 			<growDays>16</growDays>
 			<fertilitySensitivity>0.9</fertilitySensitivity>
 			<visualSizeRange>0.5~1.0</visualSizeRange>
-			<immatureGraphicPath>Plants_Immature/WheatPlant</immatureGraphicPath>
+			<immatureGraphicPath>Things/Plants/Immature/WheatPlant</immatureGraphicPath>
 			<wildOrder>2</wildOrder>
 			<purpose>Food</purpose>
 		</plant>
@@ -43,7 +43,7 @@
 		<label>einkorn</label>
 		<description>Einkorn is a grain that can be milled into flour.</description>
 		<graphicData>
-			<texPath>Plants/RawWheat</texPath>
+			<texPath>Things/Item/Resource/PlantFoodRaw/RawWheat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(0.75,0.75,0.75,1)</color>
 		</graphicData>
@@ -70,7 +70,7 @@
 		<label>barley</label>
 		<description>Barley is a grain that can be milled into flour.</description>
 		<graphicData>
-			<texPath>Plants/RawWheat</texPath>
+			<texPath>Things/Item/Resource/PlantFoodRaw/RawWheat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(0.9,0.9,0.9,1)</color>
 		</graphicData>
@@ -97,7 +97,7 @@
 		<label>sorghum</label>
 		<description>Sorghum is a grain that can be milled into flour.</description>
 		<graphicData>
-			<texPath>Plants/RawWheat</texPath>
+			<texPath>Things/Item/Resource/PlantFoodRaw/RawWheat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(0.6,0.52,0.34,1)</color>
 		</graphicData>
@@ -124,7 +124,7 @@
 		<label>sorghum</label>
 		<description>Sorghum is a grain that can be milled into flour.</description>
 		<graphicData>
-			<texPath>Plants/RawWheat</texPath>
+			<texPath>Things/Item/Resource/PlantFoodRaw/RawWheat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(0.36,0.25,0.2,1)</color>
 		</graphicData>

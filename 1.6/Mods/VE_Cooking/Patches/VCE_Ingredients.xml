@@ -84,7 +84,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="DankPyon_Spices"]</xpath>
 		<value>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension">
 				<statToAdd>
 					<li>VCE_CondimentEffects</li>
 				</statToAdd>
@@ -144,7 +144,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="DankPyon_Sugar"]</xpath>
 		<value>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension">
 				<statToAdd>
 					<li>VCE_CondimentEffects</li>
 				</statToAdd>
@@ -226,7 +226,7 @@
 		<match Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="DankPyon_Salt"]</xpath>
 			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension">
+				<li Class="VEF.AnimalBehaviours.AnimalStatExtension">
 					<statToAdd>
 						<li>VCE_CondimentEffects</li>
 					</statToAdd>

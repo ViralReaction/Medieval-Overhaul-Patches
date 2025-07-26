@@ -6,7 +6,7 @@
 		<label>uncooked vegetable pot</label>
 		<description>An uncooked vegetable pot. This needs to be cooked in a stew pot to be edible.</description>
 		<graphicData>
-			<texPath>Meal/VegetablePot</texPath>
+			<texPath>Things/Item/Meal/VegetablePot</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -37,7 +37,7 @@
 		<label>uncooked lentil and onion stew</label>
 		<description>An uncooked lentil and onion stew. This needs to be cooked in a stew pot to be edible.</description>
 		<graphicData>
-			<texPath>Meal/BoiledBeansAndOnion</texPath>
+			<texPath>Things/Item/Meal/BoiledBeansAndOnion</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -68,7 +68,7 @@
 		<label>uncooked hunter stew</label>
 		<description>An uncooked hearty stew. This needs to be cooked in a stew pot to be edible.</description>
 		<graphicData>
-			<texPath>Meal/HuntersStew</texPath>
+			<texPath>Things/Item/Meal/HuntersStew</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>

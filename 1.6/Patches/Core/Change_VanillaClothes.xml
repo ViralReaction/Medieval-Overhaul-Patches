@@ -1,107 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-		
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="Apparel_Tuque"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="Apparel_Tuque"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Apparel_Tuque"]</xpath>
-			<value>
-				<recipeMaker>
-					<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-				</recipeMaker>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="Apparel_Tuque"]/recipeMaker/researchPrerequisite</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="Apparel_Tuque"]/recipeMaker/researchPrerequisite</xpath>
-			<value>
-				<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Apparel_Tuque"]</xpath>
-			<value>
-				<recipeMaker>
-					<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-				</recipeMaker>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<!-- Ideology Clothes -->
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Ideology</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-			
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="Apparel_Tailcap"]/recipeMaker/researchPrerequisite</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="Apparel_Tailcap"]/recipeMaker/researchPrerequisite</xpath>
-						<value>
-							<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Apparel_Tailcap"]</xpath>
-						<value>
-							<recipeMaker>
-								<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-							</recipeMaker>
-						</value>
-					</nomatch>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="Apparel_Shadecone"]/recipeMaker/researchPrerequisite</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="Apparel_Shadecone"]/recipeMaker/researchPrerequisite</xpath>
-						<value>
-							<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Apparel_Shadecone"]</xpath>
-						<value>
-							<recipeMaker>
-								<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-							</recipeMaker>
-						</value>
-					</nomatch>
-				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="Apparel_Flophat"]/recipeMaker/researchPrerequisite</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="Apparel_Flophat"]/recipeMaker/researchPrerequisite</xpath>
-						<value>
-							<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Apparel_Flophat"]</xpath>
-						<value>
-							<recipeMaker>
-								<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-							</recipeMaker>
-						</value>
-					</nomatch>
-				</li>
-			
-			</operations>
-		</match>
-	</Operation>
 	
 	<!-- Biotech Clothes -->
 	<Operation Class="PatchOperationFindMod">
@@ -110,25 +8,7 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="Apparel_ClothMask"]/recipeMaker/researchPrerequisite</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="Apparel_ClothMask"]/recipeMaker/researchPrerequisite</xpath>
-						<value>
-							<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Apparel_ClothMask"]</xpath>
-						<value>
-							<recipeMaker>
-								<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-							</recipeMaker>
-						</value>
-					</nomatch>
-				</li>
-				
+
 				<!-- Sash is Neolithic -->
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="Apparel_Sash"]/recipeMaker/researchPrerequisite</xpath>
@@ -143,25 +23,7 @@
 						<techLevel>Neolithic</techLevel>
 					</value>
 				</li>
-				
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[@Name="ChildApparelMakeableBase"]/recipeMaker/researchPrerequisite</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[@Name="ChildApparelMakeableBase"]/recipeMaker/researchPrerequisite</xpath>
-						<value>
-							<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[@Name="ChildApparelMakeableBase"]</xpath>
-						<value>
-							<recipeMaker>
-								<researchPrerequisite>DankPyon_Tailoring</researchPrerequisite>
-							</recipeMaker>
-						</value>
-					</nomatch>
-				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Apparel_KidShirt" or defName="Apparel_KidPants"]</xpath>
 					<value>

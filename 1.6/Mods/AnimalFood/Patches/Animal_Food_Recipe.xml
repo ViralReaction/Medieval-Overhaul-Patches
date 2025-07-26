@@ -35,20 +35,13 @@
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[
-					defName="CookFeedstockGrazing" or
-					defName="CookFeedstockGrazingBulk" or
-					defName="CookRenderedMeat" or
-					defName="CookRenderedMeatBulk"]/researchPrerequisite		</xpath>
-		<value>
-			<researchPrerequisite>DankPyon_BasicCooking</researchPrerequisite>
-		</value>
-	</Operation>
-				
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/RecipeDef[defName="CookRenderedMeat" or defName="CookRenderedMeatBulk"]/recipeUsers
+			defName="CookFeedstockGrazing" or
+			defName="CookFeedstockGrazingBulk" or
+			defName="CookRenderedMeat" or
+			defName="CookRenderedMeatBulk"]/researchPrerequisite
 		</xpath>
 		<value>
-			<li>DankPyon_RusticCookingTable</li>
+			<researchPrerequisite>DankPyon_BasicCooking</researchPrerequisite>
 		</value>
 	</Operation>
 

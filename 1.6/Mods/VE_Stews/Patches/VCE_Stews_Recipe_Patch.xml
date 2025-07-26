@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- Soup Recipes -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/RecipeDef[
-			defName="VCE_CookStewSimple" or
-			defName="VCE_CookStewFine" or
-			defName="VCE_CookStewLavish"]/recipeUsers/li[.="DankPyon_RusticCookingTable"]</xpath>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[
-				defName="VCE_CookStewSimple" or
-				defName="VCE_CookStewFine" or
-				defName="VCE_CookStewLavish"]/recipeUsers</xpath>
-			<value>
-				<li>DankPyon_RusticCookingTable</li>
-			</value>
-		</match>
-	</Operation>
-
 	<!-- Change Recipe Research Requirements -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="VCE_CookStewSimple"]/researchPrerequisite</xpath>

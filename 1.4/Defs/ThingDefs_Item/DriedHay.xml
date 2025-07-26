@@ -31,7 +31,7 @@
 		<description>A collective pile of straw, flax, and hay fashioned to conserve space.</description>
 		<thingClass>Building_Storage</thingClass>
 		<graphicData>
-			<texPath>Storage/StrawPile</texPath>
+			<texPath>Things/Building/Storage/StrawPile</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2.70,2.70)</drawSize>
 			<color>(0.75,1,0.75,1)</color>

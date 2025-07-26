@@ -12,7 +12,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VCE_AppleTree"]/graphicData/texPath</xpath>
 					<value>
-						<texPath>Plants/TreeApple</texPath>
+						<texPath>Things/Plants/FullGrown/TreeApple</texPath>
 					</value>
 				</li>
 

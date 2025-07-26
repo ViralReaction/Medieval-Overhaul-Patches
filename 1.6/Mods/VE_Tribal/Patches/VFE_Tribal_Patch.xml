@@ -642,26 +642,6 @@
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>VFET_Culture</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]</xpath>
-			<value>
-				<researchPrerequisites>
-					<li>VFET_Culture</li>
-				</researchPrerequisites>
-			</value>
-		</nomatch>
-	</Operation>
-
-	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_CleaningBench"]/researchPrerequisites</xpath>
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="DankPyon_CleaningBench"]/researchPrerequisites</xpath>

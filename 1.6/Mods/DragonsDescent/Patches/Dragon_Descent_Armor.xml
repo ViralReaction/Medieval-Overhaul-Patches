@@ -30,15 +30,5 @@
 			</researchPrerequisites>
 		</value>
 	</Operation>
-				
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="DD_Apparel_WingCape"]/recipeMaker/researchPrerequisite</xpath>
-		<value>
-			<researchPrerequisites>
-				<li>DraconicApparelAndWeapons</li>
-				<li>DankPyon_Tailoring</li>
-			</researchPrerequisites>
-		</value>
-	</Operation>
 
 </Patch>

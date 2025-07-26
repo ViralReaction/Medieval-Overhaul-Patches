@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/RecipeDef[
-					defName="BS_CookLargeMealSimple" or
-					defName="BS_CookLargeMealSimpleBulk" or 
-					defName="BS_CookLargeMealFine" or
-					defName="BS_CookLargeMealFine_Veg" or
-					defName="BS_CookLargeMealFine_Meat" or
-					defName="BS_CookLargeMealFineBulk" or
-					defName="BS_CookLargeMealFineBulk_Meat" or
-					defName="BS_CookLargeMealFineBulk_Veg" or
-					defName="BS_CookLargeMealLavish" or
-					defName="BS_CookLargeMealLavish_Meat" or
-					defName="BS_CookLargeMealLavish_Veg" or
-					defName="BS_CookLargeMealLavishBulk" or
-					defName="BS_CookLargeMealLavishBulk_Veg" or
-					defName="BS_CookLargeMealLavishBulk_Meat" or
-					defName="BS_CookLargeMealSurvival" or
-					defName="BS_CookLargeMealSurvivalBulk"]/recipeUsers/li[.="DankPyon_RusticCookingTable"]		</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[
-					defName="BS_CookLargeMealSimple" or
-					defName="BS_CookLargeMealSimpleBulk" or 
-					defName="BS_CookLargeMealFine" or
-					defName="BS_CookLargeMealFine_Veg" or
-					defName="BS_CookLargeMealFine_Meat" or
-					defName="BS_CookLargeMealFineBulk" or
-					defName="BS_CookLargeMealFineBulk_Meat" or
-					defName="BS_CookLargeMealFineBulk_Veg" or
-					defName="BS_CookLargeMealLavish" or
-					defName="BS_CookLargeMealLavish_Meat" or
-					defName="BS_CookLargeMealLavish_Veg" or
-					defName="BS_CookLargeMealLavishBulk" or
-					defName="BS_CookLargeMealLavishBulk_Veg" or
-					defName="BS_CookLargeMealLavishBulk_Meat" or
-					defName="BS_CookLargeMealSurvival" or
-					defName="BS_CookLargeMealSurvivalBulk"]/recipeUsers			</xpath>
-			<value>
-				<li>DankPyon_RusticCookingTable</li>
-			</value>
-		</nomatch>
-	</Operation>
-
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="BS_CookLargeMealSurvival" or defName="BS_CookLargeMealSurvivalBulk"]/researchPrerequisite</xpath>
 		<value>
@@ -57,7 +15,7 @@
 		<xpath>Defs/ThingDef[defName="BS_MealLargeSurvivalPack"]/graphicData</xpath>
 		<value>
 			<graphicData>
-				<texPath>Meal/Rations</texPath>
+				<texPath>Things/Item/Meal/Rations</texPath>
 				<graphicClass>Graphic_StackCount</graphicClass>
 				<drawSize>2.0</drawSize>
 			</graphicData>

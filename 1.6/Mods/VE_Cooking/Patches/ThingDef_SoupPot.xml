@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- Soup Recipes -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/RecipeDef[
-					defName="VCE_CookSoupSimple" or
-					defName="VCE_CookSoupFine" or
-					defName="VCE_CookSoupLavish" or
-					defName="VCE_CookSoupGourmet"]/recipeUsers</xpath>
-		<value>
-			<li>DankPyon_RusticCookingTable</li>
-		</value>
-	</Operation>
-
 	<!-- VCE Soup Industrial -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/techLevel</xpath>

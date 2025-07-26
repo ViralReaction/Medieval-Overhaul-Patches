@@ -57,7 +57,7 @@
 		<xpath>Defs/ThingDef[defName="BS_MealLargeSurvivalPack"]/graphicData</xpath>
 		<value>
 			<graphicData>
-				<texPath>Meal/Rations</texPath>
+				<texPath>Things/Item/Meal/Rations</texPath>
 				<graphicClass>Graphic_StackCount</graphicClass>
 				<drawSize>2.0</drawSize>
 			</graphicData>

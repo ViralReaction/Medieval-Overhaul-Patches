@@ -3,7 +3,7 @@
 
 	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
-			<li>schematic_gunpowder</li>
+			<li>lindwurm_giddyup</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>

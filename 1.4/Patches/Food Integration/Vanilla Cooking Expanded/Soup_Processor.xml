@@ -127,7 +127,7 @@
 							<label>uncooked bone broth</label>
 							<description>An uncooked bone broth. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
-								<texPath>Meal/BoneSoup</texPath>
+								<texPath>Things/Item/Meal/BoneSoup</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<statBases>
@@ -234,7 +234,7 @@
 							<label>uncooked lentil broth</label>
 							<description>An uncooked lentil broth. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
-								<texPath>Meal/WinterLentilSoup</texPath>
+								<texPath>Things/Item/Meal/WinterLentilSoup</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<statBases>
@@ -341,7 +341,7 @@
 							<label>uncooked mushroom soup</label>
 							<description>An uncooked mushroom soup. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
-								<texPath>Meal/MushroomSoup</texPath>
+								<texPath>Things/Item/Meal/MushroomSoup</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<statBases>
@@ -449,7 +449,7 @@
 							<label>uncooked bread soup</label>
 							<description>An uncooked bread soup. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
-								<texPath>Meal/SoupBread</texPath>
+								<texPath>Things/Item/Meal/SoupBread</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<statBases>
@@ -557,7 +557,7 @@
 							<label>uncooked pumpkin soup</label>
 							<description>An uncooked pumpkin soup. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
-								<texPath>Meal/PumpkinSoup</texPath>
+								<texPath>Things/Item/Meal/PumpkinSoup</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<statBases>
@@ -677,7 +677,7 @@
 							<label>uncooked cheese soup</label>
 							<description>An uncooked cheese soup. This needs to be cooked in a soup pot to be edible.</description>
 							<graphicData>
-								<texPath>Meal/SoupCheese</texPath>
+								<texPath>Things/Item/Meal/SoupCheese</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 							</graphicData>
 							<statBases>

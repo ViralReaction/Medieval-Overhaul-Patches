@@ -2,15 +2,6 @@
 <Patch>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef[defName="Mending"]/prerequisites</xpath>
-		<value>
-			<prerequisites>
-				<li>DankPyon_Tailoring</li>
-			</prerequisites>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ResearchProjectDef[defName="Mending"]/techLevel</xpath>
 		<value>
 			<techLevel>Medieval</techLevel>

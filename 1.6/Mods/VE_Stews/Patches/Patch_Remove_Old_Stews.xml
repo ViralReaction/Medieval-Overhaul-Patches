@@ -4,12 +4,13 @@
 	<!-- Remove Old Recipes -->
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/RecipeDef[
-					defName="DankPyon_CookMealVegetablePot" or
-					defName="DankPyon_CookMealVegetablePotBulk" or
-					defName="DankPyon_CookMealBoiledBeansAndOnion" or
-					defName="DankPyon_CookMealBoiledBeanAndOnionBulk" or
-					defName="DankPyon_CookMealHuntersStew" or
-					defName="DankPyon_CookMealHuntersStewBulk"]</xpath>
+			defName="DankPyon_CookMealVegetablePot" or
+			defName="DankPyon_CookMealVegetablePotBulk" or
+			defName="DankPyon_CookMealBoiledBeansAndOnion" or
+			defName="DankPyon_CookMealBoiledBeanAndOnionBulk" or
+			defName="DankPyon_CookMealHuntersStew" or
+			defName="DankPyon_CookMealHuntersStewBulk"]
+		</xpath>
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">

@@ -2,15 +2,6 @@
 <Patch>
 
 	<!-- Preserved Food -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/RecipeDef[defName="RB_PreserveMeat" or defName="RB_PreserveVegetables"]/recipeUsers</xpath>
-		<value>
-			<recipeUsers>
-				<li>DankPyon_RusticCookingTable</li>
-			</recipeUsers>
-		</value>
-	</Operation>
-				
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/RecipeDef[defName="RB_PreserveMeat" or defName="RB_PreserveVegetables"]/researchPrerequisites</xpath>
 		<match Class="PatchOperationReplace">
@@ -32,21 +23,6 @@
 	</Operation>
 				
 	<!-- Honey Meals -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/RecipeDef[
-					defName="RB_CookHoneyMealSimple" or
-					defName="RB_CookHoneyMealSimpleBulk" or
-					defName="RB_CookHoneyMealFine" or
-					defName="RB_CookHoneyMealFineBulk" or
-					defName="RB_CookHoneyMealLavish" or
-					defName="RB_CookHoneyMealLavishBulk"]/recipeUsers		</xpath>
-		<value>
-			<recipeUsers>
-				<li>DankPyon_RusticCookingTable</li>
-			</recipeUsers>
-		</value>
-	</Operation>
-				
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/RecipeDef[defName="RB_CookHoneyMealFine" or	defName="RB_CookHoneyMealFineBulk"]/researchPrerequisites</xpath>
 		<match Class="PatchOPerationReplace">

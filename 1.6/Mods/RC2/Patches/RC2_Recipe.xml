@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-	<!-- Food Users-->
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/RecipeDef[
-				defName="CookThinPottage" or
-				defName="RC2_CookThickPottage" or
-				defName="RC2_MakeHardtack" or
-				defName="RC2_MakeCandy" or
-				defName="RC2_MakeJuice"]/recipeUsers		</xpath>
-		<value>
-			<li>DankPyon_RusticCookingTable</li>
-		</value>
-	</Operation>
-			
+	
 	<!-- Hardtack Flour Fix -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/RecipeDef[defName="RC2_MakeHardtack"]/ingredients/li/filter/categories</xpath>
