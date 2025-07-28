@@ -301,16 +301,6 @@
 					</nomatch>
 				</li>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants/DankPyon_MacciPlant</xpath>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/BiomeDef[defName="TemperateForest"]/wildPlants</xpath>
-						<value>
-							<DankPyon_MacciPlant>0.02</DankPyon_MacciPlant>
-						</value>
-					</nomatch>
-				</li>
-
 			</operations>
 		</active>
 	</Operation>
@@ -478,16 +468,6 @@
 					</nomatch>
 				</li>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildPlants/DankPyon_MacciPlant</xpath>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildPlants</xpath>
-						<value>
-							<DankPyon_MacciPlant>0.01</DankPyon_MacciPlant>
-						</value>
-					</nomatch>
-				</li>
-
 			</operations>
 		</active>
 	</Operation>
@@ -556,16 +536,6 @@
 						<xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
 						<value>
 							<DankPyon_Tree_Lemon>0.02</DankPyon_Tree_Lemon>
-						</value>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants/DankPyon_MacciPlant</xpath>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildPlants</xpath>
-						<value>
-							<DankPyon_MacciPlant>0.01</DankPyon_MacciPlant>
 						</value>
 					</nomatch>
 				</li>
@@ -642,16 +612,6 @@
 					</nomatch>
 				</li>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/BiomeDef[defName="AridShrubland"]/wildPlants/DankPyon_MacciPlant</xpath>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/BiomeDef[defName="AridShrubland"]/wildPlants</xpath>
-						<value>
-							<DankPyon_MacciPlant>0.05</DankPyon_MacciPlant>
-						</value>
-					</nomatch>
-				</li>
-				
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/BiomeDef[defName="AridShrubland"]/wildPlants/DankPyon_Plant_Spelt</xpath>
 					<nomatch Class="PatchOperationAdd">
