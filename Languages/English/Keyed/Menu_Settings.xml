@@ -12,6 +12,9 @@
 
 	<MO_Patches_Settings_Building_Deboat_Title>Remove building duplicates:</MO_Patches_Settings_Building_Deboat_Title>
 	<MO_Patches_Settings_Building_Deboat_Desc>Removes overlapping building types from the game</MO_Patches_Settings_Building_Deboat_Desc>
+	
+	<MO_Patches_Settings_Ruins_Deboat_Title>Remove MO ancient scatter junk:</MO_Patches_Settings_Ruins_Deboat_Title>
+	<MO_Patches_Settings_Ruins_Deboat_Desc>Removes map generation scatter items from MO</MO_Patches_Settings_Ruins_Deboat_Desc>
 
 	<!-- Individual Tweaks -->
 	<MO_Patches_Individual_Tweak>Individual Tweaks</MO_Patches_Individual_Tweak>

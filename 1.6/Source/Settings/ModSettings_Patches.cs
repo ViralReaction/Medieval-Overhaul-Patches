@@ -19,6 +19,7 @@ namespace MO_Patches
         // Debloat Settings
         public bool building_bloat = true;
         public bool plant_bloat = true;
+        public bool ruins_bloat = false;
 
         // Individual Tweaks
         public bool alchemical_drug = false;
@@ -52,6 +53,7 @@ namespace MO_Patches
             base.ExposeData();
             Scribe_Values.Look(ref building_bloat, "building_bloat", true);
             Scribe_Values.Look(ref plant_bloat, "plant_bloat", true);
+            Scribe_Values.Look(ref ruins_bloat, "ruins_bloat", false);
             Scribe_Values.Look(ref alchemical_drug, "alchemical_drug", true);
             Scribe_Values.Look(ref medieval_drug, "medieval_drug", true);
             Scribe_Values.Look(ref mo_wild_plants, "mo_wild_plants", true);
@@ -96,6 +98,7 @@ namespace MO_Patches
             Text.Font = GameFont.Small;
             options.CheckboxLabeled("MO_Patches_Settings_Plant_Deboat_Title".Translate(), ref this.plant_bloat, "MO_Patches_Settings_Plant_Deboat_Desc".Translate());
             options.CheckboxLabeled("MO_Patches_Settings_Building_Deboat_Title".Translate(), ref this.building_bloat, "MO_Patches_Settings_Building_Deboat_Desc".Translate());
+            options.CheckboxLabeled("MO_Patches_Settings_Ruins_Deboat_Title".Translate(), ref this.ruins_bloat, "MO_Patches_Settings_Ruins_Deboat_Desc".Translate());
             options.GapLine();
             options.Gap();
             Text.Font = GameFont.Medium;
@@ -166,6 +169,7 @@ namespace MO_Patches
         {
             plant_bloat = true;
             building_bloat = true;
+            ruins_bloat = false;
             alchemical_drug = false;
             medieval_drug = false;
             mo_wild_plants = true;
