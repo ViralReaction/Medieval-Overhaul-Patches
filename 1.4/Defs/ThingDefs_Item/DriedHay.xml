@@ -8,7 +8,7 @@
 		<description>Dried stalks of grain, used especially as fodder, harvested and compacted for storage. Straw is good animal feed, but inedible for humans.</description>
 		<stackLimit>200</stackLimit>
 		<graphicData>
-			<texPath>Resources/Straw</texPath>
+			<texPath>Things/Item/Resource/Straw</texPath>
 			<color>(0.75,1,0.75,1)</color>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>

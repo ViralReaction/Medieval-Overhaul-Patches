@@ -15,7 +15,7 @@
 							<label>tableware shelf</label>
 							<description>A shelf for Tableware. Increases Cook speed when placed near rustic cooking table.</description>
 							<graphicData>
-								<texPath>Misc/RusticCupboard</texPath>
+								<texPath>Things/Building/Misc/RusticCupboard</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<drawSize>4</drawSize>
 								<shaderType>CutoutComplex</shaderType>
@@ -23,7 +23,7 @@
 							</graphicData>
 							<thingClass>Building</thingClass>
 							<uiIconScale>1</uiIconScale>
-							<uiIconPath>Misc/RusticCupboard_MenuIcon</uiIconPath>
+							<uiIconPath>Things/Building/Misc/RusticCupboard_MenuIcon</uiIconPath>
 							<uiIconOffset>(0, 0)</uiIconOffset>
 							<size>(2,1)</size>
 							<altitudeLayer>BuildingOnTop</altitudeLayer>

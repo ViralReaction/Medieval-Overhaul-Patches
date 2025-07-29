@@ -49,7 +49,7 @@
 										<graphicClass>Graphic_Single</graphicClass>
 										<drawSize>4.8</drawSize>
 										<drawRotated>false</drawRotated>
-										<texPath>Animal/Daer/Daer_south_giddyup</texPath>
+										<texPath>Things/Pawn/Animal/Daer/Daer_south_giddyup</texPath>
 									</graphicDataDefault>
 								</overlayFront>
 							</li>
@@ -65,7 +65,7 @@
 											<graphicClass>Graphic_Single</graphicClass>
 											<drawSize>4.8</drawSize>
 											<drawRotated>false</drawRotated>
-											<texPath>Animal/Daer/Daer_south_giddyup</texPath>
+											<texPath>Things/Pawn/Animal/Daer/Daer_south_giddyup</texPath>
 										</graphicDataDefault>
 									</overlayFront>
 								</li>
@@ -114,7 +114,7 @@
 										<graphicClass>Graphic_Single</graphicClass>
 										<drawSize>4.2</drawSize>
 										<drawRotated>false</drawRotated>
-										<texPath>Animal/Rox/Rox_south_giddyup</texPath>
+										<texPath>Things/Pawn/Animal/Rox/Rox_south_giddyup</texPath>
 									</graphicDataDefault>
 								</overlayFront>
 							</li>
@@ -130,7 +130,7 @@
 											<graphicClass>Graphic_Single</graphicClass>
 											<drawSize>4.2</drawSize>
 											<drawRotated>false</drawRotated>
-											<texPath>Animal/Rox/Rox_south_giddyup</texPath>
+											<texPath>Things/Pawn/Animal/Rox/Rox_south_giddyup</texPath>
 										</graphicDataDefault>
 									</overlayFront>
 								</li>

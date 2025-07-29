@@ -19,7 +19,7 @@
 							<label>giant log slab bed</label>
 							<description>A simple and quick to make log bed.</description>
 							<graphicData>
-								<texPath>Furniture/LogSlabBed</texPath>
+								<texPath>Things/Building/Furniture/LogSlabBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
@@ -80,7 +80,7 @@
 							<label>giant wicker bed</label>
 							<description>A simple and quick to make wicker bed.</description>
 							<graphicData>
-								<texPath>Furniture/BedWicker</texPath>
+								<texPath>Things/Building/Furniture/BedWicker</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
@@ -142,7 +142,7 @@
 							<label>giant double wicker bed</label>
 							<description>A simple and quick to make wicker bed.</description>
 							<graphicData>
-								<texPath>Furniture/BedWickerDouble</texPath>
+								<texPath>Things/Building/Furniture/BedWickerDouble</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
@@ -206,7 +206,7 @@
 							<label>giant straw bed</label>
 							<description>A simple and quick to make wicker bed, padded with straw for added comfort.</description>
 							<graphicData>
-								<texPath>Furniture/StrawBed</texPath>
+								<texPath>Things/Building/Furniture/StrawBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
@@ -270,7 +270,7 @@
 							<label>giant double straw bed</label>
 							<description>A simple and quick to make wicker bed, padded with straw for added comfort.</description>
 							<graphicData>
-								<texPath>Furniture/BedStrawDouble</texPath>
+								<texPath>Things/Building/Furniture/BedStrawDouble</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(3.05,3.05)</drawSize>
@@ -344,7 +344,7 @@
 							<label>small log slab bed</label>
 							<description>A simple and quick to make log bed.</description>
 							<graphicData>
-								<texPath>Furniture/LogSlabBed</texPath>
+								<texPath>Things/Building/Furniture/LogSlabBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(1.5,1)</drawSize>
@@ -406,7 +406,7 @@
 							<label>small wicker bed</label>
 							<description>A simple and quick to make wicker bed.</description>
 							<graphicData>
-								<texPath>Furniture/BedWicker</texPath>
+								<texPath>Things/Building/Furniture/BedWicker</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(1.5,1)</drawSize>
@@ -469,7 +469,7 @@
 							<label>small straw bed</label>
 							<description>A simple and quick to make wicker bed, padded with straw for added comfort.</description>
 							<graphicData>
-								<texPath>Furniture/StrawBed</texPath>
+								<texPath>Things/Building/Furniture/StrawBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(1.5,1)</drawSize>
@@ -534,7 +534,7 @@
 							<label>small fur bed</label>
 							<description>A cozy bed made from pieces of soft and comfy fur.</description>
 							<graphicData>
-								<texPath>Furniture/BedFur</texPath>
+								<texPath>Things/Building/Furniture/BedFur</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(1.5,1)</drawSize>
@@ -599,7 +599,7 @@
 							<label>small royal tudor bed</label>
 							<description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits one.</description>
 							<graphicData>
-								<texPath>Furniture/RoyalTudorBed</texPath>
+								<texPath>Things/Building/Furniture/RoyalTudorBed</texPath>
 								<graphicClass>Graphic_Multi</graphicClass>
 								<shaderType>CutoutComplex</shaderType>
 								<drawSize>(2,2)</drawSize>

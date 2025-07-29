@@ -51,7 +51,7 @@
 							<label>sequoia timber</label>
 							<description>Wood from sequoia trees. Useful for building structures and weapons. It's more resistant to fire than normal wood, and slightly harder. Useful in construction projects and also slightly more valuable than normal wood, due it's age.</description>
 							<graphicData>
-								<texPath>Resources/WoodPlank</texPath>
+								<texPath>Things/Item/Resource/WoodPlank</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
 								<color>(126,43,16)</color>
 							</graphicData>

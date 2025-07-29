@@ -20,7 +20,7 @@
 								<defName>DankPyon_Hide_TrollLight</defName>
 								<label>large light troll hide</label>
 								<graphicData>
-									<texPath>Resources/HeavyFurLarge</texPath>
+									<texPath>Things/Item/Resource/HeavyFurLarge</texPath>
 									<color>(86,77,64)</color>
 								</graphicData>
 								<statBases>
@@ -104,7 +104,7 @@
 								<defName>DankPyon_Hide_TrollLightPygmy</defName>
 								<label>large pygmy troll hide</label>
 								<graphicData>
-									<texPath>Resources/HeavyFurLarge</texPath>
+									<texPath>Things/Item/Resource/HeavyFurLarge</texPath>
 									<color>(86,77,64)</color>
 								</graphicData>
 								<statBases>
@@ -140,7 +140,7 @@
 								<defName>DankPyon_Hide_TrollHeavy</defName>
 								<label>large heavy troll hide</label>
 								<graphicData>
-									<texPath>Resources/HeavyFurLarge</texPath>
+									<texPath>Things/Item/Resource/HeavyFurLarge</texPath>
 									<color>(58,57,57)</color>
 								</graphicData>
 								<statBases>
@@ -237,7 +237,7 @@
 								<defName>DankPyon_Hide_TrollGrahl</defName>
 								<label>huge grahl hide</label>
 								<graphicData>
-									<texPath>Resources/HeavyFurHuge</texPath>
+									<texPath>Things/Item/Resource/HeavyFurHuge</texPath>
 									<color>(156,167,179)</color>
 								</graphicData>
 								<statBases>

@@ -5,7 +5,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Beer"]/graphicData/texPath</xpath>
 		<value>
-			<texPath>Drug/DarkAle</texPath>
+			<texPath>Things/Item/Drug/DarkAle</texPath>
 		</value>
 	</Operation>
 			
