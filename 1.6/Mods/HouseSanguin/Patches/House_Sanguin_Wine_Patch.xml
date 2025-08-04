@@ -29,16 +29,11 @@
 		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Vanilla Cooking Expanded</li>
-		</mods>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="DevDesigner_BloodWine"]/comps</xpath>
-			<value>
-				<li Class="VanillaCookingExpanded.CompProperties_StackByQuality"/>
-			</value>
-		</match>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DevDesigner_BloodWine"]/comps</xpath>
+		<value>
+			<li Class="VEF.Cooking.CompProperties_StackByQuality"/>
+		</value>
 	</Operation>
 
 </Patch>

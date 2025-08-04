@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	
+
 	<!-- Tundra -->
 	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
@@ -50,7 +50,7 @@
 			</operations>
 		</active>
 	</Operation>
-	
+
 	<!-- Boreal Forest -->
 	<Operation Class="MO_Patches.PatchOperation_ToggleSettings">
 		<settings>
@@ -68,7 +68,7 @@
 						</value>
 					</nomatch>
 				</li>
-			
+
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/BiomeDef[defName="BorealForest"]/wildPlants/DankPyon_Plant_Onions</xpath>
 					<nomatch Class="PatchOperationAdd">
