@@ -97,7 +97,6 @@
 		<li IfModActive="anumeric.dirtywindows,owlchemist.windows">1.6/Mods/Windows</li>
 		<li IfModActive="aoba.fortress.medieval.material">1.6/Mods/FortificationsMaterial</li>
 		<li IfModActive="vanillaexpanded.vbookse">1.6/Mods/VE_Books</li>
-		<li IfModActive="vanillaexpanded.vappe">1.6/Mods/VE_Apparel</li>
 		<li IfModActive="vanillaexpanded.varme">1.6/Mods/VE_Armor</li>
 		<li IfModActive="oskarpotocki.vfe.tribals">1.6/Mods/VE_Tribal</li>
 		<li IfModActive="mlie.rc2.core">1.6/Mods/RC2</li>
