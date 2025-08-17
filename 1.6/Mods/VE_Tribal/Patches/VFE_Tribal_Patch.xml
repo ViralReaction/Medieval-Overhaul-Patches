@@ -299,26 +299,6 @@
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="DankPyon_HideTentWall"]/researchPrerequisites</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="DankPyon_HideTentWall"]/researchPrerequisites</xpath>
-			<value>
-				<researchPrerequisites Inherit="false">
-					<li>VFET_Hunting</li>
-				</researchPrerequisites>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="DankPyon_HideTentWall"]</xpath>
-			<value>
-				<researchPrerequisites Inherit="false">
-					<li>VFET_Hunting</li>
-				</researchPrerequisites>
-			</value>
-		</nomatch>
-	</Operation>
-
-	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DankPyon_TentWall"]/researchPrerequisites</xpath>
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[defName="DankPyon_TentWall"]/researchPrerequisites</xpath>
